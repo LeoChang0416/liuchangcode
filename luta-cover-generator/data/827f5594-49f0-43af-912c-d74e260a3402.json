@@ -1,0 +1,61 @@
+{
+  "id": "827f5594-49f0-43af-912c-d74e260a3402",
+  "taskId": "task_01KDCXC8FHHPAJ002KAA9FJ1BV",
+  "degree": "dana",
+  "podcastContent": "说起佛经，大家最耳熟能详的应该就是《心经》了。电视剧里经常听到的“色即是空，空即是色”，还有“般若波罗蜜”，都出自《心经》。可《心经》到底讲什么？有什么妙用？听我讲完，下次再听就能心里有数了。\n\n《心经》其实很短，全篇只有260个字。现在大家一般读到的，都是玄奘法师翻译的版本——就是大家熟悉的“唐僧”所译的《心经》。开篇第一句是“观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄”。\n\n大家知道《心经》与观音菩萨相关，所以开篇先提及他的名号。“观自在菩萨”就是“观世音菩萨”，“观世音”的意思是倾听世间的一切声音。但要注意，在佛教里没有“神仙”的概念，“佛”指的是觉悟的人；“菩萨”含义相近，也指修行觉悟者，只不过菩萨的境界比佛稍低一些。\n\n“般若”应念作“bō rě”，代表智慧；“波罗”意为“彼岸”，“蜜”是“抵达”的意思。所以“般若波罗蜜”的意思是“抵达智慧的彼岸”，这些词都是从梵语直接音译而来。菩萨说，我们要努力抵达智慧的彼岸，这是修行的最高境界。\n\n菩萨在修行中发现了一个道理，这个道理就是“照见五蕴皆空，度一切苦厄”。佛教里把人与世界的接触分为五个维度，也就是常说的“色、受、",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "智慧",
+      "secondary": "安宁"
+    },
+    "emotion": [
+      "觉悟",
+      "宁静"
+    ],
+    "theme": [
+      "般若波罗蜜",
+      "五蕴皆空",
+      "涅槃"
+    ],
+    "imagery": [
+      "观音菩萨",
+      "五蕴",
+      "色即是空"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "苦厄",
+      "to": "涅槃"
+    },
+    "physicalMetaphor": "心灵的帆船驶向智慧的彼岸",
+    "topologicalLayout": {
+      "zoneCount": "2",
+      "zoneCountReason": "从苦厄到涅槃是两个状态的对照，需要双域",
+      "divisionMethod": "gradient-fade",
+      "divisionMethodReason": "苦厄与涅槃之间是渐进过程，不是硬切",
+      "zoneRatios": "50:50"
+    },
+    "primaryRelationship": {
+      "type": "opposing",
+      "typeReason": "苦厄与涅槃两种状态相向对照但保持各自边界",
+      "interactionQuality": "near"
+    },
+    "rhythmSignature": {
+      "type": "none",
+      "typeReason": "只有两域静态对照，不需要节奏感",
+      "elementCount": 2
+    },
+    "structureParams": {
+      "whitespaceTarget": 60,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "左域暗淡模糊，右域明亮清晰"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding\n- Whitespace target: 60%\n- Visual weight distribution: 左域暗淡模糊，右域明亮清晰\n\n[TOPOLOGY] — 基于 topologicalLayout\n- Zone count: 2\n- Division method: gradient-fade\n- Zone ratios: 50:50\n- Physical metaphor visualization: 左侧区域象征苦厄，右侧区域象征涅槃，通过渐变分界\n\n[RELATIONSHIPS] — 基于 primaryRelationship\n- Primary relationship type: opposing\n- Interaction quality: near\n- Spatial expression: 两个区域相向但不接触\n\n[RHYTHM] — 基于 rhythmSignature\n- Rhythm type: none\n- Element count: 2\n- Interval/size variation: 无节奏感\n\n[GEOMETRY]\n- Primary shape: 左侧矩形模糊暗淡，右侧矩形清晰明亮\n- Secondary shapes: 无\n- Lines: 无\n- Edge treatment: soft gradient-fade\n- Negative space: 左右域各占一半，形成60%留白\n\n[COLOR]\n- Background: paper-white: #F6F4EE\n- Primary hue: 左侧暗淡灰色，右侧明亮米色\n- Secondary hue: 无\n- Temperature: 温暖偏中性\n- Contrast method: brightness\n\n[LIGHTING]\n- Light source: 无特别光源\n- Glow effects: 1个光晕，位于右侧涅槃区域\n- Ambient atmosphere: 整体光感柔和\n\n[TEXTURE & MATERIAL] — 度可微调\n- Surface quality: smooth\n- Edge sharpness: soft\n- Transparency: 无\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma\n- Content resonance: 左侧模糊暗淡的苦厄与右侧清晰明亮的涅槃形成对比\n\n[STYLE]\n- Render style: Clean vector-like digital art\n- No photorealism, no 3D rendering\n- High clarity at 128px thumbnail",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-26T08:46:04.624Z"
+}

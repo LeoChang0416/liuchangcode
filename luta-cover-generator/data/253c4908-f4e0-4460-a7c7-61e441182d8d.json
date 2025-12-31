@@ -1,0 +1,36 @@
+{
+  "id": "253c4908-f4e0-4460-a7c7-61e441182d8d",
+  "taskId": "task_01KDBDJE3WMSR8ZV99ZSCJBFG0",
+  "degree": "dana",
+  "podcastContent": "别把佛学当避世港湾：你误解的“放下”，从来不是躺平\n\n哈喽各位听友，欢迎回到我们的播客节目！今天要聊的这个话题，估计戳中了很多年轻人的状态——现在是不是越来越多人喜欢往寺庙跑？雍和宫的香灰堆得老高，禅修营的名额抢都抢不到，朋友圈里时不时就刷到“在上班和上进之间，我选择上香”的调侃。\n\n但不知道你有没有发现一个现象：很多人把寺庙当成了情绪避难所，把佛学当成了“避世指南”。工作不顺心了就去烧柱香，感情受挫了就想“遁入空门”，甚至有人觉得学佛就是“放下一切”，说白了就是躺平摆烂、逃避问题。今天我们就来好好掰扯掰扯：真正的佛学智慧，到底是让我们逃离现实，还是让我们更好地面对现实？你一直误解的“放下”，其实根本不是你想的那样。\n\n先给大家说个真实的事儿，我身边有个朋友，前段时间被公司裁员，又赶上感情破裂，整个人状态特别差。后来他报了个高价禅修营，天天打坐念经，回来之后跟我说“顿悟了”，说世间一切都是虚妄，不想再努力了，就在家待着“修心”。结果没过三个月，房租都快交不起了，反而更焦虑，还说“为什么我都修行了，还是这么苦”。\n\n其实像他这样的情况，不是个例。上海大学的成庆老师就说过，现在很多人信佛信",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "清醒",
+      "secondary": "坚定"
+    },
+    "emotion": [
+      "有力",
+      "通透"
+    ],
+    "theme": [
+      "佛学智慧",
+      "面对现实",
+      "放下执着"
+    ],
+    "imagery": [
+      "心灵的灯塔",
+      "清晨的阳光"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "逃避",
+      "to": "面对"
+    }
+  },
+  "geometryDescription": "一条开放的弧形，弯曲如心灵的灯塔，旁边一条轻薄的流线向外延展，象征清晨的阳光和心灵的开放。",
+  "colorLogic": "使用温暖的黄色(#FFE5B4)作为主色，搭配纸白色(#F6F4EE)背景，表达温暖和希望的感觉。轻微的蓝色渐变作为点缀，突出清醒的感觉。",
+  "prompt": "[COMPOSITION] 1:1 square, 10% safe margin, 55% whitespace, 2 shapes, 1 lines. [GEOMETRY] An open arc bending like a lighthouse of the soul, with a thin flowing line extending outward, symbolizing the morning sunlight and the opening of the heart. [COLOR] Warm yellow (#FFE5B4) on paper-white (#F6F4EE) background. Slight blue gradient accent. [LIGHTING] Soft diffuse ambient, slight gradient on flowing line. [ATMOSPHERE] Ma, Kanso, Shibui. [STYLE] Minimal geometric abstraction, no concrete objects, pure shapes.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-25T18:50:35.149Z"
+}

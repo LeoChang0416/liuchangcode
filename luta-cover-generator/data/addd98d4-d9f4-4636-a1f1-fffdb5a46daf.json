@@ -1,0 +1,63 @@
+{
+  "id": "addd98d4-d9f4-4636-a1f1-fffdb5a46daf",
+  "taskId": "task_01KDB8FMJPYE5ZYRWVQP21QDY7",
+  "degree": "samadhi",
+  "podcastContent": "别把佛学当避世港湾：你误解的“放下”，从来不是躺平\n\n哈喽各位听友，欢迎回到我们的播客节目！今天要聊的这个话题，估计戳中了很多年轻人的状态——现在是不是越来越多人喜欢往寺庙跑？雍和宫的香灰堆得老高，禅修营的名额抢都抢不到，朋友圈里时不时就刷到“在上班和上进之间，我选择上香”的调侃。\n\n但不知道你有没有发现一个现象：很多人把寺庙当成了情绪避难所，把佛学当成了“避世指南”。工作不顺心了就去烧柱香，感情受挫了就想“遁入空门”，甚至有人觉得学佛就是“放下一切”，说白了就是躺平摆烂、逃避问题。今天我们就来好好掰扯掰扯：真正的佛学智慧，到底是让我们逃离现实，还是让我们更好地面对现实？你一直误解的“放下”，其实根本不是你想的那样。\n\n先给大家说个真实的事儿，我身边有个朋友，前段时间被公司裁员，又赶上感情破裂，整个人状态特别差。后来他报了个高价禅修营，天天打坐念经，回来之后跟我说“顿悟了”，说世间一切都是虚妄，不想再努力了，就在家待着“修心”。结果没过三个月，房租都快交不起了，反而更焦虑，还说“为什么我都修行了，还是这么苦”。\n\n其实像他这样的情况，不是个例。上海大学的成庆老师就说过，现在很多人信佛信",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "清醒",
+      "secondary": "坚定"
+    },
+    "emotion": [
+      "通透",
+      "有力"
+    ],
+    "theme": [
+      "佛学智慧",
+      "面对现实",
+      "放下执着"
+    ],
+    "imagery": [
+      "心灵的光明",
+      "坚实的步伐"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "误解",
+      "to": "正确理解"
+    }
+  },
+  "geometryDescription": "一个大圆形在画面中央，外围有一个细小的环形线条，环形线条稍有径向晕染效果。",
+  "colorLogic": "主色为高明度的白色和蓝色，使用小面积的黄色作为对比色。",
+  "prompt": "Minimalist Japanese Zen-inspired abstract design. Central large circle, surrounded by a thin ring line with slight radial blur. High brightness white and blue as primary colors, small area of yellow for contrast. Soft, diffuse ambient lighting. Massive negative space, clean edges, sharp lines, distinct separation, serene and focused.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-25T17:21:40.564Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233316684631-d7768fe0-4534-4439-9537-b63abf64520b-image_task_01KDB8G358AQ0DZC7E783TMVJT_0.jpg",
+  "evaluation": {
+    "religiousRisk": {
+      "score": 0,
+      "reason": "没有明显的宗教符号。"
+    },
+    "serenity": {
+      "score": 90,
+      "reason": "留白足够，画面干净，颜色克制。"
+    },
+    "symmetryBalance": {
+      "score": 85,
+      "reason": "构图平衡，几何关系严谨。"
+    },
+    "complexity": {
+      "score": 95,
+      "reason": "形体和线条都很简单。"
+    },
+    "abstraction": {
+      "score": 90,
+      "reason": "完全看不出具体物体，纯几何抽象。"
+    },
+    "total": 90,
+    "pass": true,
+    "summary": "这张播客封面图片在各个评分维度上表现优异，特别是在宗教风险、宁静和谐感、结构复杂度和抽象纯净度方面。整体评分高，符合通过条件。"
+  },
+  "evaluatedAt": "2025-12-25T17:22:10.474Z"
+}

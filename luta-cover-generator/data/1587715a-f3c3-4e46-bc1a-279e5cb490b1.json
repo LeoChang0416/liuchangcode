@@ -1,0 +1,86 @@
+{
+  "id": "1587715a-f3c3-4e46-bc1a-279e5cb490b1",
+  "taskId": "task_01KDCE2ESSBT64WKVF1XMDT1S6",
+  "degree": "dana",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》\n\n哈喽，各位听友大家好，欢迎来到本期的播客节目。今天我们要聊的话题，可能戳中了很多学佛同修的痛点——就是那句“很多人天天念《楞严咒》，却根本没看懂《楞严经》”。\n\n不知道你有没有过这样的经历：清晨的佛堂里、安静的书房中，跟着课诵本一字一句地念诵楞严咒，咒语的音节庄严恢弘，念完之后心里也会觉得踏实。但如果有人问你，你天天念的这篇咒语，出自哪部经？这部经到底在讲什么？可能很多人都会愣住，甚至说不出个所以然。今天，我们就来好好聊聊这个问题，搞清楚楞严咒和《楞严经》的关系，也读懂《楞严经》里最核心的智慧。\n\n首先，我们得先厘清一个基本事实：楞严咒并不是独立存在的，它出自《大佛顶如来密因修证了义诸菩萨万行首楞严经》，也就是我们常说的《楞严经》，具体在经的第七卷里。这部经全文十卷，共64460字，而楞严咒作为经中核心的神咒，全咒分为五会，有427句、2620字，是汉传佛教日常课诵中最长的神咒，所以也被称为“大佛顶首楞严神咒”。\n\n可能有听友会问，既然咒在经里，为什么大家都爱念咒，却很少有人通读《楞严经》呢？其实原因很现实。一方面，《楞严经》的文字晦涩",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "觉醒",
+      "secondary": "探究"
+    },
+    "emotion": [
+      "启迪",
+      "反思"
+    ],
+    "theme": [
+      "佛法修行",
+      "破妄显真",
+      "经咒关系"
+    ],
+    "imagery": [
+      "波浪与大海",
+      "钥匙与门"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "误解",
+      "to": "理解"
+    },
+    "physicalMetaphor": "波浪平息，露出大海的平静面目",
+    "topologicalLayout": {
+      "zoneCount": "2",
+      "zoneCountReason": "讨论的核心是楞严咒和楞严经的关系，需要双域来表现对比和联系",
+      "divisionMethod": "band",
+      "divisionMethodReason": "两者之间有明确而紧密的联系，使用窄带分界体现这种关系",
+      "zoneRatios": "50:50"
+    },
+    "primaryRelationship": {
+      "type": "parallel",
+      "typeReason": "楞严咒和楞严经是并列且互为补充的关系",
+      "interactionQuality": "touching"
+    },
+    "rhythmSignature": {
+      "type": "none",
+      "typeReason": "主要是两个静态对照，不需要复杂的节奏",
+      "elementCount": 2
+    },
+    "structureParams": {
+      "whitespaceTarget": 60,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "sharp",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "楞严咒和楞严经的对比关系通过明暗对比体现"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding\n- Whitespace target: 60%\n- Visual weight distribution: Balanced between two zones\n\n[TOPOLOGY] — Based on topologicalLayout\n- Zone count: 2\n- Division method: Band\n- Zone ratios: 50:50\n- Physical metaphor visualization: The division through a narrow band represents the connection and contrast between the Surangama Mantra and Surangama Sutra, symbolizing the calming of waves to reveal the calm sea.\n\n[RELATIONSHIPS] — Based on primaryRelationship\n- Primary relationship type: Parallel\n- Interaction quality: Touching\n- Spatial expression: The two primary shapes are placed parallel to each other with a narrow band in between, touching but not overlapping.\n\n[RHYTHM] — Based on rhythmSignature\n- Rhythm type: None\n- Element count: 2\n- Interval/size variation: Not applicable as the focus is on the static comparison between the two elements.\n\n[GEOMETRY]\n- Primary shape: Two large, soft-edged rectangles, equal in size, occupying the left and right halves of the canvas.\n- Secondary shapes: None\n- Lines: One thin line as the division band\n- Edge treatment: Softened edges to give a sense of openness and flow.\n- Negative space: The space around and between the two primary shapes.\n\n[COLOR]\n- Background: Soft-gray (#F0F0F0)\n- Primary hue: Warm-beige (#F7F2E8), high brightness\n- Secondary hue: Mist-white (#F3F5F6)\n- Temperature: Warm-neutral\n- Contrast method: Brightness contrast between the two primary shapes and the background.\n\n[LIGHTING]\n- Light source: Soft, diffuse lighting\n- Glow effects: One subtle glow around the division band to emphasize the connection\n- Ambient atmosphere: Calm and contemplative\n\n[TEXTURE & MATERIAL] — Degree can adjust\n- Surface quality: Smooth texture to enhance the sense of openness and fluidity\n- Edge sharpness: Soft edges to avoid harshness\n- Transparency: Slight transparency on the division band for a subtle effect\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (space and emptiness)\n- Content resonance: The visual representation of the Surangama Mantra and Sutra relationship\n[STYLE]\n- Render style: Clean vector-like digital art\n- No photorealism, no 3D rendering\n- High clarity at 128px thumbnail",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-26T04:18:34.642Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233277270319-8ba156d2-57be-4b98-b058-44078937c4d1-image_task_01KDCE2XPGZNXRDEW15AAZ8DED_0.jpg",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "主要形体为2个矩形，线条为2条，渐变光晕为2个，画面留白超过50%"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "有色相为2（米色和白色），中性色为1（灰色），主色为高明度版本，无荧光/霓虹感，缩略到128px仍清爽"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "5秒内看不出具体物体，无符号化联想，无放射对称图腾"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间有呼吸，高级克制，有轻微层次但不堆细节"
+    },
+    "pass": true,
+    "summary": "封面在结构、颜色、抽象和品质方面均符合要求，整体简洁清爽，具有高级感。"
+  },
+  "evaluatedAt": "2025-12-26T04:19:01.363Z"
+}

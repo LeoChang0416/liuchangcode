@@ -1,0 +1,154 @@
+{
+  "id": "d5db2441-195a-45bc-bb7d-199ab2694c78",
+  "taskId": "task_01KDS8CT39WKTZEHR5P672KTP2",
+  "degree": "prajna",
+  "podcastContent": "敦煌壁画常常画这张画，就是维摩诘和文殊的对话。但我自己喜欢这一部经，常常抄这一部经，所以我觉得里面的对话好精彩。因为文殊菩萨进来了，到了病房就问说，诶，你是一个修行的人，那修行的人怎么会生病呢？你不是应该修行的这个程度已经很高了，你应该到了不生病的状况。那维摩诘就回答说：从师有爱，则我病生八个字，我常常写这8个字送朋友，我们知道痴情的痴这个字，就是理应知道不应该做的事，可是我情不自禁，我还是会做，从痴有爱，那我们也觉得很有趣，菩萨到底应不应该有爱，如果有爱是不是也有恨。就我觉得他触碰到大乘佛学非常惊人的部分，就从痴有爱则我病生，所以我生病，那文殊菩萨就问他，那你什么时候病会好。他说一切众生病好，我的病也就好。这个时候我们忽然发现维摩诘讲的病，不是一般的病，是说他承担了所有众生之病，我们知道这是大乘佛学。我们有一天知道一个人的修行到一定的程度，那个不关心是因为他有更高的关心。他会看到所有在现实里的争吵之上，应该有一个更为亲明的东西。所以我们常读到无无明，对无明的一种堪悟，能够有更大的了悟的可能。这是为摩皆经一直要传达的。",
+  "analysis": {
+    "contentEssence": "以“病”为愿力的容器：从个人痴爱之病，转为承载众生之病，并在更高层次的关心中得到堪悟。",
+    "physicalMetaphor": "一只点燃的灯芯被放入透明的琉璃罩内，罩壁慢慢凝出雾气与水珠；灯并不熄灭，而是把雾气的重量“留在自己身上”，直到罩内重新澄明。",
+    "metaphorVisualization": "中心是一枚小而稳定的发光点（灯芯），外层是一圈半透明的壳（琉璃罩）；壳内壁有不规则凝结颗粒由密到疏，象征“从痴有爱则我病生”的聚集与承担，最终向澄清过渡（颗粒减少但不完全消失）。",
+    "spiritualTone": {
+      "primary": "慈悲愿力",
+      "secondary": "般若堪悟"
+    },
+    "emotion": [
+      "震动",
+      "悲悯"
+    ],
+    "theme": [
+      "大乘承担",
+      "痴爱与病",
+      "更高层次的关心"
+    ],
+    "imagery": [
+      "琉璃罩",
+      "凝露",
+      "不灭灯芯",
+      "澄明"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "“修行人为何会病”的表面矛盾与痴爱牵缠",
+      "to": "把病转义为承载众生之病的愿力与更大了悟",
+      "tensionType": "transformation"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "意象是“灯在琉璃罩内承受凝露”，主体与承载空间属于同一场域，不需要分成多个对立区域。",
+      "divisionMethod": "radial",
+      "divisionMethodReason": "灯芯为中心，病/雾/露在罩壁环形分布，天然是向心—环绕结构。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "nested",
+      "typeReason": "维摩诘之“病”像琉璃罩：把众生之病/雾气包纳在自身边界内，中心保持觉照之灯不灭。",
+      "interactionQuality": "touching",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "decelerating",
+      "typeReason": "凝结颗粒从密集到稀疏，象征从情执聚集的“病相”逐渐被堪悟与愿力安放、澄清。",
+      "elementCount": 4,
+      "direction": "inward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 65,
+      "contrastMethod": "layering",
+      "edgeTreatment": "soft",
+      "glowCount": 1,
+      "layerCount": 3,
+      "tensionExpression": "用“稳定光点”对“罩壁凝露的重量与密度变化”制造张力：中心不动、外层承载；颗粒密度递减呈现从痴爱之病到承担众生之病再趋澄明的转义过程。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "采用“中心灯芯—外层琉璃罩凝露”的嵌套承载结构与密度递变节奏，表达承担与堪悟；没有把概念拆成并列对照区，而是让意义在同一容器中发生转义与澄清。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides\n- Whitespace target: 65% (large calm negative space, Ma)\n- Visual weight distribution: single-field composition with a small, steady warm core near center; most visual weight is a faint radial container boundary and sparse condensation along its inner edge\n\n[TOPOLOGY] — based on topologicalLayout\n- Zone count: 1 (no split panels, no opposing fields)\n- Division method: radial (center-to-edge organization)\n- Zone ratios: 100\n- Physical metaphor visualization: depict one unified atmosphere: a lit wick at the center inside a transparent liuli glass罩; condensation forms as a ring-like phenomenon on the inner wall, maintaining a clear central cavity\n\n[RELATIONSHIPS] — based on primaryRelationship\n- Primary relationship type: nested\n- Interaction quality: touching\n- Spatial expression: three nested presences: (1) central wick/flame mark; (2) an enclosing glass罩 boundary that lightly “touches” the condensation; (3) condensation clusters attached to the inner rim of the罩, not floating freely\n\n[RHYTHM] — based on rhythmSignature\n- Rhythm type: decelerating\n- Element count: 4\n- Interval/size variation: four condensation clusters along the inner wall; start with the densest cluster (tightest droplets) on one arc, then progressively thinner/sparser clusters as they proceed around the ring, creating a clearing trajectory while keeping the center perfectly still\n\n[GEOMETRY]\n- Primary shape: a thin, rounded oval/teardrop wick mark centered (or slightly above center), small (about 6–8% of canvas height), soft edges\n- Secondary shapes: (1) one large, very thin circular/oval罩 outline (about 55–65% of canvas width), centered; (2) four small droplet/mist clusters hugging the inner rim of the罩 (each cluster 2–4% of canvas area, but total accent area must stay within constraints below)\n- Lines: maximum 2 lines total: use one ultra-thin outline line for the罩 boundary; optionally one hairline vertical hint for the wick stem (keep extremely subtle)\n- Edge treatment: soft-division edges, gentle feathering on mist; keep boundaries crisp enough to feel “seen-through” yet not harsh\n- Negative space: keep the majority of the field empty and breathable; no framing boxes; no diagonals\n\n[COLOR]\n- Background: cool-mist #F5F7FA (flat, paper-like)\n- Primary hue: butter #FFF8E1 for the wick/flame and the faint warm aura; keep lightness ~96%, saturation low\n- Secondary hue (accent): eucalyptus #E0F2F1 used sparingly as cool condensation tint\n- Temperature: overall cool, lucid atmosphere with a quiet warm core (warm-cool contrast)\n- Contrast method: temperature contrast only (warm center against cool field) while maintaining very high value; no hard black\n- Accent usage: eucalyptus must be ~3% of total image area, applied as a thin translucent veil on parts of the condensation clusters; opacity exactly ~14% (10–15% acceptable range)\n\n[LIGHTING]\n- Light source: subtle internal glow from the wick\n- Glow effects: 1 glow only—very small, soft halo around the wick in butter (#FFF8E1), extremely restrained\n- Ambient atmosphere: bright, high-key clarity; no dramatic shadows\n\n[TEXTURE & MATERIAL] — degree micro-adjustments only\n- Surface quality: matte, fine paper grain background; glass罩 appears as a faint translucent boundary with minimal highlights\n- Edge sharpness: soft on mist and droplets; slightly clearer on the罩 outline to imply insight/clarity without splitting the composition\n- Transparency: gentle translucency on condensation; keep all tones within high lightness (minimum brightness 85%), max saturation 32%\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (breathing room), Kanso (few elements), Shibui (quiet restraint)\n- Content resonance: compassionate burden held by the boundary (condensation) while inner light remains unwavering; the decelerating rhythm signifies easing/clearing\n\n[STYLE]\n- Render style: clean vector-like digital art, flat + subtle transparency; no photorealism, no 3D rendering\n- No text, no symbols, no UI elements\n- Ensure high clarity at 128px thumbnail: the warm wick should read immediately, the glass ring should be barely-there but legible, and the four condensation clusters should show the decelerating density clearly.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998232847011668-11554770-c6ab-457b-b8b1-071d8d8949e4-image_task_01KDS8DC5BBQS3MY4X136C0DVK_0.jpg",
+  "createdAt": "2025-12-31T03:49:30.376Z",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "主要形体和线条数量符合要求，渐变不满屏，留白充足。"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "有色相符合要求，主色明度高，无荧光感，饱和度低。",
+      "brightnessEstimate": "85%",
+      "saturationEstimate": "30%"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "无具体物体或符号化联想，符合抽象要求。"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间感和层次感良好，符合美学要求。"
+    },
+    "pass": true,
+    "summary": "封面设计符合所有快检维度的要求，整体简约且具有美感。"
+  },
+  "evaluatedAt": "2025-12-31T03:51:56.921Z",
+  "imageryVerification": {
+    "actualDescription": "图片呈现了一个中心的火焰，周围是一个透明的圆形结构，内壁上有水珠凝结的效果。",
+    "isLeftRightDual": false,
+    "leftRightDualDetail": "",
+    "metaphorMatch": {
+      "score": 85,
+      "isMatched": true,
+      "matchedElements": [
+        "中心火焰",
+        "透明圆形结构",
+        "水珠凝结"
+      ],
+      "missingElements": [
+        "更明显的澄明效果"
+      ]
+    },
+    "structureMatch": {
+      "expectedZoneCount": "1",
+      "actualZoneCount": "1",
+      "expectedRelationship": "nested",
+      "actualRelationship": "nested",
+      "isMatched": true
+    },
+    "overallScore": 86,
+    "pass": true,
+    "verdict": "图片成功呈现了预期的视觉意象，符合物理隐喻和结构要求。",
+    "suggestions": [
+      "可以增加一些光线透过水珠的效果，以增强澄明的感觉。"
+    ]
+  },
+  "verifiedAt": "2025-12-31T03:52:50.205Z",
+  "edit": {
+    "sourceImageUrl": "https://upload.apimart.ai/f/image/9998232847011668-11554770-c6ab-457b-b8b1-071d8d8949e4-image_task_01KDS8DC5BBQS3MY4X136C0DVK_0.jpg",
+    "editPrompt": "EDIT THE PROVIDED REFERENCE COVER (do not regenerate). Maintain the same abstract geometric, Japanese minimal (Ma) composition and topology. \n\nKeep the single unified radial field with nested relationship: (1) the small steady warm wick/flame mark near center, (2) the faint transparent liuli罩 outline ring, (3) four condensation clusters attached to the inner rim showing a decelerating density progression. Keep the 65% negative space and the overall high-key, paper-like flat vector style.\n\nChange: enhance the “clarity / 澄明” feeling ONLY by adding a very subtle light-transmission effect through the condensation droplets: introduce tiny soft highlights and faint internal refraction-like brightening within parts of the droplet/mist clusters (not extra objects), as if cool light is passing through them. The effect must remain minimal, high brightness (>=85%), no hard shadows, no shiny/metallic realism, no 3D.\n\nKeep color rules: background stays cool-mist #F5F7FA; wick/glow stays butter/cream-yellow (#FFF8E1~#FFF9E6) with a single restrained halo; condensation tint remains eucalyptus/clear-cyan family (#E0F2F1~#E0F7FA) used as a thin translucent veil, total accent area ~3% (allowed 2–5%), opacity ~14% (10–15%). Maintain max saturation <=32% and temperature-contrast-only (quiet warm core vs cool field). \n\nDo not add any text, symbols, icons, UI, or figurative elements. No extra lines beyond the existing ultra-thin罩 outline and optional hairline wick stem. No additional rings, frames, diagonals, or panel splits. Keep everything else unchanged.",
+    "changes": [
+      "Add: subtle light-transmission highlights inside the existing condensation clusters to suggest increased clarity (澄明), without adding new elements",
+      "Change: slightly increase local brightness within droplet highlights while keeping overall brightness >=85% and saturation <=32%",
+      "Keep accent compliance while applying the new highlights: eucalyptus/clear-cyan veil remains ~3% area (2–5% ok) at ~14% opacity (10–15% ok)"
+    ],
+    "keeps": [
+      "Keep: zoneCount = 1, radial division, 100% single-field composition (no split panels)",
+      "Keep: nested relationship and touching interaction (wick inside ring; condensation hugging inner rim, not floating)",
+      "Keep: decelerating rhythm with exactly 4 condensation clusters from densest to sparsest around the inner wall",
+      "Keep: abstract geometric, Japanese minimal (Ma) with ~65% whitespace and calm negative space",
+      "Keep: central small wick/flame mark size/placement and single restrained warm halo (glowCount = 1)",
+      "Keep: one ultra-thin罩 outline line (and only optional hairline wick stem), no additional lines or framing",
+      "Keep: flat clean vector-like rendering with soft mist feathering and matte paper grain background (no photorealism, no 3D, no shiny glass)",
+      "Keep: no text, no symbols, no icons/UI, no figurative subjects"
+    ],
+    "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+    "taskId": "task_01KDS95FFXCS0KPH6DXMKTPMTD",
+    "status": "submitted",
+    "createdAt": "2025-12-31T04:02:58.911Z"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": "80818988-eed1-4f5a-966a-985b457dcc76",
+  "taskId": "task_01KDS6GDXAVH301ZEFSET3MH0T",
+  "degree": "prajna",
+  "podcastContent": "敦煌壁画常常画这张画，就是维摩诘和文殊的对话。但我自己喜欢这一部经，常常抄这一部经，所以我觉得里面的对话好精彩。因为文殊菩萨进来了，到了病房就问说，诶，你是一个修行的人，那修行的人怎么会生病呢？你不是应该修行的这个程度已经很高了，你应该到了不生病的状况。那维摩诘就回答说：从师有爱，则我病生八个字，我常常写这8个字送朋友，我们知道痴情的痴这个字，就是理应知道不应该做的事，可是我情不自禁，我还是会做，从痴有爱，那我们也觉得很有趣，菩萨到底应不应该有爱，如果有爱是不是也有恨。就我觉得他触碰到大乘佛学非常惊人的部分，就从痴有爱则我病生，所以我生病，那文殊菩萨就问他，那你什么时候病会好。他说一切众生病好，我的病也就好。这个时候我们忽然发现维摩诘讲的病，不是一般的病，是说他承担了所有众生之病，我们知道这是大乘佛学。我们有一天知道一个人的修行到一定的程度，那个不关心是因为他有更高的关心。他会看到所有在现实里的争吵之上，应该有一个更为亲明的东西。所以我们常读到无无明，对无明的一种堪悟，能够有更大的了悟的可能。这是为摩皆经一直要传达的。",
+  "analysis": {
+    "contentEssence": "以“病房对话”为入口，把个人之病提升为对众生苦病的共担与觉悟：爱与痴并非污点，而是通向大悲与更大了悟的门。",
+    "physicalMetaphor": "一盏油灯的灯芯被点燃后，火焰不向外爆发而是向内回卷，灯芯越烧越黑却让光圈逐层扩散，直到把整间病房都照亮。",
+    "metaphorVisualization": "中心是“被烧灼的灯芯”这一细长主形体（病/承担），其上方或周围出现几圈由强到弱的光晕（觉悟/大悲的扩散）；黑与光不对抗，而是同体共存：暗在芯里，明在晕里，形成向外回响的同心层。",
+    "spiritualTone": {
+      "primary": "慈悲承担",
+      "secondary": "透彻洞见"
+    },
+    "emotion": [
+      "震动",
+      "温柔"
+    ],
+    "theme": [
+      "大乘慈悲",
+      "爱与痴的悖论",
+      "以病示道"
+    ],
+    "imagery": [
+      "病房",
+      "灯芯灼黑",
+      "光晕回响",
+      "同心扩散"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "“修行人为何生病”的表面矛盾",
+      "to": "“众生病好我病乃好”的大悲承担与觉悟",
+      "tensionType": "breakthrough"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "意象是“一盏灯在同一空间内由芯到光晕扩散”，病与悟同处一体，不需要拆分成多个对立区域。",
+      "divisionMethod": "radial",
+      "divisionMethodReason": "光从灯芯向外形成圈层回响，最贴合“从痴有爱则我病生”到“众生病好我病乃好”的扩展性。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "nested",
+      "typeReason": "灯芯被光晕包裹：内层是“病/承担的灼点”，外层是“悲智的照明”，呈现由内而外的同体关系。",
+      "interactionQuality": "fused",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "echoing",
+      "typeReason": "对话的要点像一句偈语不断扩散：从“八字”起，层层推出“众生之病”与“无无明”的回响。",
+      "elementCount": 3,
+      "direction": "outward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 65,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 2,
+      "layerCount": 3,
+      "tensionExpression": "把“病”压缩成中心一处较暗、被烧灼的细芯；张力来自中心的沉重与外圈光晕的扩大之间的拉扯，外圈越扩，中心越显克制与承担。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "结构以“中心灼点+同心光晕扩散”的单域放射来表达‘以病示道、以己担众’，用嵌套与回响呈现悖论的同体性，而非把观点切成两边做对照。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides (no halo or shape touches the margin)\n- Whitespace target: 65% (dominant calm emptiness, Ma)\n- Visual weight distribution: a small, dense dark focal point at exact center; three progressively lighter radial echoes expanding outward, with the outer field remaining mostly blank like a quiet sickroom air.\n\n[TOPOLOGY] — based on topologicalLayout\n- Zone count: 1 (single continuous space)\n- Division method: radial (structure defined only by concentric diffusion and fade)\n- Zone ratios: 100\n- Physical metaphor visualization: treat the whole canvas as one room-like atmosphere; the “lamp” is implied by a central wick and inward-curling flame, while light spreads in three echoing halo bands.\n\n[RELATIONSHIPS] — based on primaryRelationship\n- Primary relationship type: nested\n- Interaction quality: fused\n- Spatial expression: one compact wick/flame nucleus embedded inside and seamlessly fused with surrounding glow; no separations into panels, no opposing halves.\n\n[RHYTHM] — based on rhythmSignature\n- Rhythm type: echoing\n- Element count: 3\n- Interval/size variation: three concentric halo bands repeat the same motif with gentle attenuation: each ring larger, thinner, and fainter than the previous; keep spacing slightly irregular but still clearly “echoing,” not uniform.\n\n[GEOMETRY]\n- Primary shape: a small vertical wick silhouette (rounded capsule), centered; inside it, a restrained inward-curling flame shape that curves back toward the wick (not bursting outward). Keep the flame minimal and abstract.\n- Secondary shapes: three concentric halo bands (soft-edged rings) centered on the wick; the outer ring remains well within the safe margin.\n- Lines: none (avoid outline strokes; use shape edges only).\n- Edge treatment: gradient-fade edges on halos; wick edges soft but clearer than halos.\n- Negative space: keep the corners and outer field largely untouched, emphasizing Ma.\n\n[COLOR]\n- Background: cool-mist (#F5F7FA)\n- Primary hue: moon-white (#F0F4F8), used for the main glow and most shapes (95% lightness feel)\n- Secondary hue (accent only): eucalyptus (#E0F2F1) at 4% area maximum, applied as a modest translucent patch within one halo band or a tiny offset tint near the flame; opacity 13% (as a glazing overlay, not a new structure)\n- Temperature: cool, lucid, awakening clarity\n- Contrast method: brightness contrast (darkest nucleus vs very light field); do NOT introduce additional hues\n- Accent usage: the eucalyptus accent must be subtle, quiet, and not “clever”; it should read as a faint insight highlight, not decoration.\n\n[LIGHTING]\n- Light source: implied internal lamp light from the center\n- Glow effects: exactly 2 glow/gradient layers (e.g., one inner bloom around the flame, one broad outer fade supporting the halos)\n- Ambient atmosphere: clean, misty brightness with gentle falloff; no dramatic spotlight.\n\n[TEXTURE & MATERIAL]\n- Surface quality: smooth, paper-like digital vector finish (kanso), very slight grain only if needed\n- Edge sharpness: soft overall; nucleus slightly sharper for clarity\n- Transparency: halos semi-transparent; eucalyptus overlay at 13% opacity.\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (spacious quiet), Kanso (minimal), Shibui (restrained depth)\n- Content resonance: a tender but shaking tension—center is charred/weighty, while the expanding halos are compassionate illumination.\n\n[STYLE]\n- Render style: clean vector-like digital art, high clarity at 128px thumbnail\n- No photorealism, no 3D rendering\n- No text, no symbols, no UI elements, no left-right split, no diagonal divider.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998232848982193-9155fa08-3b3b-4f4a-a1be-90e782004235-image_task_01KDS6H7TCG259Z781KCPWWB4H_0.png",
+  "createdAt": "2025-12-31T03:16:31.749Z",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "主要形体和线条数量符合要求，渐变效果不超过限制，留白充足。"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "色相数量符合要求，主色为高明度版本，无荧光感，缩略后清爽。"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 80,
+      "reason": "5秒内没有具体物体或符号化联想，无放射对称图腾。"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 85,
+      "reason": "空间有呼吸感，设计简约克制，有轻微层次感。"
+    },
+    "pass": true,
+    "summary": "封面设计符合所有快检标准，整体简约且富有美感。"
+  },
+  "evaluatedAt": "2025-12-31T03:17:51.875Z",
+  "imageryVerification": {
+    "actualDescription": "图片中心有一个火焰形状的图案，周围是同心圆环，呈现出从中心向外扩散的结构。",
+    "isLeftRightDual": false,
+    "leftRightDualDetail": "",
+    "metaphorMatch": {
+      "score": 85,
+      "isMatched": true,
+      "matchedElements": [
+        "中心的火焰图案",
+        "同心圆环的扩散"
+      ],
+      "missingElements": [
+        "灯芯灼黑的细节"
+      ]
+    },
+    "structureMatch": {
+      "expectedZoneCount": "1",
+      "actualZoneCount": "1",
+      "expectedRelationship": "nested",
+      "actualRelationship": "nested",
+      "isMatched": true
+    },
+    "overallScore": 87,
+    "pass": true,
+    "verdict": "图片成功体现了预期的视觉意象，中心火焰和同心圆环很好地表达了光晕回响和同心扩散的概念。",
+    "suggestions": [
+      "可以增加一些细节来体现灯芯灼黑的效果，以更完整地表达物理隐喻。"
+    ]
+  },
+  "verifiedAt": "2025-12-31T03:18:08.324Z"
+}

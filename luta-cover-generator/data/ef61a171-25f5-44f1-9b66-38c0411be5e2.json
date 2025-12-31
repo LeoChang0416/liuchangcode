@@ -1,0 +1,130 @@
+{
+  "id": "ef61a171-25f5-44f1-9b66-38c0411be5e2",
+  "taskId": "task_01KDFXPAD2GB3360WSM78Z5DG4",
+  "degree": "prajna",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》。其实佛陀早就说：你找的“真心”，不在外面，就在你此刻的觉知里。今天我想告诉你：为什么你越努力越焦虑？答案就藏在这部被严重误解的经典中。\n\n有没有人觉得，自己明明很努力，却总是被情绪牵着走？明明想静下来，脑子里却像开了弹幕？你可能以为问题出在“不够自律”“不够幸运”，但《楞严经》告诉你：问题出在——你一直用“假心”活着，却把“真心”弄丢了。\n\n佛陀在《楞严经》开篇就问阿难：“你当初为什么出家？”阿难说：“因为我看见佛陀相好庄严，心生爱慕。”佛陀立刻反问：“你用什么看见的？用什么爱慕的？”  \n这一问，问出了整部《楞严经》的核心：你所依赖的“心”，到底是真的，还是妄的？\n\n一、破“认贼为子”：你每天用的“心”，其实是假的\n《楞严经》里有个震撼的比喻：“认贼为子”。  \n什么意思？就像你家里进了小偷，你不抓他，反而把他当亲儿子养，好吃好喝供着——结果家财散尽，还不知道是谁干的。\n\n我们每天用的“心”，就是这个“贼”。  \n你因为老板一句话失眠，是“心”在反应？  \n你刷短视频停不下来，是“心”在享受？  \n你焦虑未来、后悔过去，是“心”在思考？",
+  "analysis": {
+    "contentEssence": "破除妄心执着，体认本自具足的真心觉性。",
+    "physicalMetaphor": "云雾自然消散，露出本来皎洁的明月。",
+    "metaphorVisualization": "一个明亮的圆形（明月）位于画面中心，周围是渐变的留白（天空），下方有细微的、消散的纹理（云雾），表达'妄心歇而真心现'的意境。",
+    "spiritualTone": {
+      "primary": "觉醒",
+      "secondary": "宁静"
+    },
+    "emotion": [
+      "平静",
+      "豁然开朗"
+    ],
+    "theme": [
+      "觉知",
+      "真心",
+      "破除妄想",
+      "本自具足"
+    ],
+    "imagery": [
+      "镜子",
+      "天空",
+      "明月",
+      "水面"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "妄心攀缘",
+      "to": "真心觉知",
+      "tensionType": "release"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "内容强调真心一元、不二法门，破除二元对立，因此用单一区域表达本体的统一性。",
+      "divisionMethod": "none",
+      "divisionMethodReason": "无需分区，以中心主体和留白直接体现'真心'的圆满与虚空。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "solo",
+      "typeReason": "真心是唯一的主体，如明月独悬，一切围绕它显现。",
+      "interactionQuality": "fused",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "none",
+      "typeReason": "真心如如不动，宁静无波，故用静态节奏。",
+      "elementCount": 1,
+      "direction": "static"
+    },
+    "structureParams": {
+      "whitespaceTarget": 80,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "soft",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "通过中心明亮形体的凝聚与周围留白的扩散，形成'释放'与'显现'的视觉张力。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "采用一元中心结构，以'明月出云'的意象表达内在觉醒，而非左右对比的二元对立。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels.\n- Safe margin: 10% padding on all sides.\n- Whitespace target: 80% or more. The composition is dominated by expansive, empty space, focusing all attention inward.\n- Visual weight distribution: A single, luminous point of absolute visual weight rests at the precise center of the canvas, creating a profound sense of equilibrium and inward focus.\n\n[TOPOLOGY]\n- Zone count: 1. A unified field representing the non-dual nature of true mind.\n- Division method: None. The canvas is a single, undivided expanse of void.\n- Zone ratios: 100% void, 0% division.\n- Physical metaphor visualization: The vast emptiness is the 'dissipating mist'. The emergence of the central luminous form from this void directly illustrates 'the naturally clear moon revealed'.\n\n[RELATIONSHIPS]\n- Primary relationship type: Solo. A single, primary form exists in isolation.\n- Interaction quality: Fused. The form appears to emerge from and blend into the surrounding space, not as a separate object but as an intrinsic manifestation of the field itself.\n- Spatial expression: The sole form is positioned at the exact geometric center, symbolizing the fundamental, unmoving core. Its relationship with the surrounding space is one of emanating presence and serene absorption.\n\n[RHYTHM]\n- Rhythm type: None. Absolute visual stillness and silence.\n- Element count: 1 primary element.\n- Interval/size variation: N/A. A state of perfect static equilibrium.\n\n[GEOMETRY]\n- Primary shape: A near-perfect circle, occupying approximately 15% of the canvas height, centered. Its edges are not sharp lines but zones of soft, luminous transition.\n- Secondary shapes: One极小 (occupying less than 5% area) geometric accent—a subtle, soft-edged patch or stroke in the contrast color—touching or hovering just at the periphery of the primary circle.\n- Lines: None used.\n- Edge treatment: Extremely soft, diffuse, and feathered. The circular form has no hard boundary; it dissolves into the background like light emerging from fog, applying the Prajñā degree's 'soft' bias for a penetrating, non-cutting clarity.\n- Negative space: Immense and intentional. The space around the center is not merely empty but charged and receptive, embodying the Japanese concept of Ma (間).\n\n[COLOR]\n- Background: cool-mist (#F5F7FA).\n- Primary hue: Ice-blue (#E8F4FC), used for the central luminous form. Its value is very high (~95%), creating a bright, ethereal presence.\n- Secondary hue: Blush (#FFEBEE), used exclusively for the small geometric accent.\n- Temperature: Cool, clear, and luminous, applying the Prajñā degree's bias for an awakening, insightful atmosphere.\n- Contrast method: Brightness. The primary contrast is between the high-value ice-blue form and the slightly darker, neutral-cool background. This defines structure through light and shadow within a monochromatic sensibility.\n- Accent usage: The blush (#FFEBEE) accent is applied as a modest, soft-edged patch or fine stroke. It occupies strictly about 5% of the visual area and is applied with a low opacity (around 21%), creating a subtle, almost subliminal point of warmth and 'insight' against the cool field.\n\n[LIGHTING]\n- Light source: Internal/ambient. The central form emits its own soft, cool light.\n- Glow effects: 1. A single, subtle glow emanates from the central circle, fading gently into the background. The glow color is a lighter tint of the primary ice-blue.\n- Ambient atmosphere: Luminous, misty, and incredibly still. The light feels inherent and diffuse, not cast from an external source.\n\n[TEXTURE & MATERIAL]\n- Surface quality: Smooth, polished, and flawless—like serene water or polished jade. This applies the Prajñā degree's 'smooth' material bias to enhance clarity.\n- Edge sharpness: As described, edges are supremely soft and blended, a key application of the degree's detail bias.\n- Transparency: Used minimally in the glow effect and the application of the contrast color accent to create delicate, layered depth.\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (間 - interval/space), Kanso (簡素 - simplicity), Shibui (渋い - understated beauty). The mood is one of profound calm, sudden clarity, and serene awakening.\n- Content resonance: The image visually resonates with the emotional tone of '平静、豁然开朗' (calm, suddenly clear) and the spiritual气质 of '觉醒' (awakening). The tension between the凝聚 center and expansive void mirrors the narrative tension from 'deluded mind' to 'true awareness'.\n\n[STYLE]\n- Render style: Clean, vector-like digital art with extremely subtle gradients for soft transitions.\n- Absolutely no photorealism, no 3D rendering, no textures that imply realism.\n- The design must remain clear and legible even when viewed as a 128px thumbnail, relying on strong value contrast and simple forms.\n- No text, symbols, or recognizable concrete objects.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233160225967-8bfe849b-093c-42d5-84b4-7d9c07f4c812-image_task_01KDFXPTTG6TC7R29X2KBRV3N8_0.jpg",
+  "createdAt": "2025-12-27T12:49:17.536Z",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "形体和线条数量符合要求，留白充足。"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "色相数量符合要求，主色调高明度，无荧光感。"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "无具体物体或符号化联想，符合抽象要求。"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间有呼吸感，设计克制且有层次。"
+    },
+    "pass": true,
+    "summary": "封面设计简洁，色彩柔和，符合所有快检标准。"
+  },
+  "evaluatedAt": "2025-12-27T12:49:53.082Z",
+  "imageryVerification": {
+    "actualDescription": "图片中央有一个模糊的圆形，周围是淡淡的光晕，背景为灰色，整体呈现出一种朦胧的感觉。",
+    "isLeftRightDual": false,
+    "leftRightDualDetail": "无明显的左右双域对比结构。",
+    "metaphorMatch": {
+      "score": 85,
+      "isMatched": true,
+      "matchedElements": [
+        "圆形代表明月",
+        "朦胧感体现云雾消散"
+      ],
+      "missingElements": [
+        "镜子",
+        "水面"
+      ]
+    },
+    "structureMatch": {
+      "expectedZoneCount": "1",
+      "actualZoneCount": "1",
+      "expectedRelationship": "solo",
+      "actualRelationship": "solo",
+      "isMatched": true
+    },
+    "overallScore": 86,
+    "pass": true,
+    "verdict": "图片成功体现了云雾消散露出明月的意象，结构简单且符合预期。",
+    "suggestions": [
+      "可以增加一些水波纹效果以更好地体现水面的意象。"
+    ]
+  },
+  "verifiedAt": "2025-12-27T12:50:27.282Z"
+}

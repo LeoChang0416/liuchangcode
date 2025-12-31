@@ -1,0 +1,74 @@
+{
+  "id": "3a904b69-d3cf-4daa-9f9c-d80cc284ee1c",
+  "taskId": "task_01KDSNN054VBSAJEMVDM8J60NW",
+  "degree": "dana",
+  "podcastContent": "我07年4月份去河北柏林禅寺，那上面写着 “平常心是道”。注意，“平常心是道”，这是南泉禅师的话。我看了以后立马就不理解，心想做人就得有大丈夫气吞山河、唾江万里的雄心，“平常心是道” 怎么能让我平常心呢？我就觉得人要变得不平常。你看，我那个时候（2007 年）就是这个认知水平，满脑子都是 “要与众不同”。\n当时我就问寺院的知客僧：“你们为什么写‘平常心’？我觉得人要变得不平常才对。” 那知客僧一看我这状态，就笑了笑，说：“给你本书看看，你要不要？” 他大概是懒得跟我多解释，知道我还不具备接受这个道理的状态。\n他给了我一本寺院发的小册子，可这个事、这个 “平常心是道” 的念头，却把我给抓住了。我心里犯嘀咕：不对啊，佛教这么伟大，为什么会倡导 “平常心” 呢？这里面肯定有深意，但我就是想不通。\n后来我又看了一本书，叫南怀瑾的《冷眼观世间》。我入佛、学佛的门，就是从这本书开始的。一看之下，我直接就钻进去了。那一天晚上我都忘了自己休息没休息，心里完全被这本书抓住了，只顾着一直读。\n我本身是学哲学的，学过西方哲学、马克思主义哲学，都讲究逻辑。所以我告诉你，学哲学的人要轻易迷信，那是很难的。但我读",
+  "analysis": {
+    "contentEssence": "从“要与众不同”的躁动出发，经由一部经论所打开的清晰之门，最终回到“平常心”的稳与明，并由此获得判断世界与思想高下的尺。",
+    "physicalMetaphor": "在一面看似无门的墙前摸索许久，指尖忽然触到暗扣，推开一扇隐藏的门；门内光线涌出，把整间屋子的结构与角落照得一清二楚，门外的喧哗随之变远。",
+    "metaphorVisualization": "用“门洞/门框”的单一主形体作为阈限，门外以稀薄噪点与未成形线条暗示迷惘与躁动，门内以高亮的空域与少量清晰结构线暗示逻辑的严密与洞见；光从门内溢出形成一条逐渐收敛的亮带，强化‘一旦入门，处处可见’的确定感。",
+    "spiritualTone": {
+      "primary": "觉照与笃定",
+      "secondary": "文化自信的昂扬"
+    },
+    "emotion": [
+      "震撼",
+      "豁然明白"
+    ],
+    "theme": [
+      "平常心",
+      "入门与见地",
+      "逻辑的究竟性"
+    ],
+    "imagery": [
+      "隐藏之门",
+      "室内清光",
+      "阈限",
+      "噪点沉降",
+      "结构线"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "求不平常的用力与对“平常心”的不解",
+      "to": "入门后的清明、稳定与可判别的尺度",
+      "tensionType": "breakthrough"
+    },
+    "topologicalLayout": {
+      "zoneCount": "3",
+      "zoneCountReason": "physicalMetaphor包含“门外—门框阈限—门内”三个连续阶段：摸索(未入门)、触扣(临界)、推开(见全屋)。",
+      "divisionMethod": "organic",
+      "divisionMethodReason": "用门洞形状自然生成三域：门外的散乱空场、门框的窄阈线、门内的明亮空间；比规则切分更贴合“隐藏的门被发现”的情境。",
+      "zoneRatios": "45:10:45"
+    },
+    "primaryRelationship": {
+      "type": "piercing",
+      "typeReason": "核心动作是“推开隐藏之门让光穿出”，视觉上表现为亮带穿越阈限、把外部的混沌刺破成可见的秩序。",
+      "interactionQuality": "touching",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "decelerating",
+      "typeReason": "叙事从急切求异到‘平常心’的安住，视觉节律应从外部噪点较密逐步变稀、线条由散转整，最终在门内归于静。",
+      "elementCount": 4,
+      "direction": "inward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 68,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 1,
+      "layerCount": 3,
+      "tensionExpression": "用阈限处的最强明暗跳变来表达“入门”的临界张力：门外噪点与断裂线在接近门框时被亮带‘洗净’，门内保留极少但更硬朗的结构线，呈现‘逻辑像铁一样严密’的清晰度。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "骨架不是并列对照，而是围绕“阈限之门被打开”的单一关键动作展开：三阶段连续空间（门外/门框/门内）+ 光的穿透与噪点沉降，表达从不解到入门的突破过程。"
+    }
+  },
+  "prompt": "[CANVAS] - Format: 1:1 square, 1024x1024 pixels - Safe margin: 10% padding - Whitespace target: 68% - Visual weight distribution: Centered on the piercing light, with balance around the organic zones. [TOPOLOGY] — 基于 topologicalLayout - Zone count: 3 - Division method: organic - Zone ratios: 45:10:45 - Physical metaphor visualization: Light piercing through a hidden door, dispersing chaos outside, and illuminating clarity inside. [RELATIONSHIPS] — 基于 primaryRelationship - Primary relationship type: piercing - Interaction quality: touching - Spatial expression: Light band piercing the threshold, creating order from chaos. [RHYTHM] — 基于 rhythmSignature - Rhythm type: decelerating - Element count: 4 - Interval/size variation: From dense noise outside to sparse clarity inside. [GEOMETRY] - Primary shape: Organic light band, central, soft edges - Secondary shapes: Noise pattern outside, structured lines inside - Lines: 2, delineating the threshold - Edge treatment: Gradient-fade softens transitions - Negative space: Distributed around the light, emphasizing openness. [COLOR] - Background: paper-white (#F6F4EE) - Primary hue: Mint-mist (#E8F5E9), 96% luminance - Secondary hue: Blush (#FFEBEE) - Temperature: Warm-cool contrast - Contrast method: Cool mint against warm paper-white - Accent usage: Small blush patch, 4% area, 15% opacity. [LIGHTING] - Light source: Central glow from piercing band - Glow effects: 1, subtle around the piercing - Ambient atmosphere: Soft ambient luminosity [TEXTURE & MATERIAL] — 度可微调 - Surface quality: Tactile paper-like texture - Edge sharpness: Soft-fade gradients - Transparency: Subtle layers for depth. [ATMOSPHERE & MOOD] — 这一部分决定了图片的灵魂 - Japanese aesthetic essence: Ma (breathing space), Shibui (quiet elegance), Yūgen (profound mystery) - Emotional resonance: The metaphor of opening a hidden door to understanding - Contemplative quality: Invites reflection on the journey from chaos to clarity - Poetic abstraction: Visual haiku expressing the essence of discovery. [ARTISTIC QUALITY] — 必须包含以下美学词汇 - \"Museum-quality abstract art\" - \"Ethereal, refined, sophisticated\" - \"Soft ambient luminosity\" - \"Tactile paper-like texture\" - \"Asymmetrical dynamic balance\" - \"Meditative stillness\" - \"Gallery-worthy minimalist composition\" [STYLE] - Render: Soft-edged, painterly-digital hybrid (not hard vector, not photorealistic) - Surface: Fine art print quality, like watercolor on rice paper - Clarity: Beautiful at any size, from thumbnail to poster - Avoid: Harsh, busy, glossy, rigid, mechanical",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": null,
+  "createdAt": "2025-12-31T07:41:10.007Z"
+}

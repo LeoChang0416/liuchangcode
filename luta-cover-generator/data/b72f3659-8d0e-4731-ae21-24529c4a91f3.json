@@ -1,0 +1,56 @@
+{
+  "id": "b72f3659-8d0e-4731-ae21-24529c4a91f3",
+  "taskId": "task_01KDB72H4R6WZ0QNW66SK6FX79",
+  "degree": "prajna",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》\n\n哈喽，各位听友大家好，欢迎来到本期的播客节目。今天我们要聊的话题，可能戳中了很多学佛同修的痛点——就是那句“很多人天天念《楞严咒》，却根本没看懂《楞严经》”。\n\n不知道你有没有过这样的经历：清晨的佛堂里、安静的书房中，跟着课诵本一字一句地念诵楞严咒，咒语的音节庄严恢弘，念完之后心里也会觉得踏实。但如果有人问你，你天天念的这篇咒语，出自哪部经？这部经到底在讲什么？可能很多人都会愣住，甚至说不出个所以然。今天，我们就来好好聊聊这个问题，搞清楚楞严咒和《楞严经》的关系，也读懂《楞严经》里最核心的智慧。\n\n首先，我们得先厘清一个基本事实：楞严咒并不是独立存在的，它出自《大佛顶如来密因修证了义诸菩萨万行首楞严经》，也就是我们常说的《楞严经》，具体在经的第七卷里。这部经全文十卷，共64460字，而楞严咒作为经中核心的神咒，全咒分为五会，有427句、2620字，是汉传佛教日常课诵中最长的神咒，所以也被称为“大佛顶首楞严神咒”。\n\n可能有听友会问，既然咒在经里，为什么大家都爱念咒，却很少有人通读《楞严经》呢？其实原因很现实。一方面，《楞严经》的文字晦涩",
+  "analysis": {
+    "emotion": [
+      "启发",
+      "深邃"
+    ],
+    "theme": [
+      "智慧与迷惑",
+      "修行与觉悟"
+    ],
+    "imagery": [
+      "钥匙与门",
+      "波浪与大海"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "困惑",
+      "to": "清明"
+    },
+    "recommendedDegree": "般若",
+    "degreeReason": "播客内容强调理解《楞严经》背后的智慧，以洞见和切透妄念为核心，符合般若的特质。"
+  },
+  "geometryDescription": "画面分为左右两部分，左侧暗色调代表困惑，右侧亮色调代表清明。中间以柔和的线条切分，形成渐变过渡。上部使用弧线象征波浪和大海的动感，下部则保持平静稳定，象征钥匙与门的静态对比。",
+  "colorLogic": "使用冷色调（高明度蓝色）代表清明，暖色调（高明度黄色）代表启发。左侧使用较暗的蓝色渐变，右侧使用明亮的黄色渐变。中性底色为浅灰色，以增强图像的整体通透感。",
+  "prompt": "A square canvas divided into two parts: the left side in darker shades of blue, representing confusion, and the right side in brighter shades of yellow, representing clarity. A soft line runs vertically in the middle, creating a gentle gradient transition. The top part features curves symbolizing the movement of waves and the sea, while the bottom part remains calm and flat, symbolizing the static contrast of a key and a door. The background is a light grey to enhance the overall translucency.",
+  "negativePrompt": "text, numbers, punctuation, logos, letters, scriptures, symbols, humans, animals, organs, gestures, buildings, natural landscapes, religious artifacts, symmetrical motifs, dense geometric patterns, realistic 3D, photography, metallic or glass realism, strong grain, heavy textures, any figurative objects",
+  "status": "submitted",
+  "createdAt": "2025-12-25T16:57:02.512Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233318162360-2fd9fb64-0cb5-4f8c-ae37-84231c7efbcd-image_task_01KDB73025JH3B3N7341GV6HQN_0.jpg",
+  "evaluation": {
+    "complexity": {
+      "score": 90,
+      "reason": "主要形体 ≤ 4，线条 ≤ 3，渐变/光晕 ≤ 2，留白接近50%"
+    },
+    "color": {
+      "score": 85,
+      "reason": "有色相 ≤ 2，中性色 ≤ 1，主色高明度，无荧光/霓虹感，缩略后清爽"
+    },
+    "abstraction": {
+      "score": 95,
+      "reason": "5秒内看不出具体物体，无宗教器物/自然景物，无符号化元素，无放射对称图腾"
+    },
+    "aesthetic": {
+      "score": 80,
+      "reason": "空间有呼吸，高级克制不浮夸，有轻微层次但不堆细节"
+    },
+    "total": 87.5,
+    "pass": true,
+    "summary": "总体评价：该播客封面在结构、颜色、抽象和美学方面表现出色，符合高质量标准。"
+  },
+  "evaluatedAt": "2025-12-25T16:58:44.112Z"
+}

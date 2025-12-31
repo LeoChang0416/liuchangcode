@@ -1,0 +1,127 @@
+{
+  "id": "fcd58fc6-c2c3-46aa-b703-de0296be0e52",
+  "taskId": "task_01KDEZJB0SCK1H8MGEBXNYEEBT",
+  "degree": "prajna",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》。其实佛陀早就说：你找的“真心”，不在外面，就在你此刻的觉知里。今天我想告诉你：为什么你越努力越焦虑？答案就藏在这部被严重误解的经典中。\n\n有没有人觉得，自己明明很努力，却总是被情绪牵着走？明明想静下来，脑子里却像开了弹幕？你可能以为问题出在“不够自律”“不够幸运”，但《楞严经》告诉你：问题出在——你一直用“假心”活着，却把“真心”弄丢了。\n\n佛陀在《楞严经》开篇就问阿难：“你当初为什么出家？”阿难说：“因为我看见佛陀相好庄严，心生爱慕。”佛陀立刻反问：“你用什么看见的？用什么爱慕的？”  \n这一问，问出了整部《楞严经》的核心：你所依赖的“心”，到底是真的，还是妄的？\n\n一、破“认贼为子”：你每天用的“心”，其实是假的\n《楞严经》里有个震撼的比喻：“认贼为子”。  \n什么意思？就像你家里进了小偷，你不抓他，反而把他当亲儿子养，好吃好喝供着——结果家财散尽，还不知道是谁干的。\n\n我们每天用的“心”，就是这个“贼”。  \n你因为老板一句话失眠，是“心”在反应？  \n你刷短视频停不下来，是“心”在享受？  \n你焦虑未来、后悔过去，是“心”在思考？",
+  "analysis": {
+    "contentEssence": "指出真心如镜，觉知本自清净，修行是认出而非修成。",
+    "physicalMetaphor": "一面镜子映照万物，自身却如如不动。",
+    "metaphorVisualization": "一个纯净的几何平面（象征镜子）置于中心，周围是广阔留白，镜面上可有极淡的映象痕迹，但几乎不可见，强调镜子本身。",
+    "spiritualTone": {
+      "primary": "清净",
+      "secondary": "觉醒"
+    },
+    "emotion": [
+      "平静",
+      "醒悟"
+    ],
+    "theme": [
+      "觉知",
+      "真心",
+      "佛教智慧"
+    ],
+    "imagery": [
+      "镜子",
+      "天空",
+      "觉照"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "认妄为真",
+      "to": "识得真心",
+      "tensionType": "breakthrough"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "真心是浑然一体的觉性，如镜如空，不需要分区。",
+      "divisionMethod": "none",
+      "divisionMethodReason": "没有二元对立，真心是整体。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "solo",
+      "typeReason": "真心是独体自觉，不依赖外境。",
+      "interactionQuality": "distant",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "none",
+      "typeReason": "真心如如不动，恒常寂静。",
+      "elementCount": 1,
+      "direction": "static"
+    },
+    "structureParams": {
+      "whitespaceTarget": 80,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "soft",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "通过中心主体的纯净与周围的极致留白表现从妄想到觉悟的突破，没有冲突只有显露。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "采用单域中心独体，极致留白，表达佛教中的空性和觉性，完全不同于常见的左右对比结构。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides\n- Whitespace target: 80%\n- Visual weight distribution: A single, light visual weight concentrated slightly above the center, creating a profound sense of stillness and vast emptiness around it.\n\n[TOPOLOGY]\n- Zone count: 1 (A single, undivided field)\n- Division method: None (A unified expanse of space)\n- Zone ratios: 100% (The entire canvas is one continuous realm)\n- Physical metaphor visualization: The entire composition embodies the metaphor of a mirror. The vast, empty background is the 'unchanging emptiness', while the central form is the 'mirror' that reflects without movement.\n\n[RELATIONSHIPS]\n- Primary relationship type: solo (A solitary, self-contained entity)\n- Interaction quality: distant (The form exists independently, detached from any other element)\n- Spatial expression: A single, circular form floats in isolation, centered horizontally and positioned slightly above the vertical center. It has no contact with the edges, emphasizing its self-sufficient nature within the boundless field.\n\n[RHYTHM]\n- Rhythm type: none (Absolute stillness, no repetition or progression)\n- Element count: 1\n- Interval/size variation: N/A\n\n[GEOMETRY]\n- Primary shape: A near-perfect circle. Its diameter occupies approximately 15% of the canvas width. Positioned with its center at 50% horizontal, 45% vertical.\n- Secondary shapes: None.\n- Lines: None.\n- Edge treatment: Extremely soft and diffuse. The edge of the circle is not a hard line but a very gradual fade from its core color to the background over a span of 5-10 pixels, creating a subtle, luminous halo effect.\n- Negative space: Overwhelming and dominant. It is pure, unmodulated, and serves as the primary 'material' of the composition, framing the solitary form.\n\n[COLOR]\n- Background: snow (#FFFAFA) – a bright, neutral white with the faintest warm undertone.\n- Primary hue: sunlight (#FFECB3) – a high-value, warm yellow with 93% lightness. This is the sole color of the main circular form.\n- Secondary hue: soft-sage (#C8E6C9) – a cool, muted green. Used strictly as an accent.\n- Temperature: The overall temperature is cool and clear, achieved through the bright background and the清凉 quality of the sage accent, even though the primary hue is warm. This creates the '澄明洞见' (lucid insight) atmosphere of Prajñā.\n- Contrast method: Brightness. The primary contrast is between the slightly off-white background (#FFFAFA) and the very light but distinct sunlight-colored circle (#FFECB3). This defines the structure through subtle value difference.\n- Accent usage: The soft-sage (#C8E6C9) is applied as a single, subtle effect. It manifests as an extremely faint inner glow or a paper-thin layer of transparency (19% opacity) applied to the innermost 30% of the circular form. Its coverage is limited to about 5% of the total visual area, appearing as a modest, geometric accent that suggests depth within the form.\n\n[LIGHTING]\n- Light source: Ambient, omnidirectional, and diffuse. No distinct shadows.\n- Glow effects: 1 effect. A very subtle, wide, and soft luminosity emanates from the entire circumference of the primary circle, blending it softly into the background. The color of this glow is a slightly desaturated tint of the sunlight hue.\n- Ambient atmosphere: Even, ethereal, and calm. The light feels like the clear light of dawn, illuminating without harshness.\n\n[TEXTURE & MATERIAL]\n- Surface quality: Smooth and slightly matte, with an imperceptible micro-texture that suggests high-quality paper or fine porcelain. It has a minimal, diffuse reflectivity—not glossy, but capable of holding a soft highlight.\n- Edge sharpness: Blurred and feathered. The transition from form to space is a gentle gradient, not an edge.\n- Transparency: Used minimally in the core accent (soft-sage layer at 19% opacity) to create a shallow sense of interiority without compromising the solidity of the form.\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (間) – The profound and active use of empty space is paramount. Kanso (簡素) – Simplicity and elimination of clutter. Shibui (渋い) – Subtle, quiet, and refined beauty.\n- Content resonance: The image evokes the 'calm醒悟' (peaceful awakening) from the podcast. The solitary, luminous form amidst vast emptiness visually translates the moment of 'recognizing true mind'—a sudden clarity (the circle) appearing within the previously confused or overlooked space (the blankness).\n\n[STYLE]\n- Render style: Clean, vector-like digital art with ultra-soft gradients.\n- No photorealism, no 3D rendering.\n- The image must remain perfectly clear and legible even when scaled down to a 128px thumbnail, relying on strong value contrast (brightness) for readability.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233191813112-af052c6f-a41a-45ba-807f-11d00e9129e0-image_task_01KDEZJW08G5WTW67FYK27F5TD_0.jpg",
+  "createdAt": "2025-12-27T04:02:50.710Z",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "形体和线条简单，留白充足。"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "色相少，主色高明度，无荧光感。"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "无具体物体或符号化联想。"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间有呼吸感，整体设计克制。"
+    },
+    "pass": true,
+    "summary": "封面设计简洁，色彩柔和，符合审美要求。"
+  },
+  "evaluatedAt": "2025-12-27T04:03:23.080Z",
+  "imageryVerification": {
+    "actualDescription": "图片呈现一个中心的圆形结构，颜色由内向外渐变，中心为淡蓝色，向外过渡为黄色，整体呈现柔和的光晕效果。",
+    "isLeftRightDual": false,
+    "leftRightDualDetail": "无明显左右双域对比，整体为中心对称结构。",
+    "metaphorMatch": {
+      "score": 85,
+      "isMatched": true,
+      "matchedElements": [
+        "中心圆形结构",
+        "柔和的光晕"
+      ],
+      "missingElements": [
+        "直接的镜子意象"
+      ]
+    },
+    "structureMatch": {
+      "expectedZoneCount": "1",
+      "actualZoneCount": "1",
+      "expectedRelationship": "solo",
+      "actualRelationship": "solo",
+      "isMatched": true
+    },
+    "overallScore": 87,
+    "pass": true,
+    "verdict": "图片通过，中心圆形和柔和光晕很好地传达了镜子和觉知的意象，结构符合预期。",
+    "suggestions": [
+      "可以考虑在中心增加一些反射效果，以更直接地传达镜子的意象。"
+    ]
+  },
+  "verifiedAt": "2025-12-27T04:03:36.946Z"
+}

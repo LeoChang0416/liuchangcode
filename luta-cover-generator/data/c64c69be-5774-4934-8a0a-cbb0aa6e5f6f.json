@@ -1,0 +1,130 @@
+{
+  "id": "c64c69be-5774-4934-8a0a-cbb0aa6e5f6f",
+  "taskId": "task_01KDS616GWMS7RZ4ZJ73NPNJAR",
+  "degree": "prajna",
+  "podcastContent": "金刚经呢是佛祖跟须菩提的对话，全文呢仅仅5000字，但是这5000字却代表了人类智慧的巅峰。\n读懂后会让人豁然开朗，从此开悟，六组禅师是不识字的，但是在他年轻的时候，也是偶尔听到了金刚经的一句话就开悟了，可见这本书的神力。\n首先金刚经的开始呢，是以这样一种的对话，佛祖问须菩提，恒河里的沙子多不多，须菩提说当然多，佛祖又问如果有人散尽家财像恒河里的沙子这样多的财富，去做慈善，算不算一种功德呢，须菩提说当然算，佛祖又说有一种功德\n比这个更大，那就是在你开悟之后把金刚经最核心的四句话解释给众人听，让更多人开悟，这才是莫大的功德。\n第一句，若菩萨有我相、人相、众生相、寿者相、皆非菩萨相，佛祖说如果你看到的菩萨，他长得像我这样的人或者你这样的或者像路人这样的或者像一个长寿的，那他都不是菩萨，也就是说如果我们拜的那个菩萨拥有像人一样的相都不是菩萨，菩萨根本就没有人相，也就是没有相\n第二句，凡以色拜我，以音声求我，人行邪道，不能见如来。意思就是说凡是看见我就拜的人，或者听到我的声音就求我的人，都是执迷于佛祖的表象，这都是邪道，永远都不可能见到如来。\n第三句，凡有所相，皆是虚妄，若见诸相非相即见如来，",
+  "analysis": {
+    "contentEssence": "以“破相见性”为核心，把一切境遇与烦恼都转为修行的入口：不执表象、不求外得，在现实中照见本质而开悟。",
+    "physicalMetaphor": "一面镜子被层层雾气与水滴蒙住，修行者以一口稳长的呼吸在镜面上拭出一个清晰的圆窗；圆窗越来越大，最终镜面复明，映出同一个世界但不再被水滴形相所缠。",
+    "metaphorVisualization": "单一画面中以“中心清明窗口”作为主形体，外围是雾化颗粒与水滴般的虚影层；清明区域向外扩张、虚影向边缘退散，用层叠与渐隐表现“相→非相→见性”的过程，而非分区对照。",
+    "spiritualTone": {
+      "primary": "澄明破执",
+      "secondary": "入世修行"
+    },
+    "emotion": [
+      "豁然",
+      "笃定"
+    ],
+    "theme": [
+      "破相见性",
+      "自证自悟",
+      "烦恼即道场"
+    ],
+    "imagery": [
+      "镜面",
+      "雾化水滴",
+      "清明圆窗",
+      "渐隐边界",
+      "内观之光"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "执著于色相、音声与方法的抓取",
+      "to": "看透诸相皆虚妄、在现实中安住与通达",
+      "tensionType": "breakthrough"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "意象是同一面镜子从蒙尘到复明的变化，属于同一场域内的澄清与扩展，不需要多域分割。",
+      "divisionMethod": "radial",
+      "divisionMethodReason": "清明圆窗从中心向外扩张最贴合“拭开—洞见—普照”的体验，外围虚影自然向边缘退散。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "nested",
+      "typeReason": "清明的“见性窗口”被外围的雾与水滴包裹，象征真如本在、被相所覆；修行是让内核逐渐显露。",
+      "interactionQuality": "touching",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "decelerating",
+      "typeReason": "从“执相的繁杂颗粒”逐步沉静为“少量、稀薄、退散的虚影”，节奏由密转疏、由动归静，符合开悟后的安住。",
+      "elementCount": 4,
+      "direction": "outward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 68,
+      "contrastMethod": "layering",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 1,
+      "layerCount": 3,
+      "tensionExpression": "外围以颗粒/水滴状的虚影与轻微扭曲制造“执相的黏着感”，中心以更高透明度与微光建立“见性之窗”；通过中心区域持续扩大、外围元素稀释退散表达突破与解缚。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "采用单域径向“拭镜见性”的过程性意象：用中心清明窗口与外围雾滴层叠来表达破相与入世道场，不依赖任何左右并列或二元对照。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding (keep all forms inside)\n- Whitespace target: 68% (large calm emptiness, high-key)\n- Visual weight distribution: single-field composition with a centered-but-not-perfectly-centered radial focal; most weight in one large cleared circle, everything else dissolves outward.\n\n[TOPOLOGY] — based on topologicalLayout\n- Zone count: 1 (no split panels, no frames)\n- Division method: radial (a clarity event expanding from a central point)\n- Zone ratios: 100\n- Physical metaphor visualization: within the same field, suggest a mirror surface moving from fogged to lucid via an expanding circular wiped window; no hard borders between “states,” only radial fade.\n\n[RELATIONSHIPS] — based on primaryRelationship\n- Primary relationship type: nested\n- Interaction quality: touching\n- Spatial expression: a large, clean circular window sits inside a broader fog-halo ring; the inner circle’s soft edge touches the haze ring’s inner boundary, implying layers on the same mirror.\n\n[RHYTHM] — based on rhythmSignature\n- Rhythm type: decelerating\n- Element count: 4\n- Interval/size variation: four droplet-ghost elements placed along an outward radial path; spacing increases as they approach the margin, while size and opacity decrease (dense/active near the inner halo, sparse/quiet outward).\n\n[GEOMETRY]\n- Primary shape: one large circle (the wiped window), diameter ~52–60% of canvas, positioned slightly above center; edge has gradient-fade (soft, controlled), no stroke.\n- Secondary shapes: one larger, very translucent haze ring/veil surrounding the circle (nested), touching the circle edge; plus two to three tiny droplet-ovals (together total shapes ≤4 by merging droplets into a single grouped blot if needed; keep the total shape count at 4).\n- Lines: none (avoid diagonal or splitting lines).\n- Edge treatment: soft, smooth, mist-like feathering; clarity increases toward the inner circle.\n- Negative space: expansive cool-mist background with minimal disturbance; keep droplets near outer mid-field, never forming a border.\n\n[COLOR]\n- Background: cool-mist (#F5F7FA)\n- Primary hue: ice-blue (#E8F4FC), high lightness ~95%, used for the cleared circle and subtle mirror sheen.\n- Secondary hue (accent only): mint-mist (#E8F5E9) used at ~3% area as a tiny droplet highlight or micro-speck; apply as a veil/overlay at 12% opacity.\n- Temperature: cool, lucid, awakening; avoid warm additions.\n- Contrast method: area contrast (one large ice-blue circle vs one tiny mint-mist accent detail).\n- Accent usage: a single tiny mint droplet/speck near the outer rhythm path, extremely subtle.\n\n[LIGHTING]\n- Light source: soft ambient top-left wash, extremely gentle.\n- Glow effects: 1 total — a faint inner-lucidity bloom inside the main circle (very restrained).\n- Ambient atmosphere: calm, high-key, misty clarity.\n\n[TEXTURE & MATERIAL] — degree micro-tuning\n- Surface quality: smooth matte, paper-like; mirror suggested by barely-there sheen gradients.\n- Edge sharpness: soft (prajñā bias) with controlled gradient-fade; no harsh outlines.\n- Transparency: 3 layers total (background, haze veil, lucid circle), with droplets as thin translucent marks.\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (spacious pause), Kanso (reduction), Shibui (quiet refinement).\n- Content resonance: the expanding clear window reads as a steady breath wiping away grasping; outer droplets thinning into stillness expresses release and “烦恼即道场.”\n\n[STYLE]\n- Render style: clean vector-like digital art, minimal, no text, no symbols, no UI\n- No photorealism, no 3D rendering\n- High clarity at 128px thumbnail; composition must remain legible as one large circle + faint veil + tiny accents.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998232849489138-7b5b4b30-0fe9-4931-8776-e3929355e136-image_task_01KDS61RRDEZ6S9VKX8E2QBHW0_0.jpg",
+  "createdAt": "2025-12-31T03:08:12.705Z",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "形体和线条简单，留白充足。"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "色相单一，主色高明度，无荧光感。"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "无具体物体或符号化联想。"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间有呼吸感，设计克制，有轻微层次。"
+    },
+    "pass": true,
+    "summary": "封面设计简约，色彩柔和，符合各项快检标准。"
+  },
+  "evaluatedAt": "2025-12-31T03:08:47.233Z",
+  "imageryVerification": {
+    "actualDescription": "图片呈现一个中心圆形区域，周围有淡淡的雾化效果，圆形边缘有渐变的模糊感，圆外有几个小水滴状的形状，整体呈现出一种向心的结构。",
+    "isLeftRightDual": false,
+    "leftRightDualDetail": "图片没有明显的左右双域对比结构，整体是向心的布局。",
+    "metaphorMatch": {
+      "score": 85,
+      "isMatched": true,
+      "matchedElements": [
+        "中心圆窗",
+        "雾化效果",
+        "水滴形状"
+      ],
+      "missingElements": [
+        "内观之光"
+      ]
+    },
+    "structureMatch": {
+      "expectedZoneCount": "1",
+      "actualZoneCount": "1",
+      "expectedRelationship": "nested",
+      "actualRelationship": "nested",
+      "isMatched": true
+    },
+    "overallScore": 86,
+    "pass": true,
+    "verdict": "图片成功体现了预期的视觉意象，中心圆形和雾化效果很好地传达了核心隐喻。",
+    "suggestions": [
+      "可以在中心区域增加一些光线效果，以更好地体现内观之光的意象。"
+    ]
+  },
+  "verifiedAt": "2025-12-31T03:09:11.242Z"
+}

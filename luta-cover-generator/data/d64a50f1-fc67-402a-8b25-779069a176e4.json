@@ -1,0 +1,73 @@
+{
+  "id": "d64a50f1-fc67-402a-8b25-779069a176e4",
+  "taskId": "task_01KDEVJM18P9HKB2EFR9F6CP52",
+  "degree": "prajna",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》。其实佛陀早就说：你找的“真心”，不在外面，就在你此刻的觉知里。今天我想告诉你：为什么你越努力越焦虑？答案就藏在这部被严重误解的经典中。\n\n有没有人觉得，自己明明很努力，却总是被情绪牵着走？明明想静下来，脑子里却像开了弹幕？你可能以为问题出在“不够自律”“不够幸运”，但《楞严经》告诉你：问题出在——你一直用“假心”活着，却把“真心”弄丢了。\n\n佛陀在《楞严经》开篇就问阿难：“你当初为什么出家？”阿难说：“因为我看见佛陀相好庄严，心生爱慕。”佛陀立刻反问：“你用什么看见的？用什么爱慕的？”  \n这一问，问出了整部《楞严经》的核心：你所依赖的“心”，到底是真的，还是妄的？\n\n一、破“认贼为子”：你每天用的“心”，其实是假的\n《楞严经》里有个震撼的比喻：“认贼为子”。  \n什么意思？就像你家里进了小偷，你不抓他，反而把他当亲儿子养，好吃好喝供着——结果家财散尽，还不知道是谁干的。\n\n我们每天用的“心”，就是这个“贼”。  \n你因为老板一句话失眠，是“心”在反应？  \n你刷短视频停不下来，是“心”在享受？  \n你焦虑未来、后悔过去，是“心”在思考？",
+  "analysis": {
+    "contentEssence": "停止妄想，回归本自具足的觉性。",
+    "physicalMetaphor": "浑浊的水静置后泥沙沉淀，清澈自现。",
+    "metaphorVisualization": "底部沉淀层，中部过渡层，上部清澈区域，整体从下到上由混沌到透明，中心区域最纯净。",
+    "spiritualTone": {
+      "primary": "觉醒",
+      "secondary": "宁静"
+    },
+    "emotion": [
+      "平静",
+      "解脱"
+    ],
+    "theme": [
+      "觉知",
+      "真心",
+      "破除妄想"
+    ],
+    "imagery": [
+      "镜子",
+      "沉淀",
+      "清澈",
+      "云散"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "混沌",
+      "to": "清澈",
+      "tensionType": "transformation"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "物理意象是同一水体从浑浊到澄清的转变过程，是一个整体，而非对立分区。",
+      "divisionMethod": "horizontal",
+      "divisionMethodReason": "沉淀过程自然形成上下分层，上部清澈下部沉淀，符合自然物理现象。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "solo",
+      "typeReason": "核心是清澈的显现，它是一个独体存在，沉淀是背景过程，而非并列关系。",
+      "interactionQuality": "fused",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "decelerating",
+      "typeReason": "从躁动到静止，沉淀过程逐渐减慢直至澄清。",
+      "elementCount": 3,
+      "direction": "inward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 70,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "soft",
+      "glowCount": 1,
+      "layerCount": 3,
+      "tensionExpression": "通过垂直方向的明暗渐变和颗粒密度变化，表现从底部混沌到顶部清澈的转变。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 8,
+      "howIsThisDifferent": "这个骨架采用单域垂直分层，表现内在的沉淀与澄清过程，强调一体性转变，而非左右对比的二元对立。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels.\n- Safe margin: 10% padding on all sides.\n- Whitespace target: 70%. The composition is predominantly open, with visual activity concentrated in a central vertical band, surrounded by ample, quiet negative space.\n- Visual weight distribution: Lightest at the very top, gradually increasing in density and visual weight towards the bottom center, creating a gentle, grounded pull downwards, balanced by the expansive clarity above.\n\n[TOPOLOGY]\n- Zone count: 1. The entire canvas is a single, unified field.\n- Division method: horizontal (implied). Within the single zone, a soft, horizontal stratification is suggested through gradual value and density change from bottom to top, mimicking natural sedimentation.\n- Zone ratios: The entire canvas (100%) embodies the transformation.\n- Physical metaphor visualization: The ‘precipitation of sediment in still water leading to clarity’ is visualized as a vertical gradient. The lower portion holds subtle, sparse visual ‘particulates’ that gently fade upwards into an immaculately clear, light-filled upper region.\n\n[RELATIONSHIPS]\n- Primary relationship type: solo. The emergent clarity at the top is the singular focus.\n- Interaction quality: fused. The clarity is not separate from the process below; it emerges from it seamlessly.\n- Spatial expression: A single, soft-edged form (the gradient field) occupies the central vertical axis. Its internal relationship is between its own denser base and its luminous apex.\n\n[RHYTHM]\n- Rhythm type: decelerating.\n- Element count: 3 (conceptual layers).\n- Interval/size variation: Represented by three subtle, horizontal bands of decreasing particulate density or value shift from bottom to top. The transition between these bands becomes progressively smoother and wider as it approaches the top, visually slowing down to a state of complete stillness and clarity.\n\n[GEOMETRY]\n- Primary shape: A soft, vertical rectangular gradient field, centered, occupying approximately 60% of the canvas width. Its edges bleed softly into the background.\n- Secondary shapes: None.\n- Lines: None.\n- Edge treatment: All edges are extremely soft and blended, with no hard lines. The transition between the gradient field and the background, as well as the internal transitions within the field, are imperceptible, adhering to the ‘soft’ bias of Prajñā.\n- Negative space: Ample, pure negative space frames the central gradient on all sides, particularly above and below, emphasizing isolation, stillness, and the achieved clarity.\n\n[COLOR]\n- Background: A very light, cool, paper-white (e.g., #F3F5F6).\n- Primary hue: A single, desaturated cool hue (e.g., a very pale blue-grey, #E8EBF0).\n- Secondary hue: None.\n- Temperature: Cool and clear, with a high-value, luminous quality that feels awakening and insightful.\n- Contrast method: Brightness (value contrast). The primary visual interest comes from the subtle shift from a slightly darker, cooler value at the very bottom to a nearly pure, bright white at the top.\n\n[LIGHTING]\n- Light source: Ambient, diffuse light emanating from the top of the canvas.\n- Glow effects: 1. A very subtle, ethereal glow emanates from the top clear portion of the central gradient, suggesting luminosity and purity.\n- Ambient atmosphere: Clean, airy, and filled with a sense of tranquil illumination. No strong shadows.\n\n[TEXTURE & MATERIAL]\n- Surface quality: Smooth, matte, and flawless, like fine paper or misted glass. Any texture is subliminal, felt only as a slight granularity in the darkest point of the gradient, fading to perfect smoothness.\n- Edge sharpness: All edges are feathered and soft, achieving a sense of infinite blend.\n- Transparency: The central gradient field has a very high transparency, barely distinguishing itself from the background, emphasizing integration and subtlety.\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Strong emphasis on Ma (間) – the profound sense of space and interval between things. Kanso (簡素) – simplicity and elimination of clutter. Shibui (渋い) – subtle, subdued, and sophisticated beauty.\n- Content resonance: A visual sigh of relief. The calm after internal turbulence. The moment when confusion settles and understanding becomes clear and self-evident.\n\n[STYLE]\n- Render style: Ultra-clean, vector-like digital art with flawless gradients.\n- No photorealism, no 3D rendering, no discernible brush strokes.\n- The image must remain highly legible and compositionally clear even when scaled down to a 128px thumbnail.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": null,
+  "createdAt": "2025-12-27T02:53:04.672Z"
+}

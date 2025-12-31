@@ -1,0 +1,72 @@
+{
+  "id": "39a2a5ab-1772-4949-8b3d-d84469152e29",
+  "taskId": "task_01KDEZQ7AMJKJ3Q2PVE8NC1DJ6",
+  "degree": "prajna",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》。其实佛陀早就说：你找的“真心”，不在外面，就在你此刻的觉知里。今天我想告诉你：为什么你越努力越焦虑？答案就藏在这部被严重误解的经典中。\n\n有没有人觉得，自己明明很努力，却总是被情绪牵着走？明明想静下来，脑子里却像开了弹幕？你可能以为问题出在“不够自律”“不够幸运”，但《楞严经》告诉你：问题出在——你一直用“假心”活着，却把“真心”弄丢了。\n\n佛陀在《楞严经》开篇就问阿难：“你当初为什么出家？”阿难说：“因为我看见佛陀相好庄严，心生爱慕。”佛陀立刻反问：“你用什么看见的？用什么爱慕的？”  \n这一问，问出了整部《楞严经》的核心：你所依赖的“心”，到底是真的，还是妄的？\n\n一、破“认贼为子”：你每天用的“心”，其实是假的\n《楞严经》里有个震撼的比喻：“认贼为子”。  \n什么意思？就像你家里进了小偷，你不抓他，反而把他当亲儿子养，好吃好喝供着——结果家财散尽，还不知道是谁干的。\n\n我们每天用的“心”，就是这个“贼”。  \n你因为老板一句话失眠，是“心”在反应？  \n你刷短视频停不下来，是“心”在享受？  \n你焦虑未来、后悔过去，是“心”在思考？",
+  "analysis": {
+    "contentEssence": "指出真心如镜，觉知本自清净，修行是认出而非修成。",
+    "physicalMetaphor": "一面镜子映照万物，自身却如如不动。",
+    "metaphorVisualization": "一个纯净的几何平面（象征镜子）置于中心，周围是广阔留白，镜面上可有极淡的映象痕迹，但几乎不可见，强调镜子本身。",
+    "spiritualTone": {
+      "primary": "清净",
+      "secondary": "觉醒"
+    },
+    "emotion": [
+      "平静",
+      "醒悟"
+    ],
+    "theme": [
+      "觉知",
+      "真心",
+      "佛教智慧"
+    ],
+    "imagery": [
+      "镜子",
+      "天空",
+      "觉照"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "认妄为真",
+      "to": "识得真心",
+      "tensionType": "breakthrough"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "真心是浑然一体的觉性，如镜如空，不需要分区。",
+      "divisionMethod": "none",
+      "divisionMethodReason": "没有二元对立，真心是整体。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "solo",
+      "typeReason": "真心是独体自觉，不依赖外境。",
+      "interactionQuality": "distant",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "none",
+      "typeReason": "真心如如不动，恒常寂静。",
+      "elementCount": 1,
+      "direction": "static"
+    },
+    "structureParams": {
+      "whitespaceTarget": 80,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "soft",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "通过中心主体的纯净与周围的极致留白表现从妄想到觉悟的突破，没有冲突只有显露。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "采用单域中心独体，极致留白，表达佛教中的空性和觉性，完全不同于常见的左右对比结构。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides.\n- Whitespace target: 80%. The central shape occupies a small portion, surrounded by vast, empty space.\n- Visual weight distribution: Absolute central focus. All visual weight is concentrated on the single, centered circular form, creating a powerful sense of stillness and presence amidst void.\n\n[TOPOLOGY]\n- Zone count: 1. A single, undivided field representing the undifferentiated nature of true mind.\n- Division method: none. No lines, bands, or gradients create separation.\n- Zone ratios: 100% unified space.\n- Physical metaphor visualization: The vast, uniform negative space symbolizes the 'unmoving' emptiness from which awareness arises. The central 'mirror' sits within it, reflecting without altering its own position.\n\n[RELATIONSHIPS]\n- Primary relationship type: solo. A single, self-contained primary shape.\n- Interaction quality: distant. The shape exists in isolation, not interacting with any other element, emphasizing its self-sufficient nature.\n- Spatial expression: The shape is placed at the exact mathematical center of the canvas, asserting its solitary and pivotal role.\n\n[RHYTHM]\n- Rhythm type: none. Absolute static silence. No repetition, progression, or variation in size or spacing.\n- Element count: 1.\n- Interval/size variation: Not applicable.\n\n[GEOMETRY]\n- Primary shape: A perfect circle. Its diameter is approximately 25% of the canvas width. Positioned at the absolute center. No rounding; the edge is geometrically perfect.\n- Secondary shapes: None.\n- Lines: 1-2 extremely fine, concentric circular lines etched onto the surface of the primary circle. They are very shallow, almost transparent, and spaced closely near the edge of the circle, simulating the subtle reflection pattern of a still mirror or a faint ripple. This is the key visual element for the 'mirror' metaphor.\n- Edge treatment: The edge of the circle is razor-sharp in definition but visually soft—there is no harsh aliasing. It transitions cleanly into the background. This embodies the Prajñā bias of clear, penetrating insight with gentle presence.\n- Negative space: Immense, uniform, and serene. It dominates the composition, emphasizing the solitude and purity of the central form.\n\n[COLOR]\n- Background: cool-mist (#F5F7FA). A very light, cool-toned off-white that feels airy and clear.\n- Primary hue: clear-cyan (#E0F7FA). Applied to the entire central circle at 94% lightness. This is a cool, luminous, ethereal blue-white.\n- Secondary hue: None. Monochromatic scheme within the blue-white temperature range.\n- Temperature: Cool and澄明 (clear). The Prajñā bias mandates a清凉 (cool and refreshing) temperature that promotes mental clarity and awakening.\n- Contrast method: Warm-cool. The background `#F5F7FA` is chosen to have an extremely subtle, almost imperceptible cooler tone compared to a theoretical pure white, while the circle `#E0F7FA` is a distinctly cooler, brighter cyan. This creates a delicate temperature contrast where the cooler, brighter circle appears to 'float' with clarity against the slightly less cool background.\n- Accent usage: Not applicable.\n\n[LIGHTING]\n- Light source: Ambient, directionless light. It feels like light is emanating from the form itself and the surrounding space equally.\n- Glow effects: 1 effect. A very soft, diffuse, and minimal glow emanates from the edges of the central circle. It is the same clear-cyan color (#E0F7FA) at very low opacity (5-10%), suggesting a gentle luminous awareness without being a light source.\n- Ambient atmosphere: Even, fog-like illumination with no shadows. High-key lighting that eliminates depth, focusing on presence and essence.\n\n[TEXTURE & MATERIAL]\n- Surface quality: Perfectly smooth, polished mirror-like surface on the central circle. It has a slight, subtle gloss that suggests reflectivity without being a literal mirror, adhering to the Prajñā preference for smooth, penetrating surfaces.\n- Edge sharpness: Geometrically precise but visually softened (anti-aliased), not pixelated or jagged.\n- Transparency: The surface lines (reflection patterns) are semi-transparent (15-20% opacity). The central glow is also highly transparent.\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Supreme `Ma` (間) – the profound emptiness and interval that gives birth to presence. `Kanso` (簡素) – simplicity and elimination of clutter. `Shibui` (渋い) – subtle, unobtrusive beauty in the restrained detail of the reflection lines.\n- Content resonance: A visual equivalent of calm realization. The revelation of the true mind is not dramatic but a quiet, clear recognition of what has always been there—still, mirror-like, and luminous.\n\n[STYLE]\n- Render style: Clean, vector-like digital art with flawless gradients and shapes.\n- No photorealism, no 3D rendering. The image should feel abstract, conceptual, and digitally pure.\n- High clarity at 128px thumbnail: The central circle and its glow must be clearly distinguishable even at very small sizes.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": null,
+  "createdAt": "2025-12-27T04:05:29.801Z"
+}

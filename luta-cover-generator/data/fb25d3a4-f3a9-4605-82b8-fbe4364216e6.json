@@ -1,0 +1,63 @@
+{
+  "id": "fb25d3a4-f3a9-4605-82b8-fbe4364216e6",
+  "taskId": "task_01KDB7KKWCCN1VYX0NJNCJP8EW",
+  "degree": "samadhi",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》\n\n哈喽，各位听友大家好，欢迎来到本期的播客节目。今天我们要聊的话题，可能戳中了很多学佛同修的痛点——就是那句“很多人天天念《楞严咒》，却根本没看懂《楞严经》”。\n\n不知道你有没有过这样的经历：清晨的佛堂里、安静的书房中，跟着课诵本一字一句地念诵楞严咒，咒语的音节庄严恢弘，念完之后心里也会觉得踏实。但如果有人问你，你天天念的这篇咒语，出自哪部经？这部经到底在讲什么？可能很多人都会愣住，甚至说不出个所以然。今天，我们就来好好聊聊这个问题，搞清楚楞严咒和《楞严经》的关系，也读懂《楞严经》里最核心的智慧。\n\n首先，我们得先厘清一个基本事实：楞严咒并不是独立存在的，它出自《大佛顶如来密因修证了义诸菩萨万行首楞严经》，也就是我们常说的《楞严经》，具体在经的第七卷里。这部经全文十卷，共64460字，而楞严咒作为经中核心的神咒，全咒分为五会，有427句、2620字，是汉传佛教日常课诵中最长的神咒，所以也被称为“大佛顶首楞严神咒”。\n\n可能有听友会问，既然咒在经里，为什么大家都爱念咒，却很少有人通读《楞严经》呢？其实原因很现实。一方面，《楞严经》的文字晦涩",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "深邃",
+      "secondary": "庄严"
+    },
+    "emotion": [
+      "通透",
+      "坚定"
+    ],
+    "theme": [
+      "破妄显真",
+      "智慧",
+      "修行"
+    ],
+    "imagery": [
+      "波浪与大海",
+      "光明的中心"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "迷",
+      "to": "悟"
+    }
+  },
+  "geometryDescription": "一个中心锚定的圆形，周围有一个较大的同心圆，垂直方向上有一条贯穿中心的线",
+  "colorLogic": "主色为高明度的白色和浅蓝色，较小范围使用淡黄色进行对比，整体低饱和度",
+  "prompt": "A minimalist abstract geometric composition in a 1:1 aspect ratio. Features a centered small circle with a larger concentric circle and a vertical line passing through the center. Background is a high brightness, paper-like texture or solid off-white. Primary colors are high brightness white and light blue, with subtle contrast using a small area of light yellow. Soft ambient lighting, no harsh shadows. Massive negative space, layered transparency with subtle inner shadows, representing clarity and solemnity.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-25T17:06:22.625Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233317602192-c9e040b6-5a1c-4a85-afe9-36abc1b7bc02-image_task_01KDB7M33F4VNNDNV4NJVN1VSH_0.jpg",
+  "evaluation": {
+    "religiousRisk": {
+      "score": 0,
+      "reason": "没有明显的宗教符号。"
+    },
+    "serenity": {
+      "score": 90,
+      "reason": "留白充足，画面干净，颜色柔和。"
+    },
+    "symmetryBalance": {
+      "score": 85,
+      "reason": "构图具有良好的平衡感，几何关系严谨。"
+    },
+    "complexity": {
+      "score": 95,
+      "reason": "形体和线条都非常简单。"
+    },
+    "abstraction": {
+      "score": 100,
+      "reason": "完全看不出具体物体，纯几何抽象。"
+    },
+    "total": 94,
+    "pass": true,
+    "summary": "这张播客封面图片在所有评分维度上都表现优异，特别是其抽象纯净度和宁静和谐感。"
+  },
+  "evaluatedAt": "2025-12-25T17:06:49.620Z"
+}

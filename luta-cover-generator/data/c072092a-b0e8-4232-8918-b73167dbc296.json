@@ -1,0 +1,132 @@
+{
+  "id": "c072092a-b0e8-4232-8918-b73167dbc296",
+  "taskId": "task_01KDSBHKCPBAX4XY56204527AY",
+  "degree": "dana",
+  "podcastContent": "说起佛经，大家最耳熟能详的应该就是《心经》了。电视剧里经常听到的“色即是空，空即是色”，还有“般若波罗蜜”，都出自《心经》。可《心经》到底讲什么？有什么妙用？听我讲完，下次再听就能心里有数了。\n\n《心经》其实很短，全篇只有260个字。现在大家一般读到的，都是玄奘法师翻译的版本——就是大家熟悉的“唐僧”所译的《心经》。开篇第一句是“观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄”。\n\n大家知道《心经》与观音菩萨相关，所以开篇先提及他的名号。“观自在菩萨”就是“观世音菩萨”，“观世音”的意思是倾听世间的一切声音。但要注意，在佛教里没有“神仙”的概念，“佛”指的是觉悟的人；“菩萨”含义相近，也指修行觉悟者，只不过菩萨的境界比佛稍低一些。\n\n“般若”应念作“bō rě”，代表智慧；“波罗”意为“彼岸”，“蜜”是“抵达”的意思。所以“般若波罗蜜”的意思是“抵达智慧的彼岸”，这些词都是从梵语直接音译而来。菩萨说，我们要努力抵达智慧的彼岸，这是修行的最高境界。\n\n菩萨在修行中发现了一个道理，这个道理就是“照见五蕴皆空，度一切苦厄”。佛教里把人与世界的接触分为五个维度，也就是常说的“色、受、",
+  "analysis": {
+    "contentEssence": "通过“观照五蕴皆空”的智慧练习，把对世界与自我的执着松开，心无挂碍而得安宁与自在。",
+    "physicalMetaphor": "一只手缓缓松开攥紧的五股绳结，绳结在掌心自行回落成空圈，呼吸间变得不再勒手，手心最终摊开安住。",
+    "metaphorVisualization": "以一个“松开—回落—摊开”的单主体动作做主形：中心是一枚由五条细线缠成的结，线条逐步松弛成更大的圆环；最后只剩一只简化的掌形轮廓与空圈重叠，强调“空不是无，而是松脱后的通透关系”。",
+    "spiritualTone": {
+      "primary": "澄明观照",
+      "secondary": "慈悲安定"
+    },
+    "emotion": [
+      "释然",
+      "安宁"
+    ],
+    "theme": [
+      "空性",
+      "无挂碍",
+      "般若智慧"
+    ],
+    "imagery": [
+      "松结",
+      "空圈",
+      "掌心摊开",
+      "回落的线条",
+      "观照之光"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "被五蕴与分别心攥紧的恐惧与执著",
+      "to": "松开后心无挂碍、远离颠倒梦想的自在",
+      "tensionType": "release"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "physicalMetaphor 是同一只手完成“松结→成空圈→安住”的连续动作，核心体验是向内观照后的整体松脱，不需要分成多个对立区域。",
+      "divisionMethod": "none",
+      "divisionMethodReason": "用留白与中心主形的变化承载“空相”的含义，让“空”通过不被填满来呈现。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "fragmenting",
+      "typeReason": "五股绳结象征“五蕴束缚”，从紧缠的聚合态逐步松散为可通行的空圈，符合“束缚→松脱→通透”的断裂/重组感（不是对立并列）。",
+      "interactionQuality": "fused",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "decelerating",
+      "typeReason": "从用力攥紧到逐渐松开，张力持续下降并归于平静，对应经文由“照见”到“无挂碍、无恐怖、究竟涅槃”的收束。",
+      "elementCount": 4,
+      "direction": "inward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 72,
+      "contrastMethod": "layering",
+      "edgeTreatment": "soft",
+      "glowCount": 1,
+      "layerCount": 3,
+      "tensionExpression": "将“绳结线密度”从中心高密逐步变稀、变圆，线条粗细由紧到松；中心结的锐角逐渐钝化，最终只留空圈与掌心轮廓，辅以极轻的内向微光表示“般若照见”。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "骨架不是把概念拆成两个阵营对照，而是用单一主体的“松结动作”把《心经》从‘执著导致苦’到‘观照而解脱’表现为连续物理过程；张力来自线条密度与握力的释放，而非分区对比。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides\n- Whitespace target: 72% (quiet, breathable field)\n- Visual weight distribution: single-field composition with the visual mass slightly below center and subtly off-center to the right, maintaining asymmetrical balance and dynamic stillness\n\n[TOPOLOGY] — based on topologicalLayout\n- Zone count: 1 (no split, no panels)\n- Division method: none (no borders, no bands; space itself carries meaning)\n- Zone ratios: 100\n- Physical metaphor visualization: within one continuous space, depict the transition from a clenched knot to an open loop resting in a palm through density changes, not through separate regions\n\n[RELATIONSHIPS] — based on primaryRelationship\n- Primary relationship type: fragmenting\n- Interaction quality: fused\n- Spatial expression: one main fused form appears as four connected ‘states’ of the same knot: a tight clustered core that progressively breaks into looser fragments, ending as a calm empty loop; fragments remain visually related as one entity, never becoming opposing objects\n\n[RHYTHM] — based on rhythmSignature\n- Rhythm type: decelerating\n- Element count: 4\n- Interval/size variation: four fused fragments arranged along a short diagonal/arc; gaps and openness increase step-by-step (tight → less tight → airy → open loop). Line density and thickness decrease gradually to signal tension releasing\n\n[GEOMETRY]\n- Primary shape: a soft-sage (#C8E6C9) abstract knot-loop mass, approx 38–45% canvas width, placed slightly right of center and slightly below center; corners rounded, edges feathered\n- Secondary shapes: (1) a barely-there palm contour implied by two minimal strokes (lines), curved and discontinuous, hugging the lower part of the form without enclosing it; (2) a small blush (#FFEBEE) translucent geometric patch near the transition from knot to loop\n- Lines: maximum 2, extremely light, suggesting an opening palm rather than drawing a literal hand\n- Edge treatment: soft-fade, rice-paper bleed, no hard vector edges\n- Negative space: dominant; keep the top-left and outer perimeter especially quiet to amplify Ma\n\n[COLOR]\n- Background: paper-white #F6F4EE\n- Primary hue: soft-sage #C8E6C9 at high value (~90%), desaturated\n- Secondary hue (accent): blush #FFEBEE only, used at 5% area with 11% opacity as a modest patch (not a symbol)\n- Temperature: warm-neutral overall; cool sage against warm paper-white for warm-cool contrast\n- Contrast method: area contrast (large quiet ground vs compact center mass), plus subtle temperature contrast\n- Accent usage: blush patch is small (5%), translucent (11%), placed near the ‘release point’ to softly awaken attention without stealing focus\n\n[LIGHTING]\n- Light source: diffuse ambient, no directional shadows\n- Glow effects: exactly 1 very subtle inner luminosity within the loosening loop (a faint milky bloom, not neon)\n- Ambient atmosphere: soft luminosity, calm and airy\n\n[TEXTURE & MATERIAL] — degree micro-adjustments only\n- Surface quality: tactile paper-like texture (fine rice paper grain), soft matte finish\n- Edge sharpness: gentle feathering and slight watercolor bleed\n- Transparency: subtle layering (3 levels): background, sage form, faint inner glow + blush accent\n\n[ATMOSPHERE & MOOD]\n- Japanese Ma aesthetic, Shibui elegance: silence as structure, restrained beauty, mature quietness\n- Yūgen: the loop suggests emptiness and release without explicit symbolism\n- Emotional resonance: the knot’s density dissolves into an open loop resting in a calm palm—relief, clarity, and settled openness\n- Contemplative quality: the image should invite pause and reflection, like a visual haiku\n\n[ARTISTIC QUALITY]\n- Museum-quality abstract art, gallery-worthy\n- Ethereal, poetic, meditative stillness\n- Soft luminosity, tactile paper texture\n- Asymmetrical balance, quiet sophistication\n- Ethereal, refined, sophisticated; soft ambient luminosity; tactile paper-like texture; asymmetrical dynamic balance; meditative stillness; gallery-worthy minimalist composition\n\n[STYLE]\n- Render: soft-edged painterly-digital hybrid (not hard vector, not photorealistic)\n- Surface: fine art print quality, like watercolor on rice paper\n- Avoid: outward concentric rings, obvious flowing ‘giving’ swooshes, symmetry, harsh contrast, clutter, glossy/metallic finishes, text or symbols",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998232843708829-7dea6162-75c0-4d83-9078-986cde8503ed-image_task_01KDSBJ5K2EPJK236E3SYCZ9Q9_0.jpg",
+  "createdAt": "2025-12-31T04:44:32.705Z",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "主要形体和线条数量符合要求，留白充足。"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "有色相符合要求，主色为高明度版本，无荧光感，饱和度符合dana度约束。",
+      "brightnessEstimate": "85%",
+      "saturationEstimate": "30%"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "5秒内看不出具体物体或符号化联想。"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间有呼吸感，整体风格克制，有轻微层次。"
+    },
+    "pass": true,
+    "summary": "封面整体符合所有快检维度的要求，设计简约且符合dana度的颜色约束。"
+  },
+  "evaluatedAt": "2025-12-31T04:45:45.560Z",
+  "imageryVerification": {
+    "actualDescription": "图片呈现了一组柔和的绿色形状，类似于绳结的碎片，逐渐向下散开，形成一个圆圈。背景是浅色的，整体布局偏向中心和右下方，隐约可见一个手掌的轮廓。",
+    "isLeftRightDual": false,
+    "leftRightDualDetail": "图片没有明显的左右对比结构，形状的分布是从上到下的渐变。",
+    "metaphorMatch": {
+      "score": 85,
+      "isMatched": true,
+      "matchedElements": [
+        "绳结的碎片",
+        "形成的圆圈",
+        "手掌的轮廓"
+      ],
+      "missingElements": [
+        "观照之光"
+      ]
+    },
+    "structureMatch": {
+      "expectedZoneCount": "1",
+      "actualZoneCount": "1",
+      "expectedRelationship": "fragmenting",
+      "actualRelationship": "fragmenting",
+      "isMatched": true
+    },
+    "overallScore": 86,
+    "pass": true,
+    "verdict": "图片成功传达了预期的物理隐喻，结构也符合预期，没有出现左右对比的问题。",
+    "suggestions": [
+      "可以增加一些光线或光晕效果以更好地表达‘观照之光’的意象。"
+    ]
+  },
+  "verifiedAt": "2025-12-31T04:45:57.667Z"
+}

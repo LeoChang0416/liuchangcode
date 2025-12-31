@@ -1,0 +1,74 @@
+{
+  "id": "27b00a06-631d-4a75-9cb0-17db568d8278",
+  "taskId": "task_01KDFXWEDWEF577BDVVSJRCRE5",
+  "degree": "prajna",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》。其实佛陀早就说：你找的“真心”，不在外面，就在你此刻的觉知里。今天我想告诉你：为什么你越努力越焦虑？答案就藏在这部被严重误解的经典中。\n\n有没有人觉得，自己明明很努力，却总是被情绪牵着走？明明想静下来，脑子里却像开了弹幕？你可能以为问题出在“不够自律”“不够幸运”，但《楞严经》告诉你：问题出在——你一直用“假心”活着，却把“真心”弄丢了。\n\n佛陀在《楞严经》开篇就问阿难：“你当初为什么出家？”阿难说：“因为我看见佛陀相好庄严，心生爱慕。”佛陀立刻反问：“你用什么看见的？用什么爱慕的？”  \n这一问，问出了整部《楞严经》的核心：你所依赖的“心”，到底是真的，还是妄的？\n\n一、破“认贼为子”：你每天用的“心”，其实是假的\n《楞严经》里有个震撼的比喻：“认贼为子”。  \n什么意思？就像你家里进了小偷，你不抓他，反而把他当亲儿子养，好吃好喝供着——结果家财散尽，还不知道是谁干的。\n\n我们每天用的“心”，就是这个“贼”。  \n你因为老板一句话失眠，是“心”在反应？  \n你刷短视频停不下来，是“心”在享受？  \n你焦虑未来、后悔过去，是“心”在思考？",
+  "analysis": {
+    "contentEssence": "破除妄心执着，体认本自具足的真心觉性。",
+    "physicalMetaphor": "云雾自然消散，露出本来皎洁的明月。",
+    "metaphorVisualization": "一个明亮的圆形（明月）位于画面中心，周围是渐变的留白（天空），下方有细微的、消散的纹理（云雾），表达'妄心歇而真心现'的意境。",
+    "spiritualTone": {
+      "primary": "觉醒",
+      "secondary": "宁静"
+    },
+    "emotion": [
+      "平静",
+      "豁然开朗"
+    ],
+    "theme": [
+      "觉知",
+      "真心",
+      "破除妄想",
+      "本自具足"
+    ],
+    "imagery": [
+      "镜子",
+      "天空",
+      "明月",
+      "水面"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "妄心攀缘",
+      "to": "真心觉知",
+      "tensionType": "release"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "内容强调真心一元、不二法门，破除二元对立，因此用单一区域表达本体的统一性。",
+      "divisionMethod": "none",
+      "divisionMethodReason": "无需分区，以中心主体和留白直接体现'真心'的圆满与虚空。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "solo",
+      "typeReason": "真心是唯一的主体，如明月独悬，一切围绕它显现。",
+      "interactionQuality": "fused",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "none",
+      "typeReason": "真心如如不动，宁静无波，故用静态节奏。",
+      "elementCount": 1,
+      "direction": "static"
+    },
+    "structureParams": {
+      "whitespaceTarget": 80,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "soft",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "通过中心明亮形体的凝聚与周围留白的扩散，形成'释放'与'显现'的视觉张力。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "采用一元中心结构，以'明月出云'的意象表达内在觉醒，而非左右对比的二元对立。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides\n- Whitespace target: 80%\n- Visual weight distribution: All visual weight is concentrated in the absolute center of the canvas—a single, luminous, near-perfect circle. The vast expanse of mist-white negative space surrounds it, creating a powerful sense of focus, stillness, and emergence.\n\n[TOPOLOGY]\n- Zone count: 1 (A single, undivided field)\n- Division method: None. The composition is unified, expressing non-duality.\n- Zone ratios: 100 (The entire canvas is one experiential field)\n- Physical metaphor visualization: The central luminous circle is the 'bright moon.' The subtle, fading layers around it and the faint water texture at its base visualize the 'natural dissipation of clouds and mist,' revealing the moon's inherent clarity above a serene 'water surface.'\n\n[RELATIONSHIPS]\n- Primary relationship type: Solo. One primary form exists in serene isolation.\n- Interaction quality: Fused. The form is seamlessly integrated with its own emanations (glow, texture).\n- Spatial expression: A single, centered circle. Its position is perfectly axial, symbolizing the unchanging, fundamental nature of 'true mind.'\n\n[RHYTHM]\n- Rhythm type: None. Perfect static equilibrium and silence.\n- Element count: 1 (The primary circle)\n- Interval/size variation: N/A\n\n[GEOMETRY]\n- Primary shape: A near-perfect circle, occupying approximately 15% of the canvas height, positioned dead center. Its edge is not a hard line but an ultra-soft, feathered gradient from pure white to transparency.\n- Secondary shapes: One very small, faint crescent or droplet-like form in rose-mist (#FFCDD2) at 16% opacity, placed subtly within the negative space, occupying less than 10% of the visual area, to fulfill the area contrast requirement.\n- Lines: None. All transitions are soft.\n- Edge treatment: Extremely soft and diffused edges for the main circle, achieving a 'light-emanation' quality. The faint water ripple texture at the base of the circle has hair-thin, delicate concentric lines that dissolve into nothingness.\n- Negative space: Abundant, uniform, and calm mist-white (#F3F5F6) space enveloping the central form, constituting at least 80% of the image.\n\n[COLOR]\n- Background: mist-white (#F3F5F6)\n- Primary hue: White — silk (#FCFCFC) at 99% lightness, used for the central circle.\n- Secondary hue: Red — rose-mist (#FFCDD2) at 16% opacity, used for a very small, subordinate accent shape.\n- Temperature: Cool, clear, and luminous. The white is bright and pure, against a cool-toned neutral background.\n- Contrast method: Area contrast via size and brightness. A large, bright white circle dominates, contrasted with a tiny, faint rosy accent. The primary contrast is the extreme brightness of the circle against the softer background.\n- Accent usage: The rose-mist color is used as a single, small, semi-transparent shape (e.g., a faint dot or subtle arc), noticeable but subordinate, occupying roughly 10% of the visual weight area.\n\n[LIGHTING]\n- Light source: Internal. The central circle emits its own light.\n- Glow effects: 1. A very soft, wide, and almost imperceptible white glow emanates from the central circle, fading smoothly into the background.\n- Ambient atmosphere: Even, diffuse, and ethereal light, like dawn mist illuminated from within.\n\n[TEXTURE & MATERIAL]\n- Surface quality: The central circle has a smooth, mirror-like, or still-water surface quality. The background is matte and paper-like.\n- Edge sharpness: All edges are ultra-soft, feathered, and blurred. No sharp corners exist.\n- Transparency: Used extensively for the glow and the secondary accent shape (16% opacity). The water ripple texture is also highly transparent.\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: MA (negative space as active element), KANSO (simplicity), SHIBUI (subtle, understated beauty).\n- Content resonance: A visual metaphor for awakening—the sudden, clear recognition of the true mind ('bright moon'), undisturbed and luminous, once the clouds of delusion ('mist') naturally clear. The mood is one of profound peace, clarity, and open spaciousness.\n\n[STYLE]\n- Render style: Clean, vector-like digital art with ultra-soft gradients.\n- No photorealism, no 3D rendering.\n- Must be high clarity and recognizable as a focused, minimalist composition even at 128px thumbnail size.\n- **Critical Improvement Instructions:** Incorporate an extremely subtle, fine concentric water ripple texture at the very base edge of the central white circle. This texture must be almost invisible, hair-thin, and highly transparent, solely to suggest the metaphor of the moon reflected on a perfectly calm water surface or a mirror, addressing the previous lack of 'water surface' imagery.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": null,
+  "createdAt": "2025-12-27T12:52:38.198Z"
+}

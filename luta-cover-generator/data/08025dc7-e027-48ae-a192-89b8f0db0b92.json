@@ -1,0 +1,62 @@
+{
+  "id": "08025dc7-e027-48ae-a192-89b8f0db0b92",
+  "taskId": "task_01KDBAETADV94F3WQA779FQ495",
+  "degree": "dana",
+  "podcastContent": "别把佛学当避世港湾：你误解的“放下”，从来不是躺平\n\n哈喽各位听友，欢迎回到我们的播客节目！今天要聊的这个话题，估计戳中了很多年轻人的状态——现在是不是越来越多人喜欢往寺庙跑？雍和宫的香灰堆得老高，禅修营的名额抢都抢不到，朋友圈里时不时就刷到“在上班和上进之间，我选择上香”的调侃。\n\n但不知道你有没有发现一个现象：很多人把寺庙当成了情绪避难所，把佛学当成了“避世指南”。工作不顺心了就去烧柱香，感情受挫了就想“遁入空门”，甚至有人觉得学佛就是“放下一切”，说白了就是躺平摆烂、逃避问题。今天我们就来好好掰扯掰扯：真正的佛学智慧，到底是让我们逃离现实，还是让我们更好地面对现实？你一直误解的“放下”，其实根本不是你想的那样。\n\n先给大家说个真实的事儿，我身边有个朋友，前段时间被公司裁员，又赶上感情破裂，整个人状态特别差。后来他报了个高价禅修营，天天打坐念经，回来之后跟我说“顿悟了”，说世间一切都是虚妄，不想再努力了，就在家待着“修心”。结果没过三个月，房租都快交不起了，反而更焦虑，还说“为什么我都修行了，还是这么苦”。\n\n其实像他这样的情况，不是个例。上海大学的成庆老师就说过，现在很多人信佛信",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "清醒",
+      "secondary": "坚定"
+    },
+    "emotion": [
+      "通透",
+      "有力"
+    ],
+    "theme": [
+      "佛学智慧",
+      "面对现实",
+      "放下执着"
+    ],
+    "imagery": [
+      "光明与黑暗",
+      "心灵的自由"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "迷",
+      "to": "悟"
+    }
+  },
+  "geometryDescription": "中心偏左的开放弧线，从左侧较暗逐渐过渡到右侧明亮。左侧的弧线较少且模糊，右侧的弧线较多且清晰。少量（≤5个）点状光斑从右侧向外散开，代表心灵的自由。",
+  "colorLogic": "主色采用高明度的黄，代表光明与觉悟。背景为浅灰色，代表通透与清醒。少量蓝色光斑点缀，增加对比度和视觉焦点。",
+  "prompt": "A minimalist square design with a light gray background. Center-left an open arc starting dark on the left and gradually becoming bright yellow towards the right. ≤5 small blue light dots scatter outward from the right side. The composition should reflect the transition from confusion to enlightenment, with ample white space and a sense of flow and openness.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-25T17:56:10.856Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233314614421-830d52c9-5b4d-4729-a7fc-c120a9c26cda-image_task_01KDBAF8VAP3029C4QT0XNJFED_0.jpg",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "主要形体 ≤ 4，线条 ≤ 3，渐变/光晕 ≤ 2，画面留白 ≥ 50%"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "有色相 ≤ 2，中性色 ≤ 1，主色为高明度版本，无荧光/霓虹感，无'彩虹堆叠'"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "5 秒内看不出具体物体/宗教器物/自然景物，无符号化联想，无放射对称图腾"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "'間（Ma）'成立，'渋い（Shibui）'成立，'幽玄（Yūgen）'成立"
+    },
+    "pass": true,
+    "summary": "该封面在所有维度上均符合要求，整体设计简洁、高级且具有视觉呼吸感。"
+  },
+  "evaluatedAt": "2025-12-25T17:57:00.366Z"
+}

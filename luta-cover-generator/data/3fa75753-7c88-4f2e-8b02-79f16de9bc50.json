@@ -1,0 +1,79 @@
+{
+  "id": "3fa75753-7c88-4f2e-8b02-79f16de9bc50",
+  "taskId": "task_01KDC9KPVPN0NC95SH5R7K5X9D",
+  "degree": "dana",
+  "podcastContent": "别把佛学当避世港湾：你误解的“放下”，从来不是躺平\n\n哈喽各位听友，欢迎回到我们的播客节目！今天要聊的这个话题，估计戳中了很多年轻人的状态——现在是不是越来越多人喜欢往寺庙跑？雍和宫的香灰堆得老高，禅修营的名额抢都抢不到，朋友圈里时不时就刷到“在上班和上进之间，我选择上香”的调侃。\n\n但不知道你有没有发现一个现象：很多人把寺庙当成了情绪避难所，把佛学当成了“避世指南”。工作不顺心了就去烧柱香，感情受挫了就想“遁入空门”，甚至有人觉得学佛就是“放下一切”，说白了就是躺平摆烂、逃避问题。今天我们就来好好掰扯掰扯：真正的佛学智慧，到底是让我们逃离现实，还是让我们更好地面对现实？你一直误解的“放下”，其实根本不是你想的那样。\n\n先给大家说个真实的事儿，我身边有个朋友，前段时间被公司裁员，又赶上感情破裂，整个人状态特别差。后来他报了个高价禅修营，天天打坐念经，回来之后跟我说“顿悟了”，说世间一切都是虚妄，不想再努力了，就在家待着“修心”。结果没过三个月，房租都快交不起了，反而更焦虑，还说“为什么我都修行了，还是这么苦”。\n\n其实像他这样的情况，不是个例。上海大学的成庆老师就说过，现在很多人信佛信",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "清醒",
+      "secondary": "坚定"
+    },
+    "emotion": [
+      "醒悟",
+      "勇气"
+    ],
+    "theme": [
+      "佛学智慧",
+      "面对现实",
+      "正确放下"
+    ],
+    "imagery": [
+      "勇士",
+      "枷锁"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "逃避",
+      "to": "面对"
+    },
+    "structureParams": {
+      "compositionType": "dual-zone",
+      "compositionReason": "内容核心是从逃避到面对的转变，需要两域对照表达",
+      "axis": "horizontal",
+      "axisReason": "从左到右的阅读习惯，象征从逃避到面对的过程",
+      "anchorPosition": "center",
+      "anchorReason": "切分线居中，两域等重，体现平衡",
+      "whitespaceTarget": 60,
+      "whitespaceReason": "需要足够的空间来呈现对比和思考的余地",
+      "contrastMethod": "brightness",
+      "contrastReason": "逃避=暗，面对=明，用明度对比最直接",
+      "edgeTreatment": "sharp",
+      "edgeReason": "明确的边界强调从逃避到面对的清晰转变",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "左域略暗略模糊，右域更亮更清晰"
+    }
+  },
+  "geometryDescription": "画面分为左右两个区域，左侧形体略暗略模糊，右侧形体更亮更清晰，中心有一道明确的分割线。",
+  "colorLogic": "左侧使用深灰色表示逃避，右侧使用亮白色表示面对，整体背景为暖白色。",
+  "prompt": "[CANVAS] Format: 1:1 square, 1024x1024 pixels. Safe margin: 10% padding on all sides, main geometric elements positioned within center 80% zone. Whitespace target: 60% of total area remains as clean background. Visual weight distribution: balanced, with slight emphasis on the right side to represent facing reality.\n\n[COMPOSITION] Layout type: dual-zone composition representing the journey from avoidance to facing reality. Primary axis: horizontal orientation, reading left-to-right as a temporal progression. Anchor position: centered, with a vertical dividing line splitting the canvas into two equal zones. Spatial zones: left zone (40%) represents avoidance, right zone (40%) represents facing reality, with 20% transition zone in the center. Depth layering: 2 layers - background plane and floating geometric forms. Tension expression: the transition from dark-to-light and blur-to-clear embodies the podcast's theme of moving from avoidance to facing reality.\n\n[GEOMETRY] Primary shape: soft-cornered rectangle, 35% canvas width, 40% canvas height, positioned in left zone with 8px corner radius, representing the container of avoidance. Secondary shapes: clean angular form in right zone, 25% canvas width, slightly smaller, crisp 4px corners suggesting clarity. One subtle dividing line: 1.5px weight, vertical, spanning 60% of canvas height, positioned at zone boundary with 15% top margin. Edge treatment: left shape has 12px Gaussian blur on outer edge (dissolution), right shape has crisp 2px edge (clarity). Shape relationships: 8% horizontal gap between shapes, no overlap, aligned on horizontal center axis. Negative space: large breathing area in upper-right quadrant and lower margins.\n\n[COLOR] Background: warm paper-white #F6F4EE with subtle paper-like warmth, clean and non-distracting. Primary hue: soft blue at high brightness, approximately #B8D4E8 to #C5E0F0 range, applied to right-zone shape suggesting clarity and awakening. Secondary hue: muted warm gray #E8E4DC on left-zone shape, representing the unawakened state. Contrast method: brightness contrast (left shape 15% darker than right) plus subtle warm-cool contrast. Color transitions: dividing line uses gradient from left-shape color to right-shape color over 40px width, creating soft visual bridge.\n\n[LIGHTING] Light source: soft ambient illumination from upper-right, no harsh directional light. Glow effects: 1 subtle glow positioned at transition zone, radius approximately 15% of canvas, pale blue-white tint #F0F6FA at 8% opacity, creating sense of emerging light. Gradient application: left-zone shape has 12% darker value at its left edge fading to base color, suggesting depth. Shadow: no drop shadows, only subtle inner value variations. Ambient atmosphere: overall luminous and airy, high-key lighting suggests openness and peace.\n\n[TEXTURE & MATERIAL] Surface quality: matte digital finish with extremely subtle paper-grain suggestion in background only. Edge sharpness: right-zone elements pixel-crisp, left-zone elements have 4-8px feathered edges. Transparency: dividing line element at 70% opacity allowing background to show through. Noise/grain: none on geometric elements, imperceptible organic texture in background only.\n\n[ATMOSPHERE & MOOD] Japanese aesthetic: Ma (間) expressed through generous upper and side margins allowing visual breathing; Kanso (簡素) through limited element count; Shibui (渋い) through restrained, sophisticated color palette avoiding vibrancy. Spiritual tone: the composition embodies the podcast's message of awakening - moving from cluttered seeking to simple knowing. Emotional resonance: viewer should feel a sense of gentle revelation, as if fog is lifting. Breathing space: 60% whitespace creates meditative calm, elements float rather than crowd.\n\n[STYLE] Render style: clean vector-like digital art with minimal geometric abstraction. Flat design language with subtle depth through value shifts, not 3D effects. No photorealism, no complex textures, no decorative elements. High clarity maintained at 128px thumbnail - shapes remain distinct, colors stay clean, no muddy mixing.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-26T03:00:37.020Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233281931467-19598488-ad28-4b67-8571-bf44ea30f007-image_task_01KDC9MNSMBHY3HBNKJFAZW9FS_0.jpg",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "主要形体为2个，线条为1条，渐变/光晕为1个，画面留白超过50%"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "有色相为2个（蓝色和灰色），中性色为1个（白色），主色为高明度版本，无荧光/霓虹感，缩略到128px仍清爽"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 80,
+      "reason": "5秒内看不出具体物体或宗教器物，无符号化联想，无放射对称图腾"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 85,
+      "reason": "空间有呼吸感，设计高级克制，有轻微层次但不堆细节"
+    },
+    "pass": true,
+    "summary": "该封面在结构、颜色、抽象和品质四个维度上均通过了检测，整体设计简洁清爽，符合要求。"
+  },
+  "evaluatedAt": "2025-12-26T03:01:26.890Z"
+}

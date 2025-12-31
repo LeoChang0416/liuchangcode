@@ -1,0 +1,147 @@
+{
+  "id": "825fe553-ccbf-4239-bf57-ffb0e43e2ecf",
+  "taskId": "task_01KDSAR9Z4HQSF4MCC8TSZTFRF",
+  "degree": "prajna",
+  "podcastContent": "说起佛经，大家最耳熟能详的应该就是《心经》了。电视剧里经常听到的“色即是空，空即是色”，还有“般若波罗蜜”，都出自《心经》。可《心经》到底讲什么？有什么妙用？听我讲完，下次再听就能心里有数了。\n\n《心经》其实很短，全篇只有260个字。现在大家一般读到的，都是玄奘法师翻译的版本——就是大家熟悉的“唐僧”所译的《心经》。开篇第一句是“观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄”。\n\n大家知道《心经》与观音菩萨相关，所以开篇先提及他的名号。“观自在菩萨”就是“观世音菩萨”，“观世音”的意思是倾听世间的一切声音。但要注意，在佛教里没有“神仙”的概念，“佛”指的是觉悟的人；“菩萨”含义相近，也指修行觉悟者，只不过菩萨的境界比佛稍低一些。\n\n“般若”应念作“bō rě”，代表智慧；“波罗”意为“彼岸”，“蜜”是“抵达”的意思。所以“般若波罗蜜”的意思是“抵达智慧的彼岸”，这些词都是从梵语直接音译而来。菩萨说，我们要努力抵达智慧的彼岸，这是修行的最高境界。\n\n菩萨在修行中发现了一个道理，这个道理就是“照见五蕴皆空，度一切苦厄”。佛教里把人与世界的接触分为五个维度，也就是常说的“色、受、",
+  "analysis": {
+    "contentEssence": "以“观照五蕴皆空”的智慧松开执着，从恐惧与颠倒中解缚，抵达心无挂碍的安宁彼岸。",
+    "physicalMetaphor": "一只手缓慢解开一串缠结的绳结，绳结逐个松散成顺滑的线，最后线头穿过一道窄环，落入静定的圆盘中心。",
+    "metaphorVisualization": "用一个中心“静定圆盘”作为涅槃/安宁的落点；外围用若干“结点/小团块”表示五蕴与分别执取，沿着一条连续曲线依次变小、变顺，曲线末端穿过一个细窄的环形门槛（彼岸/波罗蜜），进入中心并停止扰动。",
+    "spiritualTone": {
+      "primary": "澄明观照",
+      "secondary": "慈悲安定"
+    },
+    "emotion": [
+      "安心",
+      "通透"
+    ],
+    "theme": [
+      "空性",
+      "解缚",
+      "抵达彼岸"
+    ],
+    "imagery": [
+      "绳结",
+      "穿环",
+      "静圆",
+      "顺滑曲线",
+      "微光"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "五蕴缠结带来的挂碍与恐怖",
+      "to": "心无挂碍、远离颠倒、究竟涅槃的静定",
+      "tensionType": "release"
+    },
+    "topologicalLayout": {
+      "zoneCount": "3",
+      "zoneCountReason": "physicalMetaphor包含“结缚区（绳结）→门槛区（穿环/彼岸）→归静区（圆盘中心）”三个连续阶段，需要三段式来表达解结、跨越与安住。",
+      "divisionMethod": "diagonal",
+      "divisionMethodReason": "用斜向路径表现“揭谛…波罗揭谛…”的去向与推进：从角落的纠结沿斜线流向中心的归静，比上下/左右分割更像一次行进与抵达。",
+      "zoneRatios": "40:15:45"
+    },
+    "primaryRelationship": {
+      "type": "piercing",
+      "typeReason": "核心动作是“线头穿过窄环”象征波罗蜜的到达与跨越门槛，属于穿透式突破而非并列对照。",
+      "interactionQuality": "touching",
+      "spatialPosition": "grounded"
+    },
+    "rhythmSignature": {
+      "type": "decelerating",
+      "typeReason": "绳结逐一松开后，扰动减少、形体更顺滑，最终落入静圆并停止，节奏从繁密走向寂静收敛。",
+      "elementCount": 4,
+      "direction": "inward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 70,
+      "contrastMethod": "layering",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 1,
+      "layerCount": 3,
+      "tensionExpression": "用“结点密度递减 + 曲线由抖动变顺 + 穿环处的窄压缩 + 进入中心后边缘渐隐”来表现从挂碍到自在的释放过程。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "不是把概念分成两边对照，而是用一条连续的解结-穿环-归静动作链，把《心经》的‘观照→无挂碍→到彼岸→安宁’转成可见的物理过程与收敛节奏。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides\n- Whitespace target: 70% (large calm emptiness, Ma)\n- Visual weight distribution: diagonal journey from lower-left (small dense tension) through a narrow mid-threshold to an upper-right calm anchoring disc; the heaviest mass is the final disc, but kept airy via high lightness.\n\n[TOPOLOGY] — based on topologicalLayout\n- Zone count: 3\n- Division method: diagonal (a continuous diagonal flow, not a hard cut)\n- Zone ratios: 40:15:45 along the diagonal progression\n- Physical metaphor visualization: zone 1 contains the knotted bind; zone 2 is a compressed threshold corridor; zone 3 is the calm resting field with a disc center. The zones are separated by subtle negative-space gaps and gentle tonal fades, never by a single slicing line.\n\n[RELATIONSHIPS] — based on primaryRelationship\n- Primary relationship type: piercing\n- Interaction quality: touching\n- Spatial expression: one continuous cord line travels diagonally and physically passes through a narrow ring (the tip touches the ring edge then pierces through). The ring sits near the boundary between zone 2 and zone 3 as the hinge of meaning.\n\n[RHYTHM] — based on rhythmSignature\n- Rhythm type: decelerating\n- Element count: 4\n- Interval/size variation: along the diagonal cord path show four sequential states: (1) tight knot cluster with small, dense loops; (2) looser knot with fewer crossings; (3) nearly smooth curve that pinches narrow at the ring; (4) the cord becomes fully smooth and then fades as it enters the disc center. Spacing between ‘events’ increases as it approaches the disc; visual noise decreases.\n\n[GEOMETRY]\n- Primary shape: a large, soft-edged circle/disc in zone 3 (upper-right quadrant), diameter ~38–44% of canvas width, centered slightly off the exact corner to respect the safe margin.\n- Secondary shapes: one minimal narrow ring/oval near the diagonal midline (zone 2→3), small (6–9% canvas width), aligned to be pierced by the cord.\n- Lines: 1 main cord line (single stroke), plus 1 extremely thin auxiliary line only if needed to suggest the ‘threshold corridor’ (keep total lines ≤2; prefer negative space instead).\n- Edge treatment: gradient-fade on the cord and disc edges; soften boundaries (soft-division), no hard outlines.\n- Negative space: keep broad empty fields around the diagonal; do not fill the corners; ensure ≥55% whitespace.\n\n[COLOR]\n- Background: cool-mist #F5F7FA (flat, paper-like)\n- Primary hue: soft-gold #FFF3CD (dominant, used for disc fill and parts of the cord; lightness ~95%)\n- Secondary hue (accent only): mint-mist #E8F5E9 at 3% area maximum, opacity 13% (tiny translucent wake-up tint near the ring or just inside the disc center)\n- Temperature: warm-cool contrast maintained softly; overall cool clarity with warm calmness\n- Contrast method: warm disc/cord against cool-mist field; mint accent is a minimal, barely-there cool whisper\n- Accent usage: a small mint-mist veil/dot-like patch near the ring or at the moment of piercing; keep it subtle, not decorative.\n\n[LIGHTING]\n- Light source: diffuse ambient (no directional cast shadows)\n- Glow effects: 1 only — a very faint halo inside the disc center (soft-gold light bloom), restrained and paper-like\n- Ambient atmosphere: airy, lucid, high-key\n\n[TEXTURE & MATERIAL] — degree micro-adjustments only\n- Surface quality: matte paper texture impression (very subtle grain)\n- Edge sharpness: soft-division with controlled clarity; gradients are short and clean\n- Transparency: mint-mist accent at 13% opacity; optional slight transparency on the cord as it enters the disc (fade-out)\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (intentional emptiness), Kanso (reduction), Shibui (quiet refinement)\n- Content resonance: release from entanglement into unobstructed calm; the visual should feel reassuring, transparent, and awake.\n\n[STYLE]\n- Render style: clean vector-like digital art, minimal, high clarity at 128px thumbnail\n- No photorealism, no 3D rendering\n- No text, no symbols, no UI elements; only meaningful abstraction.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998232844537990-f4b511ef-de8f-4cfd-b38d-25479323519f-image_task_01KDSARVVS9XP0KGGF5CH88R2F_0.jpg",
+  "createdAt": "2025-12-31T04:30:43.833Z",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "主要形体和线条数量符合要求，留白充足。"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "色相数量符合要求，主色高明度，饱和度低。",
+      "brightnessEstimate": "约85%",
+      "saturationEstimate": "约30%"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "没有具体物体或符号化联想。"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间感和层次感良好，整体克制。"
+    },
+    "pass": true,
+    "summary": "封面整体符合各项快检标准，设计简洁且色彩和谐。"
+  },
+  "evaluatedAt": "2025-12-31T04:31:29.446Z",
+  "imageryVerification": {
+    "actualDescription": "图片呈现了一根绳子从左下角延伸至右上角，绳子在左下方形成一个结，逐渐解开并穿过一个环，最终进入一个大圆形区域。",
+    "isLeftRightDual": false,
+    "leftRightDualDetail": "图片没有明显的左右双域对比结构，绳子和圆形的布局是对角线的。",
+    "metaphorMatch": {
+      "score": 85,
+      "isMatched": true,
+      "matchedElements": [
+        "绳结",
+        "穿环",
+        "静圆"
+      ],
+      "missingElements": [
+        "微光"
+      ]
+    },
+    "structureMatch": {
+      "expectedZoneCount": 3,
+      "actualZoneCount": 3,
+      "expectedRelationship": "piercing",
+      "actualRelationship": "piercing",
+      "isMatched": true
+    },
+    "overallScore": 88,
+    "pass": true,
+    "verdict": "图片成功地体现了预期的视觉意象，结构和隐喻匹配度都很高。",
+    "suggestions": [
+      "可以考虑在圆形区域添加一些微光效果，以增强视觉隐喻的完整性。"
+    ]
+  },
+  "verifiedAt": "2025-12-31T04:31:44.162Z",
+  "edit": {
+    "sourceImageUrl": "https://upload.apimart.ai/f/image/9998232844537990-f4b511ef-de8f-4cfd-b38d-25479323519f-image_task_01KDSARVVS9XP0KGGF5CH88R2F_0.jpg",
+    "editPrompt": "EDIT: Add a subtle bioluminescent glow effect inside the circular area to represent “micro-glow”. Use a soft radial halo plus a few tiny light specks/dust with gentle blur, low opacity, and smooth falloff; avoid hard edges or starburst shapes. Ensure the overall image brightness stays at or above 85%. Reduce/limit saturation so no colored region exceeds 32% saturation, keeping the glow mostly near-white with only a faint tint if needed. Keep everything else unchanged.",
+    "changes": [
+      "Add subtle micro-glow within the circle (soft halo + tiny specks)",
+      "Keep glow low-opacity with smooth falloff (no hard starbursts)",
+      "Ensure brightness ≥85%",
+      "Limit saturation to ≤32% across the image"
+    ],
+    "keeps": [],
+    "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+    "taskId": "task_01KDSATHN00GGYVMV5PH2RS9Y4",
+    "status": "submitted",
+    "createdAt": "2025-12-31T04:31:57.527Z"
+  }
+}

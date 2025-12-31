@@ -1,0 +1,60 @@
+{
+  "id": "cd79dc0f-ea42-4101-a49b-75b7c4455ec0",
+  "taskId": "task_01KDCDQXVTEPED09X9RQWRAV8S",
+  "degree": "samadhi",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》\n\n哈喽，各位听友大家好，欢迎来到本期的播客节目。今天我们要聊的话题，可能戳中了很多学佛同修的痛点——就是那句“很多人天天念《楞严咒》，却根本没看懂《楞严经》”。\n\n不知道你有没有过这样的经历：清晨的佛堂里、安静的书房中，跟着课诵本一字一句地念诵楞严咒，咒语的音节庄严恢弘，念完之后心里也会觉得踏实。但如果有人问你，你天天念的这篇咒语，出自哪部经？这部经到底在讲什么？可能很多人都会愣住，甚至说不出个所以然。今天，我们就来好好聊聊这个问题，搞清楚楞严咒和《楞严经》的关系，也读懂《楞严经》里最核心的智慧。\n\n首先，我们得先厘清一个基本事实：楞严咒并不是独立存在的，它出自《大佛顶如来密因修证了义诸菩萨万行首楞严经》，也就是我们常说的《楞严经》，具体在经的第七卷里。这部经全文十卷，共64460字，而楞严咒作为经中核心的神咒，全咒分为五会，有427句、2620字，是汉传佛教日常课诵中最长的神咒，所以也被称为“大佛顶首楞严神咒”。\n\n可能有听友会问，既然咒在经里，为什么大家都爱念咒，却很少有人通读《楞严经》呢？其实原因很现实。一方面，《楞严经》的文字晦涩",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "觉悟",
+      "secondary": "反思"
+    },
+    "emotion": [
+      "启迪",
+      "内省"
+    ],
+    "theme": [
+      "破妄显真",
+      "修行智慧",
+      "经咒关系"
+    ],
+    "imagery": [
+      "波浪与大海",
+      "钥匙与门"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "对咒语的表层理解",
+      "to": "对经文的深层理解"
+    },
+    "physicalMetaphor": "波浪平息，露出大海的本来面目",
+    "topologicalLayout": {
+      "zoneCount": "2",
+      "zoneCountReason": "表层与深层理解形成对比，需要双域",
+      "divisionMethod": "gradient-fade",
+      "divisionMethodReason": "从表层理解到深层理解是一个渐进过程",
+      "zoneRatios": "50:50"
+    },
+    "primaryRelationship": {
+      "type": "opposing",
+      "typeReason": "表层理解与深层理解相向对照但保持各自边界",
+      "interactionQuality": "near"
+    },
+    "rhythmSignature": {
+      "type": "none",
+      "typeReason": "两个主要区域静态对照，不需要节奏感",
+      "elementCount": 2
+    },
+    "structureParams": {
+      "whitespaceTarget": 60,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "左域较暗，右域较亮，象征从表层到深层的觉悟"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding\n- Whitespace target: 60%\n- Visual weight distribution: Balanced between two zones with a soft gradient fade\n\n[TOPOLOGY] — Based on topologicalLayout\n- Zone count: 2\n- Division method: Gradient-fade\n- Zone ratios: 50:50\n- Physical metaphor visualization: The gradient fade between the two zones represents the gradual transition from surface understanding to deep understanding, akin to waves calming down to reveal the ocean's true nature.\n\n[RELATIONSHIPS] — Based on primaryRelationship\n- Primary relationship type: Opposing\n- Interaction quality: Near\n- Spatial expression: Two main shapes positioned opposite each other, close but not touching, representing the contrast and proximity between surface and deep understanding.\n\n[RHYTHM] — Based on rhythmSignature\n- Rhythm type: None\n- Element count: 2\n- Interval/size variation: Not applicable, static nature with no rhythmic variation\n\n[GEOMETRY]\n- Primary shape: Two opposing shapes, with soft edges and smooth corners, positioned near each other but not touching\n- Secondary shapes: None\n- Lines: None\n- Edge treatment: Soft, with a gradient-fade effect at the division\n- Negative space: Distributed evenly around the two shapes, with significant whitespace (60%)\n\n[COLOR]\n- Background: Soft-gray #F0F0F0\n- Primary hue: Light Blue, high brightness, #ADD8E6\n- Secondary hue: Soft Beige, #F7F2E8\n- Temperature: Cool and serene, reflecting a calm and contemplative atmosphere\n- Contrast method: Brightness contrast between the two zones\n\n[LIGHTING]\n- Light source: Soft, diffused lighting\n- Glow effects: One subtle glow around the shapes\n- Ambient atmosphere: Overall calm and serene\n\n[TEXTURE & MATERIAL] — Degree can adjust\n- Surface quality: Smooth and matte\n- Edge sharpness: Soft and blended\n- Transparency: None\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (space and silence), Kanso (simplicity), Shibui (understated elegance)\n- Content resonance: The gradual fade and opposing shapes reflect the metaphor of waves calming to reveal the ocean's true nature, invoking a sense of enlightenment and introspection.\n[STYLE]\n- Render style: Clean vector-like digital art\n- No photorealism, no 3D rendering\n- High clarity at 128px thumbnail",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-26T04:12:49.620Z"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "dd0e82b7-8633-4899-bdb4-d50d66de48e8",
+  "taskId": "task_01KDCBV76Y6K0HA8M6M7DTGV4X",
+  "degree": "prajna",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》\n\n哈喽，各位听友大家好，欢迎来到本期的播客节目。今天我们要聊的话题，可能戳中了很多学佛同修的痛点——就是那句“很多人天天念《楞严咒》，却根本没看懂《楞严经》”。\n\n不知道你有没有过这样的经历：清晨的佛堂里、安静的书房中，跟着课诵本一字一句地念诵楞严咒，咒语的音节庄严恢弘，念完之后心里也会觉得踏实。但如果有人问你，你天天念的这篇咒语，出自哪部经？这部经到底在讲什么？可能很多人都会愣住，甚至说不出个所以然。今天，我们就来好好聊聊这个问题，搞清楚楞严咒和《楞严经》的关系，也读懂《楞严经》里最核心的智慧。\n\n首先，我们得先厘清一个基本事实：楞严咒并不是独立存在的，它出自《大佛顶如来密因修证了义诸菩萨万行首楞严经》，也就是我们常说的《楞严经》，具体在经的第七卷里。这部经全文十卷，共64460字，而楞严咒作为经中核心的神咒，全咒分为五会，有427句、2620字，是汉传佛教日常课诵中最长的神咒，所以也被称为“大佛顶首楞严神咒”。\n\n可能有听友会问，既然咒在经里，为什么大家都爱念咒，却很少有人通读《楞严经》呢？其实原因很现实。一方面，《楞严经》的文字晦涩",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "庄严",
+      "secondary": "深邃"
+    },
+    "emotion": [
+      "敬畏",
+      "求知"
+    ],
+    "theme": [
+      "楞严咒",
+      "楞严经",
+      "佛教智慧"
+    ],
+    "imagery": [
+      "波浪与大海",
+      "钥匙与说明书"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "迷惑",
+      "to": "觉悟"
+    },
+    "structureParams": {
+      "compositionType": "dual-zone",
+      "compositionReason": "内容核心是从'迷惑'到'觉悟'的转变，需要两域对照表达。",
+      "axis": "horizontal",
+      "axisReason": "从左到右的阅读习惯，象征从迷惑到觉悟的过程。",
+      "anchorPosition": "center",
+      "anchorReason": "切分线居中，两域等重，体现迷惑与觉悟的对比。",
+      "whitespaceTarget": 60,
+      "whitespaceReason": "需要足够空间来体现深邃的思想和对比信息。",
+      "contrastMethod": "layering",
+      "contrastReason": "用层次对比来表现从表象到本质的转变。",
+      "edgeTreatment": "gradient-fade",
+      "edgeReason": "过渡不锐利，符合从迷惑到觉悟的渐进过程。",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "左域略模糊，右域更清晰，象征从迷惑到觉悟的过程。"
+    }
+  },
+  "geometryDescription": "主形体为左侧柔和模糊的长方形，代表迷惑；右侧为清晰锐利的长方形，代表觉悟。两者之间有一条过渡线，象征从迷惑到觉悟的渐进过程。",
+  "colorLogic": "背景采用柔和的纸白色，左侧形体使用暖灰色，右侧形体使用高明度的浅蓝色，表示从迷惑到觉悟的转变。颜色对比通过明度和冷暖对照实现。",
+  "prompt": "[CANVAS] Format: 1:1 square, 1024x1024 pixels. Safe margin: 10% padding on all sides, main geometric elements positioned within center 80% zone. Whitespace target: 60% of total area remains as clean background. Visual weight distribution: central balance with equal visual weight on both sides.\n\n[COMPOSITION] Layout type: dual-zone composition representing the journey from confusion to clarity. Primary axis: horizontal orientation, reading left-to-right as temporal progression. Anchor position: center, dividing the canvas into two equal zones. Spatial zones: left zone (50%) represents the obscured/searching state, right zone (50%) represents clarity/awakening. Depth layering: 2 layers - background plane and floating geometric forms. Tension expression: the transition from dense-to-open, dark-to-light embodies the podcast's theme of breaking through illusion to find truth.\n\n[GEOMETRY] Primary shape: soft-cornered rectangle, 35% canvas width, 40% canvas height, positioned in left zone with 8px corner radius, representing the container of confusion. Secondary shapes: clean angular form in right zone, 25% canvas width, slightly smaller, crisp 4px corners suggesting clarity. One subtle dividing line: 1.5px weight, vertical, spanning 60% of canvas height, positioned at zone boundary with 15% top margin. Edge treatment: left shape has 12px Gaussian blur on outer edge (dissolution), right shape has crisp 2px edge (clarity). Shape relationships: 8% horizontal gap between shapes, no overlap, aligned on horizontal center axis. Negative space: large breathing area in upper-right quadrant and lower margins.\n\n[COLOR] Background: warm paper-white #F6F4EE with subtle paper-like warmth, clean and non-distracting. Primary hue: soft blue at high brightness, approximately #B8D4E8 to #C5E0F0 range, applied to right-zone shape suggesting clarity and awakening. Secondary hue: muted warm gray #E8E4DC on left-zone shape, representing the unawakened state. Contrast method: brightness contrast (left shape 15% darker than right) plus subtle warm-cool contrast. Color transitions: dividing line uses gradient from left-shape color to right-shape color over 40px width, creating soft visual bridge.\n\n[LIGHTING] Light source: soft ambient illumination from upper-right, no harsh directional light. Glow effects: 1 subtle glow positioned at transition zone, radius approximately 15% of canvas, pale blue-white tint #F0F6FA at 8% opacity, creating sense of emerging light. Gradient application: left-zone shape has 12% darker value at its left edge fading to base color, suggesting depth. Shadow: no drop shadows, only subtle inner value variations. Ambient atmosphere: overall luminous and airy, high-key lighting suggests openness and peace.\n\n[TEXTURE & MATERIAL] Surface quality: matte digital finish with extremely subtle paper-grain suggestion in background only. Edge sharpness: right-zone elements pixel-crisp, left-zone elements have 4-8px feathered edges. Transparency: dividing line element at 70% opacity allowing background to show through. Noise/grain: none on geometric elements, imperceptible organic texture in background only.\n\n[ATMOSPHERE & MOOD] Japanese aesthetic: Ma (間) expressed through generous upper and side margins allowing visual breathing; Kanso (簡素) through limited element count; Shibui (渋い) through restrained, sophisticated color palette avoiding vibrancy. Spiritual tone: the composition embodies the podcast's message of awakening - moving from cluttered seeking to simple knowing. Emotional resonance: viewer should feel a sense of gentle revelation, as if fog is lifting. Breathing space: 60% whitespace creates meditative calm, elements float rather than crowd.\n\n[STYLE] Render style: clean vector-like digital art with minimal geometric abstraction. Flat design language with subtle depth through value shifts, not 3D effects. No photorealism, no complex textures, no decorative elements. High clarity maintained at 128px thumbnail - shapes remain distinct, colors stay clean, no muddy mixing.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-26T03:39:40.339Z"
+}

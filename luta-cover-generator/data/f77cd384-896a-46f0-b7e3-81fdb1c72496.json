@@ -1,0 +1,86 @@
+{
+  "id": "f77cd384-896a-46f0-b7e3-81fdb1c72496",
+  "taskId": "task_01KDCGZGM3K6N4JEQR662GCH84",
+  "degree": "virya",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》\n\n哈喽，各位听友大家好，欢迎来到本期的播客节目。今天我们要聊的话题，可能戳中了很多学佛同修的痛点——就是那句“很多人天天念《楞严咒》，却根本没看懂《楞严经》”。\n\n不知道你有没有过这样的经历：清晨的佛堂里、安静的书房中，跟着课诵本一字一句地念诵楞严咒，咒语的音节庄严恢弘，念完之后心里也会觉得踏实。但如果有人问你，你天天念的这篇咒语，出自哪部经？这部经到底在讲什么？可能很多人都会愣住，甚至说不出个所以然。今天，我们就来好好聊聊这个问题，搞清楚楞严咒和《楞严经》的关系，也读懂《楞严经》里最核心的智慧。\n\n首先，我们得先厘清一个基本事实：楞严咒并不是独立存在的，它出自《大佛顶如来密因修证了义诸菩萨万行首楞严经》，也就是我们常说的《楞严经》，具体在经的第七卷里。这部经全文十卷，共64460字，而楞严咒作为经中核心的神咒，全咒分为五会，有427句、2620字，是汉传佛教日常课诵中最长的神咒，所以也被称为“大佛顶首楞严神咒”。\n\n可能有听友会问，既然咒在经里，为什么大家都爱念咒，却很少有人通读《楞严经》呢？其实原因很现实。一方面，《楞严经》的文字晦涩",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "觉悟",
+      "secondary": "反思"
+    },
+    "emotion": [
+      "启迪",
+      "反省"
+    ],
+    "theme": [
+      "佛教修行",
+      "经咒关系",
+      "智慧探寻"
+    ],
+    "imagery": [
+      "波浪与大海",
+      "钥匙与门"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "迷茫",
+      "to": "觉悟"
+    },
+    "physicalMetaphor": "波浪平息，露出大海的平静面貌",
+    "topologicalLayout": {
+      "zoneCount": "2",
+      "zoneCountReason": "讨论经与咒的关系，需要对照两个不同但相关的领域",
+      "divisionMethod": "band",
+      "divisionMethodReason": "经与咒之间有紧密联系，但也有明确的区分",
+      "zoneRatios": "50:50"
+    },
+    "primaryRelationship": {
+      "type": "parallel",
+      "typeReason": "经与咒的关系是并行的，两者各自独立但有联系",
+      "interactionQuality": "near"
+    },
+    "rhythmSignature": {
+      "type": "uniform",
+      "typeReason": "讨论的内容有条理地展开，节奏均匀",
+      "elementCount": 3
+    },
+    "structureParams": {
+      "whitespaceTarget": 60,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "sharp",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "经与咒的对比与联系通过明暗对比呈现"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding\n- Whitespace target: 60%\n- Visual weight distribution: Based on the strong variables, the visual weight is evenly distributed between the two zones.\n\n[TOPOLOGY]\n- Zone count: 2\n- Division method: band\n- Zone ratios: 50:50\n- Physical metaphor visualization: The division of zones represents the clear, yet connected relationship between sutras and mantras, akin to waves calming and revealing the serene sea beneath.\n\n[RELATIONSHIPS]\n- Primary relationship type: parallel\n- Interaction quality: near\n- Spatial expression: Two parallel shapes near each other, symbolizing the independent yet interconnected nature of sutras and mantras.\n\n[RHYTHM]\n- Rhythm type: uniform\n- Element count: 3\n- Interval/size variation: Elements are evenly spaced, representing the orderly progression of the discussion.\n\n[GEOMETRY]\n- Primary shape: Two parallel rectangles, each taking up half the canvas, with soft edges.\n- Secondary shapes: Three smaller circles evenly spaced within each rectangle.\n- Lines: One horizontal band dividing the two rectangles.\n- Edge treatment: Soft edges to align with the smooth and calm metaphor.\n- Negative space: The whitespace is evenly distributed, ensuring a balanced and uncluttered composition.\n\n[COLOR]\n- Background: mist-white (#F3F5F6)\n- Primary hue: soft-gray for the rectangles (#F0F0F0)\n- Secondary hue: warm-beige for the circles (#F7F2E8)\n- Temperature: Warm, with a bias towards a more lively and energetic feel.\n- Contrast method: Brightness contrast between the soft-gray rectangles and warm-beige circles.\n\n[LIGHTING]\n- Light source: Soft, ambient light\n- Glow effects: One subtle glow around the dividing band to highlight the connection between the two zones.\n- Ambient atmosphere: Overall light and airy, contributing to a sense of clarity and enlightenment.\n\n[TEXTURE & MATERIAL]\n- Surface quality: Smooth, with a slight sheen to suggest a polished, serene surface.\n- Edge sharpness: Soft, to convey calmness and smoothness.\n- Transparency: None\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma\n- Content resonance: The visual metaphor of calming waves reveals the deeper understanding of the relationship between sutras and mantras, evoking a sense of enlightenment and reflection.\n[STYLE]\n- Render style: Clean vector-like digital art\n- No photorealism, no 3D rendering\n- High clarity at 128px thumbnail",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-26T05:09:23.654Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233274220869-4d312db9-61e0-4e2e-b796-828629768c12-image_task_01KDCGZZNT4SXK3HJQ3SRGTMYJ_0.jpg",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "主要形体和线条数量符合要求，渐变/光晕数量符合要求，画面留白充足。"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "有色相和中性色数量符合要求，主色为高明度版本，无荧光/霓虹感，缩略到128px仍清爽。"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "5秒内看不出具体物体或宗教器物，无符号化联想，无放射对称图腾。"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间有呼吸感，高级克制，有轻微层次但不堆细节。"
+    },
+    "pass": true,
+    "summary": "该封面在所有维度上均符合要求，整体设计简洁、清爽，具有高级感。"
+  },
+  "evaluatedAt": "2025-12-26T05:09:57.094Z"
+}

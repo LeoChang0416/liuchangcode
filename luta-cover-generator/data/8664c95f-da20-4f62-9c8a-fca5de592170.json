@@ -1,0 +1,36 @@
+{
+  "id": "8664c95f-da20-4f62-9c8a-fca5de592170",
+  "taskId": "task_01KDB8KP2BSDJPG8D2SF5WKTTC",
+  "degree": "prajna",
+  "podcastContent": "别把佛学当避世港湾：你误解的“放下”，从来不是躺平\n\n哈喽各位听友，欢迎回到我们的播客节目！今天要聊的这个话题，估计戳中了很多年轻人的状态——现在是不是越来越多人喜欢往寺庙跑？雍和宫的香灰堆得老高，禅修营的名额抢都抢不到，朋友圈里时不时就刷到“在上班和上进之间，我选择上香”的调侃。\n\n但不知道你有没有发现一个现象：很多人把寺庙当成了情绪避难所，把佛学当成了“避世指南”。工作不顺心了就去烧柱香，感情受挫了就想“遁入空门”，甚至有人觉得学佛就是“放下一切”，说白了就是躺平摆烂、逃避问题。今天我们就来好好掰扯掰扯：真正的佛学智慧，到底是让我们逃离现实，还是让我们更好地面对现实？你一直误解的“放下”，其实根本不是你想的那样。\n\n先给大家说个真实的事儿，我身边有个朋友，前段时间被公司裁员，又赶上感情破裂，整个人状态特别差。后来他报了个高价禅修营，天天打坐念经，回来之后跟我说“顿悟了”，说世间一切都是虚妄，不想再努力了，就在家待着“修心”。结果没过三个月，房租都快交不起了，反而更焦虑，还说“为什么我都修行了，还是这么苦”。\n\n其实像他这样的情况，不是个例。上海大学的成庆老师就说过，现在很多人信佛信",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "清醒",
+      "secondary": "坚定"
+    },
+    "emotion": [
+      "有力",
+      "通透"
+    ],
+    "theme": [
+      "佛学智慧",
+      "面对现实",
+      "放下执着"
+    ],
+    "imagery": [
+      "红尘中的修行",
+      "心灵的清净"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "逃避",
+      "to": "面对"
+    }
+  },
+  "geometryDescription": "两块几何区域清晰对照，其中一块为明亮的白色，另一块为冷调的蓝色，之间以一条清晰的切线分割。蓝色区域内有一个高亮度的黄色圆形，象征洞见和觉悟。",
+  "colorLogic": "主色使用高明度的白色和蓝色，白色象征澄明，蓝色象征冷静与坚定。对比色小面积使用高明度黄色，象征智慧和洞见。",
+  "prompt": "minimalist abstract, 1:1 aspect ratio, two contrasting geometric areas, one in bright white, one in cool blue, divided by a clean-cut line, high brightness, soft ambient light, blue area contains a high-brightness yellow circle, high contrast, clean edges, serene and balanced, Japanese minimalism, 80% negative space",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-25T17:23:53.165Z"
+}

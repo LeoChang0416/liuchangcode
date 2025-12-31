@@ -1,0 +1,86 @@
+{
+  "id": "1a332a11-3908-442f-b3c4-34c19e189cb9",
+  "taskId": "task_01KDCGWTAE8DXXBM5KPMZW6RB3",
+  "degree": "virya",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》\n\n哈喽，各位听友大家好，欢迎来到本期的播客节目。今天我们要聊的话题，可能戳中了很多学佛同修的痛点——就是那句“很多人天天念《楞严咒》，却根本没看懂《楞严经》”。\n\n不知道你有没有过这样的经历：清晨的佛堂里、安静的书房中，跟着课诵本一字一句地念诵楞严咒，咒语的音节庄严恢弘，念完之后心里也会觉得踏实。但如果有人问你，你天天念的这篇咒语，出自哪部经？这部经到底在讲什么？可能很多人都会愣住，甚至说不出个所以然。今天，我们就来好好聊聊这个问题，搞清楚楞严咒和《楞严经》的关系，也读懂《楞严经》里最核心的智慧。\n\n首先，我们得先厘清一个基本事实：楞严咒并不是独立存在的，它出自《大佛顶如来密因修证了义诸菩萨万行首楞严经》，也就是我们常说的《楞严经》，具体在经的第七卷里。这部经全文十卷，共64460字，而楞严咒作为经中核心的神咒，全咒分为五会，有427句、2620字，是汉传佛教日常课诵中最长的神咒，所以也被称为“大佛顶首楞严神咒”。\n\n可能有听友会问，既然咒在经里，为什么大家都爱念咒，却很少有人通读《楞严经》呢？其实原因很现实。一方面，《楞严经》的文字晦涩",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "启蒙",
+      "secondary": "深思"
+    },
+    "emotion": [
+      "觉醒",
+      "反思"
+    ],
+    "theme": [
+      "理解与实践",
+      "智慧的传承",
+      "破妄显真"
+    ],
+    "imagery": [
+      "钥匙与门",
+      "波浪与大海"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "无知",
+      "to": "觉悟"
+    },
+    "physicalMetaphor": "钥匙插入锁孔，门缓缓打开",
+    "topologicalLayout": {
+      "zoneCount": "2",
+      "zoneCountReason": "对比念咒与理解经文的两种状态",
+      "divisionMethod": "line",
+      "divisionMethodReason": "清晰区分两种状态，强调其差异",
+      "zoneRatios": "50:50"
+    },
+    "primaryRelationship": {
+      "type": "opposing",
+      "typeReason": "念咒与理解经文是两种对立但相关的行为",
+      "interactionQuality": "near"
+    },
+    "rhythmSignature": {
+      "type": "none",
+      "typeReason": "主要是两种状态的对比，不涉及多元素的节奏变化",
+      "elementCount": 2
+    },
+    "structureParams": {
+      "whitespaceTarget": 60,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "sharp",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "左边较暗，右边明亮，象征从无知到觉悟的过程"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding\n- Whitespace target: 60%\n- Visual weight distribution: 左边较暗，右边明亮，象征从无知到觉悟的过程\n\n[TOPOLOGY] — 基于 topologicalLayout\n- Zone count: 2\n- Division method: line\n- Zone ratios: 50:50\n- Physical metaphor visualization: 钥匙插入锁孔，门缓缓打开，通过两个区域的对比和明度变化来表达\n\n[RELATIONSHIPS] — 基于 primaryRelationship\n- Primary relationship type: opposing\n- Interaction quality: near\n- Spatial expression: 两个区域相对但不接触，体现念咒与理解经文的对立状态\n\n[RHYTHM] — 基于 rhythmSignature\n- Rhythm type: none\n- Element count: 2\n- Interval/size variation: 无节奏变化，主要通过两个对立区域的对比\n\n[GEOMETRY]\n- Primary shape: 左侧区域较暗，右侧区域明亮，形状简单，线条分割\n- Secondary shapes: 无\n- Lines: 1 条分割线\n- Edge treatment: 软边缘\n- Negative space: 留白主要集中在两区域的外部\n\n[COLOR]\n- Background: soft-gray: #F0F0F0\n- Primary hue: 左侧较暗的灰色，右侧明亮的白色\n- Secondary hue: 暖色调，用于右侧区域\n- Temperature: 温暖偏热，有活力\n- Contrast method: 明度对比\n\n[LIGHTING]\n- Light source: 整体均匀的光源，右侧稍亮\n- Glow effects: 1 个，右侧区域略有光晕\n- Ambient atmosphere: 整体光感清澈，左暗右亮\n\n[TEXTURE & MATERIAL] — 度可微调\n- Surface quality: 光滑\n- Edge sharpness: 软边缘\n- Transparency: 无\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma\n- Content resonance: 钥匙插入锁孔，门缓缓打开的象征，表达觉醒和反思的情感\n[STYLE]\n- Render style: Clean vector-like digital art\n- No photorealism, no 3D rendering\n- High clarity at 128px thumbnail",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-26T05:07:55.527Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233274308077-10c47a8e-ec73-47d0-952b-c1ac82a2030e-image_task_01KDCGXAGJ82DNM9SCY3K8MNVR_0.jpg",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "主要形体为1个锁形，线条少于3条，渐变和光晕各1个，且不覆盖满屏，画面留白超过50%。"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "有色相为橙色和灰色，中性色为白色，主色为高明度版本，无荧光/霓虹感，缩略到128px仍清爽。"
+    },
+    "abstraction": {
+      "pass": false,
+      "score": 40,
+      "reason": "5秒内可以看出具体的锁形物体。"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 80,
+      "reason": "空间有呼吸感，设计高级克制，有轻微层次但不堆细节。"
+    },
+    "pass": false,
+    "summary": "封面在复杂性、颜色和美学上都表现良好，但由于能够在5秒内识别出具体物体，因此在抽象性维度上未通过。"
+  },
+  "evaluatedAt": "2025-12-26T05:08:35.582Z"
+}

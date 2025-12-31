@@ -1,0 +1,62 @@
+{
+  "id": "72f559fc-ff98-459a-bbb0-b42dc0c579cd",
+  "taskId": "task_01KDCY1B948X8JV4Z6NV3V9ZP7",
+  "degree": "samadhi",
+  "podcastContent": "我07年4月份去河北柏林禅寺，那上面写着 “平常心是道”。注意，“平常心是道”，这是南泉禅师的话。我看了以后立马就不理解，心想做人就得有大丈夫气吞山河、唾江万里的雄心，“平常心是道” 怎么能让我平常心呢？我就觉得人要变得不平常。你看，我那个时候（2007 年）就是这个认知水平，满脑子都是 “要与众不同”。\n当时我就问寺院的知客僧：“你们为什么写‘平常心’？我觉得人要变得不平常才对。” 那知客僧一看我这状态，就笑了笑，说：“给你本书看看，你要不要？” 他大概是懒得跟我多解释，知道我还不具备接受这个道理的状态。\n他给了我一本寺院发的小册子，可这个事、这个 “平常心是道” 的念头，却把我给抓住了。我心里犯嘀咕：不对啊，佛教这么伟大，为什么会倡导 “平常心” 呢？这里面肯定有深意，但我就是想不通。\n后来我又看了一本书，叫南怀瑾的《冷眼观世间》。我入佛、学佛的门，就是从这本书开始的。一看之下，我直接就钻进去了。那一天晚上我都忘了自己休息没休息，心里完全被这本书抓住了，只顾着一直读。\n我本身是学哲学的，学过西方哲学、马克思主义哲学，都讲究逻辑。所以我告诉你，学哲学的人要轻易迷信，那是很难的。但我读",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "觉悟",
+      "secondary": "反思"
+    },
+    "emotion": [
+      "震撼",
+      "敬畏"
+    ],
+    "theme": [
+      "文化自信",
+      "从迷到悟",
+      "智慧的深度"
+    ],
+    "imagery": [
+      "门",
+      "解剖刀",
+      "高山"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "迷惑",
+      "to": "觉悟"
+    },
+    "physicalMetaphor": "打开门，看到里面的一切都清晰可见",
+    "topologicalLayout": {
+      "zoneCount": "2",
+      "zoneCountReason": "从迷惑到觉悟的对照，需要双域",
+      "divisionMethod": "gradient-fade",
+      "divisionMethodReason": "觉悟是一个渐进的过程，不是突然的转变",
+      "zoneRatios": "40:60"
+    },
+    "primaryRelationship": {
+      "type": "opposing",
+      "typeReason": "迷惑与觉悟两种状态相向对照但保持各自边界",
+      "interactionQuality": "near"
+    },
+    "rhythmSignature": {
+      "type": "none",
+      "typeReason": "主要是两个状态的对照，不需要复杂的节奏",
+      "elementCount": 2
+    },
+    "structureParams": {
+      "whitespaceTarget": 60,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "左域较暗，右域明亮且清晰"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding\n- Whitespace target: 60%\n- Visual weight distribution: 左暗右亮\n\n[TOPOLOGY] — 基于 topologicalLayout\n- Zone count: 2\n- Division method: gradient-fade\n- Zone ratios: 40:60\n- Physical metaphor visualization: 门的意象分界，左侧迷惑，右侧觉悟\n\n[RELATIONSHIPS] — 基于 primaryRelationship\n- Primary relationship type: opposing\n- Interaction quality: near\n- Spatial expression: 左暗右亮的对照区域，渐变分界\n\n[RHYTHM] — 基于 rhythmSignature\n- Rhythm type: none\n- Element count: 2\n- Interval/size variation: 无节奏变化\n\n[GEOMETRY]\n- Primary shape: 两个矩形区域，左侧较暗，右侧明亮\n- Secondary shapes: 无\n- Lines: 无\n- Edge treatment: 边缘柔和处理\n- Negative space: 大面积留白\n\n[COLOR]\n- Background: paper-white: #F6F4EE\n- Primary hue: soft-gray: #F0F0F0\n- Secondary hue: warm-beige: #F7F2E8\n- Temperature: 清凉宁静，不温不火\n- Contrast method: brightness\n\n[LIGHTING]\n- Light source: 无明显光源，整体柔和渐变\n- Glow effects: 1, 位于右侧明亮区域\n- Ambient atmosphere: 整体光感柔和，右侧明亮\n\n[TEXTURE & MATERIAL] — 度可微调\n- Surface quality: 平滑\n- Edge sharpness: 边缘柔和\n- Transparency: 无\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma\n- Content resonance: 迷惑到觉悟的视觉对照，柔和渐变的静谧感\n\n[STYLE]\n- Render style: Clean vector-like digital art\n- No photorealism, no 3D rendering\n- High clarity at 128px thumbnail",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": null,
+  "createdAt": "2025-12-26T08:57:35.576Z"
+}

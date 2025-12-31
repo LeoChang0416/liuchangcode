@@ -1,0 +1,62 @@
+{
+  "id": "a03d24f0-8198-4eff-a0d6-188ec45ac864",
+  "taskId": "task_01KDB9KS2ZZ8FS692QPTZQCDM5",
+  "degree": "prajna",
+  "podcastContent": "别把佛学当避世港湾：你误解的“放下”，从来不是躺平\n\n哈喽各位听友，欢迎回到我们的播客节目！今天要聊的这个话题，估计戳中了很多年轻人的状态——现在是不是越来越多人喜欢往寺庙跑？雍和宫的香灰堆得老高，禅修营的名额抢都抢不到，朋友圈里时不时就刷到“在上班和上进之间，我选择上香”的调侃。\n\n但不知道你有没有发现一个现象：很多人把寺庙当成了情绪避难所，把佛学当成了“避世指南”。工作不顺心了就去烧柱香，感情受挫了就想“遁入空门”，甚至有人觉得学佛就是“放下一切”，说白了就是躺平摆烂、逃避问题。今天我们就来好好掰扯掰扯：真正的佛学智慧，到底是让我们逃离现实，还是让我们更好地面对现实？你一直误解的“放下”，其实根本不是你想的那样。\n\n先给大家说个真实的事儿，我身边有个朋友，前段时间被公司裁员，又赶上感情破裂，整个人状态特别差。后来他报了个高价禅修营，天天打坐念经，回来之后跟我说“顿悟了”，说世间一切都是虚妄，不想再努力了，就在家待着“修心”。结果没过三个月，房租都快交不起了，反而更焦虑，还说“为什么我都修行了，还是这么苦”。\n\n其实像他这样的情况，不是个例。上海大学的成庆老师就说过，现在很多人信佛信",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "清醒",
+      "secondary": "坚定"
+    },
+    "emotion": [
+      "通透",
+      "有力"
+    ],
+    "theme": [
+      "佛学智慧",
+      "面对现实",
+      "放下执着"
+    ],
+    "imagery": [
+      "红尘中的清醒心灵",
+      "生活中的勇士"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "逃避",
+      "to": "面对"
+    }
+  },
+  "geometryDescription": "一块几何被切为两部分并错位。主体由两个方形构成，一个较大，另一个较小。二者在画面中间位置错位排列，形成明显切面。两域颜色对比明显，并有轻微渐变。背景为高亮度的纸白色。",
+  "colorLogic": "采用白色和蓝色为主色调，白色为背景，较大方形为淡蓝色，较小方形为明黄色，形成强烈的明度对比与冷暖对比。两域的颜色通过轻微渐变进行过渡，体现切分与穿透感。",
+  "prompt": "1:1 square, 10% safe margin, >=50% whitespace, <=3 shapes, <=2 lines, <=2 gradients/glows. Background: high-brightness paper white. Two abstract square shapes, one larger in light blue, one smaller in bright yellow, positioned centrally with clear offset. Strong light-dark and warm-cool contrast. Subtle gradient transitions within shapes. Japanese minimalism (Ma), clean, serene, balanced.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-25T17:41:24.855Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233315499121-d1a64a7d-9d42-4864-9fcd-8b0a11f75dc7-image_task_01KDB9M8WEEVY11Z8JBWRA77YZ_0.jpg",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 95,
+      "reason": "主要形体为2个矩形，线条为0，渐变为2，画面留白超过50%"
+    },
+    "color": {
+      "pass": true,
+      "score": 90,
+      "reason": "有色相为2（蓝色和黄色），中性色为1（白色），主色为高明度版本，无荧光/霓虹感，缩略到128px仍清爽"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 100,
+      "reason": "5秒内看不出具体物体或宗教器物，无符号化联想，无放射对称图腾"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间有呼吸感，高级克制，有轻微层次但不堆细节"
+    },
+    "pass": true,
+    "summary": "封面设计简洁，颜色清爽，符合日本美学的高级克制和空间感要求。"
+  },
+  "evaluatedAt": "2025-12-25T17:43:56.750Z"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "2dc1fe49-7562-484b-a214-6e33557a7db3",
+  "taskId": "task_01KDB5XPBND9YMHAYFKHNBVD0B",
+  "degree": "prajna",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》\n\n哈喽，各位听友大家好，欢迎来到本期的播客节目。今天我们要聊的话题，可能戳中了很多学佛同修的痛点——就是那句“很多人天天念《楞严咒》，却根本没看懂《楞严经》”。\n\n不知道你有没有过这样的经历：清晨的佛堂里、安静的书房中，跟着课诵本一字一句地念诵楞严咒，咒语的音节庄严恢弘，念完之后心里也会觉得踏实。但如果有人问你，你天天念的这篇咒语，出自哪部经？这部经到底在讲什么？可能很多人都会愣住，甚至说不出个所以然。今天，我们就来好好聊聊这个问题，搞清楚楞严咒和《楞严经》的关系，也读懂《楞严经》里最核心的智慧。\n\n首先，我们得先厘清一个基本事实：楞严咒并不是独立存在的，它出自《大佛顶如来密因修证了义诸菩萨万行首楞严经》，也就是我们常说的《楞严经》，具体在经的第七卷里。这部经全文十卷，共64460字，而楞严咒作为经中核心的神咒，全咒分为五会，有427句、2620字，是汉传佛教日常课诵中最长的神咒，所以也被称为“大佛顶首楞严神咒”。\n\n可能有听友会问，既然咒在经里，为什么大家都爱念咒，却很少有人通读《楞严经》呢？其实原因很现实。一方面，《楞严经》的文字晦涩",
+  "analysis": {
+    "emotion": [
+      "启发",
+      "通透"
+    ],
+    "theme": [
+      "智慧与迷惑",
+      "修行与觉悟"
+    ],
+    "imagery": [
+      "钥匙与门",
+      "波浪与大海"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "迷惑",
+      "to": "觉悟"
+    },
+    "recommendedDegree": "般若",
+    "degreeReason": "播客内容主要在于通过理解《楞严经》的核心智慧来达到觉悟的目的，这种洞见和切透的过程正是般若的体现。"
+  },
+  "geometryDescription": "画面分为左右两部分，左侧暗，右侧明。左右分界线为一条柔和的弧线，代表从迷惑到觉悟的过渡。左侧区域为暗蓝色，右侧区域为高明度的黄色，象征智慧的光芒。画面中有一把钥匙形状的几何形体，位于分界线附近，象征智慧的钥匙。整体构图简洁，留白充足。",
+  "colorLogic": "左侧使用暗蓝色，代表迷惑和深邃；右侧使用高明度黄色，象征启发和觉悟。分界线柔和过渡，形成冷暖对比，突出从迷惑到觉悟的主题。整体色调清新通透，符合般若的洞见和澄明。",
+  "prompt": "A square canvas divided into two distinct vertical regions. The left region is dark blue, representing confusion, while the right region is high-brightness yellow, symbolizing enlightenment. A soft curved line separates the two regions, illustrating the transition from confusion to clarity. Near the boundary, a geometric shape resembling a key symbolizes the key to wisdom. The composition is minimalistic with ample white space.",
+  "negativePrompt": "text, numbers, punctuation, logos, letters, scriptures, symbols, humans, animals, organs, gestures, buildings, natural landscapes, religious artifacts, lotus, dharma wheel, mandala, zen circle, scriptures, seals, radial symmetrical totems, dense geometric patterns, photorealistic 3D, photography, metallic or glass realism, strong grain noise, heavy textures, any figurative objects",
+  "status": "submitted",
+  "createdAt": "2025-12-25T16:36:55.363Z"
+}

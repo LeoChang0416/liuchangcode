@@ -1,0 +1,74 @@
+{
+  "id": "9474f0f1-50ea-4c11-8ca4-f2791014e294",
+  "taskId": "task_01KDS644W9A4CP4EK0BJVX7GKV",
+  "degree": "prajna",
+  "podcastContent": "金刚经呢是佛祖跟须菩提的对话，全文呢仅仅5000字，但是这5000字却代表了人类智慧的巅峰。\n读懂后会让人豁然开朗，从此开悟，六组禅师是不识字的，但是在他年轻的时候，也是偶尔听到了金刚经的一句话就开悟了，可见这本书的神力。\n首先金刚经的开始呢，是以这样一种的对话，佛祖问须菩提，恒河里的沙子多不多，须菩提说当然多，佛祖又问如果有人散尽家财像恒河里的沙子这样多的财富，去做慈善，算不算一种功德呢，须菩提说当然算，佛祖又说有一种功德\n比这个更大，那就是在你开悟之后把金刚经最核心的四句话解释给众人听，让更多人开悟，这才是莫大的功德。\n第一句，若菩萨有我相、人相、众生相、寿者相、皆非菩萨相，佛祖说如果你看到的菩萨，他长得像我这样的人或者你这样的或者像路人这样的或者像一个长寿的，那他都不是菩萨，也就是说如果我们拜的那个菩萨拥有像人一样的相都不是菩萨，菩萨根本就没有人相，也就是没有相\n第二句，凡以色拜我，以音声求我，人行邪道，不能见如来。意思就是说凡是看见我就拜的人，或者听到我的声音就求我的人，都是执迷于佛祖的表象，这都是邪道，永远都不可能见到如来。\n第三句，凡有所相，皆是虚妄，若见诸相非相即见如来，",
+  "analysis": {
+    "contentEssence": "以“破相见性”为核心，把一切境遇与烦恼都转为修行的入口：不执表象、不求外得，在现实中照见本质而开悟。",
+    "physicalMetaphor": "一面镜子被层层雾气与水滴蒙住，修行者以一口稳长的呼吸在镜面上拭出一个清晰的圆窗；圆窗越来越大，最终镜面复明，映出同一个世界但不再被水滴形相所缠。",
+    "metaphorVisualization": "单一画面中以“中心清明窗口”作为主形体，外围是雾化颗粒与水滴般的虚影层；清明区域向外扩张、虚影向边缘退散，用层叠与渐隐表现“相→非相→见性”的过程，而非分区对照。",
+    "spiritualTone": {
+      "primary": "澄明破执",
+      "secondary": "入世修行"
+    },
+    "emotion": [
+      "豁然",
+      "笃定"
+    ],
+    "theme": [
+      "破相见性",
+      "自证自悟",
+      "烦恼即道场"
+    ],
+    "imagery": [
+      "镜面",
+      "雾化水滴",
+      "清明圆窗",
+      "渐隐边界",
+      "内观之光"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "执著于色相、音声与方法的抓取",
+      "to": "看透诸相皆虚妄、在现实中安住与通达",
+      "tensionType": "breakthrough"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "意象是同一面镜子从蒙尘到复明的变化，属于同一场域内的澄清与扩展，不需要多域分割。",
+      "divisionMethod": "radial",
+      "divisionMethodReason": "清明圆窗从中心向外扩张最贴合“拭开—洞见—普照”的体验，外围虚影自然向边缘退散。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "nested",
+      "typeReason": "清明的“见性窗口”被外围的雾与水滴包裹，象征真如本在、被相所覆；修行是让内核逐渐显露。",
+      "interactionQuality": "touching",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "decelerating",
+      "typeReason": "从“执相的繁杂颗粒”逐步沉静为“少量、稀薄、退散的虚影”，节奏由密转疏、由动归静，符合开悟后的安住。",
+      "elementCount": 4,
+      "direction": "outward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 68,
+      "contrastMethod": "layering",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 1,
+      "layerCount": 3,
+      "tensionExpression": "外围以颗粒/水滴状的虚影与轻微扭曲制造“执相的黏着感”，中心以更高透明度与微光建立“见性之窗”；通过中心区域持续扩大、外围元素稀释退散表达突破与解缚。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "采用单域径向“拭镜见性”的过程性意象：用中心清明窗口与外围雾滴层叠来表达破相与入世道场，不依赖任何左右并列或二元对照。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides\n- Whitespace target: 68% (large quiet field, minimal marks)\n- Visual weight distribution: centered clarity with very light peripheral residue; emphasis stays inside a single field, no split composition\n\n[TOPOLOGY] — based on topologicalLayout\n- Zone count: 1 (one continuous mirror-world)\n- Division method: radial (clarity expands from the center outward)\n- Zone ratios: 100\n- Physical metaphor visualization: depict one mirror surface veiled by mist; a circular wiped window of clarity grows outward radially, with the outer veil retreating toward the edges rather than forming separate zones\n\n[RELATIONSHIPS] — based on primaryRelationship\n- Primary relationship type: nested\n- Interaction quality: touching\n- Spatial expression: a large, clear circular window sits centrally and is directly touching/nested within a surrounding diffuse mist film; the outer mist hugs the circle’s perimeter with a soft gradient-fade (no hard boundary, no frame)\n\n[RHYTHM] — based on rhythmSignature\n- Rhythm type: decelerating\n- Element count: 4\n- Interval/size variation: four small droplet-grain shapes placed around the central window along the radial field; spacing increases as they move outward (dense-near to sparse-far), and their opacity gently decreases outward to suggest release and calming\n\n[GEOMETRY]\n- Primary shape: one large circle (the cleared ‘seeing window’), centered; diameter ~46–52% of canvas; perfectly round; edge is soft gradient-fade into the surrounding haze\n- Secondary shape 1: one surrounding mist field as a very large, irregular soft cloud-like ring/film that nests the circle (counts as a single shape), hugging the circle and thinning toward the corners\n- Secondary shapes 2–5 (but keep total shapes ≤4): four tiny droplet/particle marks total (count them as one grouped shape if your system allows; otherwise reduce to exactly two droplets + two grains so total shapes remains 4). Each is small, rounded, water-drop or oval-grain, with subtle blur\n- Lines: none (avoid any dividing line or diagonal slash)\n- Edge treatment: soft, smooth, gradient-fade; no sharp outlines\n- Negative space: keep corners and large areas of background clean and quiet, letting the Ma breathe\n\n[COLOR]\n- Background: cool-mist #F5F7FA\n- Primary hue: serene-blue #B3E5FC at ~88% lightness, used mainly inside the clear circular window as a translucent wash\n- Secondary hue (accent): mint-mist #E8F5E9 used at ~3% area as tiny droplet highlights; apply with 12% opacity as a faint tint (no loud spots)\n- Temperature: cool, lucid, awakening\n- Contrast method: area contrast (one large clear window vs tiny droplet accents)\n- Accent usage: mint-mist only in the smallest droplets/grains; keep it subtle and sparse\n\n[LIGHTING]\n- Light source: soft internal illumination emerging from within the cleared window (inner contemplation light)\n- Glow effects: 1 total — a restrained radial bloom centered inside the clear circle, very subtle, fading before it reaches the safe margin\n- Ambient atmosphere: quiet, airy, polished clarity; no theatrical beams\n\n[TEXTURE & MATERIAL]\n- Surface quality: smooth, glass-like mirror calmness; no visible paper fibers\n- Edge sharpness: soft (prajñā bias), gentle blur only at boundaries\n- Transparency: three layers total (background mist, outer veil film, inner clear window wash); keep all translucent and minimal\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (expansive silence), Kanso (few elements), Shibui (restrained refinement)\n- Content resonance: from clinging droplets to liberated stillness; the inner light signals insight without creating a split composition\n\n[STYLE]\n- Render style: clean vector-like digital art, high clarity at 128px thumbnail\n- No photorealism, no 3D rendering, no text, no symbols, no UI elements\n- Ensure no left/right split, no diagonal divider, and no separate panels; keep everything within one continuous radial field",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": null,
+  "createdAt": "2025-12-31T03:09:49.321Z"
+}

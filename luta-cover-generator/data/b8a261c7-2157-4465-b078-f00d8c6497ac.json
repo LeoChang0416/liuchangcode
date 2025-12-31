@@ -1,0 +1,72 @@
+{
+  "id": "b8a261c7-2157-4465-b078-f00d8c6497ac",
+  "taskId": "task_01KDEYPZ5PG9XP65HCX4ZKQB24",
+  "degree": "prajna",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》。其实佛陀早就说：你找的“真心”，不在外面，就在你此刻的觉知里。今天我想告诉你：为什么你越努力越焦虑？答案就藏在这部被严重误解的经典中。\n\n有没有人觉得，自己明明很努力，却总是被情绪牵着走？明明想静下来，脑子里却像开了弹幕？你可能以为问题出在“不够自律”“不够幸运”，但《楞严经》告诉你：问题出在——你一直用“假心”活着，却把“真心”弄丢了。\n\n佛陀在《楞严经》开篇就问阿难：“你当初为什么出家？”阿难说：“因为我看见佛陀相好庄严，心生爱慕。”佛陀立刻反问：“你用什么看见的？用什么爱慕的？”  \n这一问，问出了整部《楞严经》的核心：你所依赖的“心”，到底是真的，还是妄的？\n\n一、破“认贼为子”：你每天用的“心”，其实是假的\n《楞严经》里有个震撼的比喻：“认贼为子”。  \n什么意思？就像你家里进了小偷，你不抓他，反而把他当亲儿子养，好吃好喝供着——结果家财散尽，还不知道是谁干的。\n\n我们每天用的“心”，就是这个“贼”。  \n你因为老板一句话失眠，是“心”在反应？  \n你刷短视频停不下来，是“心”在享受？  \n你焦虑未来、后悔过去，是“心”在思考？",
+  "analysis": {
+    "contentEssence": "停止向外追寻，向内认出那本自具足、如如不动的觉知本性。",
+    "physicalMetaphor": "遮蔽天空的云层逐渐消散，露出本自清净的广阔天空。",
+    "metaphorVisualization": "一个稳定、均匀的基底（天空）作为主体，其上方覆盖着一层正在褪去、消散的有机形态（云层）。视觉焦点在于云层消散处显露出的基底，而非两个区域的对抗。",
+    "spiritualTone": {
+      "primary": "觉醒的宁静",
+      "secondary": "深邃的包容"
+    },
+    "emotion": [
+      "解脱",
+      "宁静"
+    ],
+    "theme": [
+      "禅宗",
+      "觉知",
+      "本性"
+    ],
+    "imagery": [
+      "云散见天",
+      "镜子照物",
+      "狂心顿歇"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "被云层（妄念）遮蔽",
+      "to": "显露清净本体",
+      "tensionType": "release"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "核心意象‘云散见天’是一个整体（天空）中遮蔽物（云）的消融过程，并非两个独立领域的对比，而是同一基底上状态的转变。",
+      "divisionMethod": "organic",
+      "divisionMethodReason": "云层的边界是自然、柔软、不规则的，适合用有机形态来表现妄念的消散与褪去。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "fragmenting",
+      "typeReason": "云层从完整覆盖到破裂、消散，象征着妄念的消融与‘狂心顿歇’。这不是两个物体的关系，而是同一主体（觉知）上附加物的状态变化。",
+      "interactionQuality": "fused",
+      "spatialPosition": "top"
+    },
+    "rhythmSignature": {
+      "type": "decelerating",
+      "typeReason": "云层的消散是一个从密到疏、从动到静的过程，象征着妄念活动的平息，最终归于静止（菩提）。",
+      "elementCount": 3,
+      "direction": "inward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 70,
+      "contrastMethod": "brightness & warm-cool",
+      "edgeTreatment": "soft",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "通过顶部云层形态的密度变化与消散的缺口来表现‘遮蔽’与‘显露’的张力，缺口处暗示本体的显现。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "此骨架基于‘消散与显露’的纵向过程构建，是单域结构。它避免了‘妄心 vs 真心’的左右二元并置，而是将‘妄’表现为覆盖在‘真’之上的、正在褪去的短暂层，更贴合‘歇即菩提’中‘歇’的动态与‘菩提’本有的静态。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides\n- Whitespace target: 70% (achieved through vast, empty sky)\n- Visual weight distribution: Light visual weight concentrated in the upper-left quadrant, where the largest cloud fragment resides, gradually dissipating towards the lower-right, creating a sense of dynamic stillness.\n\n[TOPOLOGY]\n- Zone count: 1 (a single, continuous sky domain)\n- Division method: Organic (manifested in the irregular, natural boundaries of the cloud fragments)\n- Zone ratios: 100 (the entire canvas is one unified space)\n- Physical metaphor visualization: The clouds are in a state of fragmentation and dissipation, revealing the clear sky behind. This visually embodies the metaphor of 'clouds dispersing to reveal the sky,' symbolizing the cessation of delusions and the emergence of innate clarity.\n\n[RELATIONSHIPS]\n- Primary relationship type: Fragmenting (the cloud mass is breaking apart)\n- Interaction quality: Fused (the clouds and sky are intrinsically blended, with no hard separations)\n- Spatial expression: Three cloud fragments are arranged in a diagonal flow from upper-left to lower-right. They are not isolated but appear as parts of a dissolving whole, with the largest fragment at the start point and the smallest at the end.\n\n[RHYTHM]\n- Rhythm type: Decelerating\n- Element count: 3\n- Interval/size variation: The clouds decrease significantly in size and visual density from the first to the third. The intervals between them increase slightly, creating a sense of slowing down, spacing out, and settling into tranquility.\n\n[GEOMETRY]\n- Primary shape: Three organic, amorphous cloud shapes. The largest (approx. 15% of canvas width) is in the upper-left, the medium (approx. 10%) is near the center, and the smallest (approx. 5%) is in the lower-right.\n- Secondary shapes: None.\n- Lines: None.\n- Edge treatment: Soft, feathered edges that blend gently into the sky, yet maintain a clear, defined silhouette (Prajñā bias).\n- Negative space: The vast majority of the canvas is empty, clear sky, emphasizing openness, stillness, and potential.\n\n[COLOR]\n- Background: A cool, very light cyan-blue (#E6F2FF or similar), evoking a clear, infinite sky.\n- Primary hue: A soft, slightly warm white (#FFFFF5 with 80-95% opacity) for the cloud fragments, creating a gentle brightness contrast.\n- Secondary hue: None.\n- Temperature: Cool and clear overall, with a subtle warm tinge on the cloud edges from the implied light, enhancing the sense of awakening and clarity (Prajñā bias).\n- Contrast method: Primarily brightness contrast (bright clouds against lighter sky) and minimal warm-cool contrast.\n\n[LIGHTING]\n- Light source: Ambient, diffuse light coming from behind the viewer, illuminating the clouds evenly and making the sky uniformly bright.\n- Glow effects: One subtle, low-opacity glow (color: #FFFFE0) behind the largest cloud fragment, suggesting latent illumination breaking through, but not overpowering.\n- Ambient atmosphere: Bright, serene, and infinitely open, with a crisp, clean air quality.\n\n[TEXTURE & MATERIAL]\n- Surface quality: Smooth, matte, and soft like fine cotton or paper (Prajñā bias). No visible grain or roughness.\n- Edge sharpness: Soft but precisely defined, not blurry or fuzzy.\n- Transparency: The clouds have varying opacity: the first cloud is 90% opaque, the second 70%, the third 40%, enhancing the decelerating rhythm and dissipation effect.\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Strong emphasis on Ma (negative space as active element), Kanso (simplicity and elimination of clutter), and Shibui (subtle, quiet beauty).\n- Content resonance: The visual dissipation of clouds directly mirrors the spiritual process of 'the restless mind suddenly halting,' evoking a deep sense of liberation and tranquil awakening.\n\n[STYLE]\n- Render style: Clean, vector-like digital art with flat colors and extremely subtle gradients for depth. No photorealism, no 3D rendering, no discernible brush strokes.\n- Clarity: The composition must remain clear and legible even when scaled down to a 128px thumbnail.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": null,
+  "createdAt": "2025-12-27T03:47:52.862Z"
+}

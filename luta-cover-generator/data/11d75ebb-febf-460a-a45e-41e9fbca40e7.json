@@ -1,0 +1,53 @@
+{
+  "id": "11d75ebb-febf-460a-a45e-41e9fbca40e7",
+  "taskId": "task_01KDBFC9R9T1TYDY14T6YJCE00",
+  "degree": "virya",
+  "podcastContent": "别把佛学当避世港湾：你误解的“放下”，从来不是躺平\n\n哈喽各位听友，欢迎回到我们的播客节目！今天要聊的这个话题，估计戳中了很多年轻人的状态——现在是不是越来越多人喜欢往寺庙跑？雍和宫的香灰堆得老高，禅修营的名额抢都抢不到，朋友圈里时不时就刷到“在上班和上进之间，我选择上香”的调侃。\n\n但不知道你有没有发现一个现象：很多人把寺庙当成了情绪避难所，把佛学当成了“避世指南”。工作不顺心了就去烧柱香，感情受挫了就想“遁入空门”，甚至有人觉得学佛就是“放下一切”，说白了就是躺平摆烂、逃避问题。今天我们就来好好掰扯掰扯：真正的佛学智慧，到底是让我们逃离现实，还是让我们更好地面对现实？你一直误解的“放下”，其实根本不是你想的那样。\n\n先给大家说个真实的事儿，我身边有个朋友，前段时间被公司裁员，又赶上感情破裂，整个人状态特别差。后来他报了个高价禅修营，天天打坐念经，回来之后跟我说“顿悟了”，说世间一切都是虚妄，不想再努力了，就在家待着“修心”。结果没过三个月，房租都快交不起了，反而更焦虑，还说“为什么我都修行了，还是这么苦”。\n\n其实像他这样的情况，不是个例。上海大学的成庆老师就说过，现在很多人信佛信",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "清醒",
+      "secondary": "坚定"
+    },
+    "emotion": [
+      "觉悟",
+      "勇气"
+    ],
+    "theme": [
+      "佛学智慧",
+      "面对现实",
+      "正确理解放下"
+    ],
+    "imagery": [
+      "勇士与盾牌",
+      "清晨的阳光穿透迷雾"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "逃避",
+      "to": "面对"
+    },
+    "structureParams": {
+      "compositionType": "dual-zone",
+      "compositionReason": "内容核心是从逃避到面对的转变，需要两域对照表达",
+      "axis": "horizontal",
+      "axisReason": "从左到右的时间流动，象征从逃避到面对的过程",
+      "anchorPosition": "center",
+      "anchorReason": "两域等重，中心位置象征平衡与觉悟",
+      "whitespaceTarget": 60,
+      "whitespaceReason": "需要足够的空间来表现清醒与坚定的情感，同时避免画面过于拥挤",
+      "contrastMethod": "brightness",
+      "contrastReason": "逃避=暗，面对=明，用明度对比最直接表现觉悟的过程",
+      "edgeTreatment": "gradient-fade",
+      "edgeReason": "过渡不锐利，符合从逃避到面对的自然转变",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "左域略暗略模糊，右域更亮更清晰，象征从逃避到面对的清晰化过程"
+    }
+  },
+  "geometryDescription": "画面采用dual-zone构图，水平轴向，中心位置分为左右两个区域，左侧区域略暗略模糊，右侧区域更亮更清晰，边缘使用渐隐处理。",
+  "colorLogic": "背景采用纸白色（#F6F4EE），左侧区域使用柔和的灰色（#E8E4DC），右侧区域使用高亮度的蓝色（#B8D4E8），通过明度对比表现情感与主题。",
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides, main elements stay within center 80%\n- Whitespace target: 60% of total area remains empty/background\n- Visual weight distribution: balanced around the center, with slight emphasis on the right side to indicate clarity and awakening.\n\n[COMPOSITION]\n- Layout type: dual-zone composition representing the transition from avoidance to confrontation.\n- Primary axis: horizontal orientation, reading left-to-right as temporal progression.\n- Anchor position: center.\n- Spatial zones: left zone (40%) represents avoidance, right zone (40%) represents confrontation, with 20% transition zone at the center.\n- Depth layering: 2 layers - background plane and two main geometric forms.\n- Tension expression: the transition from dark and blurry to bright and clear, embodying the podcast's theme of moving from avoidance to confrontation.\n\n[GEOMETRY]\n- Primary shape: soft-cornered rectangle, 40% canvas width, 60% canvas height, positioned in left zone with 8px corner radius, representing the container of avoidance.\n- Secondary shapes: clean angular form in right zone, 40% canvas width, slightly smaller, crisp 4px corners suggesting clarity.\n- Lines: one subtle dividing line: 1.5px weight, vertical, spanning 60% of canvas height, positioned at zone boundary with 15% top margin.\n- Edge treatment: left shape has gradient fade on outer edge (dissolution), right shape has crisp 2px edge (clarity).\n- Shape relationships: 8% horizontal gap between shapes, no overlap, aligned on horizontal center axis.\n- Negative space: large breathing area in upper-right quadrant and lower margins.\n\n[COLOR]\n- Background: warm paper-white #F6F4EE with subtle paper-like warmth, clean and non-distracting.\n- Primary hue: soft blue at high brightness, approximately #B8D4E8 to #C5E0F0 range, applied to the right-zone shape suggesting clarity and awakening.\n- Secondary hue: muted warm gray #E8E4DC on left-zone shape, representing the unawakened state.\n- Contrast method: brightness contrast (left shape 15% darker than right) plus subtle warm-cool contrast.\n- Color transitions: dividing line uses gradient from left-shape color to right-shape color over 40px width, creating soft visual bridge.\n\n[LIGHTING]\n- Light source: soft ambient illumination from upper-right, no harsh directional light.\n- Glow effects: 1 subtle glow positioned at transition zone, radius approximately 15% of canvas, pale blue-white tint #F0F6FA at 8% opacity, creating sense of emerging light.\n- Gradient application: left-zone shape has 12% darker value at its left edge fading to base color, suggesting depth.\n- Shadow: no drop shadows, only subtle inner value variations.\n- Ambient atmosphere: overall luminous and airy, high-key lighting suggests openness and peace.\n\n[TEXTURE & MATERIAL]\n- Surface quality: matte digital finish with extremely subtle paper-grain suggestion in background only.\n- Edge sharpness: right-zone elements pixel-crisp, left-zone elements have 4-8px feathered edges.\n- Transparency: dividing line element at 70% opacity allowing background to show through.\n- Noise/grain: none on geometric elements, imperceptible organic texture in background only.\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (間) expressed through generous upper and side margins allowing visual breathing; Kanso (簡素) through limited element count; Shibui (渋い) through restrained, sophisticated color palette avoiding vibrancy.\n- Spiritual tone: the composition embodies the podcast's message of awakening - moving from cluttered seeking to simple knowing.\n- Emotional resonance: viewer should feel a sense of gentle revelation, as if fog is lifting.\n- Breathing space: 60% whitespace creates meditative calm, elements float rather than crowd.\n\n[STYLE]\n- Render style: clean vector-like digital art with minimal geometric abstraction. Flat design language with subtle depth through value shifts, not 3D effects. No photorealism, no complex textures, no decorative elements. High clarity maintained at 128px thumbnail - shapes remain distinct, colors stay clean, no muddy mixing.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-25T19:22:11.223Z"
+}

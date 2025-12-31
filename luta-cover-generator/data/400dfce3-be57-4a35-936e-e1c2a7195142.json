@@ -1,0 +1,63 @@
+{
+  "id": "400dfce3-be57-4a35-936e-e1c2a7195142",
+  "taskId": "task_01KDB8AZDAGW921638K6K636HN",
+  "degree": "virya",
+  "podcastContent": "别把佛学当避世港湾：你误解的“放下”，从来不是躺平\n\n哈喽各位听友，欢迎回到我们的播客节目！今天要聊的这个话题，估计戳中了很多年轻人的状态——现在是不是越来越多人喜欢往寺庙跑？雍和宫的香灰堆得老高，禅修营的名额抢都抢不到，朋友圈里时不时就刷到“在上班和上进之间，我选择上香”的调侃。\n\n但不知道你有没有发现一个现象：很多人把寺庙当成了情绪避难所，把佛学当成了“避世指南”。工作不顺心了就去烧柱香，感情受挫了就想“遁入空门”，甚至有人觉得学佛就是“放下一切”，说白了就是躺平摆烂、逃避问题。今天我们就来好好掰扯掰扯：真正的佛学智慧，到底是让我们逃离现实，还是让我们更好地面对现实？你一直误解的“放下”，其实根本不是你想的那样。\n\n先给大家说个真实的事儿，我身边有个朋友，前段时间被公司裁员，又赶上感情破裂，整个人状态特别差。后来他报了个高价禅修营，天天打坐念经，回来之后跟我说“顿悟了”，说世间一切都是虚妄，不想再努力了，就在家待着“修心”。结果没过三个月，房租都快交不起了，反而更焦虑，还说“为什么我都修行了，还是这么苦”。\n\n其实像他这样的情况，不是个例。上海大学的成庆老师就说过，现在很多人信佛信",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "清醒",
+      "secondary": "坚定"
+    },
+    "emotion": [
+      "通透",
+      "有力"
+    ],
+    "theme": [
+      "正确理解佛学",
+      "面对现实",
+      "放下执着"
+    ],
+    "imagery": [
+      "红尘中的修行",
+      "心灵的自由"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "逃避",
+      "to": "面对"
+    }
+  },
+  "geometryDescription": "三个递增的矩形和两条水平线，表示阶梯和递进。矩形从左下角向右上角排列，大小逐渐增大，线条在矩形中心水平相交。",
+  "colorLogic": "主色为亮红色，象征进取和热忱。对比色为小面积的明亮蓝色，突出冷静和理性。背景为高亮的浅灰色，营造清醒的氛围。",
+  "prompt": "Minimalist abstract geometric composition, three ascending rectangles and two horizontal lines representing steps and progression. Rectangles arranged from lower left to upper right, increasing in size. Lines intersect rectangles horizontally at the center. Primary color bright red, small area of bright blue for contrast. Background high-brightness light gray, creating an awakening atmosphere. Soft, diffuse ambient light, no harsh shadows.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-25T17:19:07.860Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233316837763-07ad0fff-c5b0-4abd-8761-8aaceeb2dc3f-image_task_01KDB8BDKW1JBQH3XNB1C1AT03_0.jpg",
+  "evaluation": {
+    "religiousRisk": {
+      "score": 0,
+      "reason": "没有明显的宗教符号。"
+    },
+    "serenity": {
+      "score": 85,
+      "reason": "留白足够，画面干净，颜色克制。"
+    },
+    "symmetryBalance": {
+      "score": 80,
+      "reason": "构图具有稳定的平衡感，几何关系严谨。"
+    },
+    "complexity": {
+      "score": 90,
+      "reason": "形体和线条都很少，极简设计。"
+    },
+    "abstraction": {
+      "score": 95,
+      "reason": "完全看不出具体物体，纯几何抽象。"
+    },
+    "total": 90,
+    "pass": true,
+    "summary": "这张播客封面图片符合现代艺术封面的标准，具有极简的几何抽象风格，留白足够，画面干净，构图平衡。"
+  },
+  "evaluatedAt": "2025-12-25T17:19:33.610Z"
+}

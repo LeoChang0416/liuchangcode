@@ -1,0 +1,75 @@
+{
+  "id": "42b79714-2a11-499e-a598-951a48e653a4",
+  "taskId": "task_01KDF3Z98P51N3PZZZN6V359VV",
+  "degree": "dana",
+  "podcastContent": "基础信息\n暂时无法在飞书文档外展示此内容\n\n---\n文案\n有没有经常去拜一拜的，你许的愿都实现了呢？你说佛信不信佛啊？大家怎么想的？可以把想法写在评论区。今天我想跟大家聊聊哲学经典金刚经这部经典坚定了我无神论的观点。甚至我感觉佛陀本人就是个无神论者。他想告诉我们的根本就不是拜一拜就能心想事成。很多人都搞错了。一句凡琐有相皆是虚妄，就巧明了我们拜的都是自己的贪念。接下来我会用几期视频把这段无数人捧着念，甚至会背，却没有几个人呢真正看懂的金刚经，用人话讲清楚。今天分享三个离苦得乐的方法，就源自于这部经典。但是如果你还在指望用几根香能换一切，现在你划走了。\n\n佛陀他不是神，他就是一位老师和所有的老师一样，他的任务就是在我们心中种下正念的种子。至于能不能发芽，能不能开花，全看你平时怎么浇灌。如果你每天浇灌的是焦虑贪婪嫉妒，他可能根本就无法生根发芽。但如果你用的是觉察善良自醒，他可能就会长成参天大树。金刚经其实就是一场老师与学生的现场答疑，整个过程老师都在说菩萨根本不存在，也执着于表象。如果你以为菩萨就是寺庙里的泥像，那只能说明你完全没有开悟。在这个答疑现场，有个最经典的提问，是一位来自叫虚菩提",
+  "analysis": {
+    "contentEssence": "通过《金刚经》哲学，揭示万物皆由条件暂时聚合（一合相）的本质，引导人破除对相、时、果的执着，从而在缺憾中安住，获得如如不动的内心安宁。",
+    "physicalMetaphor": "一颗石子投入平静的心湖，泛起层层涟漪，而后涟漪渐消，湖面重归深邃的平静，但湖水已接纳了石子。",
+    "metaphorVisualization": "中心一个凝聚的、有质感的圆形（石子/觉悟核心），周围是广阔、静谧的留白（湖面/心性），从中心向外扩散出几圈柔和、渐淡的同心波纹（认知的涟漪），波纹最终融入留白。",
+    "spiritualTone": {
+      "primary": "澄明",
+      "secondary": "启悟"
+    },
+    "emotion": [
+      "释然",
+      "安宁"
+    ],
+    "theme": [
+      "破执",
+      "本质",
+      "当下",
+      "内在安宁"
+    ],
+    "imagery": [
+      "涟漪",
+      "聚合与消散",
+      "静水",
+      "乐高拆解",
+      "中心点"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "对聚合之相（一合相）的执着与恐惧",
+      "to": "看清本质后的放下与从容（如如不动）",
+      "tensionType": "release"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "内容核心是引导观众回归一个统一的认知状态（看清“一合相”），而非展示对立或对比，是向心性的觉悟过程。",
+      "divisionMethod": "none",
+      "divisionMethodReason": "无需分割画面，用极致的留白（空性）来衬托和包容中心的觉悟意象，符合“凡所有相，皆是虚妄”的意境。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "solo",
+      "typeReason": "佛陀是老师，指向的是每个人自身的觉悟（“靠自己，凡事向内求”）。视觉上是一个独立但具有辐射力的核心，与周围空间（世界/心性）对话。",
+      "interactionQuality": "distant",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "echoing",
+      "typeReason": "对应“认知涟漪”的隐喻：一个核心观点（如一合相）被提出，理解如同涟漪般扩散（三个部分层层深入），最终波动平息，融入更深的领悟（平静湖面）。",
+      "elementCount": 3,
+      "direction": "outward then inward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 75,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "soft",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "张力体现在中心‘聚合体’（石子/一合相）的‘实’与周围无限留白（空性）的‘虚’之间，以及涟漪从生起到平息的动态过程中。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "此骨架彻底放弃了并置对比的思维。它采用极简的‘中心-扩散’结构，用‘涟漪’这一动态但终归平静的意象，来隐喻‘理解、破执、回归安宁’的完整心智过程，强调内化与沉淀，而非外在对立。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides.\n- Whitespace target: 75%. The vast majority of the frame is filled with the serene, warm cream background, with visual elements concentrated gently towards the center.\n- Visual weight distribution: A subtle, soft focus at the very center of the canvas, where a small, dense form rests. From it, visual weight diffuses outward through faint, translucent layers that dissolve into the background, creating a deep, receding sense of calm.\n\n[TOPOLOGY]\n- Zone count: 1. A single, unified field of empty space (Ma) representing the tranquil mind-lake and emptiness.\n- Division method: None. No hard divisions, only soft transitions of transparency and tone.\n- Zone ratios: 100% undivided space.\n- Physical metaphor visualization: The entire canvas is the \"lake surface.\" The central element and its emanating layers are the momentary \"ripple\" event within this vast stillness. The deepest, most translucent outer layer of the ripple visually sinks back into the lake, enhancing its perceived depth and tranquility after the disturbance passes.\n\n[RELATIONSHIPS]\n- Primary relationship type: Solo. A single, condensed primary form exists independently.\n- Interaction quality: Distant. The form is centered but does not dominate; it is a small event within a vast field.\n- Spatial expression: The solo form sits at the optical center. The echoing ripple layers are not perfectly concentric but slightly offset, suggesting a natural, organic propagation and dissipation rather than a mechanical pattern. Their primary relationship is with the surrounding space into which they fade.\n\n[RHYTHM]\n- Rhythm type: Echoing. Three distinct but related layers repeat the elliptical form.\n- Element count: 3 (the ripple layers).\n- Interval/size variation: Each successive layer is significantly larger than the last. The key variation is in opacity and edge definition: Layer 1 (innermost) has the highest opacity and softest internal focus. Layer 2 is larger, more transparent, with edges beginning to disperse. Layer 3 (outermost) is the largest, the most transparent, and its outer edge is treated with a slightly deeper tint of the primary hue that gently gradients into the background, creating the \"deepening calm\" effect.\n\n[GEOMETRY]\n- Primary shape: A small, soft, irregularly rounded聚合体 (aggregate form) at the center. Dimensions: approx 3% of canvas width. No sharp corners; edges are profoundly blurred and feathered.\n- Secondary shapes: Three large, overlapping, semi-transparent elliptical shapes emanating from just outside the primary shape. They are not perfect circles but soft ovals. Their edges are completely diffused, with no visible lines.\n- Lines: None used.\n- Edge treatment: Extremely soft, feathered, vapor-like edges for all elements. No hard transitions.\n- Negative space: The cream-colored background is the dominant negative space, enveloping all elements. The ripple layers themselves become negative space (transparency) through which the background is visible.\n\n[COLOR]\n- Background: Solid cream (#FFFEF5).\n- Primary hue: Mint-mist green (#E8F5E9). Used at varying opacities and a single deeper value for the outermost ripple edge.\n- Secondary hue: Blush red (#FFEBEE). Used minimally as a tiny, soft core within the central primary shape (covering less than 9% of its area, at approx 22% opacity), providing a subtle warm accent.\n- Temperature: Warm-neutral. The cream background and mint-mist green create a gentle, welcoming, and serene warmth.\n- Contrast method: Brightness. Structure is defined almost exclusively through subtle variations in value (lightness/darkness) of the mint-mist hue against the cream background, and through opacity.\n- Accent usage: The blush red is a faint, almost imperceptible glow at the very heart of the central form. It is a noticeable but deeply subordinate accent, adding a point of gentle warmth and life.\n\n[LIGHTING]\n- Light source: Ambient, omnidirectional, and diffused.\n- Glow effects: 1. A very subtle, wide glow emanates from the central primary shape, blending with the first ripple layer. It is the mint-mist color at very low opacity.\n- Ambient atmosphere: Even, soft, and misty. As if viewing the scene through a thin veil of calm air.\n\n[TEXTURE & MATERIAL]\n- Surface quality: Smooth, matte, and slightly ethereal. Like thin silk or water surface film.\n- Edge sharpness: All edges are infinitely soft and gradient. No sharpness.\n- Transparency: Critical. The three ripple layers have high and increasing transparency: ~40%, ~20%, ~8%. The outermost layer's edge deepens in color value before fading to full transparency, creating the illusion of depth and \"return to profound calm.\"\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma ( profound negative space), Kanso (simplicity), Shibui (subtle, quiet beauty).\n- Content resonance: A visual meditation on the release of attachment (the ripple dissipates) and the deep, accepting peace that remains (the tranquil, deepened lake). Evokes释然 (relief) and安宁 (tranquility).\n\n[STYLE]\n- Render style: Clean, vector-like digital art with extreme softness and gradient control.\n- No photorealism, no 3D rendering.\n- Must maintain high clarity and compositional balance even when viewed as a 128px thumbnail.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": null,
+  "createdAt": "2025-12-27T05:19:48.973Z"
+}

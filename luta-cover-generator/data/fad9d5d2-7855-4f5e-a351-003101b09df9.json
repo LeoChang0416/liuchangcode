@@ -1,0 +1,79 @@
+{
+  "id": "fad9d5d2-7855-4f5e-a351-003101b09df9",
+  "taskId": "task_01KDBEV1APZHVADEMNGA002TRP",
+  "degree": "prajna",
+  "podcastContent": "别把佛学当避世港湾：你误解的“放下”，从来不是躺平\n\n哈喽各位听友，欢迎回到我们的播客节目！今天要聊的这个话题，估计戳中了很多年轻人的状态——现在是不是越来越多人喜欢往寺庙跑？雍和宫的香灰堆得老高，禅修营的名额抢都抢不到，朋友圈里时不时就刷到“在上班和上进之间，我选择上香”的调侃。\n\n但不知道你有没有发现一个现象：很多人把寺庙当成了情绪避难所，把佛学当成了“避世指南”。工作不顺心了就去烧柱香，感情受挫了就想“遁入空门”，甚至有人觉得学佛就是“放下一切”，说白了就是躺平摆烂、逃避问题。今天我们就来好好掰扯掰扯：真正的佛学智慧，到底是让我们逃离现实，还是让我们更好地面对现实？你一直误解的“放下”，其实根本不是你想的那样。\n\n先给大家说个真实的事儿，我身边有个朋友，前段时间被公司裁员，又赶上感情破裂，整个人状态特别差。后来他报了个高价禅修营，天天打坐念经，回来之后跟我说“顿悟了”，说世间一切都是虚妄，不想再努力了，就在家待着“修心”。结果没过三个月，房租都快交不起了，反而更焦虑，还说“为什么我都修行了，还是这么苦”。\n\n其实像他这样的情况，不是个例。上海大学的成庆老师就说过，现在很多人信佛信",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "清醒",
+      "secondary": "坚定"
+    },
+    "emotion": [
+      "觉悟",
+      "勇气"
+    ],
+    "theme": [
+      "佛学智慧",
+      "面对现实",
+      "正确理解放下"
+    ],
+    "imagery": [
+      "勇士面对风浪",
+      "灯塔指引方向"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "逃避",
+      "to": "勇敢面对"
+    },
+    "structureParams": {
+      "compositionType": "dual-zone",
+      "compositionReason": "内容核心在于对比逃避与面对的两种状态，需要两域对照表达",
+      "axis": "horizontal",
+      "axisReason": "从左到右的轴向表达从逃避到面对的转变过程",
+      "anchorPosition": "center",
+      "anchorReason": "切分线居中，两域等重，突出对比",
+      "whitespaceTarget": 60,
+      "whitespaceReason": "需要足够的空间来强调对比和转变，同时保持视觉上的清晰和重点",
+      "contrastMethod": "brightness",
+      "contrastReason": "逃避=暗，面对=明，用明度对比直观表达两种状态",
+      "edgeTreatment": "gradient-fade",
+      "edgeReason": "过渡不锐利，符合从逃避到面对的渐进转变",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "左域略暗略模糊，右域更亮更清晰，象征从逃避到勇敢面对的转变"
+    }
+  },
+  "geometryDescription": "画面由竖直切线分为左右两域，左侧略暗略模糊，右侧更亮更清晰，切面附近有极淡光晕。",
+  "colorLogic": "使用纸白色和温暖米色作为背景色，左域渐变为暗色，右域渐变为亮色，象征从逃避到面对的渐进转变。",
+  "prompt": "[COMPOSITION] 1:1 square, 10% safe margin, 60% whitespace. dual-zone layout, horizontal axis, anchor at center. [GEOMETRY] 画面由竖直切线分为左右两域，左侧略暗略模糊，右侧更亮更清晰，切面附近有极淡光晕。 [COLOR] Paper-white and warm-beige background with a gradient from dark to light. Brightness contrast. [LIGHTING] One faint glow near the transition line. [ATMOSPHERE] Japanese aesthetic, spiritual tone. [STYLE] Minimal geometric abstraction.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "createdAt": "2025-12-25T19:12:45.562Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233310020276-d37600af-da02-4fd3-b33c-6a088bd424d4-image_task_01KDBEVFAAHK6VHBPW5DA51E7R_0.jpg",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "主要形体 ≤ 4，线条 ≤ 3，渐变/光晕 ≤ 2，且不覆盖满屏，画面留白 ≥ 50%"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "有色相 ≤ 2，中性色 ≤ 1，主色为高明度版本，无荧光/霓虹感，缩略到 128px 仍清爽"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "5 秒内看不出任何具体物体/宗教器物/自然景物，不出现符号化联想，无放射对称图腾"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间有呼吸，高级克制，有轻微层次但不堆细节"
+    },
+    "pass": true,
+    "summary": "该封面在结构、颜色、抽象和品质方面均符合要求，整体表现优秀。"
+  },
+  "evaluatedAt": "2025-12-25T19:13:22.802Z"
+}

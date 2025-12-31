@@ -1,0 +1,61 @@
+{
+  "id": "b76767a4-2e7c-4fd3-9737-6405f21af1d8",
+  "taskId": "task_01KDCZJ1T8MD184F970EA5BZCE",
+  "degree": "prajna",
+  "podcastContent": "我07年4月份去河北柏林禅寺，那上面写着 “平常心是道”。注意，“平常心是道”，这是南泉禅师的话。我看了以后立马就不理解，心想做人就得有大丈夫气吞山河、唾江万里的雄心，“平常心是道” 怎么能让我平常心呢？我就觉得人要变得不平常。你看，我那个时候（2007 年）就是这个认知水平，满脑子都是 “要与众不同”。\n当时我就问寺院的知客僧：“你们为什么写‘平常心’？我觉得人要变得不平常才对。” 那知客僧一看我这状态，就笑了笑，说：“给你本书看看，你要不要？” 他大概是懒得跟我多解释，知道我还不具备接受这个道理的状态。\n他给了我一本寺院发的小册子，可这个事、这个 “平常心是道” 的念头，却把我给抓住了。我心里犯嘀咕：不对啊，佛教这么伟大，为什么会倡导 “平常心” 呢？这里面肯定有深意，但我就是想不通。\n后来我又看了一本书，叫南怀瑾的《冷眼观世间》。我入佛、学佛的门，就是从这本书开始的。一看之下，我直接就钻进去了。那一天晚上我都忘了自己休息没休息，心里完全被这本书抓住了，只顾着一直读。\n我本身是学哲学的，学过西方哲学、马克思主义哲学，都讲究逻辑。所以我告诉你，学哲学的人要轻易迷信，那是很难的。但我读",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "觉悟",
+      "secondary": "反思"
+    },
+    "emotion": [
+      "震撼",
+      "深思"
+    ],
+    "theme": [
+      "平常心",
+      "文化自信",
+      "哲学思考"
+    ],
+    "imagery": [
+      "打开门后的明亮房间",
+      "攀登高峰俯瞰群山"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "不解",
+      "to": "觉悟"
+    },
+    "physicalMetaphor": "打开一扇门，光明照亮整个房间",
+    "topologicalLayout": {
+      "zoneCount": "2",
+      "zoneCountReason": "从不解到觉悟是两个状态的对照，需要双域",
+      "divisionMethod": "gradient-fade",
+      "divisionMethodReason": "不解到觉悟是一个渐进的过程，不是突然的转变",
+      "zoneRatios": "50:50"
+    },
+    "primaryRelationship": {
+      "type": "opposing",
+      "typeReason": "不解与觉悟两种状态相向对照但保持各自边界",
+      "interactionQuality": "near"
+    },
+    "rhythmSignature": {
+      "type": "none",
+      "typeReason": "主要是两个状态的静态对照，不需要节奏感",
+      "elementCount": 2
+    },
+    "structureParams": {
+      "whitespaceTarget": 60,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "左域较暗且模糊，右域明亮清晰"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding\n- Whitespace target: 60%\n- Visual weight distribution: Based on the transition from ignorance to enlightenment, with the left side darker and the right side brighter\n\n[TOPOLOGY] — Based on topologicalLayout\n- Zone count: 2\n- Division method: gradient-fade\n- Zone ratios: 50:50\n- Physical metaphor visualization: The gradient-fade division represents the gradual process from ignorance to enlightenment\n\n[RELATIONSHIPS] — Based on primaryRelationship\n- Primary relationship type: opposing\n- Interaction quality: near\n- Spatial expression: The two zones are placed side by side, with the left zone being darker and the right zone brighter, opposing each other but near\n\n[RHYTHM] — Based on rhythmSignature\n- Rhythm type: none\n- Element count: 2\n- Interval/size variation: N/A\n\n[GEOMETRY]\n- Primary shape: Rectangles, one for each zone, with a gradient fade between them\n- Secondary shapes: None\n- Lines: None\n- Edge treatment: Soft edges for the gradient fade\n- Negative space: Balanced distribution of whitespace between the two zones\n\n[COLOR]\n- Background: soft-gray: #F0F0F0\n- Primary hue: Left zone: mist-white: #F3F5F6, Right zone: warm-beige: #F7F2E8\n- Secondary hue: None\n- Temperature: Cool and clear, with a sense of enlightenment\n- Contrast method: Brightness contrast between the two zones\n\n[LIGHTING]\n- Light source: Diffuse light, enhancing the gradient fade\n- Glow effects: 1 glow effect on the right zone, representing enlightenment\n- Ambient atmosphere: Overall clear and bright\n\n[TEXTURE & MATERIAL] — Degree adjustable\n- Surface quality: Smooth\n- Edge sharpness: Soft\n- Transparency: N/A\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (space and emptiness)\n- Content resonance: The gradual enlightenment process is visually represented by the gradient fade and brightness contrast\n\n[STYLE]\n- Render style: Clean vector-like digital art\n- No photorealism, no 3D rendering\n- High clarity at 128px thumbnail",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": null,
+  "createdAt": "2025-12-26T09:24:11.535Z"
+}

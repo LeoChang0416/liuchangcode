@@ -1,0 +1,74 @@
+{
+  "id": "cd90200a-73d7-460f-a905-4e6de63296c1",
+  "taskId": "task_01KDS7BCVBHG9Q03M51V19E608",
+  "degree": "prajna",
+  "podcastContent": "敦煌壁画常常画这张画，就是维摩诘和文殊的对话。但我自己喜欢这一部经，常常抄这一部经，所以我觉得里面的对话好精彩。因为文殊菩萨进来了，到了病房就问说，诶，你是一个修行的人，那修行的人怎么会生病呢？你不是应该修行的这个程度已经很高了，你应该到了不生病的状况。那维摩诘就回答说：从师有爱，则我病生八个字，我常常写这8个字送朋友，我们知道痴情的痴这个字，就是理应知道不应该做的事，可是我情不自禁，我还是会做，从痴有爱，那我们也觉得很有趣，菩萨到底应不应该有爱，如果有爱是不是也有恨。就我觉得他触碰到大乘佛学非常惊人的部分，就从痴有爱则我病生，所以我生病，那文殊菩萨就问他，那你什么时候病会好。他说一切众生病好，我的病也就好。这个时候我们忽然发现维摩诘讲的病，不是一般的病，是说他承担了所有众生之病，我们知道这是大乘佛学。我们有一天知道一个人的修行到一定的程度，那个不关心是因为他有更高的关心。他会看到所有在现实里的争吵之上，应该有一个更为亲明的东西。所以我们常读到无无明，对无明的一种堪悟，能够有更大的了悟的可能。这是为摩皆经一直要传达的。",
+  "analysis": {
+    "contentEssence": "以“病”为慈悲的容器：从情爱的牵连而生病，并将个人病痛扩展为对众生苦的共同承担与觉悟。",
+    "physicalMetaphor": "一盏灯芯被油浸透后微微发热冒烟：热与烟不是故障，而是把周围的冷与暗一起吸纳进来，直到整间屋子被照亮才渐渐平息。",
+    "metaphorVisualization": "画面中心是一个小而稳定的“灯芯/火种”形体，外圈是被吸入的半透明烟雾与热晕，呈向心汇聚后再缓慢淡出的层叠；烟雾的形不是分区对照，而是围绕核心的“病相”与“光相”共存。",
+    "spiritualTone": {
+      "primary": "悲智不二",
+      "secondary": "大乘承担"
+    },
+    "emotion": [
+      "震动",
+      "悲悯"
+    ],
+    "theme": [
+      "痴爱与病",
+      "众生共苦",
+      "更高层级的关心"
+    ],
+    "imagery": [
+      "灯芯",
+      "热晕",
+      "烟雾回旋",
+      "向心吸纳",
+      "渐息的余烬光圈"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "“修行人为何会病”的表层矛盾与情爱牵连",
+      "to": "以病承载众生之病、以觉悟照见更大的关心",
+      "tensionType": "breakthrough"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "physicalMetaphor 是“灯芯+热晕烟雾”的同一系统：病与慈悲在同一中心里发生，不需要拆成多个对立区域。",
+      "divisionMethod": "radial",
+      "divisionMethodReason": "热晕与烟雾天然以中心向外扩散/回旋，最贴合“从一念痴爱而生病、又承担众生苦”的向心—外放结构。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "nested",
+      "typeReason": "灯芯被热晕与烟雾层层包裹，象征“以自身为容器承载众生之病”，不是并列对照而是内外含摄。",
+      "interactionQuality": "fused",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "decelerating",
+      "typeReason": "从“冒烟发热”的扰动逐渐收束为稳定光源，呼应“众生病好，我病亦好”的渐息与回归澄明。",
+      "elementCount": 4,
+      "direction": "inward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 65,
+      "contrastMethod": "layering",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 2,
+      "layerCount": 3,
+      "tensionExpression": "中心光核保持清晰小尺度稳定形；外层烟雾以半透明回旋纹理制造“病相扰动”；烟雾密度由外向内递减并在最外缘淡出，形成“承担—照见—平息”的张力轨迹。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "整体是单域向心的“灯芯被烟雾包裹并渐息”的动态隐喻，用嵌套与层叠表达病与慈悲同体，而非把概念切成两个并列阵营做左右对比。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels, clean vector-like digital art\n- Safe margin: 10% padding (all forms stay well inside)\n- Whitespace target: 65% (quiet Ma, large calm field)\n- Visual weight distribution: centered but not rigid; the smallest, sharpest weight at the core, with increasingly lighter nested fields radiating outward\n\n[TOPOLOGY] — Based on topologicalLayout\n- Zone count: 1 (single unified field)\n- Division method: radial (energy and matter expand from a single center)\n- Zone ratios: 100\n- Physical metaphor visualization: depict an oil-soaked wick that heats and smokes; heat and smoke expand from the same center and gradually subside, implying absorption of surrounding cold/darkness until the space feels lit\n\n[RELATIONSHIPS] — Based on primaryRelationship\n- Primary relationship type: nested\n- Interaction quality: fused\n- Spatial expression: a tiny crisp core is wrapped by two translucent veils and one smoke ribbon; each layer partially overlaps and fuses through transparency, never becoming separate regions\n\n[RHYTHM]\n- Rhythm type: decelerating\n- Element count: 4\n- Interval/size variation: four nested elements with reminder spacing that increases outward (inner layers tighter; outer layer farther and lighter), indicating settling and calming\n\n[GEOMETRY]\n- Primary shape (1): a very small vertical wick-ember capsule at center (about 3–4% of canvas width), slightly rounded corners, crisp edge\n- Secondary shapes (2–4): \n  1) an inner heat veil: an irregular soft oval around the core (tight radius)\n  2) a smoke swirl ribbon: one continuous, semi-transparent spiral-like stroke that rotates around the core (not a perfect circle), with thickness subtly tapering; keep it calm and slow, like a gentle eddy\n  3) an outer halo ring: a very faint, larger soft field that dissolves into background near the edge of its radius\n- Lines: 1 max, used only as the smoke ribbon stroke (no diagonal divider lines, no framing)\n- Edge treatment: gradient-fade edges; outermost edges feather out smoothly\n- Negative space: dominant; smoke and halos occupy less than half the canvas, leaving spacious calm\n\n[COLOR]\n- Background: cool-mist (#F5F7FA)\n- Primary hue: clear-cyan (#E0F7FA), used for halos and smoke translucency\n- Secondary hue (temperature contrast within warm-cool strategy, still extremely subtle): a near-neutral warm tint used only inside the inner heat veil at very low opacity (keep saturation under 32%, very high lightness; do not introduce a strong third hue)\n- Temperature: overall cool, lucid, awakening; warm-cool contrast is minimal frequency and minimal area\n- Contrast method: layering (3 layers via transparency)\n- Accent usage: if used, keep to 2–5% area and 10–15% opacity, very faint, to avoid “clever and noisy”\n\n[LIGHTING]\n- Light source: implied inner glow from the wick core\n- Glow effects: exactly 2 (a tight inner glow and a faint outer halo glow)\n- Ambient atmosphere: bright, airy, clarified\n\n[TEXTURE & MATERIAL]\n- Surface quality: smooth, paper-like calm (very subtle grain)\n- Edge sharpness: core is crisp; all outer forms soften with gentle fade\n- Transparency: smoke ribbon and veils are semi-transparent, clean overlaps, no muddy blending\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (spacious), Kanso (reduced), Shibui (restrained)\n- Content resonance: vibration and compassion—smoke swirl signifies illness/heat agitation; nested halos signify bearing and illuminating; outward deceleration signifies gradual easing and return to clarity\n\n[STYLE]\n- Clean vector-like digital art, no text, no symbols, no UI\n- No photorealism, no 3D rendering\n- High clarity at 128px thumbnail; the smoke swirl must be clearly readable as a gentle rotation, not replaced by perfect concentric circles.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": null,
+  "createdAt": "2025-12-31T03:31:15.446Z"
+}

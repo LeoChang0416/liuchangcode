@@ -1,0 +1,131 @@
+{
+  "id": "c7ce5cff-7143-4578-b21b-2fe86216e95d",
+  "taskId": "task_01KDS77C129VVDRJHP101Y4Y4S",
+  "degree": "prajna",
+  "podcastContent": "敦煌壁画常常画这张画，就是维摩诘和文殊的对话。但我自己喜欢这一部经，常常抄这一部经，所以我觉得里面的对话好精彩。因为文殊菩萨进来了，到了病房就问说，诶，你是一个修行的人，那修行的人怎么会生病呢？你不是应该修行的这个程度已经很高了，你应该到了不生病的状况。那维摩诘就回答说：从师有爱，则我病生八个字，我常常写这8个字送朋友，我们知道痴情的痴这个字，就是理应知道不应该做的事，可是我情不自禁，我还是会做，从痴有爱，那我们也觉得很有趣，菩萨到底应不应该有爱，如果有爱是不是也有恨。就我觉得他触碰到大乘佛学非常惊人的部分，就从痴有爱则我病生，所以我生病，那文殊菩萨就问他，那你什么时候病会好。他说一切众生病好，我的病也就好。这个时候我们忽然发现维摩诘讲的病，不是一般的病，是说他承担了所有众生之病，我们知道这是大乘佛学。我们有一天知道一个人的修行到一定的程度，那个不关心是因为他有更高的关心。他会看到所有在现实里的争吵之上，应该有一个更为亲明的东西。所以我们常读到无无明，对无明的一种堪悟，能够有更大的了悟的可能。这是为摩皆经一直要传达的。",
+  "analysis": {
+    "contentEssence": "以“病”为慈悲的容器：从情爱的牵连而生病，并将个人病痛扩展为对众生苦的共同承担与觉悟。",
+    "physicalMetaphor": "一盏灯芯被油浸透后微微发热冒烟：热与烟不是故障，而是把周围的冷与暗一起吸纳进来，直到整间屋子被照亮才渐渐平息。",
+    "metaphorVisualization": "画面中心是一个小而稳定的“灯芯/火种”形体，外圈是被吸入的半透明烟雾与热晕，呈向心汇聚后再缓慢淡出的层叠；烟雾的形不是分区对照，而是围绕核心的“病相”与“光相”共存。",
+    "spiritualTone": {
+      "primary": "悲智不二",
+      "secondary": "大乘承担"
+    },
+    "emotion": [
+      "震动",
+      "悲悯"
+    ],
+    "theme": [
+      "痴爱与病",
+      "众生共苦",
+      "更高层级的关心"
+    ],
+    "imagery": [
+      "灯芯",
+      "热晕",
+      "烟雾回旋",
+      "向心吸纳",
+      "渐息的余烬光圈"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "“修行人为何会病”的表层矛盾与情爱牵连",
+      "to": "以病承载众生之病、以觉悟照见更大的关心",
+      "tensionType": "breakthrough"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "physicalMetaphor 是“灯芯+热晕烟雾”的同一系统：病与慈悲在同一中心里发生，不需要拆成多个对立区域。",
+      "divisionMethod": "radial",
+      "divisionMethodReason": "热晕与烟雾天然以中心向外扩散/回旋，最贴合“从一念痴爱而生病、又承担众生苦”的向心—外放结构。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "nested",
+      "typeReason": "灯芯被热晕与烟雾层层包裹，象征“以自身为容器承载众生之病”，不是并列对照而是内外含摄。",
+      "interactionQuality": "fused",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "decelerating",
+      "typeReason": "从“冒烟发热”的扰动逐渐收束为稳定光源，呼应“众生病好，我病亦好”的渐息与回归澄明。",
+      "elementCount": 4,
+      "direction": "inward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 65,
+      "contrastMethod": "layering",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 2,
+      "layerCount": 3,
+      "tensionExpression": "中心光核保持清晰小尺度稳定形；外层烟雾以半透明回旋纹理制造“病相扰动”；烟雾密度由外向内递减并在最外缘淡出，形成“承担—照见—平息”的张力轨迹。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "整体是单域向心的“灯芯被烟雾包裹并渐息”的动态隐喻，用嵌套与层叠表达病与慈悲同体，而非把概念切成两个并列阵营做左右对比。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides (no important marks beyond this)\n- Whitespace target: 65%+ (large calm field)\n- Visual weight distribution: a tiny, crisp center kernel with very light, radial outward veils; most mass stays near center, dissolving toward the rim\n\n[TOPOLOGY] — based on topologicalLayout\n- Zone count: 1 (one continuous field, no splits)\n- Division method: radial (all structure emanates from a single center)\n- Zone ratios: 100\n- Physical metaphor visualization: the entire image behaves like one lamp system—wick at the core, heat-halo and smoke as concentric/spiraling veils expanding outward and fading into the same background space\n\n[RELATIONSHIPS] — based on primaryRelationship\n- Primary relationship type: nested\n- Interaction quality: fused (layers feel like one phenomenon, not separate objects)\n- Spatial expression: place a small central wick-shape; surround it with three larger nested smoke/heat veils that partially overlap and melt into each other via transparency (no hard boundaries between layers)\n\n[RHYTHM] — based on rhythmSignature\n- Rhythm type: decelerating\n- Element count: 4 total nested elements (1 core + 3 surrounding veils, or 1 core + 3 smoke layers; total shapes must be 4)\n- Interval/size variation: gaps between layers increase outward (tight near the core, wider toward the edge); opacity decreases outward; outermost layer fades out before reaching the safe margin\n\n[GEOMETRY]\n- Primary shape: a tiny vertical teardrop/short wick mark at exact center, about 3–5% of canvas width, softly rounded tip, stable and crisp\n- Secondary shapes (3): three nested, imperfect circular-oval veils suggesting smoke swirl (not perfect rings), each veil slightly offset by a few pixels to imply gentle rotation; keep them centered overall to preserve radial topology\n- Lines: none (avoid illustrative strokes)\n- Edge treatment: soft gradient-fade edges; no sharp outlines; the core wick can be the sharpest element but still smooth\n- Negative space: uninterrupted; no panels, no diagonals, no left-right contrast blocks\n\n[COLOR]\n- Background: cool-mist (#F5F7FA)\n- Primary hue (all shapes): moon-white (#F0F4F8), value ~95%, saturation kept under 32%\n- Secondary hue: none (monochrome)\n- Temperature: cool, clear Prajñā bias; implement warm-cool contrast only via subtle temperature shift inside gradients (very faint warmth in the inner glow while the field stays cool)\n- Contrast method: layering through transparency (3 depth layers)\n- Accent usage: none; if any ‘wake-up’ presence is needed, express it only as a 10–15% opacity micro-variation within moon-white, limited to 2–5% area, still reading as the same hue\n\n[LIGHTING]\n- Light source: implied inner heat from the wick\n- Glow effects: exactly 2 very subtle glows/gradient halos—(1) a small inner heat halo hugging the wick, (2) a broader, faint halo that dissolves into the background; both remain extremely soft and understated\n- Ambient atmosphere: high-key paper-light, calm clarity, no dramatic spotlight\n\n[TEXTURE & MATERIAL] — degree micro-adjustments\n- Surface quality: smooth, paper-like, minimal grain (almost flat)\n- Edge sharpness: predominantly soft; center slightly clearer for ‘insight’ without adding new structure\n- Transparency: three-layer depth; outer veil lowest opacity, fading out at edges\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (expansive silence), Kanso (few elements), Shibui (quiet depth)\n- Content resonance: trembling compassion contained within one light—smoke as ‘illness’ that becomes a gentle, settling illumination rather than a problem\n\n[STYLE]\n- Render style: clean vector-like digital art, high clarity at 128px thumbnail\n- No photorealism, no 3D rendering, no text, no symbols, no UI elements, no compositional splitting",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998232848233163-77c90297-7d9e-4a96-ab88-b000ff053abe-image_task_01KDS7839MEK5GTE7BT7NN8YPR_0.png",
+  "createdAt": "2025-12-31T03:29:03.498Z",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "形体和线条数量适中，留白充足。"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "色相数量符合要求，主色明度高，无荧光感。",
+      "brightnessEstimate": "85%",
+      "saturationEstimate": "30%"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "无具体物体或符号化联想。"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间有呼吸感，整体风格克制。"
+    },
+    "pass": true,
+    "summary": "封面设计符合所有快检维度，整体简约且色彩柔和。"
+  },
+  "evaluatedAt": "2025-12-31T03:29:55.749Z",
+  "imageryVerification": {
+    "actualDescription": "图片呈现一个中心的火焰形状，周围是同心圆环状的光晕，整体呈现出向心的结构。",
+    "isLeftRightDual": false,
+    "leftRightDualDetail": "无明显的左右双域对比，结构是向心的。",
+    "metaphorMatch": {
+      "score": 85,
+      "isMatched": true,
+      "matchedElements": [
+        "中心的火焰形状",
+        "同心圆环状的光晕"
+      ],
+      "missingElements": [
+        "烟雾回旋的表现"
+      ]
+    },
+    "structureMatch": {
+      "expectedZoneCount": "1",
+      "actualZoneCount": "1",
+      "expectedRelationship": "nested",
+      "actualRelationship": "nested",
+      "isMatched": true
+    },
+    "overallScore": 87,
+    "pass": true,
+    "verdict": "图片成功传达了预期的视觉意象，结构和隐喻都符合要求。",
+    "suggestions": [
+      "可以增加一些烟雾回旋的元素，以更完整地体现烟雾的意象。"
+    ]
+  },
+  "verifiedAt": "2025-12-31T03:30:39.764Z"
+}

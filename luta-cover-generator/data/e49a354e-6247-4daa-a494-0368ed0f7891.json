@@ -1,0 +1,87 @@
+{
+  "id": "e49a354e-6247-4daa-a494-0368ed0f7891",
+  "taskId": "task_01KDCYAJ1SNWG9SAJ66SWC7E5H",
+  "degree": "dana",
+  "podcastContent": "我07年4月份去河北柏林禅寺，那上面写着 “平常心是道”。注意，“平常心是道”，这是南泉禅师的话。我看了以后立马就不理解，心想做人就得有大丈夫气吞山河、唾江万里的雄心，“平常心是道” 怎么能让我平常心呢？我就觉得人要变得不平常。你看，我那个时候（2007 年）就是这个认知水平，满脑子都是 “要与众不同”。\n当时我就问寺院的知客僧：“你们为什么写‘平常心’？我觉得人要变得不平常才对。” 那知客僧一看我这状态，就笑了笑，说：“给你本书看看，你要不要？” 他大概是懒得跟我多解释，知道我还不具备接受这个道理的状态。\n他给了我一本寺院发的小册子，可这个事、这个 “平常心是道” 的念头，却把我给抓住了。我心里犯嘀咕：不对啊，佛教这么伟大，为什么会倡导 “平常心” 呢？这里面肯定有深意，但我就是想不通。\n后来我又看了一本书，叫南怀瑾的《冷眼观世间》。我入佛、学佛的门，就是从这本书开始的。一看之下，我直接就钻进去了。那一天晚上我都忘了自己休息没休息，心里完全被这本书抓住了，只顾着一直读。\n我本身是学哲学的，学过西方哲学、马克思主义哲学，都讲究逻辑。所以我告诉你，学哲学的人要轻易迷信，那是很难的。但我读",
+  "analysis": {
+    "spiritualTone": {
+      "primary": "觉悟",
+      "secondary": "反思"
+    },
+    "emotion": [
+      "惊叹",
+      "顿悟"
+    ],
+    "theme": [
+      "文化自信",
+      "哲学对比",
+      "心灵探索"
+    ],
+    "imagery": [
+      "门",
+      "书",
+      "山峰"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "困惑",
+      "to": "理解"
+    },
+    "physicalMetaphor": "攀登高峰，俯瞰群山",
+    "topologicalLayout": {
+      "zoneCount": "2",
+      "zoneCountReason": "从困惑到理解是两个状态的对照，需要双域",
+      "divisionMethod": "line",
+      "divisionMethodReason": "哲学思考和顿悟之间有明确界限",
+      "zoneRatios": "50:50"
+    },
+    "primaryRelationship": {
+      "type": "opposing",
+      "typeReason": "困惑与理解两个状态相向对照但保持各自边界",
+      "interactionQuality": "near"
+    },
+    "rhythmSignature": {
+      "type": "none",
+      "typeReason": "两个状态的静态对照，不需要节奏感",
+      "elementCount": 2
+    },
+    "structureParams": {
+      "whitespaceTarget": 60,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "sharp",
+      "glowCount": 1,
+      "layerCount": 2,
+      "tensionExpression": "左域暗淡模糊，右域明亮清晰"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding\n- Whitespace target: 60%\n- Visual weight distribution: Based on the topological layout, the visual weight is balanced between two equal zones.\n\n[TOPOLOGY] — Based on topologicalLayout\n- Zone count: 2\n- Division method: line\n- Zone ratios: 50:50\n- Physical metaphor visualization: The division of two zones reflects the metaphor of climbing a peak and overlooking the mountains, representing two contrasting states.\n\n[RELATIONSHIPS] — Based on primaryRelationship\n- Primary relationship type: opposing\n- Interaction quality: near\n- Spatial expression: Two primary shapes are placed in opposing directions, near but not touching, symbolizing the contrast between confusion and understanding.\n\n[RHYTHM] — Based on rhythmSignature\n- Rhythm type: none\n- Element count: 2\n- Interval/size variation: No rhythm is needed, as the focus is on the static contrast between the two states.\n\n[GEOMETRY]\n- Primary shape: Two opposing shapes, placed left and right, with a clear dividing line between them.\n- Secondary shapes: None\n- Lines: One dividing line\n- Edge treatment: Soft edges to convey a sense of openness.\n- Negative space: The negative space is distributed evenly around the two primary zones.\n\n[COLOR]\n- Background: #F6F4EE (paper-white)\n- Primary hue: Warm beige (#F7F2E8) for the right zone, soft gray (#F0F0F0) for the left zone\n- Secondary hue: None\n- Temperature: Warm and neutral, avoiding cold or overly hot tones.\n- Contrast method: Brightness contrast between the left and right zones.\n\n[LIGHTING]\n- Light source: Soft ambient light, emphasizing the clarity of the right zone.\n- Glow effects: One subtle glow effect around the right zone to enhance the sense of clarity.\n- Ambient atmosphere: A gentle, warm light that enhances the overall feeling of understanding and enlightenment.\n\n[TEXTURE & MATERIAL] — Degree can adjust\n- Surface quality: Smooth texture to convey a sense of fluidity and openness.\n- Edge sharpness: Soft edges to align with the degree of openness.\n- Transparency: None\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (negative space and minimalism)\n- Content resonance: The physical metaphor of climbing a peak and overlooking the mountains is reflected in the clear division and contrast between the two zones, evoking a sense of enlightenment and reflection.\n\n[STYLE]\n- Render style: Clean vector-like digital art\n- No photorealism, no 3D rendering\n- High clarity at 128px thumbnail",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233260153661-9fa3c22e-8edd-4383-aca6-a6b902bc90ba-image_task_01KDCYD8JV4KB0WXBSK64Y74P5_0.png",
+  "createdAt": "2025-12-26T09:02:37.467Z",
+  "evaluation": {
+    "complexity": {
+      "pass": true,
+      "score": 90,
+      "reason": "主要形体 ≤ 4，线条 ≤ 3，渐变/光晕 ≤ 2，画面留白 ≥ 50%"
+    },
+    "color": {
+      "pass": true,
+      "score": 85,
+      "reason": "有色相 ≤ 2，中性色 ≤ 1，主色为高明度版本，无荧光/霓虹感，缩略到 128px 仍清爽"
+    },
+    "abstraction": {
+      "pass": true,
+      "score": 95,
+      "reason": "5 秒内看不出任何具体物体/宗教器物/自然景物，不出现符号化联想，无放射对称图腾"
+    },
+    "aesthetic": {
+      "pass": true,
+      "score": 90,
+      "reason": "空间有呼吸，高级克制，有轻微层次但不堆细节"
+    },
+    "pass": true,
+    "summary": "该封面在结构、颜色、抽象和品质四个维度上均符合要求，整体设计简洁高级，符合快检标准。"
+  },
+  "evaluatedAt": "2025-12-26T09:21:41.990Z"
+}

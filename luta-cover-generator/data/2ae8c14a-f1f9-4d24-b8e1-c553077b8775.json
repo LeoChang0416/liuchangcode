@@ -1,0 +1,73 @@
+{
+  "id": "2ae8c14a-f1f9-4d24-b8e1-c553077b8775",
+  "taskId": "task_01KDS6NJ92Q0QEVCQDY18DS54F",
+  "degree": "prajna",
+  "podcastContent": "敦煌壁画常常画这张画，就是维摩诘和文殊的对话。但我自己喜欢这一部经，常常抄这一部经，所以我觉得里面的对话好精彩。因为文殊菩萨进来了，到了病房就问说，诶，你是一个修行的人，那修行的人怎么会生病呢？你不是应该修行的这个程度已经很高了，你应该到了不生病的状况。那维摩诘就回答说：从师有爱，则我病生八个字，我常常写这8个字送朋友，我们知道痴情的痴这个字，就是理应知道不应该做的事，可是我情不自禁，我还是会做，从痴有爱，那我们也觉得很有趣，菩萨到底应不应该有爱，如果有爱是不是也有恨。就我觉得他触碰到大乘佛学非常惊人的部分，就从痴有爱则我病生，所以我生病，那文殊菩萨就问他，那你什么时候病会好。他说一切众生病好，我的病也就好。这个时候我们忽然发现维摩诘讲的病，不是一般的病，是说他承担了所有众生之病，我们知道这是大乘佛学。我们有一天知道一个人的修行到一定的程度，那个不关心是因为他有更高的关心。他会看到所有在现实里的争吵之上，应该有一个更为亲明的东西。所以我们常读到无无明，对无明的一种堪悟，能够有更大的了悟的可能。这是为摩皆经一直要传达的。",
+  "analysis": {
+    "contentEssence": "以“病房对话”为入口，把个人之病提升为对众生苦病的共担与觉悟：爱与痴并非污点，而是通向大悲与更大了悟的门。",
+    "physicalMetaphor": "一盏油灯的灯芯被点燃后，火焰不向外爆发而是向内回卷，灯芯越烧越黑却让光圈逐层扩散，直到把整间病房都照亮。",
+    "metaphorVisualization": "中心是“被烧灼的灯芯”这一细长主形体（病/承担），其上方或周围出现几圈由强到弱的光晕（觉悟/大悲的扩散）；黑与光不对抗，而是同体共存：暗在芯里，明在晕里，形成向外回响的同心层。",
+    "spiritualTone": {
+      "primary": "慈悲承担",
+      "secondary": "透彻洞见"
+    },
+    "emotion": [
+      "震动",
+      "温柔"
+    ],
+    "theme": [
+      "大乘慈悲",
+      "爱与痴的悖论",
+      "以病示道"
+    ],
+    "imagery": [
+      "病房",
+      "灯芯灼黑",
+      "光晕回响",
+      "同心扩散"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "“修行人为何生病”的表面矛盾",
+      "to": "“众生病好我病乃好”的大悲承担与觉悟",
+      "tensionType": "breakthrough"
+    },
+    "topologicalLayout": {
+      "zoneCount": "1",
+      "zoneCountReason": "意象是“一盏灯在同一空间内由芯到光晕扩散”，病与悟同处一体，不需要拆分成多个对立区域。",
+      "divisionMethod": "radial",
+      "divisionMethodReason": "光从灯芯向外形成圈层回响，最贴合“从痴有爱则我病生”到“众生病好我病乃好”的扩展性。",
+      "zoneRatios": "100"
+    },
+    "primaryRelationship": {
+      "type": "nested",
+      "typeReason": "灯芯被光晕包裹：内层是“病/承担的灼点”，外层是“悲智的照明”，呈现由内而外的同体关系。",
+      "interactionQuality": "fused",
+      "spatialPosition": "center"
+    },
+    "rhythmSignature": {
+      "type": "echoing",
+      "typeReason": "对话的要点像一句偈语不断扩散：从“八字”起，层层推出“众生之病”与“无无明”的回响。",
+      "elementCount": 3,
+      "direction": "outward"
+    },
+    "structureParams": {
+      "whitespaceTarget": 65,
+      "contrastMethod": "brightness",
+      "edgeTreatment": "gradient-fade",
+      "glowCount": 2,
+      "layerCount": 3,
+      "tensionExpression": "把“病”压缩成中心一处较暗、被烧灼的细芯；张力来自中心的沉重与外圈光晕的扩大之间的拉扯，外圈越扩，中心越显克制与承担。"
+    },
+    "antiTemplateCheck": {
+      "isLeftRightDual": false,
+      "uniquenessScore": 9,
+      "howIsThisDifferent": "结构以“中心灼点+同心光晕扩散”的单域放射来表达‘以病示道、以己担众’，用嵌套与回响呈现悖论的同体性，而非把观点切成两边做对照。"
+    }
+  },
+  "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding on all sides\n- Whitespace target: 65% (large calm field, high Ma)\n- Visual weight distribution: a very small, darkened center (wick) holding tension; three faint radial echoes expanding outward, most of the canvas kept quiet.\n\n[TOPOLOGY] — based on topologicalLayout\n- Zone count: 1 (single continuous space, no split panels)\n- Division method: radial (concentric spatial logic, but keep it imperfect and organic)\n- Zone ratios: 100\n- Physical metaphor visualization: the entire field is one “sickroom-like” emptiness; illumination is expressed as radial halo layers emerging from a single wick point, staying within the same unified space.\n\n[RELATIONSHIPS] — based on primaryRelationship\n- Primary relationship type: nested\n- Interaction quality: fused (halos feel optically fused into the background, not hard separate rings)\n- Spatial expression: place a tiny wick at exact center or slightly above-center (within 3% shift). Wrap it with three nested halo bands that share soft boundaries and overlap subtly.\n\n[RHYTHM] — based on rhythmSignature\n- Rhythm type: echoing\n- Element count: 3\n- Interval/size variation: three halos repeat with gentle change—each ring slightly larger and slightly less opaque than the previous; spacing increases subtly outward (echo fade), but keep the overall rhythm calm and static.\n\n[GEOMETRY]\n- Primary shape: a tiny vertical wick mark (slim rounded-rectangle), height ~6–8% of canvas, width ~0.8–1.2%, centered. The top 20–30% is visibly charred: near-black/dark gray tip with a small irregular notch suggesting inward-curling flame (do NOT draw a flame silhouette).\n- Secondary shapes (3): three imperfect circular/oval halo bands centered on the wick; each band is a thin, soft-edged ring-like area (not a hard outline), fused into the background.\n- Lines: at most 1 ultra-thin vertical line integrated with the wick (optional); no dividers, no diagonals.\n- Edge treatment: gradient-fade edges everywhere; soft transitions, no sharp ring outlines.\n- Negative space: keep the outer 40–50% of the canvas nearly empty, only the faintest residual illumination.\n\n[COLOR]\n- Background: cool-mist (#F5F7FA)\n- Primary hue (halos): soft-gold (#FFF3CD), very high lightness (~95%), used as translucent halo layers\n- Secondary hue accent: celadon (#DCEDC8) used at 2% area only, opacity 12% (a tiny offset speck or micro-smear near the second halo, not forming any symbol)\n- Temperature: warm-cool contrast (warm halos against cool background) to evoke lucid insight\n- Contrast method: brightness contrast—darkened wick tip vs luminous pale halos\n- Accent usage: extremely subtle, barely noticeable celadon cue; must not create a second focal point.\n\n[LIGHTING]\n- Light source: implied from the wick core\n- Glow effects: 2 total glows only—one tight inner glow around the wick (soft-gold), one broader outer glow fading into background (soft-gold).\n- Ambient atmosphere: clean, quiet, clinically airy but compassionate.\n\n[TEXTURE & MATERIAL] — Prajñā micro-adjustments only\n- Surface quality: smooth, paper-like digital matte\n- Edge sharpness: soft (no crisp outlines), gentle diffusion\n- Transparency: halos are semi-transparent; outermost halo nearly dissolves.\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma (dominant empty field), Kanso (few elements), Shibui (subtle restraint)\n- Content resonance: the wick grows darker (burden/illness) while light expands (compassion/insight), suggesting “illumination that doesn’t escape the room, but clarifies it.”\n\n[STYLE]\n- Render style: clean vector-like digital art\n- No photorealism, no 3D rendering\n- No text, no symbols, no UI\n- Must read clearly at 128px thumbnail: a tiny charred wick center + three faint echo halos in a cool-mist field.",
+  "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed",
+  "status": "submitted",
+  "imageUrl": null,
+  "createdAt": "2025-12-31T03:19:20.034Z"
+}

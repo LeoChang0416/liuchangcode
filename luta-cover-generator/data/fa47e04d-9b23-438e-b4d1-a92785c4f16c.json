@@ -1,0 +1,56 @@
+{
+  "id": "fa47e04d-9b23-438e-b4d1-a92785c4f16c",
+  "taskId": "task_01KDB7AA9D5Z5BWBK9ECRCSMWJ",
+  "degree": "dana",
+  "podcastContent": "很多人天天念《楞严咒》，却根本没看懂《楞严经》\n\n哈喽，各位听友大家好，欢迎来到本期的播客节目。今天我们要聊的话题，可能戳中了很多学佛同修的痛点——就是那句“很多人天天念《楞严咒》，却根本没看懂《楞严经》”。\n\n不知道你有没有过这样的经历：清晨的佛堂里、安静的书房中，跟着课诵本一字一句地念诵楞严咒，咒语的音节庄严恢弘，念完之后心里也会觉得踏实。但如果有人问你，你天天念的这篇咒语，出自哪部经？这部经到底在讲什么？可能很多人都会愣住，甚至说不出个所以然。今天，我们就来好好聊聊这个问题，搞清楚楞严咒和《楞严经》的关系，也读懂《楞严经》里最核心的智慧。\n\n首先，我们得先厘清一个基本事实：楞严咒并不是独立存在的，它出自《大佛顶如来密因修证了义诸菩萨万行首楞严经》，也就是我们常说的《楞严经》，具体在经的第七卷里。这部经全文十卷，共64460字，而楞严咒作为经中核心的神咒，全咒分为五会，有427句、2620字，是汉传佛教日常课诵中最长的神咒，所以也被称为“大佛顶首楞严神咒”。\n\n可能有听友会问，既然咒在经里，为什么大家都爱念咒，却很少有人通读《楞严经》呢？其实原因很现实。一方面，《楞严经》的文字晦涩",
+  "analysis": {
+    "emotion": [
+      "启发",
+      "通透"
+    ],
+    "theme": [
+      "楞严咒与楞严经",
+      "破妄显真"
+    ],
+    "imagery": [
+      "波浪与大海",
+      "钥匙与门"
+    ],
+    "tension": {
+      "hasTension": true,
+      "from": "困惑",
+      "to": "清明"
+    },
+    "recommendedDegree": "般若",
+    "degreeReason": "通过深入理解《楞严经》的智慧，切透表象，洞见本质，帮助听众从困惑中获得清明和觉悟。"
+  },
+  "geometryDescription": "整体构图采用开放弧线和向外舒展的流线，主体偏向画面中心或者一侧。几何形态包括一个开放的大弧线，象征波浪和大海的流动；一个弧环，象征钥匙与门的开启。两者之间有柔和的径向渐变，体现从困惑到清明的过渡。留白区域占据画面的50%以上，增强视觉的轻盈感。",
+  "colorLogic": "采用高明度的黄色作为主色调，象征启发和温暖。绿色作为辅助色，增强画面的通透感和自然感。少量蓝色用于对比，象征大海的深邃。色彩之间通过径向渐变过渡，中心向外缘扩散，增加画面的流动性和开放感。",
+  "prompt": "A square canvas with a minimalist design inspired by Japanese aesthetics. The composition features an open arc and flowing lines extending outward, representing the themes of 'waves and the sea' and 'key and door.' The main shapes include one large open arc and one smaller arc ring, both positioned near the center or slightly off-center. The background should have a high-brightness yellow as the primary color, with green accents and a small amount of blue for contrast. Use a radial gradient from the center to the edges to create a sense of movement and openness. Ensure over 50% of the canvas is left blank to enhance the feeling of lightness and space. No text, symbols, or realistic objects.",
+  "negativePrompt": "No text, numbers, punctuation, logos, letters, scriptures, symbols, people, animals, organs, gestures, buildings, natural landscapes, religious objects, lotus, dharma wheel, mandala, zen circle, scriptures, seals, radial symmetrical totems, dense geometric patterns, realistic 3D, photography, metallic or glass realism, strong grain noise, heavy texture, any figurative objects.",
+  "status": "submitted",
+  "createdAt": "2025-12-25T17:01:17.632Z",
+  "imageUrl": "https://upload.apimart.ai/f/image/9998233317906784-4f3b9413-43f6-4c5b-ba7e-abb1877f3809-image_task_01KDB7ASMZN7JJJB3VVFYEH0QW_0.jpg",
+  "evaluation": {
+    "complexity": {
+      "score": 85,
+      "reason": "主要形体 ≤ 4，线条 ≤ 3，渐变/光晕 ≤ 2，留白接近50%。"
+    },
+    "color": {
+      "score": 80,
+      "reason": "有色相 ≤ 2，中性色 ≤ 1，主色高明度，无荧光/霓虹感，缩略后清爽。"
+    },
+    "abstraction": {
+      "score": 90,
+      "reason": "5秒内看不出具体物体，无宗教器物/自然景物，无符号化元素，无放射对称图腾。"
+    },
+    "aesthetic": {
+      "score": 75,
+      "reason": "空间有呼吸，高级克制不浮夸，有轻微层次但不堆细节。"
+    },
+    "total": 82.5,
+    "pass": true,
+    "summary": "总体上，这张封面设计简洁、颜色和谐，抽象且具有美学价值，符合通过标准。"
+  },
+  "evaluatedAt": "2025-12-25T17:01:45.244Z"
+}
