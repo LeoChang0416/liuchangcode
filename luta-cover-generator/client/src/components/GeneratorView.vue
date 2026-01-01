@@ -985,11 +985,52 @@ async function handleAnalyze() {
   showDecisionTrace.value = false;
 
   try {
-    const res = await axios.post('/api/generate-prompt', {
+    // 使用异步任务模式，彻底避免反向代理 60s 超时导致 504
+    const res = await axios.post('/api/generate-prompt?async=1', {
       podcastContent: podcastContent.value
     });
-    
-    const data = res.data.data;
+
+    const payload = res.data.data;
+
+    // 异步：返回 taskId → 轮询 /api/task/:taskId
+    if (payload?.taskId) {
+      const final = await pollPromptTaskStatus(payload.taskId);
+      const data = final?.result || null;
+      if (!data) throw new Error(final?.error || '分析失败：任务未返回结果');
+
+      analysisResult.value = data.analysis;
+      structureParams.value = data.structureParams;
+      degreeSelection.value = data.degreeSelection || null;
+      selectedDegreeKey.value = data.degreeKey || degreeSelection.value?.degreeKey || '';
+
+      // V6 新增：提取三类骨架强变量
+      strongLayoutVars.value = data.strongLayoutVars || {
+        topologicalLayout: data.analysis?.topologicalLayout,
+        primaryRelationship: data.analysis?.primaryRelationship,
+        rhythmSignature: data.analysis?.rhythmSignature,
+        physicalMetaphor: data.analysis?.physicalMetaphor
+      };
+
+      designLogic.value = {
+        degreeInfo: data.degreeInfo,
+        contentSignature: data.contentSignature,
+        antiClicheCheck: data.antiClicheCheck,  // V6 更新：反先验验证
+        degreeBiasApplication: data.degreeBiasApplication,
+        warnings: data.warnings,
+        constraintCheck: data.constraintCheck,
+        geometryDescription: data.geometryDescription,
+        colorLogic: data.colorLogic
+      };
+
+      generatedPrompt.value = {
+        prompt: data.prompt,
+        negative_prompt: data.negative_prompt
+      };
+      return;
+    }
+
+    // 同步兜底（本地开发/无需反代时）
+    const data = payload;
     analysisResult.value = data.analysis;
     structureParams.value = data.structureParams;
     degreeSelection.value = data.degreeSelection || null;
@@ -1021,6 +1062,25 @@ async function handleAnalyze() {
   } finally {
     analyzeLoading.value = false;
   }
+}
+
+async function pollPromptTaskStatus(taskId) {
+  const maxAttempts = 60;  // 5分钟（60 * 5s）
+  const interval = 5000;
+
+  for (let i = 0; i < maxAttempts; i++) {
+    await new Promise(r => setTimeout(r, interval));
+    try {
+      const res = await axios.get(`/api/task/${taskId}`);
+      const t = res.data.data;
+      if (t?.status === 'completed') return t;
+      if (t?.status === 'failed') throw new Error(t?.error || '分析任务失败');
+    } catch (e) {
+      if (i >= maxAttempts - 3) console.error('轮询分析任务失败', e);
+    }
+  }
+
+  throw new Error('分析超时（5分钟），请重试');
 }
 
 async function handleEditWithSuggestions() {

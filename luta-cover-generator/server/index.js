@@ -9,6 +9,7 @@ import { DEGREES } from './prompts/system.js';
 import { analyzeContent, generatePrompt, buildEditPrompt } from './services/llm.js';
 import { generateImage, editImage, getTaskStatus } from './services/imageGen.js';
 import { evaluateImage, verifyImagery, buildQuickCheckSuggestions } from './services/evaluate.js';
+import { createLocalTask, getLocalTask, runLocalTask } from './services/localTasks.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '..', 'data');
@@ -45,9 +46,19 @@ app.post('/api/analyze', async (req, res) => {
     if (!podcastContent) {
       return res.status(400).json({ success: false, error: '缺少播客内容' });
     }
-    
+
+    const asyncMode = req?.query?.async === '1' || req?.body?.async === true;
+    if (asyncMode) {
+      const task = createLocalTask({ prefix: 'a_', type: 'analyze', meta: { len: String(podcastContent).length } });
+      runLocalTask(task.id, async () => {
+        const result = await analyzeContent(podcastContent);
+        return { analysis: result };
+      });
+      return res.json({ success: true, data: { taskId: task.id, status: task.status } });
+    }
+
     const result = await analyzeContent(podcastContent);
-    res.json({ success: true, data: result });
+    return res.json({ success: true, data: result });
   } catch (err) {
     console.error('分析失败:', err.message);
     res.status(500).json({ success: false, error: err.message });
@@ -61,12 +72,28 @@ app.post('/api/generate-prompt', async (req, res) => {
     if (!podcastContent) {
       return res.status(400).json({ success: false, error: '缺少播客内容' });
     }
-    
+
+    // 默认保持同步模式；前端可通过 ?async=1 或 body.async=true 改为异步任务，彻底避免 Nginx 60s 504
+    const asyncMode = req?.query?.async === '1' || req?.body?.async === true;
+    if (asyncMode) {
+      const task = createLocalTask({ prefix: 'p_', type: 'generate-prompt', meta: { len: String(podcastContent).length, degree: degree || null } });
+      runLocalTask(task.id, async ({ setProgress }) => {
+        setProgress(15);
+        const result = await generatePrompt(podcastContent, degree, analysisResult, {
+          improvementSuggestions,
+          previousIssues
+        });
+        setProgress(90);
+        return result;
+      });
+      return res.json({ success: true, data: { taskId: task.id, status: task.status } });
+    }
+
     const result = await generatePrompt(podcastContent, degree, analysisResult, {
       improvementSuggestions,
       previousIssues
     });
-    res.json({ success: true, data: result });
+    return res.json({ success: true, data: result });
   } catch (err) {
     console.error('生成提示词失败:', err.message);
     const msg = err?.message || '生成提示词失败';
@@ -120,8 +147,16 @@ app.post('/api/generate-image', async (req, res) => {
 app.get('/api/task/:taskId', async (req, res) => {
   try {
     const { taskId } = req.params;
+    // 本地任务（分析/提示词等）：a_ / p_ 前缀
+    if (typeof taskId === 'string' && (taskId.startsWith('a_') || taskId.startsWith('p_'))) {
+      const t = getLocalTask(taskId);
+      if (!t) return res.status(404).json({ success: false, error: '任务不存在或已过期' });
+      return res.json({ success: true, data: t });
+    }
+
+    // 图片任务（上游 task_id）
     const result = await getTaskStatus(taskId);
-    res.json({ success: true, data: result });
+    return res.json({ success: true, data: result });
   } catch (err) {
     console.error('查询任务失败:', err.message);
     res.status(500).json({ success: false, error: err.message });
