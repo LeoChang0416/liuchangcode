@@ -195,65 +195,65 @@ export const STYLE_DNA = `
 - Symmetrical, predictable, rigid compositions
 `;
 
-// 背景色号参考（扩展）
+// 背景色号参考（扩展）- V2饱和度+45%版
 export const BACKGROUND_COLORS = [
-  { name: 'paper-white', hex: '#F6F4EE', temp: 'warm' },
-  { name: 'mist-white', hex: '#F3F5F6', temp: 'cool' },
-  { name: 'warm-beige', hex: '#F7F2E8', temp: 'warm' },
+  { name: 'paper-white', hex: '#F6F3EA', temp: 'warm' },
+  { name: 'mist-white', hex: '#F2F5F6', temp: 'cool' },
+  { name: 'warm-beige', hex: '#F7F0E1', temp: 'warm' },
   { name: 'soft-gray', hex: '#F0F0F0', temp: 'neutral' },
-  { name: 'cream', hex: '#FFFEF5', temp: 'warm' },
-  { name: 'cool-mist', hex: '#F5F7FA', temp: 'cool' },
-  { name: 'ivory', hex: '#FFFFF0', temp: 'warm' },
-  { name: 'snow', hex: '#FFFAFA', temp: 'neutral' }
+  { name: 'cream', hex: '#FFFEF1', temp: 'warm' },
+  { name: 'cool-mist', hex: '#F3F6FA', temp: 'cool' },
+  { name: 'ivory', hex: '#FFFFE9', temp: 'warm' },
+  { name: 'snow', hex: '#FFF8F8', temp: 'neutral' }
 ];
 
 // ========================================
-// 五方佛五色体系（基于 lutaai.txt 2.1）
-// 每色 6 个变体：从极浅到中等，覆盖不同明度/饱和度
+// 五方佛五色体系（V2饱和度+45%版）
+// HSV模型下饱和度 S × 1.45（上限100%），亮度V保持不变
 // ========================================
 export const FIVE_COLORS = {
   '蓝': {
     meaning: '澄明、冷静、深邃（东方）',
     variants: [
-      { name: 'ice-blue', hex: '#E8F4FC', brightness: 95, saturation: 15 },
-      { name: 'sky-mist', hex: '#D6EAF8', brightness: 92, saturation: 22 },
-      { name: 'soft-azure', hex: '#AED6F1', brightness: 85, saturation: 35 },
-      { name: 'powder-blue', hex: '#85C1E9', brightness: 78, saturation: 45 },
-      { name: 'clear-cyan', hex: '#E0F7FA', brightness: 94, saturation: 20 },
-      { name: 'serene-blue', hex: '#B3E5FC', brightness: 88, saturation: 30 }
+      { name: 'ice-blue', hex: '#DFF0FC', brightness: 95, saturation: 12 },
+      { name: 'sky-mist', hex: '#C7E4F8', brightness: 92, saturation: 20 },
+      { name: 'soft-azure', hex: '#90CAF1', brightness: 85, saturation: 40 },
+      { name: 'powder-blue', hex: '#58AFE9', brightness: 78, saturation: 62 },
+      { name: 'clear-cyan', hex: '#D4F6FA', brightness: 94, saturation: 15 },
+      { name: 'serene-blue', hex: '#92DBFC', brightness: 88, saturation: 42 }
     ]
   },
   '黄': {
     meaning: '温暖、开阔、滋养（南方）',
     variants: [
-      { name: 'cream-yellow', hex: '#FFF9E6', brightness: 97, saturation: 10 },
-      { name: 'soft-gold', hex: '#FFF3CD', brightness: 95, saturation: 20 },
-      { name: 'warm-amber', hex: '#FFE9B3', brightness: 92, saturation: 30 },
-      { name: 'honey-light', hex: '#FFE082', brightness: 88, saturation: 40 },
-      { name: 'butter', hex: '#FFF8E1', brightness: 96, saturation: 15 },
-      { name: 'sunlight', hex: '#FFECB3', brightness: 93, saturation: 28 }
+      { name: 'cream-yellow', hex: '#FFF6DB', brightness: 97, saturation: 14 },
+      { name: 'soft-gold', hex: '#FFEEB7', brightness: 95, saturation: 28 },
+      { name: 'warm-amber', hex: '#FFDF91', brightness: 92, saturation: 43 },
+      { name: 'honey-light', hex: '#FFD24A', brightness: 88, saturation: 71 },
+      { name: 'butter', hex: '#FFF5D3', brightness: 96, saturation: 17 },
+      { name: 'sunlight', hex: '#FFE391', brightness: 93, saturation: 43 }
     ]
   },
   '红': {
     meaning: '力量、温热、精进（西方）',
     variants: [
-      { name: 'blush', hex: '#FFEBEE', brightness: 96, saturation: 8 },
-      { name: 'rose-mist', hex: '#FFCDD2', brightness: 90, saturation: 18 },
-      { name: 'coral-light', hex: '#FFAB91', brightness: 82, saturation: 35 },
-      { name: 'peach', hex: '#FFCCBC', brightness: 88, saturation: 25 },
-      { name: 'warm-rose', hex: '#F8BBD9', brightness: 85, saturation: 28 },
-      { name: 'terracotta-light', hex: '#FFCCBC', brightness: 88, saturation: 22 }
+      { name: 'blush', hex: '#FFE2E6', brightness: 96, saturation: 11 },
+      { name: 'rose-mist', hex: '#FFB7BE', brightness: 90, saturation: 28 },
+      { name: 'coral-light', hex: '#FF8560', brightness: 82, saturation: 63 },
+      { name: 'peach', hex: '#FFB59E', brightness: 88, saturation: 38 },
+      { name: 'warm-rose', hex: '#F8A0CB', brightness: 85, saturation: 36 },
+      { name: 'terracotta-light', hex: '#FFB59E', brightness: 88, saturation: 38 }
     ]
   },
   '绿': {
     meaning: '生机、平衡、流动（北方）',
     variants: [
-      { name: 'mint-mist', hex: '#E8F5E9', brightness: 96, saturation: 10 },
-      { name: 'soft-sage', hex: '#C8E6C9', brightness: 90, saturation: 20 },
-      { name: 'spring-green', hex: '#A5D6A7', brightness: 84, saturation: 30 },
-      { name: 'jade-light', hex: '#B2DFDB', brightness: 88, saturation: 25 },
-      { name: 'eucalyptus', hex: '#E0F2F1', brightness: 95, saturation: 12 },
-      { name: 'celadon', hex: '#DCEDC8', brightness: 92, saturation: 18 }
+      { name: 'mint-mist', hex: '#E2F5E4', brightness: 96, saturation: 8 },
+      { name: 'soft-sage', hex: '#BAE6BC', brightness: 90, saturation: 19 },
+      { name: 'spring-green', hex: '#8FD692', brightness: 84, saturation: 33 },
+      { name: 'jade-light', hex: '#9EDFD9', brightness: 88, saturation: 29 },
+      { name: 'eucalyptus', hex: '#D8F2F1', brightness: 95, saturation: 11 },
+      { name: 'celadon', hex: '#D4EDB7', brightness: 92, saturation: 23 }
     ]
   },
   '白': {
@@ -262,9 +262,9 @@ export const FIVE_COLORS = {
       { name: 'pure-white', hex: '#FFFFFF', brightness: 100, saturation: 0 },
       { name: 'cloud-white', hex: '#FAFAFA', brightness: 98, saturation: 0 },
       { name: 'fog-white', hex: '#F5F5F5', brightness: 96, saturation: 0 },
-      { name: 'pearl', hex: '#F8F9FA', brightness: 97, saturation: 2 },
+      { name: 'pearl', hex: '#F7F9FA', brightness: 97, saturation: 1 },
       { name: 'silk', hex: '#FCFCFC', brightness: 99, saturation: 0 },
-      { name: 'moon-white', hex: '#F0F4F8', brightness: 95, saturation: 5 }
+      { name: 'moon-white', hex: '#ECF2F8', brightness: 95, saturation: 5 }
     ]
   }
 };
@@ -285,7 +285,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [10, 15], // 点醒不透明度%
     allowedContrastMethods: ['area', 'brightness', 'warm-cool'],
     rule: '高明度黄/绿为主，蓝/红只作"提示"，避免抢戏',
-    palette: { main: 'butter', mainHex: '#FFF8E1', aux1: 'celadon', aux1Hex: '#DCEDC8', aux2: 'ice-blue', aux2Hex: '#E8F4FC', bg: 'paper-white', bgHex: '#F6F4EE' }
+    palette: { main: 'butter', mainHex: '#FFF5D3', aux1: 'celadon', aux1Hex: '#D4EDB7', aux2: 'ice-blue', aux2Hex: '#DFF0FC', bg: 'paper-white', bgHex: '#F6F3EA' }
   },
   sila: {
     name: '持戒',
@@ -299,7 +299,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [8, 12],
     allowedContrastMethods: ['brightness', 'area', 'none'],
     rule: '以冷白/淡蓝/淡绿建立秩序；红/黄仅用于"警醒点"',
-    palette: { main: 'moon-white', mainHex: '#F0F4F8', aux1: 'ice-blue', aux1Hex: '#E8F4FC', aux2: 'eucalyptus', aux2Hex: '#E0F2F1', bg: 'mist-white', bgHex: '#F3F5F6' }
+    palette: { main: 'moon-white', mainHex: '#ECF2F8', aux1: 'ice-blue', aux1Hex: '#DFF0FC', aux2: 'eucalyptus', aux2Hex: '#D8F2F1', bg: 'mist-white', bgHex: '#F2F5F6' }
   },
   ksanti: {
     name: '忍辱',
@@ -313,7 +313,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [12, 18],
     allowedContrastMethods: ['layering', 'brightness', 'warm-cool', 'none'],
     rule: '以留白与雾化叠层承受刺激；引入"温和暖黄"作为稳定中轴',
-    palette: { main: 'pearl', mainHex: '#F8F9FA', aux1: 'mint-mist', aux1Hex: '#E8F5E9', aux2: 'warm-amber', aux2Hex: '#FFE9B3', bg: 'cream', bgHex: '#FFFEF5' }
+    palette: { main: 'pearl', mainHex: '#F7F9FA', aux1: 'mint-mist', aux1Hex: '#E2F5E4', aux2: 'warm-amber', aux2Hex: '#FFDF91', bg: 'cream', bgHex: '#FFFEF1' }
   },
   virya: {
     name: '精进',
@@ -327,7 +327,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['brightness', 'area', 'warm-cool'],
     rule: '暖色主导但不压；用冷色作"呼吸口"，保持轻盈',
-    palette: { main: 'honey-light', mainHex: '#FFE082', aux1: 'warm-rose', aux1Hex: '#F8BBD9', aux2: 'serene-blue', aux2Hex: '#B3E5FC', bg: 'warm-beige', bgHex: '#F7F2E8' }
+    palette: { main: 'honey-light', mainHex: '#FFD24A', aux1: 'warm-rose', aux1Hex: '#F8A0CB', aux2: 'serene-blue', aux2Hex: '#92DBFC', bg: 'warm-beige', bgHex: '#F7F0E1' }
   },
   samadhi: {
     name: '禅定',
@@ -341,7 +341,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['brightness', 'area', 'warm-cool', 'none'],
     rule: '仍以留白与微差为核心，加入明亮暖黄作为"内在灯火"',
-    palette: { main: 'cloud-white', mainHex: '#FAFAFA', aux1: 'clear-cyan', aux1Hex: '#E0F7FA', aux2: 'sunlight', aux2Hex: '#FFECB3', bg: 'ivory', bgHex: '#FFFFF0' }
+    palette: { main: 'cloud-white', mainHex: '#FAFAFA', aux1: 'clear-cyan', aux1Hex: '#D4F6FA', aux2: 'sunlight', aux2Hex: '#FFE391', bg: 'ivory', bgHex: '#FFFFE9' }
   },
   prajna: {
     name: '般若',
@@ -355,7 +355,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['warm-cool', 'brightness', 'area'],
     rule: '保留冷暖对照但降低频率；点醒色更小更淡，避免"聪明而躁"',
-    palette: { main: 'moon-white', mainHex: '#F0F4F8', aux1: 'clear-cyan', aux1Hex: '#E0F7FA', aux2: 'cream-yellow', aux2Hex: '#FFF9E6', bg: 'cool-mist', bgHex: '#F5F7FA' }
+    palette: { main: 'moon-white', mainHex: '#ECF2F8', aux1: 'clear-cyan', aux1Hex: '#D4F6FA', aux2: 'cream-yellow', aux2Hex: '#FFF6DB', bg: 'cool-mist', bgHex: '#F3F6FA' }
   }
 };
 
@@ -436,12 +436,12 @@ export function generateColorScheme(degreeKey) {
   };
 }
 
-// 兼容旧代码的导出
+// 兼容旧代码的导出（V2饱和度+45%版）
 export const PRIMARY_COLOR_EXAMPLES = {
-  '黄': { light: '#FFF8E7', medium: '#FFE5B4' },
-  '绿': { light: '#E8F5E9', medium: '#C8E6C9' },
-  '蓝': { light: '#E3F2FD', medium: '#BBDEFB' },
-  '红': { light: '#FFEBEE', medium: '#FFCDD2' },
+  '黄': { light: '#FFF5D3', medium: '#FFDF91' },
+  '绿': { light: '#E2F5E4', medium: '#BAE6BC' },
+  '蓝': { light: '#DFF0FC', medium: '#C7E4F8' },
+  '红': { light: '#FFE2E6', medium: '#FFB7BE' },
   '白': { light: '#FAFAFA', medium: '#F5F5F5' }
 };
 

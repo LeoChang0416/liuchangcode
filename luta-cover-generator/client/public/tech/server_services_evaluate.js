@@ -2,20 +2,64 @@ import axios from 'axios';
 import config from '../config.js';
 import { EVALUATE_SYSTEM, IMAGERY_VERIFY_SYSTEM } from '../prompts/system.js';
 
+// 下载图片并转为 base64
+async function imageUrlToBase64(url) {
+  if (!url || typeof url !== 'string') {
+    throw new Error(`imageUrlToBase64: URL无效 - ${typeof url}`);
+  }
+  // 验证URL格式
+  try {
+    new URL(url);
+  } catch (e) {
+    throw new Error(`imageUrlToBase64: URL格式错误 - ${url}`);
+  }
+  console.log('[imageUrlToBase64] 下载图片:', url);
+  const response = await axios.get(url, { responseType: 'arraybuffer', timeout: 30000 });
+  const contentType = response.headers['content-type'] || 'image/jpeg';
+  const base64 = Buffer.from(response.data, 'binary').toString('base64');
+  console.log('[imageUrlToBase64] 下载成功, size:', response.data.byteLength, 'type:', contentType);
+  return { base64, mimeType: contentType };
+}
+
+// 判断是否使用 Gemini 模型
+function isGeminiModel(model) {
+  return model && model.toLowerCase().includes('gemini');
+}
+
 // 从响应中提取文本内容
 function extractContent(responseData) {
-  // APIMart 格式: { code: 200, data: { choices: [{ message: { content: "..." } }] } }
-  if (responseData.data?.choices?.[0]?.message?.content) {
-    return responseData.data.choices[0].message.content;
+  const root = responseData?.data ?? responseData;
+
+  // APIMart ChatCompletions 兼容: { code:200, data:{ choices:[{ message:{ content } }] } }
+  if (root?.choices?.[0]?.message?.content) {
+    return root.choices[0].message.content;
   }
-  // 格式1: Anthropic/自定义格式 output[0].content[0].text
-  const output = responseData.output;
-  if (output && output[0] && output[0].content && output[0].content[0]) {
-    return output[0].content[0].text || '';
+
+  // OpenAI Responses: { output:[{type:"reasoning"},{type:"message",content:[{type:"output_text",text:"..."}]}] }
+  const output = root?.output;
+  if (Array.isArray(output) && output.length) {
+    const msgItem = output.find(o => o?.type === 'message' && Array.isArray(o?.content));
+    if (msgItem?.content?.length) {
+      const texts = msgItem.content
+        .map(p => (typeof p?.text === 'string' ? p.text : ''))
+        .filter(Boolean);
+      if (texts.length) return texts.join('');
+    }
+    // 兼容旧格式：output[0].content[0].text
+    if (output?.[0]?.content?.[0] && typeof output[0].content[0]?.text === 'string') {
+      return output[0].content[0].text || '';
+    }
   }
-  // 格式2: OpenAI 格式 choices[0].message.content
-  const choices = responseData.choices;
-  if (choices && choices[0] && choices[0].message) {
+
+  // Gemini Native: { candidates:[{ content:{ parts:[{ text }] } }] }
+  const candidates = root?.candidates;
+  if (candidates?.[0]?.content?.parts?.[0]?.text) {
+    return candidates[0].content.parts[0].text || '';
+  }
+
+  // OpenAI ChatCompletions（非data包裹）
+  const choices = root?.choices;
+  if (choices?.[0]?.message?.content) {
     return choices[0].message.content || '';
   }
   console.error('[extractContent] 无法识别的响应格式:', JSON.stringify(responseData).substring(0, 500));
@@ -52,14 +96,73 @@ function safeJsonParse(jsonStr) {
   }
 }
 
-export async function evaluateImage(imageUrl) {
+export function buildQuickCheckSuggestions(evaluation, threshold = 75) {
+  if (!evaluation) return [];
+  const dims = ['complexity', 'color', 'abstraction', 'aesthetic'];
+  const suggestions = [];
+  for (const k of dims) {
+    const item = evaluation?.[k];
+    if (!item) continue;
+    const pass = item?.pass === true;
+    const score = Number(item?.score);
+    const isLow = Number.isFinite(score) && score < threshold;
+    if (!pass || isLow) {
+      const reason = typeof item?.reason === 'string' ? item.reason : '';
+      if (reason) suggestions.push(`${k}: ${reason}`);
+      else suggestions.push(`${k}: 低分/未通过`);
+    }
+  }
+  const overallPass = evaluation?.pass === true;
+  const anyLow = dims.some(k => {
+    const s = Number(evaluation?.[k]?.score);
+    return Number.isFinite(s) && s < threshold;
+  });
+  if (overallPass && !anyLow) return [];
+  return Array.from(new Set(suggestions)).slice(0, 6);
+}
+
+export async function evaluateImage(imageUrl, degreeKey = null) {
   console.log('[evaluateImage] 开始评估...');
   
   try {
-    const response = await axios.post(
-      `${config.API_BASE}/v1/responses`,
-      {
-        model: config.VISION_MODEL,
+    const model = config.VISION_MODEL;
+    const userText = `请对这张播客封面图片进行快检评分。${degreeKey ? `本次度（degree）为：${degreeKey}。请按该度的V2明度/饱和度约束严格检查颜色快检。` : ''}`;
+    
+    let response;
+    
+    if (isGeminiModel(model)) {
+      // Gemini Native Format: 需要下载图片转 base64
+      console.log('[evaluateImage] 使用 Gemini Native Format');
+      const { base64, mimeType } = await imageUrlToBase64(imageUrl);
+      
+      const requestBody = {
+        contents: [
+          {
+            role: 'user',
+            parts: [
+              { text: EVALUATE_SYSTEM + '\n\n' + userText },
+              { inlineData: { mimeType, data: base64 } }
+            ]
+          }
+        ],
+        generationConfig: { temperature: 0.3 }
+      };
+      
+      response = await axios.post(
+        `${config.APIMART_API_BASE}/v1beta/models/${model}:generateContent`,
+        requestBody,
+        {
+          timeout: 120000,
+          headers: {
+            'Authorization': `Bearer ${config.APIMART_API_KEY}`,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+    } else {
+      // OpenAI Responses Format
+      const requestBody = {
+        model,
         input: [
           {
             role: 'system',
@@ -68,20 +171,26 @@ export async function evaluateImage(imageUrl) {
           {
             role: 'user',
             content: [
-              { type: 'input_text', text: '请对这张播客封面图片进行快检评分。' },
+              { type: 'input_text', text: userText },
               { type: 'input_image', image_url: imageUrl }
             ]
           }
         ],
         temperature: 0.3
-      },
-      {
-        headers: {
-          'Authorization': `Bearer ${config.API_KEY}`,
-          'Content-Type': 'application/json'
+      };
+
+      response = await axios.post(
+        `${config.APIMART_API_BASE}/v1/responses`,
+        requestBody,
+        {
+          timeout: 120000,
+          headers: {
+            'Authorization': `Bearer ${config.APIMART_API_KEY}`,
+            'Content-Type': 'application/json'
+          }
         }
-      }
-    );
+      );
+    }
 
     console.log('[evaluateImage] API 响应状态:', response.status);
     
@@ -172,10 +281,42 @@ ${imagery.join('、') || '未提供'}
   "suggestions": ["改进建议列表"]
 }`;
 
-  const response = await axios.post(
-    `${config.API_BASE}/v1/responses`,
-    {
-      model: config.VISION_MODEL,
+  const model = config.VISION_MODEL;
+  let response;
+  
+  if (isGeminiModel(model)) {
+    // Gemini Native Format
+    console.log('[verifyImagery] 使用 Gemini Native Format');
+    const { base64, mimeType } = await imageUrlToBase64(imageUrl);
+    
+    const requestBody = {
+      contents: [
+        {
+          role: 'user',
+          parts: [
+            { text: IMAGERY_VERIFY_SYSTEM + '\n\n' + verifyPrompt },
+            { inlineData: { mimeType, data: base64 } }
+          ]
+        }
+      ],
+      generationConfig: { temperature: 0.3 }
+    };
+    
+    response = await axios.post(
+      `${config.APIMART_API_BASE}/v1beta/models/${model}:generateContent`,
+      requestBody,
+      {
+        timeout: 120000,
+        headers: {
+          'Authorization': `Bearer ${config.APIMART_API_KEY}`,
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+  } else {
+    // OpenAI Responses Format
+    const requestBody = {
+      model,
       input: [
         {
           role: 'system',
@@ -190,14 +331,20 @@ ${imagery.join('、') || '未提供'}
         }
       ],
       temperature: 0.3
-    },
-    {
-      headers: {
-        'Authorization': `Bearer ${config.API_KEY}`,
-        'Content-Type': 'application/json'
+    };
+
+    response = await axios.post(
+      `${config.APIMART_API_BASE}/v1/responses`,
+      requestBody,
+      {
+        timeout: 120000,
+        headers: {
+          'Authorization': `Bearer ${config.APIMART_API_KEY}`,
+          'Content-Type': 'application/json'
+        }
       }
-    }
-  );
+    );
+  }
 
   const content = extractContent(response.data);
   console.log('[verifyImagery] Raw content:', content.substring(0, 500));

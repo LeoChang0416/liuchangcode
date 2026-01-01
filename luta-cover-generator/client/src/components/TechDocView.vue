@@ -48,9 +48,9 @@
             <div class="overview-meta">DEGREE_SELECT_SYSTEM → degreeKey/confidence/reason/evidence（置信度≥70%通过）</div>
           </div>
           <div class="overview-card highlight-new">
-            <div class="overview-title">🆕 模型容灾</div>
-            <div class="overview-value">多模型轮询切换</div>
-            <div class="overview-meta">deepseek-v3.2-think → gpt-5.2（503/502/超时自动切换）</div>
+            <div class="overview-title">🆕 文本模型目录</div>
+            <div class="overview-value">可选模型 + 自动回退</div>
+            <div class="overview-meta">TEXT_MODEL_CATALOG（Ark Doubao / APIMart Gemini / MiMo），preferred textModelId → default → 其他可用模型</div>
           </div>
           <div class="overview-card">
             <div class="overview-title">核心链路</div>
@@ -113,12 +113,11 @@
         </div>
 
         <div class="impl-block highlight-new">
-          <h3>🆕 模型容灾切换</h3>
+          <h3>🆕 文本模型选择与回退</h3>
           <div class="checklist">
-            <div class="check-item">TEXT_MODELS 数组：按优先级排列（deepseek-v3.2-think → gpt-5.2）</div>
-            <div class="check-item">callChatCompletions()：多模型轮询 + 指数退避重试（503/502/超时自动切换）</div>
-            <div class="check-item">shouldRetryLLM()：判断可重试错误码（429/502/503/504/ECONNRESET/ETIMEDOUT）</div>
-            <div class="check-item">getLLMErrorMessage()：生成用户友好错误信息</div>
+            <div class="check-item">/api/text-models：返回可用模型列表 + defaultId（按密钥/配置过滤 enabled）</div>
+            <div class="check-item">callChatCompletions()：按顺序尝试 preferredModelId → DEFAULT_TEXT_MODEL_ID → 其他可用模型</div>
+            <div class="check-item">每个模型最多重试 2 次；可重试错误：429/502/503/504/ECONNRESET/ETIMEDOUT/ECONNABORTED</div>
           </div>
         </div>
 
@@ -342,9 +341,9 @@
           <div class="arch-layer external">
             <div class="layer-label">External APIs (APIMart)</div>
             <div class="layer-content">
-              <div class="arch-node api">DeepSeek (分析/Prompt)</div>
-              <div class="arch-node api">Gemini (生图)</div>
-              <div class="arch-node api">GPT-4o (评估)</div>
+              <div class="arch-node api">文本模型（Ark/APIMart/MiMo）(选度/分析/Prompt)</div>
+              <div class="arch-node api">Gemini 生图（APIMart）</div>
+              <div class="arch-node api">Gemini 视觉（APIMart）(评估/意象)</div>
             </div>
           </div>
         </div>
@@ -381,7 +380,7 @@
             <div class="step-badge">1</div>
             <div class="step-card">
               <h3>内容分析</h3>
-              <div class="step-model">DeepSeek V3.2</div>
+              <div class="step-model">文本模型（可选）</div>
               <p>从播客文本提取：</p>
               <ul>
                 <li>核心意象 (imagery)</li>
@@ -397,7 +396,7 @@
             <div class="step-badge">2</div>
             <div class="step-card">
               <h3>Prompt 生成</h3>
-              <div class="step-model">DeepSeek V3.2</div>
+              <div class="step-model">文本模型（可选）</div>
               <p>基于分析结果构建：</p>
               <ul>
                 <li>骨架强变量约束</li>
@@ -413,7 +412,7 @@
             <div class="step-badge">3</div>
             <div class="step-card">
               <h3>图片生成</h3>
-              <div class="step-model">Gemini 3 Pro</div>
+              <div class="step-model">IMAGE_MODEL: gemini-3-pro-image-preview</div>
               <p>执行文生图：</p>
               <ul>
                 <li>aspect_ratio: 1:1</li>
@@ -427,7 +426,7 @@
             <div class="step-badge">4</div>
             <div class="step-card">
               <h3>质量评估</h3>
-              <div class="step-model">GPT-4o Vision</div>
+              <div class="step-model">VISION_MODEL: gemini-3-flash-preview</div>
               <p>多维度快检：</p>
               <ul>
                 <li>结构快检 (complexity)</li>
@@ -675,7 +674,7 @@ const sections = [
 
 const matrixRows = [
   { name: '🆕 智能选度（DEGREE_SELECT_SYSTEM）', analyze: true, prompt: true, image: false, poll: false, evaluate: false, imagery: false, storage: true, client: true },
-  { name: '🆕 模型容灾切换（多模型轮询）', analyze: true, prompt: true, image: false, poll: false, evaluate: true, imagery: true, storage: false, client: false },
+  { name: '🆕 文本模型选择与回退（TEXT_MODEL_CATALOG）', analyze: true, prompt: true, image: false, poll: false, evaluate: false, imagery: false, storage: false, client: true },
   { name: '硬约束（结构/颜色/留白）', analyze: false, prompt: true, image: false, poll: false, evaluate: true, imagery: true, storage: false, client: true },
   { name: 'Negative（HARD_NEGATIVES）', analyze: false, prompt: false, image: true, poll: false, evaluate: true, imagery: true, storage: true, client: true },
   { name: '骨架强变量（三类强变量）', analyze: true, prompt: true, image: false, poll: false, evaluate: false, imagery: true, storage: true, client: true },
@@ -688,8 +687,8 @@ const matrixRows = [
 ];
 
 const sequenceSteps = [
-  { id: 'degree', type: 'llm', icon: '0', title: '🆕 智能选度', desc: 'selectDegree()', details: ['DEGREE_SELECT_SYSTEM → degreeKey/confidence/reason/evidence', '置信度≥70%通过，否则返回missingInfo引导重试', '多模型轮询（deepseek→gpt-5.2）'] },
-  { id: 'analyze', type: 'llm', icon: '1', title: '内容分析', desc: 'analyzeContent()', details: ['ANALYZE_SYSTEM → JSON 输出（意象/强变量）', '多模型容灾切换'] },
+  { id: 'degree', type: 'llm', icon: '0', title: '🆕 智能选度', desc: 'selectDegree()', details: ['DEGREE_SELECT_SYSTEM → degreeKey/confidence/reason/evidence', '置信度≥70%通过，否则返回missingInfo引导重试', '文本模型可选（textModelId）+ 自动回退'] },
+  { id: 'analyze', type: 'llm', icon: '1', title: '内容分析', desc: 'analyzeContent()', details: ['ANALYZE_SYSTEM → JSON 输出（意象/强变量）', '文本模型可选（textModelId）+ 自动回退'] },
   { id: 'prompt', type: 'logic', icon: '2', title: '生成提示词', desc: 'generatePrompt()', details: ['若无degree则先调selectDegree()', 'system=PROMPT_SYSTEM', 'user=userMessage（强变量/反先验/配色注入）'] },
   { id: 'image', type: 'gen', icon: '3', title: '生图提交', desc: 'POST /api/generate-image', details: ['fullPrompt = prompt + Strict constraints + negativePrompt', '返回 taskId（异步）'] },
   { id: 'poll', type: 'verify', icon: '4', title: '轮询任务', desc: 'GET /api/task/:taskId', details: ['前端轮询/超时提示/取消'] },
@@ -716,8 +715,8 @@ const codeMap = [
     tags: ['提示词工程', '去重', '反先验', '注入段落', '🆕容灾'],
     items: [
       { name: '🆕 selectDegree()', desc: '智能选度：DEGREE_SELECT_SYSTEM调用 + 置信度校验（≥70%通过）' },
-      { name: '🆕 callChatCompletions()', desc: '多模型轮询 + 指数退避重试（503/502自动切换）' },
-      { name: '🆕 shouldRetryLLM()', desc: '判断可重试错误码（429/502/503/504/ECONNRESET）' },
+      { name: '🆕 callChatCompletions()', desc: '文本模型顺序尝试：preferredModelId → default → 其他可用模型（每个模型重试2次）' },
+      { name: 'shouldRetryLLM()', desc: '判断可重试错误码（429/502/503/504/ECONNRESET/ETIMEDOUT/ECONNABORTED）' },
       { name: 'analyzeContent()', desc: '调用 ANALYZE_SYSTEM 输出 JSON（使用容灾机制）' },
       { name: 'generatePrompt()', desc: '若无degree则先调selectDegree() + 注入degreeSelection' },
       { name: 'getUniqueColorScheme()', desc: '短期去重（RECENT_COLOR_KEYS_BY_DEGREE）' },
@@ -782,39 +781,54 @@ onMounted(async () => {
 
 const colorDemo = {
   '蓝': [
-    { name: 'ice', hex: '#E8F4FC' },
-    { name: 'sky', hex: '#D6EAF8' },
-    { name: 'powder', hex: '#85C1E9' }
+    { name: 'ice-blue', hex: '#DFF0FC', brightness: 95, saturation: 12 },
+    { name: 'sky-mist', hex: '#C7E4F8', brightness: 92, saturation: 20 },
+    { name: 'soft-azure', hex: '#90CAF1', brightness: 85, saturation: 40 },
+    { name: 'powder-blue', hex: '#58AFE9', brightness: 78, saturation: 62 },
+    { name: 'clear-cyan', hex: '#D4F6FA', brightness: 94, saturation: 15 },
+    { name: 'serene-blue', hex: '#92DBFC', brightness: 88, saturation: 42 }
   ],
   '黄': [
-    { name: 'cream', hex: '#FFF9E6' },
-    { name: 'gold', hex: '#FFF3CD' },
-    { name: 'amber', hex: '#FFE082' }
+    { name: 'cream-yellow', hex: '#FFF6DB', brightness: 97, saturation: 14 },
+    { name: 'soft-gold', hex: '#FFEEB7', brightness: 95, saturation: 28 },
+    { name: 'warm-amber', hex: '#FFDF91', brightness: 92, saturation: 43 },
+    { name: 'honey-light', hex: '#FFD24A', brightness: 88, saturation: 71 },
+    { name: 'butter', hex: '#FFF5D3', brightness: 96, saturation: 17 },
+    { name: 'sunlight', hex: '#FFE391', brightness: 93, saturation: 43 }
   ],
   '红': [
-    { name: 'blush', hex: '#FFEBEE' },
-    { name: 'rose', hex: '#FFCDD2' },
-    { name: 'coral', hex: '#FFAB91' }
+    { name: 'blush', hex: '#FFE2E6', brightness: 96, saturation: 11 },
+    { name: 'rose-mist', hex: '#FFB7BE', brightness: 90, saturation: 28 },
+    { name: 'coral-light', hex: '#FF8560', brightness: 82, saturation: 63 },
+    { name: 'peach', hex: '#FFB59E', brightness: 88, saturation: 38 },
+    { name: 'warm-rose', hex: '#F8A0CB', brightness: 85, saturation: 36 },
+    { name: 'terracotta-light', hex: '#FFB59E', brightness: 88, saturation: 38 }
   ],
   '绿': [
-    { name: 'mint', hex: '#E8F5E9' },
-    { name: 'sage', hex: '#C8E6C9' },
-    { name: 'spring', hex: '#A5D6A7' }
+    { name: 'mint-mist', hex: '#E2F5E4', brightness: 96, saturation: 8 },
+    { name: 'soft-sage', hex: '#BAE6BC', brightness: 90, saturation: 19 },
+    { name: 'spring-green', hex: '#8FD692', brightness: 84, saturation: 33 },
+    { name: 'jade-light', hex: '#9EDFD9', brightness: 88, saturation: 29 },
+    { name: 'eucalyptus', hex: '#D8F2F1', brightness: 95, saturation: 11 },
+    { name: 'celadon', hex: '#D4EDB7', brightness: 92, saturation: 23 }
   ],
   '白': [
-    { name: 'pure', hex: '#FFFFFF' },
-    { name: 'cloud', hex: '#FAFAFA' },
-    { name: 'fog', hex: '#F5F5F5' }
+    { name: 'pure-white', hex: '#FFFFFF', brightness: 100, saturation: 0 },
+    { name: 'cloud-white', hex: '#FAFAFA', brightness: 98, saturation: 0 },
+    { name: 'fog-white', hex: '#F5F5F5', brightness: 96, saturation: 0 },
+    { name: 'pearl', hex: '#F7F9FA', brightness: 97, saturation: 1 },
+    { name: 'silk', hex: '#FCFCFC', brightness: 99, saturation: 0 },
+    { name: 'moon-white', hex: '#ECF2F8', brightness: 95, saturation: 5 }
   ]
 };
 
 const degreeRules = [
-  { key: 'dana', name: '布施', primary: ['黄', '绿'], accent: ['蓝', '红'], bgTemp: 'warm', contrast: ['area', 'brightness', 'warm-cool'] },
-  { key: 'sila', name: '持戒', primary: ['白', '蓝'], accent: ['红', '黄'], bgTemp: 'cool', contrast: ['brightness', 'area'] },
-  { key: 'ksanti', name: '忍辱', primary: ['白', '蓝'], accent: ['红', '黄'], bgTemp: 'neutral', contrast: ['layering', 'brightness'] },
-  { key: 'virya', name: '精进', primary: ['红', '黄'], accent: ['蓝', '绿'], bgTemp: 'warm', contrast: ['brightness', 'area', 'warm-cool'] },
-  { key: 'samadhi', name: '禅定', primary: ['白', '蓝', '绿'], accent: ['黄'], bgTemp: 'cool', contrast: ['none', 'brightness'] },
-  { key: 'prajna', name: '般若', primary: ['白', '蓝', '黄'], accent: ['绿', '红'], bgTemp: 'neutral', contrast: ['warm-cool', 'brightness', 'area'] }
+  { key: 'dana', name: '布施', primary: ['黄', '绿'], accent: ['蓝', '红'], bgTemp: 'warm', contrast: ['area', 'brightness', 'warm-cool'], maxSat: 35, minBright: 85, accentProb: 70, palette: 'butter #FFF5D3 + celadon #D4EDB7 + ice-blue #DFF0FC' },
+  { key: 'sila', name: '持戒', primary: ['白', '蓝', '绿'], accent: ['红', '黄'], bgTemp: 'cool', contrast: ['brightness', 'area', 'none'], maxSat: 25, minBright: 88, accentProb: 35, palette: 'moon-white #ECF2F8 + ice-blue #DFF0FC + eucalyptus #D8F2F1' },
+  { key: 'ksanti', name: '忍辱', primary: ['白', '绿'], accent: ['黄'], bgTemp: 'warm', contrast: ['layering', 'brightness', 'warm-cool', 'none'], maxSat: 32, minBright: 84, accentProb: 40, palette: 'pearl #F7F9FA + mint-mist #E2F5E4 + warm-amber #FFDF91' },
+  { key: 'virya', name: '精进', primary: ['红', '黄'], accent: ['蓝', '绿'], bgTemp: 'warm', contrast: ['brightness', 'area', 'warm-cool'], maxSat: 40, minBright: 85, accentProb: 75, palette: 'honey-light #FFD24A + warm-rose #F8A0CB + serene-blue #92DBFC' },
+  { key: 'samadhi', name: '禅定', primary: ['白', '蓝'], accent: ['黄'], bgTemp: 'neutral', contrast: ['brightness', 'area', 'warm-cool', 'none'], maxSat: 28, minBright: 88, accentProb: 30, palette: 'cloud-white #FAFAFA + clear-cyan #D4F6FA + sunlight #FFE391' },
+  { key: 'prajna', name: '般若', primary: ['白', '蓝', '黄'], accent: ['绿', '红'], bgTemp: 'cool', contrast: ['warm-cool', 'brightness', 'area'], maxSat: 32, minBright: 85, accentProb: 55, palette: 'moon-white #ECF2F8 + clear-cyan #D4F6FA + cream-yellow #FFF6DB' }
 ];
 
 const cliches = [

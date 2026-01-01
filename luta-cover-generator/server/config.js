@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 export default {
   // ====== Provider credentials (use env; DO NOT hardcode secrets) ======
   // APIMart
@@ -45,7 +48,7 @@ export default {
   DEFAULT_TEXT_MODEL_ID: process.env.DEFAULT_TEXT_MODEL_ID || 'doubao-seed-1-8',
 
   // 视觉模型（图片评估、意象校验）
-  VISION_MODEL: process.env.VISION_MODEL || 'gemini-2.5-pro',
+  VISION_MODEL: process.env.VISION_MODEL || 'gemini-3-flash-preview',
 
   PORT: Number(process.env.PORT || 3002)
 };

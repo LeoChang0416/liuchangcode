@@ -6,17 +6,20 @@ export async function generateImage(prompt) {
   console.log('[generateImage] Prompt长度:', prompt.length);
   
   try {
+    const apiBase = config.APIMART_API_BASE;
+    const apiKey = config.APIMART_API_KEY;
     const response = await axios.post(
-      `${config.API_BASE}/v1/images/generations`,
+      `${apiBase}/v1/images/generations`,
       {
         model: config.IMAGE_MODEL,
         prompt: prompt,
-        aspect_ratio: '1:1',
-        n: 1
+        size: '1:1',
+        n: 1,
+        resolution: '1K'
       },
       {
         headers: {
-          'Authorization': `Bearer ${config.API_KEY}`,
+          'Authorization': `Bearer ${apiKey}`,
           'Content-Type': 'application/json'
         }
       }
@@ -57,11 +60,14 @@ export async function editImage({ imageUrl, prompt }) {
   console.log('[editImage] Prompt长度:', prompt.length);
   
   try {
+    const apiBase = config.APIMART_API_BASE;
+    const apiKey = config.APIMART_API_KEY;
     const requestBody = {
       model: config.IMAGE_MODEL,
       prompt: prompt,
       size: '1:1',
       n: 1,
+      resolution: '1K',
       image_urls: [
         { url: imageUrl }
       ]
@@ -70,11 +76,11 @@ export async function editImage({ imageUrl, prompt }) {
     console.log('[editImage] 请求体:', JSON.stringify(requestBody).substring(0, 500));
     
     const response = await axios.post(
-      `${config.API_BASE}/v1/images/generations`,
+      `${apiBase}/v1/images/generations`,
       requestBody,
       {
         headers: {
-          'Authorization': `Bearer ${config.API_KEY}`,
+          'Authorization': `Bearer ${apiKey}`,
           'Content-Type': 'application/json'
         }
       }
@@ -112,11 +118,13 @@ export async function getTaskStatus(taskId) {
   }
   
   try {
+    const apiBase = config.APIMART_API_BASE;
+    const apiKey = config.APIMART_API_KEY;
     const response = await axios.get(
-      `${config.API_BASE}/v1/tasks/${taskId}`,
+      `${apiBase}/v1/tasks/${taskId}`,
       {
         headers: {
-          'Authorization': `Bearer ${config.API_KEY}`
+          'Authorization': `Bearer ${apiKey}`
         }
       }
     );

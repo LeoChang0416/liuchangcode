@@ -23,21 +23,18 @@ export const DEGREES = {
     
     // 结构偏置（二阶调节，非骨架指令）
     bias: {
-      edgePreference: 'soft-fade',        // 边缘偏好：柔和渐隐
-      shapeRhythm: 'flowing',             // 形体节奏：流动感
-      contrastTendency: 'area',           // 对比倾向：面积对比为主
-      whitespaceDistribution: 'outer',    // 留白分布：外围更多
-      depthTreatment: 'subtle-layers',    // 深度处理：微妙层次
-      cornerTreatment: 'rounded'          // 角处理：圆润
+      edgePreference: 'soft-fade',
+      shapeRhythm: 'flowing',
+      contrastTendency: 'area',
+      whitespaceDistribution: 'outer',
+      depthTreatment: 'subtle-layers',
+      cornerTreatment: 'rounded'
     },
     
     // 约束（硬性）
     constraints: { maxShapes: 3, maxLines: 2, minWhitespace: 55 },
     
-    // 颜色倾向（非具体配方）
-    colorTendency: '暖色或中性绿为主，高明度，避免深沉冷硬',
-    
-    // 情感锚点（用于内容匹配，不是画面指令）
+    // 情感锚点
     emotionalAnchors: ['慷慨', '温暖', '释放', '给予', '开阔', '轻松', '解脱']
   },
   
@@ -54,16 +51,15 @@ export const DEGREES = {
     },
     
     bias: {
-      edgePreference: 'crisp',            // 边缘偏好：清晰但不锐利
-      shapeRhythm: 'static',              // 形体节奏：静态稳定
-      contrastTendency: 'brightness',     // 对比倾向：明度对比
-      whitespaceDistribution: 'inner',    // 留白分布：内部留白
-      depthTreatment: 'flat',             // 深度处理：扁平
-      cornerTreatment: 'subtle-round'     // 角处理：微圆角
+      edgePreference: 'crisp',
+      shapeRhythm: 'static',
+      contrastTendency: 'brightness',
+      whitespaceDistribution: 'inner',
+      depthTreatment: 'flat',
+      cornerTreatment: 'subtle-round'
     },
     
     constraints: { maxShapes: 4, maxLines: 3, minWhitespace: 50 },
-    colorTendency: '冷色或中性白为主，高明度，极简配色',
     emotionalAnchors: ['自律', '清净', '坚定', '克制', '纯粹', '安稳']
   },
   
@@ -76,20 +72,19 @@ export const DEGREES = {
       spatial: '有缓冲感的空间，元素之间不碰撞、有过渡',
       energy: '柔化、中和、接纳的能量状态',
       weight: '柔韧而非脆硬，有弹性感',
-      temperature: '温和中性，不极端'
+      temperature: '温和中性偏暖，不极端'
     },
     
     bias: {
-      edgePreference: 'gradient-fade',    // 边缘偏好：渐变过渡
-      shapeRhythm: 'cushioned',           // 形体节奏：有缓冲
-      contrastTendency: 'layering',       // 对比倾向：层次叠加
-      whitespaceDistribution: 'center',   // 留白分布：中心缓冲
-      depthTreatment: 'subtle-layers',    // 深度处理：微妙层次
-      cornerTreatment: 'very-rounded'     // 角处理：非常圆润
+      edgePreference: 'gradient-fade',
+      shapeRhythm: 'cushioned',
+      contrastTendency: 'layering',
+      whitespaceDistribution: 'center',
+      depthTreatment: 'subtle-layers',
+      cornerTreatment: 'very-rounded'
     },
     
     constraints: { maxShapes: 3, maxGradients: 2, minWhitespace: 50 },
-    colorTendency: '柔和冷色或中性色，避免刺激性色彩',
     emotionalAnchors: ['包容', '柔韧', '平和', '接纳', '化解', '从容']
   },
   
@@ -106,16 +101,15 @@ export const DEGREES = {
     },
     
     bias: {
-      edgePreference: 'crisp',            // 边缘偏好：清晰
-      shapeRhythm: 'progressive',         // 形体节奏：递进感
-      contrastTendency: 'brightness',     // 对比倾向：明度递进
-      whitespaceDistribution: 'directional', // 留白分布：有方向
-      depthTreatment: 'distinct-planes',  // 深度处理：层次分明
-      cornerTreatment: 'subtle-round'     // 角处理：微圆角
+      edgePreference: 'crisp',
+      shapeRhythm: 'progressive',
+      contrastTendency: 'brightness',
+      whitespaceDistribution: 'directional',
+      depthTreatment: 'distinct-planes',
+      cornerTreatment: 'subtle-round'
     },
     
     constraints: { maxShapes: 4, maxLines: 2, minWhitespace: 50 },
-    colorTendency: '暖色为主（红/黄高明度），配冷色点缀平衡',
     emotionalAnchors: ['进取', '坚持', '热忱', '勇猛', '不退', '积极']
   },
   
@@ -128,20 +122,19 @@ export const DEGREES = {
       spatial: '收束向心的空间感，极大留白，元素极少',
       energy: '内敛、安住、静止的能量状态',
       weight: '极轻，近乎虚空',
-      temperature: '清凉宁静，不温不火'
+      temperature: '中性宁静，不强冷'
     },
     
     bias: {
-      edgePreference: 'soft-fade',        // 边缘偏好：柔和渐隐
-      shapeRhythm: 'static',              // 形体节奏：静态
-      contrastTendency: 'none',           // 对比倾向：极弱对比
-      whitespaceDistribution: 'dominant', // 留白分布：主导性留白
-      depthTreatment: 'flat',             // 深度处理：扁平
-      cornerTreatment: 'rounded'          // 角处理：圆润
+      edgePreference: 'soft-fade',
+      shapeRhythm: 'static',
+      contrastTendency: 'none',
+      whitespaceDistribution: 'dominant',
+      depthTreatment: 'flat',
+      cornerTreatment: 'rounded'
     },
     
     constraints: { maxShapes: 2, maxLines: 1, minWhitespace: 65 },
-    colorTendency: '冷色或中性白为主，极高明度，配色最少',
     emotionalAnchors: ['宁静', '专注', '安住', '沉静', '内敛', '澄明']
   },
   
@@ -158,16 +151,15 @@ export const DEGREES = {
     },
     
     bias: {
-      edgePreference: 'soft-division',    // 边缘偏好：柔和分界
-      shapeRhythm: 'contrasting',         // 形体节奏：对照感
-      contrastTendency: 'warm-cool',      // 对比倾向：冷暖对比
-      whitespaceDistribution: 'balanced', // 留白分布：均衡
-      depthTreatment: 'distinct-planes',  // 深度处理：层次分明
-      cornerTreatment: 'mixed'            // 角处理：混合
+      edgePreference: 'soft-division',
+      shapeRhythm: 'contrasting',
+      contrastTendency: 'warm-cool',
+      whitespaceDistribution: 'balanced',
+      depthTreatment: 'distinct-planes',
+      cornerTreatment: 'mixed'
     },
     
     constraints: { maxShapes: 3, maxLines: 2, minWhitespace: 55 },
-    colorTendency: '冷暖对照或明暗对照，高明度，强调"洞见"感',
     emotionalAnchors: ['清醒', '通透', '洞察', '明晰', '觉悟', '超越']
   }
 };
@@ -181,73 +173,87 @@ export const HARD_NEGATIVES =
   "arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, " +
   "photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, dirty, messy, complex, detailed";
 
-// 风格DNA
+// 风格DNA（增强艺术性）
 export const STYLE_DNA = `
-- Background: Minimalist paper-like texture or solid color, high brightness (off-white/light gray).
-- Lighting: Soft, diffuse ambient light. No harsh shadows. Max 2 subtle gradients/glows.
-- Aesthetics: Japanese minimalism (Ma), clean, serene, balanced.
-- Composition: Strict geometric abstraction. No concrete objects.
+## 美学DNA — 必须融入每一张图
+- **艺术定位**：Museum-quality abstract art, gallery-worthy, collectible print
+- **视觉风格**：Ethereal, poetic, contemplative, refined, sophisticated
+- **情绪氛围**：Meditative calm, quiet elegance, transcendent serenity
+- **日本美学三原则**：
+  - 間（Ma）：Negative space as breathing room, silence that speaks
+  - 渋い（Shibui）：Understated elegance, restrained beauty, mature taste
+  - 幽玄（Yūgen）：Subtle profundity, mystery beyond words, depth through simplicity
+- **光感**：Soft diffuse ambient light, gentle luminosity, no harsh shadows
+- **材质感**：Like fine rice paper or silk, soft matte finish, tactile quality
+- **构图**：Asymmetrical balance, dynamic stillness, intentional imperfection (wabi-sabi)
+- **色彩**：Muted, desaturated, high-value tones; color as whisper not shout
+
+## 禁止（会破坏美学）
+- Harsh edges, sharp contrasts, aggressive geometry
+- Busy, cluttered, complex, detailed patterns
+- Metallic, glossy, plastic, digital-looking surfaces
+- Symmetrical, predictable, rigid compositions
 `;
 
-// 背景色号参考（扩展）
+// 背景色号参考（扩展）- V2饱和度+45%版
 export const BACKGROUND_COLORS = [
-  { name: 'paper-white', hex: '#F6F4EE', temp: 'warm' },
-  { name: 'mist-white', hex: '#F3F5F6', temp: 'cool' },
-  { name: 'warm-beige', hex: '#F7F2E8', temp: 'warm' },
+  { name: 'paper-white', hex: '#F6F3EA', temp: 'warm' },
+  { name: 'mist-white', hex: '#F2F5F6', temp: 'cool' },
+  { name: 'warm-beige', hex: '#F7F0E1', temp: 'warm' },
   { name: 'soft-gray', hex: '#F0F0F0', temp: 'neutral' },
-  { name: 'cream', hex: '#FFFEF5', temp: 'warm' },
-  { name: 'cool-mist', hex: '#F5F7FA', temp: 'cool' },
-  { name: 'ivory', hex: '#FFFFF0', temp: 'warm' },
-  { name: 'snow', hex: '#FFFAFA', temp: 'neutral' }
+  { name: 'cream', hex: '#FFFEF1', temp: 'warm' },
+  { name: 'cool-mist', hex: '#F3F6FA', temp: 'cool' },
+  { name: 'ivory', hex: '#FFFFE9', temp: 'warm' },
+  { name: 'snow', hex: '#FFF8F8', temp: 'neutral' }
 ];
 
 // ========================================
-// 五方佛五色体系（基于 lutaai.txt 2.1）
-// 每色 6 个变体：从极浅到中等，覆盖不同明度/饱和度
+// 五方佛五色体系（V2饱和度+45%版）
+// HSV模型下饱和度 S × 1.45（上限100%），亮度V保持不变
 // ========================================
 export const FIVE_COLORS = {
   '蓝': {
     meaning: '澄明、冷静、深邃（东方）',
     variants: [
-      { name: 'ice-blue', hex: '#E8F4FC', brightness: 95, saturation: 15 },
-      { name: 'sky-mist', hex: '#D6EAF8', brightness: 92, saturation: 22 },
-      { name: 'soft-azure', hex: '#AED6F1', brightness: 85, saturation: 35 },
-      { name: 'powder-blue', hex: '#85C1E9', brightness: 78, saturation: 45 },
-      { name: 'clear-cyan', hex: '#E0F7FA', brightness: 94, saturation: 20 },
-      { name: 'serene-blue', hex: '#B3E5FC', brightness: 88, saturation: 30 }
+      { name: 'ice-blue', hex: '#DFF0FC', brightness: 95, saturation: 12 },
+      { name: 'sky-mist', hex: '#C7E4F8', brightness: 92, saturation: 20 },
+      { name: 'soft-azure', hex: '#90CAF1', brightness: 85, saturation: 40 },
+      { name: 'powder-blue', hex: '#58AFE9', brightness: 78, saturation: 62 },
+      { name: 'clear-cyan', hex: '#D4F6FA', brightness: 94, saturation: 15 },
+      { name: 'serene-blue', hex: '#92DBFC', brightness: 88, saturation: 42 }
     ]
   },
   '黄': {
     meaning: '温暖、开阔、滋养（南方）',
     variants: [
-      { name: 'cream-yellow', hex: '#FFF9E6', brightness: 97, saturation: 10 },
-      { name: 'soft-gold', hex: '#FFF3CD', brightness: 95, saturation: 20 },
-      { name: 'warm-amber', hex: '#FFE9B3', brightness: 92, saturation: 30 },
-      { name: 'honey-light', hex: '#FFE082', brightness: 88, saturation: 40 },
-      { name: 'butter', hex: '#FFF8E1', brightness: 96, saturation: 15 },
-      { name: 'sunlight', hex: '#FFECB3', brightness: 93, saturation: 28 }
+      { name: 'cream-yellow', hex: '#FFF6DB', brightness: 97, saturation: 14 },
+      { name: 'soft-gold', hex: '#FFEEB7', brightness: 95, saturation: 28 },
+      { name: 'warm-amber', hex: '#FFDF91', brightness: 92, saturation: 43 },
+      { name: 'honey-light', hex: '#FFD24A', brightness: 88, saturation: 71 },
+      { name: 'butter', hex: '#FFF5D3', brightness: 96, saturation: 17 },
+      { name: 'sunlight', hex: '#FFE391', brightness: 93, saturation: 43 }
     ]
   },
   '红': {
     meaning: '力量、温热、精进（西方）',
     variants: [
-      { name: 'blush', hex: '#FFEBEE', brightness: 96, saturation: 8 },
-      { name: 'rose-mist', hex: '#FFCDD2', brightness: 90, saturation: 18 },
-      { name: 'coral-light', hex: '#FFAB91', brightness: 82, saturation: 35 },
-      { name: 'peach', hex: '#FFCCBC', brightness: 88, saturation: 25 },
-      { name: 'warm-rose', hex: '#F8BBD9', brightness: 85, saturation: 28 },
-      { name: 'terracotta-light', hex: '#FFCCBC', brightness: 88, saturation: 22 }
+      { name: 'blush', hex: '#FFE2E6', brightness: 96, saturation: 11 },
+      { name: 'rose-mist', hex: '#FFB7BE', brightness: 90, saturation: 28 },
+      { name: 'coral-light', hex: '#FF8560', brightness: 82, saturation: 63 },
+      { name: 'peach', hex: '#FFB59E', brightness: 88, saturation: 38 },
+      { name: 'warm-rose', hex: '#F8A0CB', brightness: 85, saturation: 36 },
+      { name: 'terracotta-light', hex: '#FFB59E', brightness: 88, saturation: 38 }
     ]
   },
   '绿': {
     meaning: '生机、平衡、流动（北方）',
     variants: [
-      { name: 'mint-mist', hex: '#E8F5E9', brightness: 96, saturation: 10 },
-      { name: 'soft-sage', hex: '#C8E6C9', brightness: 90, saturation: 20 },
-      { name: 'spring-green', hex: '#A5D6A7', brightness: 84, saturation: 30 },
-      { name: 'jade-light', hex: '#B2DFDB', brightness: 88, saturation: 25 },
-      { name: 'eucalyptus', hex: '#E0F2F1', brightness: 95, saturation: 12 },
-      { name: 'celadon', hex: '#DCEDC8', brightness: 92, saturation: 18 }
+      { name: 'mint-mist', hex: '#E2F5E4', brightness: 96, saturation: 8 },
+      { name: 'soft-sage', hex: '#BAE6BC', brightness: 90, saturation: 19 },
+      { name: 'spring-green', hex: '#8FD692', brightness: 84, saturation: 33 },
+      { name: 'jade-light', hex: '#9EDFD9', brightness: 88, saturation: 29 },
+      { name: 'eucalyptus', hex: '#D8F2F1', brightness: 95, saturation: 11 },
+      { name: 'celadon', hex: '#D4EDB7', brightness: 92, saturation: 23 }
     ]
   },
   '白': {
@@ -256,9 +262,9 @@ export const FIVE_COLORS = {
       { name: 'pure-white', hex: '#FFFFFF', brightness: 100, saturation: 0 },
       { name: 'cloud-white', hex: '#FAFAFA', brightness: 98, saturation: 0 },
       { name: 'fog-white', hex: '#F5F5F5', brightness: 96, saturation: 0 },
-      { name: 'pearl', hex: '#F8F9FA', brightness: 97, saturation: 2 },
+      { name: 'pearl', hex: '#F7F9FA', brightness: 97, saturation: 1 },
       { name: 'silk', hex: '#FCFCFC', brightness: 99, saturation: 0 },
-      { name: 'moon-white', hex: '#F0F4F8', brightness: 95, saturation: 5 }
+      { name: 'moon-white', hex: '#ECF2F8', brightness: 95, saturation: 5 }
     ]
   }
 };
@@ -279,7 +285,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [10, 15], // 点醒不透明度%
     allowedContrastMethods: ['area', 'brightness', 'warm-cool'],
     rule: '高明度黄/绿为主，蓝/红只作"提示"，避免抢戏',
-    palette: { main: 'butter', mainHex: '#FFF8E1', aux1: 'celadon', aux1Hex: '#DCEDC8', aux2: 'ice-blue', aux2Hex: '#E8F4FC', bg: 'paper-white', bgHex: '#F6F4EE' }
+    palette: { main: 'butter', mainHex: '#FFF5D3', aux1: 'celadon', aux1Hex: '#D4EDB7', aux2: 'ice-blue', aux2Hex: '#DFF0FC', bg: 'paper-white', bgHex: '#F6F3EA' }
   },
   sila: {
     name: '持戒',
@@ -293,7 +299,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [8, 12],
     allowedContrastMethods: ['brightness', 'area', 'none'],
     rule: '以冷白/淡蓝/淡绿建立秩序；红/黄仅用于"警醒点"',
-    palette: { main: 'moon-white', mainHex: '#F0F4F8', aux1: 'ice-blue', aux1Hex: '#E8F4FC', aux2: 'eucalyptus', aux2Hex: '#E0F2F1', bg: 'mist-white', bgHex: '#F3F5F6' }
+    palette: { main: 'moon-white', mainHex: '#ECF2F8', aux1: 'ice-blue', aux1Hex: '#DFF0FC', aux2: 'eucalyptus', aux2Hex: '#D8F2F1', bg: 'mist-white', bgHex: '#F2F5F6' }
   },
   ksanti: {
     name: '忍辱',
@@ -307,7 +313,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [12, 18],
     allowedContrastMethods: ['layering', 'brightness', 'warm-cool', 'none'],
     rule: '以留白与雾化叠层承受刺激；引入"温和暖黄"作为稳定中轴',
-    palette: { main: 'pearl', mainHex: '#F8F9FA', aux1: 'mint-mist', aux1Hex: '#E8F5E9', aux2: 'warm-amber', aux2Hex: '#FFE9B3', bg: 'cream', bgHex: '#FFFEF5' }
+    palette: { main: 'pearl', mainHex: '#F7F9FA', aux1: 'mint-mist', aux1Hex: '#E2F5E4', aux2: 'warm-amber', aux2Hex: '#FFDF91', bg: 'cream', bgHex: '#FFFEF1' }
   },
   virya: {
     name: '精进',
@@ -321,7 +327,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['brightness', 'area', 'warm-cool'],
     rule: '暖色主导但不压；用冷色作"呼吸口"，保持轻盈',
-    palette: { main: 'honey-light', mainHex: '#FFE082', aux1: 'warm-rose', aux1Hex: '#F8BBD9', aux2: 'serene-blue', aux2Hex: '#B3E5FC', bg: 'warm-beige', bgHex: '#F7F2E8' }
+    palette: { main: 'honey-light', mainHex: '#FFD24A', aux1: 'warm-rose', aux1Hex: '#F8A0CB', aux2: 'serene-blue', aux2Hex: '#92DBFC', bg: 'warm-beige', bgHex: '#F7F0E1' }
   },
   samadhi: {
     name: '禅定',
@@ -335,7 +341,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['brightness', 'area', 'warm-cool', 'none'],
     rule: '仍以留白与微差为核心，加入明亮暖黄作为"内在灯火"',
-    palette: { main: 'cloud-white', mainHex: '#FAFAFA', aux1: 'clear-cyan', aux1Hex: '#E0F7FA', aux2: 'sunlight', aux2Hex: '#FFECB3', bg: 'ivory', bgHex: '#FFFFF0' }
+    palette: { main: 'cloud-white', mainHex: '#FAFAFA', aux1: 'clear-cyan', aux1Hex: '#D4F6FA', aux2: 'sunlight', aux2Hex: '#FFE391', bg: 'ivory', bgHex: '#FFFFE9' }
   },
   prajna: {
     name: '般若',
@@ -349,7 +355,7 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['warm-cool', 'brightness', 'area'],
     rule: '保留冷暖对照但降低频率；点醒色更小更淡，避免"聪明而躁"',
-    palette: { main: 'moon-white', mainHex: '#F0F4F8', aux1: 'clear-cyan', aux1Hex: '#E0F7FA', aux2: 'cream-yellow', aux2Hex: '#FFF9E6', bg: 'cool-mist', bgHex: '#F5F7FA' }
+    palette: { main: 'moon-white', mainHex: '#ECF2F8', aux1: 'clear-cyan', aux1Hex: '#D4F6FA', aux2: 'cream-yellow', aux2Hex: '#FFF6DB', bg: 'cool-mist', bgHex: '#F3F6FA' }
   }
 };
 
@@ -430,12 +436,12 @@ export function generateColorScheme(degreeKey) {
   };
 }
 
-// 兼容旧代码的导出
+// 兼容旧代码的导出（V2饱和度+45%版）
 export const PRIMARY_COLOR_EXAMPLES = {
-  '黄': { light: '#FFF8E7', medium: '#FFE5B4' },
-  '绿': { light: '#E8F5E9', medium: '#C8E6C9' },
-  '蓝': { light: '#E3F2FD', medium: '#BBDEFB' },
-  '红': { light: '#FFEBEE', medium: '#FFCDD2' },
+  '黄': { light: '#FFF5D3', medium: '#FFDF91' },
+  '绿': { light: '#E2F5E4', medium: '#BAE6BC' },
+  '蓝': { light: '#DFF0FC', medium: '#C7E4F8' },
+  '红': { light: '#FFE2E6', medium: '#FFB7BE' },
   '白': { light: '#FAFAFA', medium: '#F5F5F5' }
 };
 
@@ -628,42 +634,75 @@ export const ANALYZE_SYSTEM = `你是一个"播客→独特视觉意象"转换�
 4. ✅ antiTemplateCheck.isLeftRightDual 是否为 false？
 5. ✅ 这个骨架是否真正反映了播客的独特意象？
 
-只输出 JSON。`;
+**重要：所有输出内容必须使用中文，不要使用英文。只输出JSON。**`;
 
 // ========================================
-// 自动选度（V1）
+// 自动选度（V2：增强区分度，防止般若成为默认）
 // ========================================
-export const DEGREE_SELECT_SYSTEM = `你是一个“六度（布施/持戒/忍辱/精进/禅定/般若）自动判别器”。你的任务是：阅读用户提供的完整播客文本内容（可包含标题、简介、逐字稿片段、要点），判断最适合的“度”。
+export const DEGREE_SELECT_SYSTEM = `你是一个"六度自动判别器"。阅读播客内容，判断最适合的"度"。
 
-## 重要原则
-- 你必须阅读并综合整段文本，不要只看开头几句。
-- 选择依据必须来自文本本身的语义与气质：情绪、动机、行动方向、张力类型、价值取向。
-- 如果信息不足或多度都合理，你必须降低置信度，并明确说明缺失信息点。
-- 不要输出多余解释，只输出 JSON。
+## ⚠️ 警告：避免般若偏误
+很多播客都在"分享见解"，但这**不代表应该选般若**！
+般若的核心是**破除二元对立、瓦解概念执着**，不是普通的"分享观点"或"传递知识"。
 
-## 六度语义取向（高层）
-- dana（布施）：开放、给予、流动、轻盈；向外扩展、分享、连接、温暖而不炽热。
-- sila（持戒）：边界、秩序、澄净；规则、自律、克制、清明、守护、稳定的“框定”。
-- ksanti（忍辱）：承受、缓冲、化解；接纳、包容、消融冲突、等持/保持、温和稳定。
-- virya（精进）：推进、节律、明快；行动力、训练、持续、迭代、突破惯性但不焦躁。
-- samadhi（禅定）：收束、安住、澄寂；内在沉静、定力、专注、空明、减少噪声。
-- prajna（般若）：切透、澄明、洞见；认知穿透、看破迷雾、觉察、分辨与明晰（可有冷暖对照但不必二元对立）。
+## 六度判别标准（按动作/动机区分）
+
+| 度 | 核心动作 | 典型场景 | **必须有的信号** |
+|----|----------|----------|------------------|
+| dana（布施） | 给予、分享、释放 | 分享经验、传授方法、馈赠资源 | 明确的"向外给予"意图，有接收者 |
+| sila（持戒） | 设限、守护、规范 | 建立习惯、戒除某事、坚守原则 | 明确的"边界/规则/自律"主题 |
+| ksanti（忍辱） | 承受、接纳、化解 | 面对困难、处理冲突、等待时机 | 明确的"承压/忍耐/等持"主题 |
+| virya（精进） | 推进、行动、迭代 | 执行计划、训练技能、持续精进 | 明确的"行动/努力/坚持"主题 |
+| samadhi（禅定） | 安住、专注、沉静 | 冥想、专注当下、减少杂念 | 明确的"收束/安定/专注"主题 |
+| prajna（般若） | 瓦解、穿透、解构 | 破除迷思、超越二元、觉醒真相 | 明确的"解构概念/破除对立"信号 |
+
+## 区分要点
+
+### 布施 vs 般若
+- 布施：我有东西给你（知识、经验、资源）→ 选 dana
+- 般若：我要打破你的固有认知结构 → 选 prajna
+
+### 精进 vs 般若
+- 精进：教你如何行动、如何坚持 → 选 virya
+- 般若：让你看清行动背后的虚妄 → 选 prajna
+
+### 禅定 vs 般若
+- 禅定：让你安静下来、专注当下 → 选 samadhi
+- 般若：让你看穿"安静"本身也是概念 → 选 prajna
+
+## 判断流程
+1. 先排除：文本是否有明确的给予/设限/承受/行动/安住信号？
+2. 如果有 → 优先选对应的度
+3. 只有当文本核心是**解构、穿透、破除二元**时 → 才选般若
+4. 如果不确定 → 降低置信度，不要默认选般若
 
 ## 输出格式（JSON）
 {
   "degreeKey": "dana|sila|ksanti|virya|samadhi|prajna",
   "confidence": 0-100,
-  "reason": "一句话说明为什么（引用文本语义，不要泛泛而谈）",
-  "evidence": ["从文本中抽取的短语/要点（最多3条）"],
-  "missingInfo": ["若置信度<70，指出缺失的信息（最多3条）"]
+  "reason": "一句话说明为什么（必须引用具体文本证据）",
+  "evidence": ["从文本中抽取的关键短语（最多3条）"],
+  "whyNotOthers": "为什么不选其他度（简短说明排除理由）"
 }
 
-只输出 JSON。`;
+**重要：所有输出内容必须使用中文，不要使用英文。只输出JSON。**`;
 
 // ========================================
 // 第二阶段：生成提示词（V6 骨架强变量版：三类强变量决定骨架）
 // ========================================
 export const PROMPT_SYSTEM = `你是一个顶级平面设计师，擅长日本极简美学（Ma）。
+
+## 🎨 美学目标（Rubric，不是模板）
+- 目标：让作品更“艺术”、更“抽象”、更“高级”，像可收藏的画廊级抽象作品，而不是工程图或廉价图标。
+- 方式：用**少量但精准**的美学语言引导气质与手感；不要背诵固定词组；不要为了“符合”而堆砌形容词。
+- 结果应具备：间（Ma）的呼吸、渋い（Shibui）的克制、幽玄（Yūgen）的微深。
+- 绝不做：廉价的装饰性、机械对称、锐利硬边、塑料感/金属感/霓虹感。
+
+## 可选美学词库（Lexicon，可择优使用/改写，禁止逐字照抄整段）
+- 质感：tactile, paper-like, matte, soft grain, silk-like, ink-wash, watercolor-bleed
+- 气质：ethereal, poetic, contemplative, refined, understated, quiet elegance, meditative stillness
+- 构图：asymmetrical balance, dynamic stillness, breathing room, intentional restraint, wabi-sabi
+- 光感：soft ambient luminosity, gentle haze, subtle halo, delicate falloff
 
 ## ★★★ 核心原则：骨架由三类强变量决定 ★★★
 
@@ -823,13 +862,26 @@ physicalMetaphor 应该在画面中有直观的视觉呼应。
 - Edge sharpness: {度影响的边缘}
 - Transparency: {如有}
 
-[ATMOSPHERE & MOOD]
-- Japanese aesthetic: {Ma/Kanso/Shibui}
-- Content resonance: {physicalMetaphor 的情感呼应}
+[ATMOSPHERE & MOOD] — 这一部分决定了图片的灵魂
+- Japanese aesthetic essence: Ma (breathing space), Shibui (quiet elegance), Yūgen (profound mystery)
+- Emotional resonance: {physicalMetaphor 如何转化为视觉情感}
+- Contemplative quality: The image should invite pause and reflection
+- Poetic abstraction: Like a haiku in visual form — minimal strokes, maximum meaning
+
+[ARTISTIC QUALITY] — 必须包含以下美学词汇
+- "Museum-quality abstract art"
+- "Ethereal, refined, sophisticated"
+- "Soft ambient luminosity"
+- "Tactile paper-like texture"
+- "Asymmetrical dynamic balance"
+- "Meditative stillness"
+- "Gallery-worthy minimalist composition"
+
 [STYLE]
-- Render style: Clean vector-like digital art
-- No photorealism, no 3D rendering
-- High clarity at 128px thumbnail
+- Render: Soft-edged, painterly-digital hybrid (not hard vector, not photorealistic)
+- Surface: Fine art print quality, like watercolor on rice paper
+- Clarity: Beautiful at any size, from thumbnail to poster
+- Avoid: Harsh, busy, glossy, rigid, mechanical
 \`\`\`
 
 ## 输出格式（JSON）
@@ -872,7 +924,7 @@ physicalMetaphor 应该在画面中有直观的视觉呼应。
 2. 如果骨架与该度的默认 cliché 相似，你必须说明为什么三类强变量支持这个骨架
 3. degreeBiasApplication.skeletonUntouched 必须为 true（度没有改变骨架）
 
-只输出 JSON。`;
+**重要：所有输出内容必须使用中文，不要使用英文。只输出JSON。**`;
 
 // ========================================
 // 意象校验（新增）
@@ -907,7 +959,38 @@ export const IMAGERY_VERIFY_SYSTEM = `你是一个视觉意象校验专家。你
 - isLeftRightDual = false（除非预期就是左右对比）
 - metaphorMatch.isMatched = true
 
-请严格评判，不要宽容。`;
+请严格评判，不要宽容。
+
+**重要：所有输出内容必须使用中文，不要使用英文。**`;
+
+// ========================================
+// 多模态改图提示词（意象校验 → 参考图编辑）
+// ========================================
+export const EDIT_PROMPT_SYSTEM = `你是一个"播客封面多模态改图提示词工程师"。
+
+## ⚠️ 最重要原则：极简改图指令
+- **只描述要改什么**，不要描述保留什么
+- 结尾加一句 "Keep everything else unchanged." 即可
+- 过度描述保留项会导致画面僵硬、过度一致，失去生动感
+
+## 坏例子 ❌
+"EDIT THE PROVIDED REFERENCE COVER. Maintain the same abstract geometric, Japanese minimal (Ma) composition and topology. Keep the single unified radial field with nested relationship: (1) the small steady warm wick/flame mark near center, (2) the faint transparent liuli罩 outline ring, (3) four condensation clusters attached to the inner rim..."
+
+问题：描述了太多"保留"细节，模型会完全复制原图，失去改进空间。
+
+## 好例子 ✓
+"EDIT: Make the overall brightness higher (≥85%). Reduce saturation of all colored areas (≤35%). Keep everything else unchanged."
+
+优点：只说改动点，简洁明确，给模型留有发挥空间。
+
+## 输出格式（JSON）
+{
+  "editPrompt": "极简的英文改图指令（50-120词，只说改什么，结尾Keep everything else unchanged）",
+  "changes": ["改动点（<=4条，极简描述）"],
+  "keeps": ["（留空数组，不要列保留项）"]
+}
+
+**重要：所有输出内容必须使用中文，不要使用英文。只输出JSON。**`;
 
 // ========================================
 // 质量评估
@@ -922,9 +1005,22 @@ export const EVALUATE_SYSTEM = `你是一个严格的封面快检审稿员。请
 
 ## 维度 2：颜色快检（color）
 - 有色相 ≤ 3（背景色可为氛围匹配的非中性色）
-- 主色为高明度版本
+- 主色为高明度版本（目测明度 ≥ 80%）
 - 无荧光/霓虹感
+- 无高饱和色块（目测饱和度 ≤ 40%）
 - 缩略到 128px 仍清爽
+
+### V2 各度明度/饱和度参考（严格检查）
+| 度 | 最低明度 | 最高饱和度 |
+|----|----------|------------|
+| 布施 | 85% | 35% |
+| 持戒 | 88% | 25% |
+| 忍辱 | 84% | 32% |
+| 精进 | 85% | 40% |
+| 禅定 | 88% | 28% |
+| 般若 | 85% | 32% |
+
+如果用户提供了度（degree），请对照上表检查画面颜色是否符合该度的约束。
 
 ## 维度 3：抽象快检（abstraction）
 - 5 秒内看不出任何具体物体/宗教器物/自然景物
@@ -939,7 +1035,7 @@ export const EVALUATE_SYSTEM = `你是一个严格的封面快检审稿员。请
 ## 输出格式（JSON）
 {
   "complexity": { "pass": true/false, "score": 0-100, "reason": "..." },
-  "color": { "pass": true/false, "score": 0-100, "reason": "..." },
+  "color": { "pass": true/false, "score": 0-100, "reason": "...", "brightnessEstimate": "目测主色明度", "saturationEstimate": "目测最高饱和度" },
   "abstraction": { "pass": true/false, "score": 0-100, "reason": "..." },
   "aesthetic": { "pass": true/false, "score": 0-100, "reason": "..." },
   "pass": true/false,
@@ -948,4 +1044,6 @@ export const EVALUATE_SYSTEM = `你是一个严格的封面快检审稿员。请
 
 pass 规则：
 - 只要任一维度 pass=false，则 pass=false。
+
+**重要：只输出JSON，不要输出任何解释、思考过程或markdown代码块。直接以 { 开头。所有文字内容必须使用中文。**
 `;

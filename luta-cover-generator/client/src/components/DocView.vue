@@ -67,13 +67,13 @@
               <div class="impl-card">
                 <h4>LLM 调用链</h4>
                 <div class="impl-flow">
-                  <span class="impl-node">DeepSeek</span>
+                  <span class="impl-node">文本模型（可选）</span>
                   <span class="impl-arrow">→</span>
                   <span class="impl-node">Prompt 构建</span>
                   <span class="impl-arrow">→</span>
-                  <span class="impl-node">Gemini</span>
+                  <span class="impl-node">Gemini 生图</span>
                   <span class="impl-arrow">→</span>
-                  <span class="impl-node">GPT-4o 校验</span>
+                  <span class="impl-node">Gemini 视觉评估/意象</span>
                 </div>
               </div>
               <div class="impl-card">
@@ -475,12 +475,12 @@
                       <span class="comp-value">{{ comp.elements }}</span>
                     </div>
                     <div class="comp-row">
-                      <span class="comp-label">Color Mask</span>
-                      <span class="comp-value small">{{ comp.colorMask }}</span>
+                      <span class="comp-label">边缘偏置</span>
+                      <span class="comp-value small">{{ comp.edgeBias }}</span>
                     </div>
                     <div class="comp-row">
-                      <span class="comp-label">Blur Mask</span>
-                      <span class="comp-value small">{{ comp.blurMask }}</span>
+                      <span class="comp-label">对比策略</span>
+                      <span class="comp-value small">{{ comp.contrastMethod }}</span>
                     </div>
                   </div>
                 </div>
@@ -656,11 +656,11 @@ const sections = [
 
 const workflowSteps = [
   { id: 'input', type: 'input', title: '用户输入', desc: '播客文本（无需手动选度）', details: null },
-  { id: 'degree', type: 'llm', title: '🆕 智能选度', desc: 'LLM自动推导最匹配的「度」', details: ['置信度≥70%通过', '多模型容灾切换'] },
-  { id: 'analyze', type: 'llm', title: 'DeepSeek 分析', desc: '提取意象、确定骨架强变量', details: ['TopologicalLayout', 'PrimaryRelationship', 'RhythmSignature'] },
-  { id: 'inject', type: 'logic', title: '规则注入', desc: 'Prompt 构建 + 配色生成', details: ['硬约束', '随机配色', '反 cliché'] },
-  { id: 'gen', type: 'gen', title: 'Gemini 生图', desc: '文生图执行', details: null },
-  { id: 'verify', type: 'verify', title: '校验', desc: '评估 + 意象校验', details: ['快检评分', '左右双域检测'] }
+  { id: 'degree', type: 'llm', title: '🆕 智能选度', desc: 'selectDegree()：文本模型自动推导最匹配的「度」', details: ['置信度≥70%通过', '可指定 textModelId'] },
+  { id: 'analyze', type: 'llm', title: '内容分析', desc: 'analyzeContent()：提取意象、确定骨架强变量', details: ['TopologicalLayout', 'PrimaryRelationship', 'RhythmSignature'] },
+  { id: 'inject', type: 'logic', title: '规则注入', desc: 'generatePrompt()：Prompt 构建 + 配色生成', details: ['硬约束', '随机配色', '反 cliché'] },
+  { id: 'gen', type: 'gen', title: '生图提交', desc: 'generateImage()：APIMart /v1/images/generations（异步 taskId）', details: ['IMAGE_MODEL: gemini-3-pro-image-preview'] },
+  { id: 'verify', type: 'verify', title: '校验', desc: 'evaluateImage() + verifyImagery()：视觉快检 + 意象校验', details: ['VISION_MODEL: gemini-3-flash-preview'] }
 ];
 
 const aesthetics = [
@@ -674,47 +674,47 @@ const aesthetics = [
 
 const degreeRules = [
   { 
-    key: 'dana', name: '布施', nameEn: 'Dāna', color: '#FFF8E1', 
+    key: 'dana', name: '布施', nameEn: 'Dāna', color: '#FFF5D3', 
     spirit: '开放、给予、流动、轻盈的温暖',
     skeleton: '开放/流动', contrast: 'area, brightness, warm-cool', 
     colors: ['黄', '绿'], accentColors: ['蓝', '红'],
     bgTemp: '暖', minBright: 85, maxSat: 35, accentProb: 70,
     accentHint: '面积2–6%；不透明度10–15%',
     semantic: '开放、流动、轻盈', visualHint: '向外舒展，不封闭',
-    palette: { main: 'butter #FFF8E1', aux1: 'celadon #DCEDC8', aux2: 'ice-blue #E8F4FC', bg: 'paper-white #F6F4EE' },
+    palette: { main: 'butter #FFF5D3', aux1: 'celadon #D4EDB7', aux2: 'ice-blue #DFF0FC', bg: 'paper-white #F6F3EA' },
     rule: '高明度黄/绿为主，蓝/红只作"提示"，避免抢戏'
   },
   { 
-    key: 'sila', name: '持戒', nameEn: 'Śīla', color: '#F0F4F8', 
+    key: 'sila', name: '持戒', nameEn: 'Śīla', color: '#ECF2F8', 
     spirit: '清净、克制、边界感、规则与自持',
     skeleton: '边界/秩序', contrast: 'brightness, area, none', 
     colors: ['白', '蓝', '绿'], accentColors: ['红', '黄'],
     bgTemp: '冷', minBright: 88, maxSat: 25, accentProb: 35,
     accentHint: '面积1–4%；不透明度8–12%；作为"警醒点"',
     semantic: '边界、秩序、澄净', visualHint: '清晰界线，规整',
-    palette: { main: 'moon-white #F0F4F8', aux1: 'ice-blue #E8F4FC', aux2: 'eucalyptus #E0F2F1', bg: 'mist-white #F3F5F6' },
+    palette: { main: 'moon-white #ECF2F8', aux1: 'ice-blue #DFF0FC', aux2: 'eucalyptus #D8F2F1', bg: 'mist-white #F2F5F6' },
     rule: '以冷白/淡蓝/淡绿建立秩序；红/黄仅用于"警醒点"'
   },
   { 
-    key: 'ksanti', name: '忍辱', nameEn: 'Kṣānti', color: '#F8F9FA', 
+    key: 'ksanti', name: '忍辱', nameEn: 'Kṣānti', color: '#F7F9FA', 
     spirit: '柔软承受、缓冲刺激、含容不迫；更强调"等持/持有/保持"的稳定与温和',
     skeleton: '缓冲/柔化', contrast: 'layering, brightness, warm-cool, none', 
     colors: ['白', '绿'], accentColors: ['黄'],
     bgTemp: '中性偏暖', minBright: 84, maxSat: 32, accentProb: 40,
     accentHint: '暖黄轴面积6–18%；不透明度12–18%；避免强对比与高饱和红',
     semantic: '承受、缓冲、化解', visualHint: '柔边过渡，包容',
-    palette: { main: 'pearl #F8F9FA', aux1: 'mint-mist #E8F5E9', aux2: 'warm-amber #FFE9B3', bg: 'cream #FFFEF5' },
-    rule: '🆕 V2：以留白与雾化叠层承受刺激；引入"温和暖黄"作为稳定中轴，拉开与持戒的气质差异'
+    palette: { main: 'pearl #F7F9FA', aux1: 'mint-mist #E2F5E4', aux2: 'warm-amber #FFDF91', bg: 'cream #FFFEF1' },
+    rule: '🆕 V2：以留白与雾化叠层承受刺激；引入"温和暖黄"作为稳定中轴'
   },
   { 
-    key: 'virya', name: '精进', nameEn: 'Vīrya', color: '#FFE082', 
+    key: 'virya', name: '精进', nameEn: 'Vīrya', color: '#FFD24A', 
     spirit: '动能、推进、明快而不躁',
     skeleton: '推进/节律', contrast: 'brightness, area, warm-cool', 
     colors: ['红', '黄'], accentColors: ['蓝', '绿'],
     bgTemp: '暖', minBright: 85, maxSat: 40, accentProb: 75,
     accentHint: '面积2–6%；不透明度10–15%；避免大块高饱和',
     semantic: '推进、节律、明快', visualHint: '有方向感，节奏',
-    palette: { main: 'honey-light #FFE082', aux1: 'warm-rose #F8BBD9', aux2: 'serene-blue #B3E5FC', bg: 'warm-beige #F7F2E8' },
+    palette: { main: 'honey-light #FFD24A', aux1: 'warm-rose #F8A0CB', aux2: 'serene-blue #92DBFC', bg: 'warm-beige #F7F0E1' },
     rule: '暖色主导但不压；用冷色作"呼吸口"，保持轻盈'
   },
   { 
@@ -725,29 +725,29 @@ const degreeRules = [
     bgTemp: '中性（不强冷）', minBright: 88, maxSat: 28, accentProb: 30,
     accentHint: '暖黄面积2–8%；不透明度10–15%；以"光感"而非"热闹"为准',
     semantic: '收束、安住、澄寂', visualHint: '中心锚定，大留白',
-    palette: { main: 'cloud-white #FAFAFA', aux1: 'clear-cyan #E0F7FA', aux2: 'sunlight #FFECB3', bg: 'ivory #FFFFF0' },
-    rule: '🆕 V2：仍以留白与微差为核心，加入明亮暖黄作为"内在灯火"，纠正过清冷感'
+    palette: { main: 'cloud-white #FAFAFA', aux1: 'clear-cyan #D4F6FA', aux2: 'sunlight #FFE391', bg: 'ivory #FFFFE9' },
+    rule: '🆕 V2：仍以留白与微差为核心，加入明亮暖黄作为"内在灯火"'
   },
   { 
-    key: 'prajna', name: '般若', nameEn: 'Prajñā', color: '#F0F4F8', 
+    key: 'prajna', name: '般若', nameEn: 'Prajñā', color: '#ECF2F8', 
     spirit: '澄明洞见、清醒而温润',
     skeleton: '切透/对照', contrast: 'warm-cool, brightness, area', 
     colors: ['白', '蓝', '黄'], accentColors: ['绿', '红'],
     bgTemp: '冷', minBright: 85, maxSat: 32, accentProb: 55,
     accentHint: '面积2–5%；不透明度10–15%；避免大块强对比',
     semantic: '切透、澄明、洞见', visualHint: '干净切面，澄明',
-    palette: { main: 'moon-white #F0F4F8', aux1: 'clear-cyan #E0F7FA', aux2: 'cream-yellow #FFF9E6', bg: 'cool-mist #F5F7FA' },
-    rule: '🆕 V2：保留冷暖对照，但降低频率；点醒色更小、更淡，以免"聪明而躁"'
+    palette: { main: 'moon-white #ECF2F8', aux1: 'clear-cyan #D4F6FA', aux2: 'cream-yellow #FFF6DB', bg: 'cool-mist #F3F6FA' },
+    rule: '🆕 V2：保留冷暖对照，但降低频率；点醒色更小、更淡'
   }
 ];
 
 function getColorHex(name) {
   const map = { 
-    '黄': '#F5DEB3', 
-    '绿': '#A8D5BA', 
-    '蓝': '#A5C8E1', 
-    '红': '#E8B4B8', 
-    '白': '#F0F0F0' 
+    '黄': '#FFDF91', 
+    '绿': '#BAE6BC', 
+    '蓝': '#C7E4F8', 
+    '红': '#FFB7BE', 
+    '白': '#FAFAFA' 
   };
   return map[name] || '#ddd';
 }
@@ -816,20 +816,70 @@ function getRawBlocks(sectionId) {
 }
 
 const colorSystem = {
-  '蓝 · 东方': { meaning: '澄明、冷静、深邃', variants: [{name: 'Ice', hex: '#E8F4FC'}, {name: 'Sky', hex: '#D6EAF8'}, {name: 'Powder', hex: '#85C1E9'}] },
-  '黄 · 南方': { meaning: '温暖、开阔、滋养', variants: [{name: 'Cream', hex: '#FFF9E6'}, {name: 'Gold', hex: '#FFF3CD'}, {name: 'Amber', hex: '#FFE082'}] },
-  '红 · 西方': { meaning: '力量、温热、精进', variants: [{name: 'Blush', hex: '#FFEBEE'}, {name: 'Rose', hex: '#FFCDD2'}, {name: 'Coral', hex: '#FFAB91'}] },
-  '绿 · 北方': { meaning: '生机、平衡、流动', variants: [{name: 'Mint', hex: '#E8F5E9'}, {name: 'Sage', hex: '#C8E6C9'}, {name: 'Spring', hex: '#A5D6A7'}] },
-  '白 · 中央': { meaning: '清净、澄澈、空灵', variants: [{name: 'Pure', hex: '#FFFFFF'}, {name: 'Cloud', hex: '#FAFAFA'}, {name: 'Fog', hex: '#F5F5F5'}] },
+  '蓝 · 东方': { 
+    meaning: '澄明、冷静、深邃', 
+    variants: [
+      {name: 'ice-blue', hex: '#DFF0FC', brightness: 95, saturation: 12}, 
+      {name: 'sky-mist', hex: '#C7E4F8', brightness: 92, saturation: 20}, 
+      {name: 'soft-azure', hex: '#90CAF1', brightness: 85, saturation: 40}, 
+      {name: 'powder-blue', hex: '#58AFE9', brightness: 78, saturation: 62},
+      {name: 'clear-cyan', hex: '#D4F6FA', brightness: 94, saturation: 15},
+      {name: 'serene-blue', hex: '#92DBFC', brightness: 88, saturation: 42}
+    ] 
+  },
+  '黄 · 南方': { 
+    meaning: '温暖、开阔、滋养', 
+    variants: [
+      {name: 'cream-yellow', hex: '#FFF6DB', brightness: 97, saturation: 14}, 
+      {name: 'soft-gold', hex: '#FFEEB7', brightness: 95, saturation: 28}, 
+      {name: 'warm-amber', hex: '#FFDF91', brightness: 92, saturation: 43}, 
+      {name: 'honey-light', hex: '#FFD24A', brightness: 88, saturation: 71},
+      {name: 'butter', hex: '#FFF5D3', brightness: 96, saturation: 17},
+      {name: 'sunlight', hex: '#FFE391', brightness: 93, saturation: 43}
+    ] 
+  },
+  '红 · 西方': { 
+    meaning: '力量、温热、精进', 
+    variants: [
+      {name: 'blush', hex: '#FFE2E6', brightness: 96, saturation: 11}, 
+      {name: 'rose-mist', hex: '#FFB7BE', brightness: 90, saturation: 28}, 
+      {name: 'coral-light', hex: '#FF8560', brightness: 82, saturation: 63}, 
+      {name: 'peach', hex: '#FFB59E', brightness: 88, saturation: 38},
+      {name: 'warm-rose', hex: '#F8A0CB', brightness: 85, saturation: 36},
+      {name: 'terracotta-light', hex: '#FFB59E', brightness: 88, saturation: 38}
+    ] 
+  },
+  '绿 · 北方': { 
+    meaning: '生机、平衡、流动', 
+    variants: [
+      {name: 'mint-mist', hex: '#E2F5E4', brightness: 96, saturation: 8}, 
+      {name: 'soft-sage', hex: '#BAE6BC', brightness: 90, saturation: 19}, 
+      {name: 'spring-green', hex: '#8FD692', brightness: 84, saturation: 33}, 
+      {name: 'jade-light', hex: '#9EDFD9', brightness: 88, saturation: 29},
+      {name: 'eucalyptus', hex: '#D8F2F1', brightness: 95, saturation: 11},
+      {name: 'celadon', hex: '#D4EDB7', brightness: 92, saturation: 23}
+    ] 
+  },
+  '白 · 中央': { 
+    meaning: '清净、澄澈、空灵', 
+    variants: [
+      {name: 'pure-white', hex: '#FFFFFF', brightness: 100, saturation: 0}, 
+      {name: 'cloud-white', hex: '#FAFAFA', brightness: 98, saturation: 0}, 
+      {name: 'fog-white', hex: '#F5F5F5', brightness: 96, saturation: 0}, 
+      {name: 'pearl', hex: '#F7F9FA', brightness: 97, saturation: 1},
+      {name: 'silk', hex: '#FCFCFC', brightness: 99, saturation: 0},
+      {name: 'moon-white', hex: '#ECF2F8', brightness: 95, saturation: 5}
+    ] 
+  },
 };
 
 const compositionRules = [
-  { degree: '布施', color: '#FFF8E1', layout: '开放弧/环 + 向外舒展流线', elements: '形体≤3；线≤2', colorMask: '径向渐变 12–18%', blurMask: '外扩边缘 30–60px' },
-  { degree: '持戒', color: '#F0F4F8', layout: '框/界线/分区；对齐规整', elements: '形体≤4；线≤3', colorMask: '矩形边界式 10–16%', blurMask: '边界处 20–40px' },
-  { degree: '忍辱', color: '#F8F9FA', layout: '两股相向 + 缓冲带/过渡层', elements: '形体≤3；渐变≤2', colorMask: '双侧对向融合 14–22%', blurMask: '中心融合 40–80px' },
-  { degree: '精进', color: '#FFE082', layout: '递进序列（阶梯/分段/节拍）', elements: '形体≤4；线≤2', colorMask: '线性渐变 12–18%', blurMask: '尾部硬边 20–50px' },
-  { degree: '禅定', color: '#FAFAFA', layout: '中心锚定（同心/环/集中）', elements: '形体≤2；线≤1', colorMask: '径向晕染 10–16%', blurMask: '外缘 30–70px' },
-  { degree: '般若', color: '#F0F4F8', layout: '两域对照 + 干净切面/切线', elements: '形体≤3；线≤2', colorMask: '分域渐变 12–20%', blurMask: '切线两侧 20–40px' }
+  { degree: '布施', color: '#FFF5D3', layout: '向外舒展、边界开放', elements: '形体≤3；线≤2', edgeBias: 'soft-fade', contrastMethod: 'area, brightness, warm-cool' },
+  { degree: '持戒', color: '#ECF2F8', layout: '清晰内外分界、有秩序', elements: '形体≤4；线≤3', edgeBias: 'crisp', contrastMethod: 'brightness, area, none' },
+  { degree: '忍辱', color: '#F7F9FA', layout: '缓冲感空间、有过渡', elements: '形体≤3；渐变≤2', edgeBias: 'gradient-fade', contrastMethod: 'layering, brightness, warm-cool' },
+  { degree: '精进', color: '#FFD24A', layout: '有方向感、暗示推进', elements: '形体≤4；线≤2', edgeBias: 'crisp', contrastMethod: 'brightness, area, warm-cool' },
+  { degree: '禅定', color: '#FAFAFA', layout: '收束向心、极大留白', elements: '形体≤2；线≤1', edgeBias: 'soft-fade', contrastMethod: 'brightness, area, none' },
+  { degree: '般若', color: '#ECF2F8', layout: '有对照感、两域分明', elements: '形体≤3；线≤2', edgeBias: 'soft-division', contrastMethod: 'warm-cool, brightness, area' }
 ];
 </script>
 

@@ -26,15 +26,26 @@ app.use(express.json({ limit: '10mb' }));
 // 获取可用的文字模型列表（供前端下拉选择）
 app.get('/api/text-models', (req, res) => {
   const catalog = Array.isArray(config.TEXT_MODEL_CATALOG) ? config.TEXT_MODEL_CATALOG : [];
-  const defaultId = config.DEFAULT_TEXT_MODEL_ID || '';
-  const usable = catalog.filter((m) => {
+  const enabledOf = (m) => {
     if (m.provider === 'ark') return Boolean(config.ARK_API_KEY);
     if (m.provider === 'apimart') return Boolean(config.APIMART_API_KEY);
-    if (m.provider === 'openai_compat') return Boolean(m.baseUrl);
+    if (m.provider === 'openai_compat') return Boolean(m.baseUrl) && Boolean(m.apiKey || config.MIMO_API_KEY);
     return false;
-  }).map(m => ({ id: m.id, label: m.label, provider: m.provider }));
+  };
 
-  res.json({ success: true, data: { defaultId, models: usable } });
+  const models = catalog.map((m) => ({
+    id: m.id,
+    label: m.label,
+    provider: m.provider,
+    enabled: enabledOf(m)
+  }));
+
+  const requestedDefault = config.DEFAULT_TEXT_MODEL_ID || '';
+  const defaultOk = requestedDefault && models.some((m) => m.id === requestedDefault && m.enabled);
+  const firstEnabled = models.find((m) => m.enabled)?.id || '';
+  const defaultId = defaultOk ? requestedDefault : (firstEnabled || models[0]?.id || '');
+
+  res.json({ success: true, data: { defaultId, models } });
 });
 
 // 兼容旧前端接口
@@ -186,7 +197,7 @@ app.get('/api/task/:taskId', async (req, res) => {
 app.post('/api/evaluate', async (req, res) => {
   try {
     const { imageUrl, recordId, degree } = req.body;
-    console.log('[/api/evaluate] 开始评估, imageUrl:', imageUrl?.substring(0, 50));
+    console.log('[/api/evaluate] 开始评估, imageUrl:', imageUrl);
     
     if (!imageUrl) {
       return res.status(400).json({ success: false, error: '缺少图片URL' });

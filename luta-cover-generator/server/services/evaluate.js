@@ -4,9 +4,20 @@ import { EVALUATE_SYSTEM, IMAGERY_VERIFY_SYSTEM } from '../prompts/system.js';
 
 // 下载图片并转为 base64
 async function imageUrlToBase64(url) {
+  if (!url || typeof url !== 'string') {
+    throw new Error(`imageUrlToBase64: URL无效 - ${typeof url}`);
+  }
+  // 验证URL格式
+  try {
+    new URL(url);
+  } catch (e) {
+    throw new Error(`imageUrlToBase64: URL格式错误 - ${url}`);
+  }
+  console.log('[imageUrlToBase64] 下载图片:', url);
   const response = await axios.get(url, { responseType: 'arraybuffer', timeout: 30000 });
   const contentType = response.headers['content-type'] || 'image/jpeg';
   const base64 = Buffer.from(response.data, 'binary').toString('base64');
+  console.log('[imageUrlToBase64] 下载成功, size:', response.data.byteLength, 'type:', contentType);
   return { base64, mimeType: contentType };
 }
 
@@ -138,12 +149,12 @@ export async function evaluateImage(imageUrl, degreeKey = null) {
       };
       
       response = await axios.post(
-        `${config.API_BASE}/v1beta/models/${model}:generateContent`,
+        `${config.APIMART_API_BASE}/v1beta/models/${model}:generateContent`,
         requestBody,
         {
           timeout: 120000,
           headers: {
-            'Authorization': `Bearer ${config.API_KEY}`,
+            'Authorization': `Bearer ${config.APIMART_API_KEY}`,
             'Content-Type': 'application/json'
           }
         }
@@ -169,12 +180,12 @@ export async function evaluateImage(imageUrl, degreeKey = null) {
       };
 
       response = await axios.post(
-        `${config.API_BASE}/v1/responses`,
+        `${config.APIMART_API_BASE}/v1/responses`,
         requestBody,
         {
           timeout: 120000,
           headers: {
-            'Authorization': `Bearer ${config.API_KEY}`,
+            'Authorization': `Bearer ${config.APIMART_API_KEY}`,
             'Content-Type': 'application/json'
           }
         }
@@ -292,12 +303,12 @@ ${imagery.join('、') || '未提供'}
     };
     
     response = await axios.post(
-      `${config.API_BASE}/v1beta/models/${model}:generateContent`,
+      `${config.APIMART_API_BASE}/v1beta/models/${model}:generateContent`,
       requestBody,
       {
         timeout: 120000,
         headers: {
-          'Authorization': `Bearer ${config.API_KEY}`,
+          'Authorization': `Bearer ${config.APIMART_API_KEY}`,
           'Content-Type': 'application/json'
         }
       }
@@ -323,12 +334,12 @@ ${imagery.join('、') || '未提供'}
     };
 
     response = await axios.post(
-      `${config.API_BASE}/v1/responses`,
+      `${config.APIMART_API_BASE}/v1/responses`,
       requestBody,
       {
         timeout: 120000,
         headers: {
-          'Authorization': `Bearer ${config.API_KEY}`,
+          'Authorization': `Bearer ${config.APIMART_API_KEY}`,
           'Content-Type': 'application/json'
         }
       }
