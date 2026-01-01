@@ -9,10 +9,10 @@ export default {
   ARK_API_KEY: process.env.ARK_API_KEY || '',
   ARK_API_BASE: process.env.ARK_API_BASE || 'https://ark.cn-beijing.volces.com/api/v3',
 
-  // Xiaomi MiMo (if you have an OpenAI-compatible endpoint or a hosted provider)
-  // Example: self-hosted vLLM: http://127.0.0.1:8000/v1
+  // Xiaomi MiMo (Official API Platform: https://platform.xiaomimimo.com)
+  // Base URL: https://api.xiaomimimo.com/v1
   MIMO_API_KEY: process.env.MIMO_API_KEY || '',
-  MIMO_API_BASE: process.env.MIMO_API_BASE || '',
+  MIMO_API_BASE: process.env.MIMO_API_BASE || 'https://api.xiaomimimo.com/v1',
   MIMO_MODEL: process.env.MIMO_MODEL || 'mimo-v2-flash',
 
   // ====== Image (kept as-is; still via APIMart in this project) ======
@@ -35,10 +35,10 @@ export default {
     },
     {
       id: 'mimo-v2-flash',
-      label: 'MiMo-V2-Flash（OpenAI兼容/自建或托管）',
+      label: 'MiMo-V2-Flash（Xiaomi）',
       provider: 'openai_compat',
       model: process.env.MIMO_MODEL || 'mimo-v2-flash',
-      baseUrl: process.env.MIMO_API_BASE || '',
+      baseUrl: process.env.MIMO_API_BASE || 'https://api.xiaomimimo.com/v1',
       apiKey: process.env.MIMO_API_KEY || ''
     }
   ],
