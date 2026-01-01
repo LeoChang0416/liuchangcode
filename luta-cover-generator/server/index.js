@@ -37,6 +37,9 @@ app.get('/api/text-models', (req, res) => {
   res.json({ success: true, data: { defaultId, models: usable } });
 });
 
+// 兼容旧前端接口
+app.get('/api/models/text', (req, res) => res.redirect(307, '/api/text-models'));
+
 // 获取六度列表（V2：返回氛围摘要，不暴露形态菜单）
 app.get('/api/degrees', (req, res) => {
   const list = Object.entries(DEGREES).map(([key, val]) => ({
