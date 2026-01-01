@@ -96,22 +96,112 @@ function getLLMErrorMessage(err, stage) {
 }
 
 async function callChatCompletions({ messages, temperature, stage }) {
-  const models = config.TEXT_MODELS || [config.TEXT_MODEL];
+  const preferredModelId = arguments?.[0]?.preferredModelId || '';
+  const catalog = Array.isArray(config.TEXT_MODEL_CATALOG) ? config.TEXT_MODEL_CATALOG : [];
+  const defaultId = config.DEFAULT_TEXT_MODEL_ID || '';
+
+  // Backward-compat: if legacy TEXT_MODELS exists, treat them as APIMart models
+  const legacyModels = Array.isArray(config.TEXT_MODELS) ? config.TEXT_MODELS : (config.TEXT_MODEL ? [config.TEXT_MODEL] : []);
+
+  const resolvedCatalog = catalog.length
+    ? catalog
+    : legacyModels.map((m, i) => ({ id: `legacy_${i}`, label: String(m), provider: 'apimart', model: String(m) }));
+
+  // Filter out models that are not configured (avoid showing selectable but unusable models)
+  const usable = resolvedCatalog.filter((m) => {
+    if (m.provider === 'ark') return Boolean(config.ARK_API_KEY);
+    if (m.provider === 'apimart') return Boolean(config.APIMART_API_KEY);
+    if (m.provider === 'openai_compat') return Boolean(m.baseUrl);
+    return false;
+  });
+
+  if (!usable.length) {
+    throw new Error(`${stage}失败：未配置任何可用文本模型（请配置 ARK_API_KEY 或 APIMART_API_KEY，或提供 MIMO_API_BASE）`);
+  }
+
+  // Try preferred model first, then default model, then others
+  const ordered = (() => {
+    const copy = usable.slice();
+    const pickFirst = (id) => {
+      const i = copy.findIndex(m => m.id === id);
+      if (i >= 0) {
+        const [picked] = copy.splice(i, 1);
+        return picked;
+      }
+      return null;
+    };
+
+    const first = pickFirst(preferredModelId);
+    const second = pickFirst(defaultId);
+    return [first, second, ...copy].filter(Boolean);
+  })();
+
+  const models = ordered;
   const maxAttemptsPerModel = 2;
   const baseDelayMs = 1500;
 
   let lastErr = null;
   
-  for (const model of models) {
+  for (const modelItem of models) {
     for (let attempt = 1; attempt <= maxAttemptsPerModel; attempt++) {
       try {
-        console.log(`[${stage}] 尝试模型: ${model} (第${attempt}次)`);
-        
-        // 判断是否使用 Gemini Native Format
-        const isGemini = model.toLowerCase().includes('gemini');
+        const provider = modelItem.provider;
+        const model = modelItem.model;
+        console.log(`[${stage}] 尝试模型: ${modelItem.id} (${provider}:${model}) (第${attempt}次)`);
         
         let response;
-        if (isGemini) {
+
+        // Volcengine Ark: OpenAI-compatible ChatCompletions
+        if (provider === 'ark') {
+          const requestBody = {
+            model,
+            messages: (messages || []).map(m => ({
+              role: m.role,
+              content: String(m.content ?? '')
+            }))
+          };
+          if (typeof temperature === 'number') requestBody.temperature = temperature;
+
+          response = await axios.post(
+            `${config.ARK_API_BASE}/chat/completions`,
+            requestBody,
+            {
+              timeout: 180000,
+              headers: {
+                'Authorization': `Bearer ${config.ARK_API_KEY}`,
+                'Content-Type': 'application/json'
+              }
+            }
+          );
+        } else if (provider === 'openai_compat') {
+          // Generic OpenAI-compatible ChatCompletions (for self-hosted MiMo or hosted providers that expose /v1/chat/completions)
+          const baseUrl = (modelItem.baseUrl || '').replace(/\/$/, '');
+          const apiKey = modelItem.apiKey || '';
+          const requestBody = {
+            model,
+            messages: (messages || []).map(m => ({
+              role: m.role,
+              content: String(m.content ?? '')
+            }))
+          };
+          if (typeof temperature === 'number') requestBody.temperature = temperature;
+
+          response = await axios.post(
+            `${baseUrl}/chat/completions`,
+            requestBody,
+            {
+              timeout: 180000,
+              headers: {
+                ...(apiKey ? { 'Authorization': `Bearer ${apiKey}` } : {}),
+                'Content-Type': 'application/json'
+              }
+            }
+          );
+        } else {
+          // APIMart: decide between Gemini native vs OpenAI Responses
+          const isGemini = String(model).toLowerCase().includes('gemini');
+
+          if (isGemini) {
           // Gemini Native Format: /v1beta/models/{model}:generateContent
           const contents = (messages || []).map(m => ({
             role: m.role === 'assistant' ? 'model' : m.role,
@@ -122,17 +212,17 @@ async function callChatCompletions({ messages, temperature, stage }) {
             requestBody.generationConfig = { temperature };
           }
           response = await axios.post(
-            `${config.API_BASE}/v1beta/models/${model}:generateContent`,
+            `${config.APIMART_API_BASE}/v1beta/models/${model}:generateContent`,
             requestBody,
             {
               timeout: 180000,
               headers: {
-                'Authorization': `Bearer ${config.API_KEY}`,
+                'Authorization': `Bearer ${config.APIMART_API_KEY}`,
                 'Content-Type': 'application/json'
               }
             }
           );
-        } else {
+          } else {
           // OpenAI Responses Format: /v1/responses
           const input = (messages || []).map(m => ({
             role: m.role,
@@ -143,28 +233,29 @@ async function callChatCompletions({ messages, temperature, stage }) {
             requestBody.temperature = temperature;
           }
           response = await axios.post(
-            `${config.API_BASE}/v1/responses`,
+            `${config.APIMART_API_BASE}/v1/responses`,
             requestBody,
             {
               timeout: 180000,
               headers: {
-                'Authorization': `Bearer ${config.API_KEY}`,
+                'Authorization': `Bearer ${config.APIMART_API_KEY}`,
                 'Content-Type': 'application/json'
               }
             }
           );
+          }
         }
 
         const content = extractContent(response.data);
         if (!content) throw new Error(`${stage}返回格式错误: API响应内容为空`);
-        console.log(`[${stage}] 成功使用模型: ${model}`);
+        console.log(`[${stage}] 成功使用模型: ${modelItem.id} (${provider}:${model})`);
         return content;
       } catch (err) {
         lastErr = err;
         const status = err?.response?.status;
         const body = err?.response?.data;
         const bodyStr = body ? JSON.stringify(body).substring(0, 800) : '';
-        console.error(`[${stage}] 模型 ${model} 失败 (${status || err.code || err.message}) ${bodyStr}`);
+        console.error(`[${stage}] 模型 ${(modelItem && modelItem.model) || 'unknown'} 失败 (${status || err.code || err.message}) ${bodyStr}`);
         
         const retryable = shouldRetryLLM(err);
         if (retryable && attempt < maxAttemptsPerModel) {
@@ -280,13 +371,15 @@ function getDegreeAntiCliche(degreeKey) {
 }
 
 // 内容分析（使用 deepseek 文字模型，通过 chat/completions 端点）
-export async function analyzeContent(podcastContent) {
-  console.log('[analyzeContent] 开始分析，使用模型:', (config.TEXT_MODELS && config.TEXT_MODELS[0]) || config.TEXT_MODEL);
+export async function analyzeContent(podcastContent, options = {}) {
+  const preferredModelId = options?.textModelId || '';
+  console.log('[analyzeContent] 开始分析，preferredModelId:', preferredModelId || '(default)');
   
   try {
     const content = await callChatCompletions({
       stage: '内容分析',
       temperature: 0.5,
+      preferredModelId,
       messages: [
         { role: 'system', content: ANALYZE_SYSTEM },
         { role: 'user', content: `请分析以下播客内容，输出语义提取和结构参数：\n\n${podcastContent}` }
@@ -304,11 +397,13 @@ export async function analyzeContent(podcastContent) {
   }
 }
 
-export async function selectDegree(podcastContent) {
+export async function selectDegree(podcastContent, options = {}) {
+  const preferredModelId = options?.textModelId || '';
   try {
     const content = await callChatCompletions({
       stage: '自动选度',
       temperature: 0.3, // 略微提高temperature增加多样性
+      preferredModelId,
       messages: [
         { role: 'system', content: DEGREE_SELECT_SYSTEM },
         { role: 'user', content: `请基于以下播客文本进行选度：\n\n${podcastContent}` }
@@ -352,7 +447,7 @@ export async function selectDegree(podcastContent) {
   }
 }
 
-export async function buildEditPrompt({ degreeKey, originalPrompt, analysis, imageryVerification }) {
+export async function buildEditPrompt({ degreeKey, originalPrompt, analysis, imageryVerification, textModelId = '' }) {
   const colorRule = DEGREE_COLOR_RULES[degreeKey] || {};
   
   // 极简输入：只传必要的改动信息，不传原始prompt和分析细节
@@ -386,6 +481,7 @@ export async function buildEditPrompt({ degreeKey, originalPrompt, analysis, ima
   const content = await callChatCompletions({
     stage: '改图提示词',
     temperature: 0.5,
+    preferredModelId: textModelId || '',
     messages: [
       { role: 'system', content: EDIT_PROMPT_SYSTEM },
       { role: 'user', content: userMessage }
@@ -428,9 +524,10 @@ function getContrastVisualInstruction(method) {
 
 // 生成提示词（V6：骨架强变量版，三类强变量决定骨架）
 export async function generatePrompt(podcastContent, degreeKey, analysisResult = null, options = {}) {
+  const preferredModelId = options?.textModelId || '';
   let degreeSelection = null;
   if (!degreeKey) {
-    degreeSelection = await selectDegree(podcastContent);
+    degreeSelection = await selectDegree(podcastContent, { textModelId: preferredModelId });
     degreeKey = degreeSelection.degreeKey;
   }
 
@@ -440,7 +537,7 @@ export async function generatePrompt(podcastContent, degreeKey, analysisResult =
   // V2: 使用 DEGREE_COLOR_RULES 替代 DEGREES.colorTendency
   const colorRule = DEGREE_COLOR_RULES[degreeKey] || {};
 
-  const analysis = analysisResult || await analyzeContent(podcastContent);
+  const analysis = analysisResult || await analyzeContent(podcastContent, { textModelId: preferredModelId });
   
   // V2: 校验分析结果必填字段
   const requiredFields = ['topologicalLayout', 'primaryRelationship', 'rhythmSignature'];
@@ -687,11 +784,12 @@ ${improvementSuggestions.map((s, i) => `${i + 1}. **${s}**`).join('\n')}
 - prompt: string (≥200 词)
 `;
 
-  console.log('[generatePrompt] 调用 API，使用模型:', (config.TEXT_MODELS && config.TEXT_MODELS[0]) || config.TEXT_MODEL);
+  console.log('[generatePrompt] 调用 API，preferredModelId:', preferredModelId || '(default)');
 
   const content = await callChatCompletions({
     stage: '提示词生成',
     temperature: 0.7,
+    preferredModelId,
     messages: [
       { role: 'system', content: PROMPT_SYSTEM },
       { role: 'user', content: userMessage }

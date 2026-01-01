@@ -25,6 +25,16 @@
           <span class="hint">粘贴文字内容或摘要</span>
         </div>
         <div class="card-body">
+          <!-- 模型选择（影响：内容分析/自动选度/提示词生成） -->
+          <div class="model-select-row">
+            <label class="model-label">分析模型</label>
+            <select class="model-select" v-model="selectedTextModelId" :disabled="analyzeLoading || !textModels.length">
+              <option v-for="m in textModels" :key="m.id" :value="m.id">
+                {{ m.label }}
+              </option>
+            </select>
+          </div>
+
           <div class="textarea-wrapper">
             <textarea 
               v-model="podcastContent" 
@@ -855,7 +865,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import axios from 'axios';
 
 const podcastContent = ref('');
@@ -887,6 +897,24 @@ const editStatus = ref(null);
 const editImageUrl = ref('');
 const currentRecordId = ref('');
 const showDecisionTrace = ref(false);
+
+const textModels = ref([]);
+const selectedTextModelId = ref('');
+
+onMounted(async () => {
+  try {
+    const res = await axios.get('/api/text-models');
+    const payload = res.data?.data;
+    textModels.value = Array.isArray(payload?.models) ? payload.models : [];
+    const defaultId = payload?.defaultId || '';
+    selectedTextModelId.value =
+      (defaultId && textModels.value.find(m => m.id === defaultId) ? defaultId : (textModels.value[0]?.id || ''));
+  } catch (e) {
+    console.error('加载模型列表失败', e);
+    textModels.value = [];
+    selectedTextModelId.value = '';
+  }
+});
 
 const evalItems = {
   complexity: { label: '结构快检' },
@@ -987,7 +1015,8 @@ async function handleAnalyze() {
   try {
     // 使用异步任务模式，彻底避免反向代理 60s 超时导致 504
     const res = await axios.post('/api/generate-prompt?async=1', {
-      podcastContent: podcastContent.value
+      podcastContent: podcastContent.value,
+      textModelId: selectedTextModelId.value || undefined
     });
 
     const payload = res.data.data;
@@ -1102,7 +1131,8 @@ async function handleEditWithSuggestions() {
       analysisResult: analysisResult.value,
       originalPrompt: generatedPrompt.value?.prompt,
       negativePrompt: generatedPrompt.value?.negative_prompt,
-      imageryVerification: imageryVerification.value
+      imageryVerification: imageryVerification.value,
+      textModelId: selectedTextModelId.value || undefined
     });
 
     const data = res.data.data;
@@ -1244,6 +1274,7 @@ async function handleRegenerateWithSuggestions() {
       analysisResult: analysisResult.value,
       degree: selectedDegreeKey.value,
       improvementSuggestions: imageryVerification.value.suggestions,
+      textModelId: selectedTextModelId.value || undefined,
       previousIssues: {
         isLeftRightDual: imageryVerification.value.isLeftRightDual,
         missingElements: imageryVerification.value.metaphorMatch?.missingElements || [],

@@ -91,6 +91,10 @@ body {
 .hint { font-size: 0.8rem; color: var(--text-secondary); }
 
 .input-panel { position: sticky; top: 100px; } /* Adjusted top for NavBar */
+.model-select-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.model-label { font-size: 0.8rem; color: var(--text-secondary); min-width: 64px; }
+.model-select { flex: 1; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border-light); background: var(--card); color: var(--text); font-size: 0.85rem; }
+.model-select:disabled { opacity: 0.6; cursor: not-allowed; }
 .textarea-wrapper { position: relative; margin-bottom: 24px; }
 textarea { width: 100%; padding: 16px; border: none; border-radius: var(--radius); font-size: 0.95rem; background: var(--bg); resize: none; }
 textarea:focus { outline: none; background: #EAEAEA; }

@@ -1,12 +1,52 @@
 export default {
-  API_KEY: 'sk-QDveW1X9IX9GAkWuQ9GbL9NAZSaJA9OfXQ5lbySqYe1zVAIV',
-  API_BASE: 'https://api.apimart.ai',
-  IMAGE_MODEL: 'gemini-3-pro-image-preview',
-  // 文字分析模型（内容分析、生成提示词）- 按优先级排列，503时自动切换
-  TEXT_MODELS: ['gemini-3-pro-image-preview'],
-  TEXT_MODEL: 'gemini-3-pro-image-preview', // 默认首选
+  // ====== Provider credentials (use env; DO NOT hardcode secrets) ======
+  // APIMart
+  APIMART_API_KEY: process.env.APIMART_API_KEY || process.env.API_KEY || '',
+  APIMART_API_BASE: process.env.APIMART_API_BASE || process.env.API_BASE || 'https://api.apimart.ai',
+
+  // Volcengine Ark (Doubao)
+  // Base recommended by Ark console examples: https://ark.cn-beijing.volces.com/api/v3
+  ARK_API_KEY: process.env.ARK_API_KEY || '',
+  ARK_API_BASE: process.env.ARK_API_BASE || 'https://ark.cn-beijing.volces.com/api/v3',
+
+  // Xiaomi MiMo (if you have an OpenAI-compatible endpoint or a hosted provider)
+  // Example: self-hosted vLLM: http://127.0.0.1:8000/v1
+  MIMO_API_KEY: process.env.MIMO_API_KEY || '',
+  MIMO_API_BASE: process.env.MIMO_API_BASE || '',
+  MIMO_MODEL: process.env.MIMO_MODEL || 'mimo-v2-flash',
+
+  // ====== Image (kept as-is; still via APIMart in this project) ======
+  IMAGE_MODEL: process.env.IMAGE_MODEL || 'gemini-3-pro-image-preview',
+
+  // ====== Text models catalog (for analysis & prompt generation) ======
+  // id is what frontend sends as textModelId
+  TEXT_MODEL_CATALOG: [
+    {
+      id: 'doubao-seed-1-8',
+      label: 'Doubao-Seed-1.8（Ark）',
+      provider: 'ark',
+      model: process.env.ARK_TEXT_MODEL || 'doubao-seed-1-8-251215'
+    },
+    {
+      id: 'apimart-gemini',
+      label: 'Gemini（APIMart）',
+      provider: 'apimart',
+      model: process.env.APIMART_TEXT_MODEL || 'gemini-3-pro-image-preview'
+    },
+    {
+      id: 'mimo-v2-flash',
+      label: 'MiMo-V2-Flash（OpenAI兼容/自建或托管）',
+      provider: 'openai_compat',
+      model: process.env.MIMO_MODEL || 'mimo-v2-flash',
+      baseUrl: process.env.MIMO_API_BASE || '',
+      apiKey: process.env.MIMO_API_KEY || ''
+    }
+  ],
+  DEFAULT_TEXT_MODEL_ID: process.env.DEFAULT_TEXT_MODEL_ID || 'doubao-seed-1-8',
+
   // 视觉模型（图片评估、意象校验）
-  VISION_MODEL: 'gemini-2.5-pro',
-  PORT: 3002
+  VISION_MODEL: process.env.VISION_MODEL || 'gemini-2.5-pro',
+
+  PORT: Number(process.env.PORT || 3002)
 };
 

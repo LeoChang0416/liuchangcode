@@ -23,6 +23,20 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 
+// 获取可用的文字模型列表（供前端下拉选择）
+app.get('/api/text-models', (req, res) => {
+  const catalog = Array.isArray(config.TEXT_MODEL_CATALOG) ? config.TEXT_MODEL_CATALOG : [];
+  const defaultId = config.DEFAULT_TEXT_MODEL_ID || '';
+  const usable = catalog.filter((m) => {
+    if (m.provider === 'ark') return Boolean(config.ARK_API_KEY);
+    if (m.provider === 'apimart') return Boolean(config.APIMART_API_KEY);
+    if (m.provider === 'openai_compat') return Boolean(m.baseUrl);
+    return false;
+  }).map(m => ({ id: m.id, label: m.label, provider: m.provider }));
+
+  res.json({ success: true, data: { defaultId, models: usable } });
+});
+
 // 获取六度列表（V2：返回氛围摘要，不暴露形态菜单）
 app.get('/api/degrees', (req, res) => {
   const list = Object.entries(DEGREES).map(([key, val]) => ({
@@ -42,7 +56,7 @@ app.get('/api/degrees', (req, res) => {
 // 分析内容（可单独调用）
 app.post('/api/analyze', async (req, res) => {
   try {
-    const { podcastContent } = req.body;
+    const { podcastContent, textModelId } = req.body;
     if (!podcastContent) {
       return res.status(400).json({ success: false, error: '缺少播客内容' });
     }
@@ -51,13 +65,13 @@ app.post('/api/analyze', async (req, res) => {
     if (asyncMode) {
       const task = createLocalTask({ prefix: 'a_', type: 'analyze', meta: { len: String(podcastContent).length } });
       runLocalTask(task.id, async () => {
-        const result = await analyzeContent(podcastContent);
+        const result = await analyzeContent(podcastContent, { textModelId });
         return { analysis: result };
       });
       return res.json({ success: true, data: { taskId: task.id, status: task.status } });
     }
 
-    const result = await analyzeContent(podcastContent);
+    const result = await analyzeContent(podcastContent, { textModelId });
     return res.json({ success: true, data: result });
   } catch (err) {
     console.error('分析失败:', err.message);
@@ -68,7 +82,7 @@ app.post('/api/analyze', async (req, res) => {
 // 生成提示词（两阶段：分析 + 生成）
 app.post('/api/generate-prompt', async (req, res) => {
   try {
-    const { podcastContent, degree, analysisResult, improvementSuggestions, previousIssues } = req.body;
+    const { podcastContent, degree, analysisResult, improvementSuggestions, previousIssues, textModelId } = req.body;
     if (!podcastContent) {
       return res.status(400).json({ success: false, error: '缺少播客内容' });
     }
@@ -81,7 +95,8 @@ app.post('/api/generate-prompt', async (req, res) => {
         setProgress(15);
         const result = await generatePrompt(podcastContent, degree, analysisResult, {
           improvementSuggestions,
-          previousIssues
+          previousIssues,
+          textModelId
         });
         setProgress(90);
         return result;
@@ -91,7 +106,8 @@ app.post('/api/generate-prompt', async (req, res) => {
 
     const result = await generatePrompt(podcastContent, degree, analysisResult, {
       improvementSuggestions,
-      previousIssues
+      previousIssues,
+      textModelId
     });
     return res.json({ success: true, data: result });
   } catch (err) {
@@ -253,7 +269,7 @@ app.post('/api/verify-imagery', async (req, res) => {
 // 意象校验 → 多模态改图（参考图编辑）
 app.post('/api/edit-image', async (req, res) => {
   try {
-    const { imageUrl, recordId, degree, analysisResult, originalPrompt, negativePrompt, imageryVerification } = req.body;
+    const { imageUrl, recordId, degree, analysisResult, originalPrompt, negativePrompt, imageryVerification, textModelId } = req.body;
     if (!imageUrl || !degree || !analysisResult || !originalPrompt) {
       return res.status(400).json({ success: false, error: '缺少 imageUrl/degree/analysisResult/originalPrompt' });
     }
@@ -262,7 +278,8 @@ app.post('/api/edit-image', async (req, res) => {
       degreeKey: degree,
       originalPrompt,
       analysis: analysisResult,
-      imageryVerification
+      imageryVerification,
+      textModelId
     });
 
     const fullPrompt = negativePrompt
