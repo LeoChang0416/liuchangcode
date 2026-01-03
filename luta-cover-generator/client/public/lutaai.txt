@@ -22,7 +22,7 @@
 ### 1.3 颜色上限（硬约束）
 - 有色相（彩色）：≤ 3
 - 合计：≤ 3 色系（同色相明暗变化不计新增色相）
-- 背景色：允许使用符合色彩氛围的非中性色，但需保持高明度/克制
+- 背景色：允许浅/中/深（light/medium/dark）三档背景；由内容分析决定（backgroundDecision），背景饱和度必须克制，避免脏/花/霓虹
 - 主色要求：必须为高明度版本；整体中低饱和；禁止荧光/霓虹
 - 对比方式：仅允许 明度对比 / 冷暖对比 / 面积对比 / 层次叠加；禁止"彩虹撞色/多色堆叠"
 
@@ -42,7 +42,7 @@
 - **禅定(Samadhi)**：加入更暖、略鲜艳的黄作为"内在灯火"，同时放宽最高饱和度与点醒概率，但严格限制点醒面积与不透明度。
 - **般若(Prajna)**：点醒频率下降，避免"聪明而躁"。
 - **精进(Virya)**：最低明度上调至85%。
-- **整体坚持**：高明度、低饱和、少色相。
+- **整体坚持**：主形体高明度、低饱和、少色相；背景可浅/中/深三档，但必须克制且服务内容气质。
 
 ### 3.2 对比策略说明
 | 策略 | 说明 |
@@ -53,17 +53,27 @@
 | layering | 层次叠加：透明度渐变/雾化叠层 |
 | none | 无对比：单色/近单色纯净方案 |
 
+### 3.2.1 背景策略（V4）
+- 背景分三档：light / medium / dark（浅/中/深）
+- 背景由内容分析输出字段 `backgroundDecision` 决定：
+  - type: light/medium/dark
+  - suggestedColors: 背景色名列表（来自 BACKGROUND_COLORS）
+  - moodMatch: 为什么与内容气质匹配
+- 每个背景色都带有：temp（warm/cool/neutral）、texture（材质关键词）、mood（中文氛围）
+- 每一度都有“色温锁(bgTemp)”与“材质暗示(bgMaterial)”与“对比偏好(contrastPreference)”作为强约束：背景必须满足色温锁，并在提示词里出现材质暗示与对比偏好。
+
 ### 3.3 六度配色规则（完整版v2）
 
 #### 布施（Dana）
 - **精神内涵**：开放、给予、流动、轻盈的温暖
 - **主色相**：黄、绿
 - **对比色/点醒色相**：蓝、红（小面积）
-- **背景温度偏好**：暖
+- **背景温度偏好（V4 色温锁）**：暖/中性
 - **最低明度**：85%
 - **最高饱和度**：35%
 - **对比色概率**：70%
 - **允许的对比策略**：area, brightness, warm-cool
+- **V4 氛围定式（强制）**：材质暗示 matte washi paper, organic fabric, warm clay；对比偏好 gentle
 - **规则要点**：高明度黄/绿为主，蓝/红只作"提示"，避免抢戏
 - **点醒强度建议**：面积2–6%；不透明度10–15%；保持"提示"而非"主导"
 - **调色板**：主色 butter #FFF8E1 | 辅色1 celadon #DCEDC8 | 辅色2 ice-blue #E8F4FC | 背景 paper-white #F6F4EE
@@ -72,11 +82,12 @@
 - **精神内涵**：清净、克制、边界感、规则与自持
 - **主色相**：白、蓝、绿
 - **对比色/点醒色相**：红、黄（极小面积）
-- **背景温度偏好**：冷
+- **背景温度偏好（V4 色温锁）**：冷/中性
 - **最低明度**：88%
 - **最高饱和度**：25%
 - **对比色概率**：35%
 - **允许的对比策略**：brightness, area, none
+- **V4 氛围定式（强制）**：材质暗示 smooth stone, ceramic, clean minimal surface；对比偏好 crisp
 - **规则要点**：以冷白/淡蓝/淡绿建立秩序；红/黄仅用于"警醒点"
 - **点醒强度建议**：面积1–4%；不透明度8–12%；作为"警醒点"即可
 - **调色板**：主色 moon-white #F0F4F8 | 辅色1 ice-blue #E8F4FC | 辅色2 eucalyptus #E0F2F1 | 背景 mist-white #F3F5F6
@@ -85,11 +96,12 @@
 - **精神内涵**：柔软承受、缓冲刺激、含容不迫；更强调"等持/持有/保持"的稳定与温和
 - **主色相**：白、绿（为主）
 - **对比色/点醒色相**：柔和暖黄（作为稳定中轴），蓝/红仅可极少量
-- **背景温度偏好**：中性偏暖
+- **背景温度偏好（V4 色温锁）**：暖/中性
 - **最低明度**：84%
 - **最高饱和度**：32%
 - **对比色概率**：40%
 - **允许的对比策略**：layering, brightness, warm-cool, none
+- **V4 氛围定式（强制）**：材质暗示 weathered paper, layered veil, earth texture；对比偏好 layered
 - **规则要点**：以留白与雾化叠层承受刺激；引入"温和暖黄"作为稳定中轴，拉开与持戒的气质差异
 - **点醒强度建议**：暖黄轴面积6–18%（可作中区或层）；不透明度12–18%；避免强对比与高饱和红
 - **调色板**：主色 pearl #F8F9FA | 辅色1 mint-mist #E8F5E9 | 辅色2 warm-amber #FFE9B3 | 背景 cream #FFFEF5
@@ -98,11 +110,12 @@
 - **精神内涵**：动能、推进、明快而不躁
 - **主色相**：红、黄
 - **对比色/点醒色相**：蓝、绿（冷色平衡）
-- **背景温度偏好**：暖
+- **背景温度偏好（V4 色温锁）**：暖/冷
 - **最低明度**：85%
 - **最高饱和度**：40%
 - **对比色概率**：75%
 - **允许的对比策略**：brightness, area, warm-cool
+- **V4 氛围定式（强制）**：材质暗示 high grain noise, bold matte surface, kinetic blur；对比偏好 strong
 - **规则要点**：暖色主导但不压；用冷色作"呼吸口"，保持轻盈
 - **点醒强度建议**：面积2–6%；不透明度10–15%；避免大块高饱和
 - **调色板**：主色 honey-light #FFE082 | 辅色1 warm-rose #F8BBD9 | 辅色2 serene-blue #B3E5FC | 背景 warm-beige #F7F2E8
@@ -111,11 +124,12 @@
 - **精神内涵**：凝定、澄静、少即是多；在清明中保留一缕温热的"安住"
 - **主色相**：白、蓝（为主）
 - **对比色/点醒色相**：暖黄（较明亮、但面积受控）；避免红
-- **背景温度偏好**：中性（不强冷）
+- **背景温度偏好（V4 色温锁）**：冷/中性
 - **最低明度**：88%
 - **最高饱和度**：28%
 - **对比色概率**：30%
 - **允许的对比策略**：brightness, area, warm-cool, none
+- **V4 氛围定式（强制）**：材质暗示 frosted glass, mist, still water surface；对比偏好 subtle
 - **规则要点**：仍以留白与微差为核心，但加入明亮暖黄作为"内在灯火"，纠正过清冷感
 - **点醒强度建议**：暖黄面积2–8%；不透明度10–15%；以"光感"而非"热闹"为准
 - **调色板**：主色 cloud-white #FAFAFA | 辅色1 clear-cyan #E0F7FA | 辅色2 sunlight #FFECB3 | 背景 ivory #FFFFF0
@@ -124,11 +138,12 @@
 - **精神内涵**：澄明洞见、清醒而温润
 - **主色相**：白、蓝、黄
 - **对比色/点醒色相**：绿、红（小面积点醒）
-- **背景温度偏好**：冷
+- **背景温度偏好（V4 色温锁）**：冷/中性
 - **最低明度**：85%
 - **最高饱和度**：32%
 - **对比色概率**：55%
 - **允许的对比策略**：warm-cool, brightness, area
+- **V4 氛围定式（强制）**：材质暗示 dark void, optical glass, geometric grid, sharp cut；对比偏好 sharp
 - **规则要点**：保留冷暖对照，但降低频率；点醒色更小、更淡，以免"聪明而躁"
 - **点醒强度建议**：面积2–5%；不透明度10–15%；避免大块强对比
 - **调色板**：主色 moon-white #F0F4F8 | 辅色1 clear-cyan #E0F7FA | 辅色2 cream-yellow #FFF9E6 | 背景 cool-mist #F5F7FA
@@ -147,16 +162,16 @@
 - sunlight #FFECB3 作为暖光点醒，比honey-light更克制但更有温度与存在感
 - 仍以cloud-white + clear-cyan维持澄静底色，暖黄面积受控，避免热闹
 
-### 3.5 最终配色表（主色+2辅色+背景）
+### 3.5 最终配色表（主色+2辅色）
 
-| 六度 | 主色 | 主色HEX | 辅色1 | 辅色2 | 背景 |
-|------|------|---------|-------|-------|------|
-| 布施(Dana) | butter | #FFF8E1 | celadon #DCEDC8 | ice-blue #E8F4FC | paper-white #F6F4EE |
-| 持戒(Sila) | moon-white | #F0F4F8 | ice-blue #E8F4FC | eucalyptus #E0F2F1 | mist-white #F3F5F6 |
-| 忍辱(Ksanti) | pearl | #F8F9FA | mint-mist #E8F5E9 | warm-amber #FFE9B3 | cream #FFFEF5 |
-| 精进(Virya) | honey-light | #FFE082 | warm-rose #F8BBD9 | serene-blue #B3E5FC | warm-beige #F7F2E8 |
-| 禅定(Samadhi) | cloud-white | #FAFAFA | clear-cyan #E0F7FA | sunlight #FFECB3 | ivory #FFFFF0 |
-| 般若(Prajna) | moon-white | #F0F4F8 | clear-cyan #E0F7FA | cream-yellow #FFF9E6 | cool-mist #F5F7FA |
+| 六度 | 主色 | 主色HEX | 辅色1 | 辅色2 |
+|------|------|---------|-------|-------|
+| 布施(Dana) | butter | #FFF8E1 | celadon #DCEDC8 | ice-blue #E8F4FC |
+| 持戒(Sila) | moon-white | #F0F4F8 | ice-blue #E8F4FC | eucalyptus #E0F2F1 |
+| 忍辱(Ksanti) | pearl | #F8F9FA | mint-mist #E8F5E9 | warm-amber #FFE9B3 |
+| 精进(Virya) | honey-light | #FFE082 | warm-rose #F8BBD9 | serene-blue #B3E5FC |
+| 禅定(Samadhi) | cloud-white | #FAFAFA | clear-cyan #E0F7FA | sunlight #FFECB3 |
+| 般若(Prajna) | moon-white | #F0F4F8 | clear-cyan #E0F7FA | cream-yellow #FFF9E6 |
 
 ## 4. 反向排除库（Negative Library，必须全程启用）
 

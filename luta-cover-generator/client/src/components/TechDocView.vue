@@ -141,9 +141,9 @@
         <div class="impl-block">
           <h3>配色系统（随机 + 约束 + 去重 + 视觉指导注入）</h3>
           <div class="checklist">
-            <div class="check-item">BACKGROUND_COLORS（含 temp 标签）</div>
+            <div class="check-item">BACKGROUND_COLORS（light/medium/dark；每色含 temp/texture/mood）</div>
             <div class="check-item">FIVE_COLORS（五色×6变体，brightness/saturation）</div>
-            <div class="check-item">DEGREE_COLOR_RULES（度规则：主色/对比色/背景温度/对比策略/点缀概率）</div>
+            <div class="check-item">DEGREE_COLOR_RULES（度规则：主色/对比色/allowedBgTypes/bgTemp/bgMaterial/contrastPreference/点缀概率）</div>
             <div class="check-item">generateColorScheme()（contrastMethod + accentAreaPct + accentOpacityPct）</div>
             <div class="check-item">getUniqueColorScheme()（RECENT_COLOR_KEYS_BY_DEGREE 短期去重）</div>
             <div class="check-item">getContrastVisualInstruction() / getAccentVisualDescription()（把抽象参数转为可执行视觉指令）</div>
@@ -473,8 +473,10 @@
               <span>度</span>
               <span>主色</span>
               <span>对比色</span>
-              <span>背景温度</span>
+              <span>色温锁(bgTemp)</span>
               <span>对比策略</span>
+              <span>对比偏好</span>
+              <span>材质暗示</span>
             </div>
             <div class="rule-row" v-for="rule in degreeRules" :key="rule.key">
               <span class="rule-name">{{ rule.name }}</span>
@@ -482,6 +484,8 @@
               <span>{{ rule.accent.join('/') }}</span>
               <span>{{ rule.bgTemp }}</span>
               <span>{{ rule.contrast.join(', ') }}</span>
+              <span>{{ rule.contrastPreference }}</span>
+              <span>{{ rule.bgMaterial }}</span>
             </div>
           </div>
         </div>
@@ -823,12 +827,12 @@ const colorDemo = {
 };
 
 const degreeRules = [
-  { key: 'dana', name: '布施', primary: ['黄', '绿'], accent: ['蓝', '红'], bgTemp: 'warm', contrast: ['area', 'brightness', 'warm-cool'], maxSat: 35, minBright: 85, accentProb: 70, palette: 'butter #FFF5D3 + celadon #D4EDB7 + ice-blue #DFF0FC' },
-  { key: 'sila', name: '持戒', primary: ['白', '蓝', '绿'], accent: ['红', '黄'], bgTemp: 'cool', contrast: ['brightness', 'area', 'none'], maxSat: 25, minBright: 88, accentProb: 35, palette: 'moon-white #ECF2F8 + ice-blue #DFF0FC + eucalyptus #D8F2F1' },
-  { key: 'ksanti', name: '忍辱', primary: ['白', '绿'], accent: ['黄'], bgTemp: 'warm', contrast: ['layering', 'brightness', 'warm-cool', 'none'], maxSat: 32, minBright: 84, accentProb: 40, palette: 'pearl #F7F9FA + mint-mist #E2F5E4 + warm-amber #FFDF91' },
-  { key: 'virya', name: '精进', primary: ['红', '黄'], accent: ['蓝', '绿'], bgTemp: 'warm', contrast: ['brightness', 'area', 'warm-cool'], maxSat: 40, minBright: 85, accentProb: 75, palette: 'honey-light #FFD24A + warm-rose #F8A0CB + serene-blue #92DBFC' },
-  { key: 'samadhi', name: '禅定', primary: ['白', '蓝'], accent: ['黄'], bgTemp: 'neutral', contrast: ['brightness', 'area', 'warm-cool', 'none'], maxSat: 28, minBright: 88, accentProb: 30, palette: 'cloud-white #FAFAFA + clear-cyan #D4F6FA + sunlight #FFE391' },
-  { key: 'prajna', name: '般若', primary: ['白', '蓝', '黄'], accent: ['绿', '红'], bgTemp: 'cool', contrast: ['warm-cool', 'brightness', 'area'], maxSat: 32, minBright: 85, accentProb: 55, palette: 'moon-white #ECF2F8 + clear-cyan #D4F6FA + cream-yellow #FFF6DB' }
+  { key: 'dana', name: '布施', primary: ['黄', '绿'], accent: ['蓝', '红'], bgTemp: 'warm/neutral', bgMaterial: 'matte washi paper, organic fabric, warm clay', contrastPreference: 'gentle', contrast: ['area', 'brightness', 'warm-cool'], maxSat: 35, minBright: 85, accentProb: 70, palette: 'butter #FFF5D3 + celadon #D4EDB7 + ice-blue #DFF0FC' },
+  { key: 'sila', name: '持戒', primary: ['白', '蓝', '绿'], accent: ['红', '黄'], bgTemp: 'cool/neutral', bgMaterial: 'smooth stone, ceramic, clean minimal surface', contrastPreference: 'crisp', contrast: ['brightness', 'area', 'none'], maxSat: 25, minBright: 88, accentProb: 35, palette: 'moon-white #ECF2F8 + ice-blue #DFF0FC + eucalyptus #D8F2F1' },
+  { key: 'ksanti', name: '忍辱', primary: ['白', '绿'], accent: ['黄'], bgTemp: 'warm/neutral', bgMaterial: 'weathered paper, layered veil, earth texture', contrastPreference: 'layered', contrast: ['layering', 'brightness', 'warm-cool', 'none'], maxSat: 32, minBright: 84, accentProb: 40, palette: 'pearl #F7F9FA + mint-mist #E2F5E4 + warm-amber #FFDF91' },
+  { key: 'virya', name: '精进', primary: ['红', '黄'], accent: ['蓝', '绿'], bgTemp: 'warm/cool', bgMaterial: 'high grain noise, bold matte surface, kinetic blur', contrastPreference: 'strong', contrast: ['brightness', 'area', 'warm-cool'], maxSat: 40, minBright: 85, accentProb: 75, palette: 'honey-light #FFD24A + warm-rose #F8A0CB + serene-blue #92DBFC' },
+  { key: 'samadhi', name: '禅定', primary: ['白', '蓝'], accent: ['黄'], bgTemp: 'cool/neutral', bgMaterial: 'frosted glass, mist, still water surface', contrastPreference: 'subtle', contrast: ['brightness', 'area', 'warm-cool', 'none'], maxSat: 28, minBright: 88, accentProb: 30, palette: 'cloud-white #FAFAFA + clear-cyan #D4F6FA + sunlight #FFE391' },
+  { key: 'prajna', name: '般若', primary: ['白', '蓝', '黄'], accent: ['绿', '红'], bgTemp: 'cool/neutral', bgMaterial: 'dark void, optical glass, geometric grid, sharp cut', contrastPreference: 'sharp', contrast: ['warm-cool', 'brightness', 'area'], maxSat: 32, minBright: 85, accentProb: 55, palette: 'moon-white #ECF2F8 + clear-cyan #D4F6FA + cream-yellow #FFF6DB' }
 ];
 
 const cliches = [
@@ -1221,7 +1225,7 @@ const apis = [
 .color-chip { width: 48px; height: 32px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.06); }
 
 .rule-table { font-size: 0.85rem; }
-.rule-row { display: grid; grid-template-columns: 60px 1fr 1fr 80px 1.5fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--c-border-light); align-items: center; }
+.rule-row { display: grid; grid-template-columns: 60px 1fr 1fr 110px 1.2fr 90px 2fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--c-border-light); align-items: center; }
 .rule-row.header { font-weight: 600; color: var(--c-text-secondary); font-size: 0.8rem; text-transform: uppercase; }
 .rule-name { font-weight: 600; color: var(--c-text); }
 
