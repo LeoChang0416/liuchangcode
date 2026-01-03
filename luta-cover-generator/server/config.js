@@ -18,8 +18,15 @@ export default {
   MIMO_API_BASE: process.env.MIMO_API_BASE || 'https://api.xiaomimimo.com/v1',
   MIMO_MODEL: process.env.MIMO_MODEL || 'mimo-v2-flash',
 
-  // ====== Image (kept as-is; still via APIMart in this project) ======
-  IMAGE_MODEL: process.env.IMAGE_MODEL || 'gemini-3-pro-image-preview',
+  // ====== Grsai (Nano Banana 图片生成) ======
+  // 文档: https://grsai.com/zh/dashboard/documents/nano-banana
+  GRSAI_API_KEY: process.env.GRSAI_API_KEY || '',
+  GRSAI_API_BASE: process.env.GRSAI_API_BASE || 'https://api.grsai.ai', // 国内直连用 grsai.ai
+
+  // ====== Image Provider 选择 ======
+  // 可选: 'apimart' | 'grsai'
+  IMAGE_PROVIDER: process.env.IMAGE_PROVIDER || 'grsai',
+  IMAGE_MODEL: process.env.IMAGE_MODEL || 'nano-banana',
 
   // ====== Text models catalog (for analysis & prompt generation) ======
   // id is what frontend sends as textModelId

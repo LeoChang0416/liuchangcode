@@ -195,17 +195,46 @@ export const STYLE_DNA = `
 - Symmetrical, predictable, rigid compositions
 `;
 
-// 背景色号参考（扩展）- V2饱和度+45%版
-export const BACKGROUND_COLORS = [
-  { name: 'paper-white', hex: '#F6F3EA', temp: 'warm' },
-  { name: 'mist-white', hex: '#F2F5F6', temp: 'cool' },
-  { name: 'warm-beige', hex: '#F7F0E1', temp: 'warm' },
-  { name: 'soft-gray', hex: '#F0F0F0', temp: 'neutral' },
-  { name: 'cream', hex: '#FFFEF1', temp: 'warm' },
-  { name: 'cool-mist', hex: '#F3F6FA', temp: 'cool' },
-  { name: 'ivory', hex: '#FFFFE9', temp: 'warm' },
-  { name: 'snow', hex: '#FFF8F8', temp: 'neutral' }
-];
+// 背景色号参考（V3：支持深浅色，由内容决定）
+export const BACKGROUND_COLORS = {
+  // 浅色系（明亮、开放、轻盈）
+  light: [
+    { name: 'paper-white', hex: '#F6F3EA', temp: 'warm', mood: '温暖纸质' },
+    { name: 'mist-white', hex: '#F2F5F6', temp: 'cool', mood: '清凉雾白' },
+    { name: 'warm-beige', hex: '#F7F0E1', temp: 'warm', mood: '暖米色' },
+    { name: 'soft-gray', hex: '#F0F0F0', temp: 'neutral', mood: '柔和灰' },
+    { name: 'cream', hex: '#FFFEF1', temp: 'warm', mood: '奶油白' },
+    { name: 'cool-mist', hex: '#F3F6FA', temp: 'cool', mood: '冷雾蓝' },
+    { name: 'ivory', hex: '#FFFFE9', temp: 'warm', mood: '象牙白' },
+    { name: 'snow', hex: '#FFF8F8', temp: 'neutral', mood: '雪白' },
+    { name: 'pale-sage', hex: '#E8F0E8', temp: 'cool', mood: '淡鼠尾草' },
+    { name: 'blush-pink', hex: '#FFF0F0', temp: 'warm', mood: '腮红粉' }
+  ],
+  // 中性色系（平衡、稳定、过渡）
+  medium: [
+    { name: 'warm-sand', hex: '#D4C4A8', temp: 'warm', mood: '暖沙色' },
+    { name: 'cool-slate', hex: '#B8C4CC', temp: 'cool', mood: '石板蓝灰' },
+    { name: 'dusty-rose', hex: '#D4B8B8', temp: 'warm', mood: '烟玫瑰' },
+    { name: 'sage-green', hex: '#A8C4A8', temp: 'cool', mood: '鼠尾草绿' },
+    { name: 'lavender-gray', hex: '#C4C0D0', temp: 'cool', mood: '薰衣草灰' },
+    { name: 'terracotta-light', hex: '#D4A890', temp: 'warm', mood: '浅赤陶' },
+    { name: 'steel-blue', hex: '#A0B0C0', temp: 'cool', mood: '钢蓝' },
+    { name: 'taupe', hex: '#C0B0A0', temp: 'neutral', mood: '灰褐色' }
+  ],
+  // 深色系（沉稳、深邃、内敛）
+  dark: [
+    { name: 'charcoal', hex: '#2C3E50', temp: 'cool', mood: '木炭灰' },
+    { name: 'deep-navy', hex: '#1A2634', temp: 'cool', mood: '深海蓝' },
+    { name: 'midnight-blue', hex: '#0D1B2A', temp: 'cool', mood: '午夜蓝' },
+    { name: 'dark-forest', hex: '#1B2E1B', temp: 'cool', mood: '暗森林' },
+    { name: 'deep-purple', hex: '#2A1B3D', temp: 'cool', mood: '深紫' },
+    { name: 'warm-espresso', hex: '#3C2415', temp: 'warm', mood: '浓咖啡' },
+    { name: 'dark-slate', hex: '#2F3640', temp: 'neutral', mood: '暗石板' },
+    { name: 'black-ink', hex: '#0A0A0A', temp: 'neutral', mood: '墨黑' },
+    { name: 'deep-burgundy', hex: '#3D1C24', temp: 'warm', mood: '深酒红' },
+    { name: 'dark-olive', hex: '#2C3022', temp: 'warm', mood: '暗橄榄' }
+  ]
+};
 
 // ========================================
 // 五方佛五色体系（V2饱和度+45%版）
@@ -272,90 +301,91 @@ export const FIVE_COLORS = {
 // ========================================
 // 每个度的颜色策略（V2 修订版）
 // ========================================
+// V3：移除固定背景色约束，由内容分析决定
 export const DEGREE_COLOR_RULES = {
   dana: {
     name: '布施',
-    primaryHues: ['黄', '绿'],  // 主色优先：黄/绿高明度
-    accentHues: ['蓝', '红'],   // 对比色可选：蓝/红（小面积）
-    bgTempPrefer: 'warm',       // 背景温度倾向
-    brightnessMin: 85,          // 最低明度
-    saturationMax: 35,          // 最高饱和度
+    primaryHues: ['黄', '绿'],
+    accentHues: ['蓝', '红'],
+    brightnessMin: 85,
+    saturationMax: 35,
     accentProbability: 0.7,
-    accentAreaRange: [2, 6],    // 点醒面积%
-    accentOpacityRange: [10, 15], // 点醒不透明度%
+    accentAreaRange: [2, 6],
+    accentOpacityRange: [10, 15],
     allowedContrastMethods: ['area', 'brightness', 'warm-cool'],
+    allowedBgTypes: ['light', 'medium', 'dark'], // V3: 所有背景类型都允许
     rule: '高明度黄/绿为主，蓝/红只作"提示"，避免抢戏',
-    palette: { main: 'butter', mainHex: '#FFF5D3', aux1: 'celadon', aux1Hex: '#D4EDB7', aux2: 'ice-blue', aux2Hex: '#DFF0FC', bg: 'paper-white', bgHex: '#F6F3EA' }
+    palette: { main: 'butter', mainHex: '#FFF5D3', aux1: 'celadon', aux1Hex: '#D4EDB7', aux2: 'ice-blue', aux2Hex: '#DFF0FC' }
   },
   sila: {
     name: '持戒',
     primaryHues: ['白', '蓝', '绿'],
-    accentHues: ['红', '黄'],   // 极小面积
-    bgTempPrefer: 'cool',
+    accentHues: ['红', '黄'],
     brightnessMin: 88,
     saturationMax: 25,
     accentProbability: 0.35,
     accentAreaRange: [1, 4],
     accentOpacityRange: [8, 12],
     allowedContrastMethods: ['brightness', 'area', 'none'],
+    allowedBgTypes: ['light', 'medium', 'dark'],
     rule: '以冷白/淡蓝/淡绿建立秩序；红/黄仅用于"警醒点"',
-    palette: { main: 'moon-white', mainHex: '#ECF2F8', aux1: 'ice-blue', aux1Hex: '#DFF0FC', aux2: 'eucalyptus', aux2Hex: '#D8F2F1', bg: 'mist-white', bgHex: '#F2F5F6' }
+    palette: { main: 'moon-white', mainHex: '#ECF2F8', aux1: 'ice-blue', aux1Hex: '#DFF0FC', aux2: 'eucalyptus', aux2Hex: '#D8F2F1' }
   },
   ksanti: {
     name: '忍辱',
-    primaryHues: ['白', '绿'],  // V2: 白/绿为主
-    accentHues: ['黄'],         // V2: 暖黄作为稳定中轴，蓝/红极少
-    bgTempPrefer: 'warm',       // V2: 中性偏暖
-    brightnessMin: 84,          // V2: 降至84%
-    saturationMax: 32,          // V2: 升至32%
+    primaryHues: ['白', '绿'],
+    accentHues: ['黄'],
+    brightnessMin: 84,
+    saturationMax: 32,
     accentProbability: 0.4,
-    accentAreaRange: [6, 18],   // V2: 暖黄轴可更大面积
+    accentAreaRange: [6, 18],
     accentOpacityRange: [12, 18],
     allowedContrastMethods: ['layering', 'brightness', 'warm-cool', 'none'],
+    allowedBgTypes: ['light', 'medium', 'dark'],
     rule: '以留白与雾化叠层承受刺激；引入"温和暖黄"作为稳定中轴',
-    palette: { main: 'pearl', mainHex: '#F7F9FA', aux1: 'mint-mist', aux1Hex: '#E2F5E4', aux2: 'warm-amber', aux2Hex: '#FFDF91', bg: 'cream', bgHex: '#FFFEF1' }
+    palette: { main: 'pearl', mainHex: '#F7F9FA', aux1: 'mint-mist', aux1Hex: '#E2F5E4', aux2: 'warm-amber', aux2Hex: '#FFDF91' }
   },
   virya: {
     name: '精进',
-    primaryHues: ['红', '黄'],  // 主色优先：红/黄高明度
-    accentHues: ['蓝', '绿'],   // 冷色平衡
-    bgTempPrefer: 'warm',
-    brightnessMin: 85,          // V2: 上调至85%
+    primaryHues: ['红', '黄'],
+    accentHues: ['蓝', '绿'],
+    brightnessMin: 85,
     saturationMax: 40,
     accentProbability: 0.75,
     accentAreaRange: [2, 6],
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['brightness', 'area', 'warm-cool'],
+    allowedBgTypes: ['light', 'medium', 'dark'],
     rule: '暖色主导但不压；用冷色作"呼吸口"，保持轻盈',
-    palette: { main: 'honey-light', mainHex: '#FFD24A', aux1: 'warm-rose', aux1Hex: '#F8A0CB', aux2: 'serene-blue', aux2Hex: '#92DBFC', bg: 'warm-beige', bgHex: '#F7F0E1' }
+    palette: { main: 'honey-light', mainHex: '#FFD24A', aux1: 'warm-rose', aux1Hex: '#F8A0CB', aux2: 'serene-blue', aux2Hex: '#92DBFC' }
   },
   samadhi: {
     name: '禅定',
-    primaryHues: ['白', '蓝'],  // V2: 白/蓝为主
-    accentHues: ['黄'],         // V2: 暖黄作为"内在灯火"，避免红
-    bgTempPrefer: 'neutral',    // V2: 中性（不强冷）
+    primaryHues: ['白', '蓝'],
+    accentHues: ['黄'],
     brightnessMin: 88,
-    saturationMax: 28,          // V2: 升至28%
-    accentProbability: 0.3,     // V2: 升至30%
+    saturationMax: 28,
+    accentProbability: 0.3,
     accentAreaRange: [2, 8],
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['brightness', 'area', 'warm-cool', 'none'],
+    allowedBgTypes: ['light', 'medium', 'dark'],
     rule: '仍以留白与微差为核心，加入明亮暖黄作为"内在灯火"',
-    palette: { main: 'cloud-white', mainHex: '#FAFAFA', aux1: 'clear-cyan', aux1Hex: '#D4F6FA', aux2: 'sunlight', aux2Hex: '#FFE391', bg: 'ivory', bgHex: '#FFFFE9' }
+    palette: { main: 'cloud-white', mainHex: '#FAFAFA', aux1: 'clear-cyan', aux1Hex: '#D4F6FA', aux2: 'sunlight', aux2Hex: '#FFE391' }
   },
   prajna: {
     name: '般若',
     primaryHues: ['白', '蓝', '黄'],
-    accentHues: ['绿', '红'],   // 小面积点醒
-    bgTempPrefer: 'cool',
+    accentHues: ['绿', '红'],
     brightnessMin: 85,
     saturationMax: 32,
-    accentProbability: 0.55,    // V2: 降至55%
+    accentProbability: 0.55,
     accentAreaRange: [2, 5],
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['warm-cool', 'brightness', 'area'],
+    allowedBgTypes: ['light', 'medium', 'dark'],
     rule: '保留冷暖对照但降低频率；点醒色更小更淡，避免"聪明而躁"',
-    palette: { main: 'moon-white', mainHex: '#ECF2F8', aux1: 'clear-cyan', aux1Hex: '#D4F6FA', aux2: 'cream-yellow', aux2Hex: '#FFF6DB', bg: 'cool-mist', bgHex: '#F3F6FA' }
+    palette: { main: 'moon-white', mainHex: '#ECF2F8', aux1: 'clear-cyan', aux1Hex: '#D4F6FA', aux2: 'cream-yellow', aux2Hex: '#FFF6DB' }
   }
 };
 
@@ -385,7 +415,7 @@ export function selectColorVariant(hueName, minBrightness = 80, maxSaturation = 
   return eligible[Math.floor(Math.random() * eligible.length)];
 }
 
-// 根据度生成随机配色方案
+// 根据度生成随机配色方案（V3：背景色由内容决定，不在此处固定）
 export function generateColorScheme(degreeKey) {
   const rule = DEGREE_COLOR_RULES[degreeKey];
   if (!rule) return null;
@@ -397,7 +427,7 @@ export function generateColorScheme(degreeKey) {
   // 对比策略（增强变化维度）
   const contrastMethod = pickOne(rule.allowedContrastMethods || ['brightness', 'area', 'warm-cool', 'layering', 'none']);
   
-  // 是否使用对比色（不同度不同概率；且在 contrastMethod=none 时强制不使用）
+  // 是否使用对比色
   const accentAllowed = contrastMethod !== 'none' && Array.isArray(rule.accentHues) && rule.accentHues.length > 0;
   const accentProbability = typeof rule.accentProbability === 'number' ? clamp(rule.accentProbability, 0, 1) : 0.5;
   const useAccent = accentAllowed && Math.random() < accentProbability;
@@ -406,29 +436,20 @@ export function generateColorScheme(degreeKey) {
     ? selectColorVariant(accentHue, rule.brightnessMin + 5, rule.saturationMax - 5)
     : null;
 
-  // 点缀强度（V2：使用各度专属的范围）
+  // 点缀强度
   const areaRange = rule.accentAreaRange || [2, 10];
   const opacityRange = rule.accentOpacityRange || [12, 22];
   const accentAreaPct = accentVariant ? Math.round(randFloat(areaRange[0], areaRange[1])) : 0;
   const accentOpacityPct = accentVariant ? Math.round(randFloat(opacityRange[0], opacityRange[1])) : 0;
   
-  // V2：优先使用各度预设的调色板背景，否则匹配温度
-  let bgColor;
-  if (rule.palette && rule.palette.bgHex) {
-    bgColor = { name: rule.palette.bg, hex: rule.palette.bgHex, temp: rule.bgTempPrefer };
-  } else {
-    const eligibleBgs = BACKGROUND_COLORS.filter(bg => 
-      bg.temp === rule.bgTempPrefer || bg.temp === 'neutral'
-    );
-    bgColor = pickOne(eligibleBgs) || BACKGROUND_COLORS[0];
-  }
-  
+  // V3：返回可用的背景色选项，让 LLM 根据内容选择
   return {
     primaryHue,
     primaryColor: primaryVariant,
     accentHue,
     accentColor: accentVariant,
-    background: bgColor,
+    backgroundOptions: BACKGROUND_COLORS, // 提供所有背景色选项
+    allowedBgTypes: rule.allowedBgTypes || ['light', 'medium', 'dark'],
     contrastMethod,
     accentAreaPct,
     accentOpacityPct,
@@ -575,12 +596,19 @@ export const ANALYZE_SYSTEM = `你是一个"播客→独特视觉意象"转换�
     "isLeftRightDual": false,
     "uniquenessScore": 1-10,
     "howIsThisDifferent": "这个骨架与'标准左右双域对比'有何不同"
+  },
+  
+  "backgroundDecision": {
+    "type": "light | medium | dark",
+    "reason": "为什么选这个背景明度（必须引用内容情绪/氛围）",
+    "suggestedColors": ["从对应类型中推荐1-2个具体色名"],
+    "moodMatch": "背景色如何增强内容的情绪表达"
   }
 }
 
 ## 多样化输出示例
 
-### 示例1：关于"专注力"的播客
+### 示例1：关于"专注力"的播客（浅色背景）
 {
   "contentEssence": "在纷扰中找到内心的锚点",
   "physicalMetaphor": "一颗石子沉入水底，周围尘埃渐渐平息",
@@ -588,10 +616,11 @@ export const ANALYZE_SYSTEM = `你是一个"播客→独特视觉意象"转换�
   "topologicalLayout": { "zoneCount": "1", "divisionMethod": "none", "zoneRatios": "100" },
   "primaryRelationship": { "type": "solo", "spatialPosition": "center" },
   "rhythmSignature": { "type": "none", "direction": "static" },
-  "antiTemplateCheck": { "isLeftRightDual": false, "uniquenessScore": 8 }
+  "antiTemplateCheck": { "isLeftRightDual": false, "uniquenessScore": 8 },
+  "backgroundDecision": { "type": "light", "reason": "专注需要清明的心境，浅色背景营造清净氛围", "suggestedColors": ["mist-white", "soft-gray"], "moodMatch": "清凉的浅色让焦点自然落在中心主体上" }
 }
 
-### 示例2：关于"成长"的播客
+### 示例2：关于"成长"的播客（中性背景）
 {
   "contentEssence": "从根基向上生长的力量",
   "physicalMetaphor": "竹笋破土而出，节节向上",
@@ -599,21 +628,23 @@ export const ANALYZE_SYSTEM = `你是一个"播客→独特视觉意象"转换�
   "topologicalLayout": { "zoneCount": "2", "divisionMethod": "horizontal", "zoneRatios": "30:70" },
   "primaryRelationship": { "type": "piercing", "spatialPosition": "bottom" },
   "rhythmSignature": { "type": "accelerating", "direction": "upward", "elementCount": 3 },
-  "antiTemplateCheck": { "isLeftRightDual": false, "uniquenessScore": 9 }
+  "antiTemplateCheck": { "isLeftRightDual": false, "uniquenessScore": 9 },
+  "backgroundDecision": { "type": "medium", "reason": "成长需要土壤的厚重感，中性色提供稳定根基", "suggestedColors": ["warm-sand", "taupe"], "moodMatch": "大地色调暗示扎根与向上的对比" }
 }
 
-### 示例3：关于"包容"的播客
+### 示例3：关于"深夜思考"的播客（深色背景）
 {
-  "contentEssence": "以柔克刚，海纳百川",
-  "physicalMetaphor": "大圆包裹着小圆，边界柔软透气",
-  "metaphorVisualization": "外层环形包裹内层，用嵌套关系而非并列对比",
-  "topologicalLayout": { "zoneCount": "1", "divisionMethod": "radial", "zoneRatios": "100" },
-  "primaryRelationship": { "type": "nested", "spatialPosition": "center" },
-  "rhythmSignature": { "type": "echoing", "direction": "outward", "elementCount": 2 },
-  "antiTemplateCheck": { "isLeftRightDual": false, "uniquenessScore": 9 }
+  "contentEssence": "在寂静的深夜探索内心",
+  "physicalMetaphor": "一点微光在黑暗中缓缓亮起",
+  "metaphorVisualization": "深色画布上，一个发光的柔和形体",
+  "topologicalLayout": { "zoneCount": "1", "divisionMethod": "none", "zoneRatios": "100" },
+  "primaryRelationship": { "type": "solo", "spatialPosition": "center" },
+  "rhythmSignature": { "type": "pulsing", "direction": "outward", "elementCount": 1 },
+  "antiTemplateCheck": { "isLeftRightDual": false, "uniquenessScore": 9 },
+  "backgroundDecision": { "type": "dark", "reason": "深夜冥想需要沉浸的暗色环境，光点更显珍贵", "suggestedColors": ["midnight-blue", "charcoal"], "moodMatch": "深色背景让微小的光源成为视觉焦点，暗示希望" }
 }
 
-### 示例4：关于"涅槃"的播客（即使有对比，也不用左右）
+### 示例4：关于"涅槃"的播客（深色背景）
 {
   "contentEssence": "破碎后的重生",
   "physicalMetaphor": "碎片从四周向中心聚合，形成新的整体",
@@ -621,7 +652,8 @@ export const ANALYZE_SYSTEM = `你是一个"播客→独特视觉意象"转换�
   "topologicalLayout": { "zoneCount": "1", "divisionMethod": "radial", "zoneRatios": "100" },
   "primaryRelationship": { "type": "fragmenting", "spatialPosition": "center" },
   "rhythmSignature": { "type": "decelerating", "direction": "inward", "elementCount": 4 },
-  "antiTemplateCheck": { "isLeftRightDual": false, "uniquenessScore": 10 }
+  "antiTemplateCheck": { "isLeftRightDual": false, "uniquenessScore": 10 },
+  "backgroundDecision": { "type": "dark", "reason": "涅槃象征从黑暗中重生，深色背景增强戏剧张力", "suggestedColors": ["deep-purple", "black-ink"], "moodMatch": "黑暗中的聚合暗示凤凰涅槃的神秘感" }
 }
 
 ---
@@ -804,13 +836,24 @@ physicalMetaphor 应该在画面中有直观的视觉呼应。
 ## 硬约束（不可违反）
 - 画幅: 1:1 Square, 1024x1024
 - Safe margin: 10% padding
-- Whitespace: ≥ 50%
+- Whitespace: ≥ 50%（深色背景时，"留白"指低密度区域）
 - Shapes: ≤ 4
 - Lines: ≤ 3
 - Gradients/Glows: ≤ 2
 - Hue colors: ≤ 3
-- Background: atmosphere-matching color (can be non-neutral)
+- Background: 由内容分析的 backgroundDecision 决定（可浅/中/深）
 - 禁止: text, symbols, UI elements; 允许有意义的抽象意象
+
+## 背景色选择（V3：内容驱动）
+从 analysisResult.backgroundDecision 读取：
+- type: light（浅色）/ medium（中性）/ dark（深色）
+- suggestedColors: 推荐的具体色名
+
+### 深色背景注意事项
+- 深色背景时，主形体应使用较亮的颜色形成对比
+- "留白"概念转变为"低密度区域"，仍需保持呼吸感
+- 光晕效果可以更明显，营造"黑暗中发光"的氛围
+- 避免压抑感，确保有足够的视觉焦点
 
 ## Prompt 结构模板（必须 ≥ 200 词）
 
@@ -845,12 +888,15 @@ physicalMetaphor 应该在画面中有直观的视觉呼应。
 - Negative space: {留白分布}
 
 [COLOR]
-- Background: {色号}
+- Background type: {light/medium/dark，来自 backgroundDecision.type}
+- Background color: {具体色名和色号，来自 backgroundDecision.suggestedColors}
+- Background mood: {backgroundDecision.moodMatch}
 - Primary hue: {色名、明度、色号范围}
 - Secondary hue: {如有}
 - Temperature: {度影响的色温}
 - Contrast method: {对比方式及具体的构图体现}
 - Accent usage: {如有对比色，描述其具体形态和占比}
+- Dark mode adaptation: {如果是深色背景，描述主形体如何在暗色上突出}
 
 [LIGHTING]
 - Light source: {类型}

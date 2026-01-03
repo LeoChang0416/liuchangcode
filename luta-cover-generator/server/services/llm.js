@@ -9,7 +9,6 @@ function colorKeyFromScheme(s) {
   return [
     `p:${s.primaryColor?.hex || 'none'}`,
     `a:${s.accentColor?.hex || 'none'}`,
-    `bg:${s.background?.hex || 'none'}`,
     `c:${s.contrastMethod || 'none'}`,
     `aa:${s.accentAreaPct || 0}`,
     `ao:${s.accentOpacityPct || 0}`
@@ -525,10 +524,14 @@ function getContrastVisualInstruction(method) {
 // 生成提示词（V6：骨架强变量版，三类强变量决定骨架）
 export async function generatePrompt(podcastContent, degreeKey, analysisResult = null, options = {}) {
   const preferredModelId = options?.textModelId || '';
+  const onProgress = typeof options?.onProgress === 'function' ? options.onProgress : () => {};
+  
   let degreeSelection = null;
   if (!degreeKey) {
+    onProgress(15, '正在分析内容度...');
     degreeSelection = await selectDegree(podcastContent, { textModelId: preferredModelId });
     degreeKey = degreeSelection.degreeKey;
+    onProgress(35, `已选定: ${degreeKey}`);
   }
 
   const degree = DEGREES[degreeKey];
@@ -537,7 +540,12 @@ export async function generatePrompt(podcastContent, degreeKey, analysisResult =
   // V2: 使用 DEGREE_COLOR_RULES 替代 DEGREES.colorTendency
   const colorRule = DEGREE_COLOR_RULES[degreeKey] || {};
 
-  const analysis = analysisResult || await analyzeContent(podcastContent, { textModelId: preferredModelId });
+  let analysis = analysisResult;
+  if (!analysis) {
+    onProgress(40, '正在深度分析内容...');
+    analysis = await analyzeContent(podcastContent, { textModelId: preferredModelId });
+    onProgress(65, '内容分析完成');
+  }
   
   // V2: 校验分析结果必填字段
   const requiredFields = ['topologicalLayout', 'primaryRelationship', 'rhythmSignature'];
@@ -557,8 +565,24 @@ export async function generatePrompt(podcastContent, degreeKey, analysisResult =
   const rhythmSignature = analysis.rhythmSignature || {};
   const physicalMetaphor = analysis.physicalMetaphor || '';
 
-  // 构建颜色参考
-  const bgColorRef = BACKGROUND_COLORS.map(c => `${c.name}: ${c.hex}`).join(', ');
+  // 构建颜色参考（V3：分三类）
+  const bgColorRef = `
+**浅色系 (light)**：${BACKGROUND_COLORS.light.map(c => `${c.name}(${c.hex})`).join(', ')}
+**中性色系 (medium)**：${BACKGROUND_COLORS.medium.map(c => `${c.name}(${c.hex})`).join(', ')}
+**深色系 (dark)**：${BACKGROUND_COLORS.dark.map(c => `${c.name}(${c.hex})`).join(', ')}`;
+  
+  // 从内容分析获取背景决策
+  const bgDecision = analysis.backgroundDecision || { type: 'light', suggestedColors: ['paper-white'] };
+  const bgType = bgDecision.type || 'light';
+  const suggestedBgColors = bgDecision.suggestedColors || [];
+  
+  // 根据背景决策选择背景色
+  const bgPool = BACKGROUND_COLORS[bgType] || BACKGROUND_COLORS.light;
+  let selectedBg = bgPool[0];
+  if (suggestedBgColors.length > 0) {
+    const found = bgPool.find(c => suggestedBgColors.includes(c.name));
+    if (found) selectedBg = found;
+  }
   
   // 生成本次的随机配色方案
   const colorScheme = getUniqueColorScheme(degreeKey);
@@ -592,7 +616,15 @@ export async function generatePrompt(podcastContent, degreeKey, analysisResult =
 - 主色明度：${colorScheme.primaryColor.brightness}%
 ${colorScheme.accentColor ? `- 对比色相：**${colorScheme.accentHue}**
 - 对比色号：**${colorScheme.accentColor.name} (${colorScheme.accentColor.hex})**（小面积点缀）` : '- 对比色：无（纯净单色方案）'}
-- 背景色：**${colorScheme.background.name} (${colorScheme.background.hex})**
+- **背景色类型**：**${bgType}**（由内容分析决定）
+- **背景色**：**${selectedBg.name} (${selectedBg.hex})**
+- **背景情绪**：${selectedBg.mood || ''}
+${bgType === 'dark' ? `
+⚠️ **深色背景注意**：
+- 主形体应使用较亮的颜色形成对比
+- "留白"概念转变为"低密度区域"
+- 光晕效果可更明显，营造"黑暗中发光"氛围
+` : ''}
 - 对比策略（必须采用）：**${colorScheme.contrastMethod}**
   > **视觉指导**：${getContrastVisualInstruction(colorScheme.contrastMethod)}
 ${colorScheme.accentColor ? `- 对比色使用强度（必须采用）：面积 **${colorScheme.accentAreaPct}%**；叠色/蒙版不透明度 **${colorScheme.accentOpacityPct}%**
@@ -785,6 +817,7 @@ ${improvementSuggestions.map((s, i) => `${i + 1}. **${s}**`).join('\n')}
 `;
 
   console.log('[generatePrompt] 调用 API，preferredModelId:', preferredModelId || '(default)');
+  onProgress(70, '正在生成提示词...');
 
   const content = await callChatCompletions({
     stage: '提示词生成',
@@ -829,6 +862,7 @@ ${improvementSuggestions.map((s, i) => `${i + 1}. **${s}**`).join('\n')}
     warnings.push(`注意：识别到 cliché（${antiClicheCheck.avoidedCliche}），请确认已规避`);
   }
   
+  onProgress(95, '提示词生成完成');
   return {
     degreeKey,
     analysis,
@@ -856,7 +890,7 @@ ${improvementSuggestions.map((s, i) => `${i + 1}. **${s}**`).join('\n')}
     // V6 新增：反先验检查
     antiClicheCheck,
     
-    // V7 新增：随机配色方案
+    // V7 新增：随机配色方案（V3：背景由内容决定）
     colorScheme: colorScheme ? {
       primaryHue: colorScheme.primaryHue,
       primaryColor: colorScheme.primaryColor?.hex,
@@ -864,13 +898,18 @@ ${improvementSuggestions.map((s, i) => `${i + 1}. **${s}**`).join('\n')}
       accentHue: colorScheme.accentHue,
       accentColor: colorScheme.accentColor?.hex,
       accentColorName: colorScheme.accentColor?.name,
-      background: colorScheme.background?.hex,
-      backgroundName: colorScheme.background?.name,
+      backgroundType: bgType,
+      background: selectedBg?.hex,
+      backgroundName: selectedBg?.name,
+      backgroundMood: selectedBg?.mood,
       contrastMethod: colorScheme.contrastMethod,
       accentAreaPct: colorScheme.accentAreaPct,
       accentOpacityPct: colorScheme.accentOpacityPct,
       rule: colorScheme.rule
     } : null,
+    
+    // V3 新增：背景决策信息
+    backgroundDecision: bgDecision,
     
     degreeBiasApplication: result.degreeBiasApplication || { appliedBiases: [], howApplied: '' },
     constraintCheck: result.constraintCheck,

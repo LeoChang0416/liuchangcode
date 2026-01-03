@@ -106,13 +106,15 @@ app.post('/api/generate-prompt', async (req, res) => {
     if (asyncMode) {
       const task = createLocalTask({ prefix: 'p_', type: 'generate-prompt', meta: { len: String(podcastContent).length, degree: degree || null } });
       runLocalTask(task.id, async ({ setProgress }) => {
-        setProgress(15);
         const result = await generatePrompt(podcastContent, degree, analysisResult, {
           improvementSuggestions,
           previousIssues,
-          textModelId
+          textModelId,
+          onProgress: (p, msg) => {
+            setProgress(p);
+            if (msg) console.log(`[任务进度] ${p}% - ${msg}`);
+          }
         });
-        setProgress(90);
         return result;
       });
       return res.json({ success: true, data: { taskId: task.id, status: task.status } });
@@ -328,13 +330,42 @@ app.post('/api/edit-image', async (req, res) => {
 });
 
 // 获取历史记录
-app.get('/api/history', (req, res) => {
+app.get('/api/history', async (req, res) => {
   try {
     const files = fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.json'));
     const records = files.map(f => {
       const content = fs.readFileSync(path.join(DATA_DIR, f), 'utf-8');
       return JSON.parse(content);
     }).sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    
+    // 自动刷新卡住的任务
+    const pending = records.filter(r => 
+      ['submitted', 'processing'].includes(r.status) && 
+      r.taskId && 
+      !r.taskId.startsWith('sync_')
+    );
+
+    if (pending.length > 0) {
+      console.log(`[History] 正在刷新 ${pending.length} 个进行中的任务状态...`);
+      await Promise.all(pending.map(async (rec) => {
+        try {
+          const fresh = await getTaskStatus(rec.taskId);
+          if (fresh.status !== rec.status || (fresh.imageUrl && fresh.imageUrl !== rec.imageUrl)) {
+            // 更新内存对象
+            rec.status = fresh.status;
+            if (fresh.imageUrl) rec.imageUrl = fresh.imageUrl;
+            if (fresh.error) rec.error = fresh.error;
+            if (fresh.progress) rec.progress = fresh.progress;
+            
+            // 写回文件
+            fs.writeFileSync(path.join(DATA_DIR, `${rec.id}.json`), JSON.stringify(rec, null, 2));
+            console.log(`[History] 任务 ${rec.taskId} 已更新为: ${fresh.status}`);
+          }
+        } catch (e) {
+          console.error(`[History] 刷新任务 ${rec.taskId} 失败: ${e.message}`);
+        }
+      }));
+    }
     
     res.json({ success: true, data: records });
   } catch (err) {

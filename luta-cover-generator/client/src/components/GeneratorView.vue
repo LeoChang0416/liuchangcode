@@ -57,7 +57,7 @@
                 <path d="M21 21l-4.35-4.35"></path>
               </svg>
               <span class="spinner" v-else></span>
-              <span>{{ analyzeLoading ? '分析中...' : '分析内容' }}</span>
+              <span>{{ analyzeLoading ? `分析中 ${analyzeProgress}%` : '分析内容' }}</span>
             </span>
           </button>
         </div>
@@ -872,6 +872,7 @@ const podcastContent = ref('');
 const textareaFocused = ref(false);
 
 const analyzeLoading = ref(false);
+const analyzeProgress = ref(0);
 const generateLoading = ref(false);
 const generateLoadingText = ref('提交中...');
 const evaluateLoading = ref(false);
@@ -996,6 +997,7 @@ async function handleAnalyze() {
   if (!canAnalyze.value || analyzeLoading.value) return;
   
   analyzeLoading.value = true;
+  analyzeProgress.value = 0;
   analysisResult.value = null;
   structureParams.value = null;
   strongLayoutVars.value = null;  // V6 新增
@@ -1094,22 +1096,21 @@ async function handleAnalyze() {
 }
 
 async function pollPromptTaskStatus(taskId) {
-  const maxAttempts = 60;  // 5分钟（60 * 5s）
-  const interval = 5000;
+  const interval = 1500;  // 1.5秒轮询，更快响应进度
 
-  for (let i = 0; i < maxAttempts; i++) {
+  while (true) {
     await new Promise(r => setTimeout(r, interval));
     try {
       const res = await axios.get(`/api/task/${taskId}`);
       const t = res.data.data;
+      if (t?.progress) analyzeProgress.value = t.progress;
       if (t?.status === 'completed') return t;
       if (t?.status === 'failed') throw new Error(t?.error || '分析任务失败');
     } catch (e) {
-      if (i >= maxAttempts - 3) console.error('轮询分析任务失败', e);
+      if (e.message?.includes('失败')) throw e;
+      console.warn('轮询请求异常，继续重试...', e.message);
     }
   }
-
-  throw new Error('分析超时（5分钟），请重试');
 }
 
 async function handleEditWithSuggestions() {
@@ -1348,11 +1349,11 @@ function cancelGeneration() {
 }
 
 async function pollTaskStatus(taskId) {
-  const maxAttempts = 60;  // 60 次
-  const interval = 5000;   // 5 秒，减少请求频率
-  const warningThreshold = 12; // 60秒后显示超时警告
+  const interval = 1500;   // 1.5秒轮询
+  let i = 0;
   
-  for (let i = 0; i < maxAttempts; i++) {
+  while (true) {
+    i++;
     // 检查是否已取消
     if (generateCancelled.value) {
       return { cancelled: true };
@@ -1365,11 +1366,6 @@ async function pollTaskStatus(taskId) {
       return { cancelled: true };
     }
     
-    // 超过阈值显示警告
-    if (i >= warningThreshold && !showTimeoutWarning.value) {
-      showTimeoutWarning.value = true;
-    }
-    
     try {
       const res = await axios.get(`/api/task/${taskId}`);
       const data = res.data.data;
@@ -1378,9 +1374,9 @@ async function pollTaskStatus(taskId) {
       // 更新加载文本显示进度
       if (data.progress > 0) {
         generateLoadingText.value = `生成中... ${data.progress}%`;
-        showTimeoutWarning.value = false; // 有进度就取消警告
+        showTimeoutWarning.value = false;
       } else {
-        const elapsed = Math.floor((i + 1) * interval / 1000);
+        const elapsed = Math.floor(i * interval / 1000);
         generateLoadingText.value = `排队中... ${elapsed}秒`;
       }
       
@@ -1394,20 +1390,15 @@ async function pollTaskStatus(taskId) {
         throw new Error(data.error || '生成失败');
       }
     } catch (e) {
-      // 只有在最后几次尝试时才报错
-      if (i >= maxAttempts - 3) {
-        console.error('查询状态失败', e);
-      }
+      if (e.message?.includes('失败')) throw e;
+      console.warn('轮询请求异常，继续重试...', e.message);
     }
   }
-  
-  throw new Error('生成超时（5分钟），请重试');
 }
 
 async function pollEditTaskStatus(taskId) {
-  const maxAttempts = 60;
-  const interval = 5000;
-  for (let i = 0; i < maxAttempts; i++) {
+  const interval = 2000;
+  while (true) {
     await new Promise(r => setTimeout(r, interval));
     try {
       const res = await axios.get(`/api/task/${taskId}`);
@@ -1416,10 +1407,10 @@ async function pollEditTaskStatus(taskId) {
       if (data.status === 'completed' && data.imageUrl) return data;
       if (data.status === 'failed') throw new Error(data.error || '改图失败');
     } catch (e) {
-      if (i >= maxAttempts - 3) console.error('查询改图状态失败', e);
+      if (e.message?.includes('失败')) throw e;
+      console.warn('轮询改图状态异常，继续重试...', e.message);
     }
   }
-  throw new Error('改图超时（5分钟），请重试');
 }
 
 function copyPrompt() {
