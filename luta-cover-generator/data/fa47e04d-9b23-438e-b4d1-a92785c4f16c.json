@@ -28,7 +28,7 @@
   "colorLogic": "采用高明度的黄色作为主色调，象征启发和温暖。绿色作为辅助色，增强画面的通透感和自然感。少量蓝色用于对比，象征大海的深邃。色彩之间通过径向渐变过渡，中心向外缘扩散，增加画面的流动性和开放感。",
   "prompt": "A square canvas with a minimalist design inspired by Japanese aesthetics. The composition features an open arc and flowing lines extending outward, representing the themes of 'waves and the sea' and 'key and door.' The main shapes include one large open arc and one smaller arc ring, both positioned near the center or slightly off-center. The background should have a high-brightness yellow as the primary color, with green accents and a small amount of blue for contrast. Use a radial gradient from the center to the edges to create a sense of movement and openness. Ensure over 50% of the canvas is left blank to enhance the feeling of lightness and space. No text, symbols, or realistic objects.",
   "negativePrompt": "No text, numbers, punctuation, logos, letters, scriptures, symbols, people, animals, organs, gestures, buildings, natural landscapes, religious objects, lotus, dharma wheel, mandala, zen circle, scriptures, seals, radial symmetrical totems, dense geometric patterns, realistic 3D, photography, metallic or glass realism, strong grain noise, heavy texture, any figurative objects.",
-  "status": "submitted",
+  "status": "pending",
   "createdAt": "2025-12-25T17:01:17.632Z",
   "imageUrl": "https://upload.apimart.ai/f/image/9998233317906784-4f3b9413-43f6-4c5b-ba7e-abb1877f3809-image_task_01KDB7ASMZN7JJJB3VVFYEH0QW_0.jpg",
   "evaluation": {
@@ -52,5 +52,6 @@
     "pass": true,
     "summary": "总体上，这张封面设计简洁、颜色和谐，抽象且具有美学价值，符合通过标准。"
   },
-  "evaluatedAt": "2025-12-25T17:01:45.244Z"
+  "evaluatedAt": "2025-12-25T17:01:45.244Z",
+  "error": "Request failed with status code 401"
 }

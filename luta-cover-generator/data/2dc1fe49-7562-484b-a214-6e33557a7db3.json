@@ -28,6 +28,7 @@
   "colorLogic": "左侧使用暗蓝色，代表迷惑和深邃；右侧使用高明度黄色，象征启发和觉悟。分界线柔和过渡，形成冷暖对比，突出从迷惑到觉悟的主题。整体色调清新通透，符合般若的洞见和澄明。",
   "prompt": "A square canvas divided into two distinct vertical regions. The left region is dark blue, representing confusion, while the right region is high-brightness yellow, symbolizing enlightenment. A soft curved line separates the two regions, illustrating the transition from confusion to clarity. Near the boundary, a geometric shape resembling a key symbolizes the key to wisdom. The composition is minimalistic with ample white space.",
   "negativePrompt": "text, numbers, punctuation, logos, letters, scriptures, symbols, humans, animals, organs, gestures, buildings, natural landscapes, religious artifacts, lotus, dharma wheel, mandala, zen circle, scriptures, seals, radial symmetrical totems, dense geometric patterns, photorealistic 3D, photography, metallic or glass realism, strong grain noise, heavy textures, any figurative objects",
-  "status": "submitted",
-  "createdAt": "2025-12-25T16:36:55.363Z"
+  "status": "pending",
+  "createdAt": "2025-12-25T16:36:55.363Z",
+  "error": "Request failed with status code 401"
 }

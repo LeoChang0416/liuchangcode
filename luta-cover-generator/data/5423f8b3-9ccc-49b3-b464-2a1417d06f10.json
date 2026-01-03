@@ -54,7 +54,7 @@
   },
   "prompt": "[CANVAS]\n- Format: 1:1 square, 1024x1024 pixels\n- Safe margin: 10% padding\n- Whitespace target: 60%\n- Visual weight distribution: The visual weight is balanced between two opposing regions, with the left side being brighter and more superficial, and the right side being deeper and more meaningful.\n\n[TOPOLOGY] — 基于 topologicalLayout\n- Zone count: 2\n- Division method: line\n- Zone ratios: 50:50\n- Physical metaphor visualization: The division between the zones represents the act of 'lifting the veil' to reveal deeper truths.\n\n[RELATIONSHIPS] — 基于 primaryRelationship\n- Primary relationship type: opposing\n- Interaction quality: touching\n- Spatial expression: The two primary shapes are positioned opposite each other, almost touching but not merging, highlighting their contrasting nature.\n\n[RHYTHM] — 基于 rhythmSignature\n- Rhythm type: none\n- Element count: 2\n- Interval/size variation: As there is no rhythm, the elements remain static and unchanging.\n\n[GEOMETRY]\n- Primary shape: Two opposing shapes, one on the left and one on the right, both touching but not merging.\n- Secondary shapes: None\n- Lines: A single line dividing the two zones\n- Edge treatment: Soft edges to convey the degree's preference for softness and smooth transitions.\n- Negative space: Distributed evenly around the two primary shapes, ensuring at least 60% whitespace.\n\n[COLOR]\n- Background: paper-white: #F6F4EE\n- Primary hue: soft-gray: #F0F0F0\n- Secondary hue: warm-beige: #F7F2E8\n- Temperature: Warm and neutral\n- Contrast method: Brightness contrast between the two opposing shapes.\n\n[LIGHTING]\n- Light source: Soft ambient light\n- Glow effects: 1 glow effect around the touching line\n- Ambient atmosphere: A calm and contemplative light feel.\n\n[TEXTURE & MATERIAL] — 度可微调\n- Surface quality: Smooth surface for both primary shapes\n- Edge sharpness: Soft edges\n- Transparency: None\n\n[ATMOSPHERE & MOOD]\n- Japanese aesthetic: Ma\n- Content resonance: The physical metaphor of 'lifting the veil' is represented by the clear division and the opposing nature of the shapes.\n[STYLE]\n- Render style: Clean vector-like digital art\n- No photorealism, no 3D rendering\n- High clarity at 128px thumbnail",
   "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
-  "status": "submitted",
+  "status": "pending",
   "createdAt": "2025-12-26T05:06:10.130Z",
   "imageUrl": "https://upload.apimart.ai/f/image/9998233274412215-70644866-60b5-4ade-969e-c8acdf889e96-image_task_01KDCGT4T96MEMS70SDMNVXV8G_0.jpg",
   "evaluation": {
@@ -81,5 +81,6 @@
     "pass": true,
     "summary": "该封面在结构、颜色、抽象和品质四个维度上均通过了快检，整体设计简洁、高级，符合要求。"
   },
-  "evaluatedAt": "2025-12-26T05:06:49.290Z"
+  "evaluatedAt": "2025-12-26T05:06:49.290Z",
+  "error": "Request failed with status code 401"
 }

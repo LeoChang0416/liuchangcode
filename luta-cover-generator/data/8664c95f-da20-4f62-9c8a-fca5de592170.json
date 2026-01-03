@@ -31,6 +31,7 @@
   "colorLogic": "主色使用高明度的白色和蓝色，白色象征澄明，蓝色象征冷静与坚定。对比色小面积使用高明度黄色，象征智慧和洞见。",
   "prompt": "minimalist abstract, 1:1 aspect ratio, two contrasting geometric areas, one in bright white, one in cool blue, divided by a clean-cut line, high brightness, soft ambient light, blue area contains a high-brightness yellow circle, high contrast, clean edges, serene and balanced, Japanese minimalism, 80% negative space",
   "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
-  "status": "submitted",
-  "createdAt": "2025-12-25T17:23:53.165Z"
+  "status": "pending",
+  "createdAt": "2025-12-25T17:23:53.165Z",
+  "error": "Request failed with status code 401"
 }

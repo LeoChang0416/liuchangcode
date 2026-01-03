@@ -48,7 +48,7 @@
   "colorLogic": "使用纸白色和温暖米色作为背景色，左域渐变为暗色，右域渐变为亮色，象征从逃避到面对的渐进转变。",
   "prompt": "[COMPOSITION] 1:1 square, 10% safe margin, 60% whitespace. dual-zone layout, horizontal axis, anchor at center. [GEOMETRY] 画面由竖直切线分为左右两域，左侧略暗略模糊，右侧更亮更清晰，切面附近有极淡光晕。 [COLOR] Paper-white and warm-beige background with a gradient from dark to light. Brightness contrast. [LIGHTING] One faint glow near the transition line. [ATMOSPHERE] Japanese aesthetic, spiritual tone. [STYLE] Minimal geometric abstraction.",
   "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
-  "status": "submitted",
+  "status": "pending",
   "createdAt": "2025-12-25T19:12:45.562Z",
   "imageUrl": "https://upload.apimart.ai/f/image/9998233310020276-d37600af-da02-4fd3-b33c-6a088bd424d4-image_task_01KDBEVFAAHK6VHBPW5DA51E7R_0.jpg",
   "evaluation": {
@@ -75,5 +75,6 @@
     "pass": true,
     "summary": "该封面在结构、颜色、抽象和品质方面均符合要求，整体表现优秀。"
   },
-  "evaluatedAt": "2025-12-25T19:13:22.802Z"
+  "evaluatedAt": "2025-12-25T19:13:22.802Z",
+  "error": "Request failed with status code 401"
 }

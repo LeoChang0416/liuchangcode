@@ -48,6 +48,7 @@
   "colorLogic": "背景为mist-white以保持中性和宁静。左侧使用较暗的蓝色和绿色，右侧使用较亮的蓝色和绿色，以明暗对比方式突显转变过程。",
   "prompt": "[COMPOSITION] 1:1 square, 10% safe margin, 60% whitespace. dual-zone layout, horizontal axis, anchor at center. [GEOMETRY] 左侧稍暗且模糊，右侧较亮且清晰。中心位置有两层同心圆环，环内包含一个极淡的色域。 [COLOR] 左侧较暗的蓝色和绿色，右侧较亮的蓝色和绿色 on mist-white background. 明暗对比方式。 [LIGHTING] 渐变模糊处理边缘。 [ATMOSPHERE] Japanese aesthetic, spiritual tone. [STYLE] Minimal geometric abstraction.",
   "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
-  "status": "submitted",
-  "createdAt": "2025-12-25T19:11:19.534Z"
+  "status": "pending",
+  "createdAt": "2025-12-25T19:11:19.534Z",
+  "error": "Request failed with status code 401"
 }

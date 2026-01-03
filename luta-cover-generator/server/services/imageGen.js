@@ -4,7 +4,7 @@ import config from '../config.js';
 // ====== Grsai Nano Banana 图片生成 ======
 // 文档: https://grsai.com/zh/dashboard/documents/nano-banana
 async function generateImageGrsai(prompt) {
-  console.log('[generateImage-Grsai] 开始生成, 模型: nano-banana');
+  console.log('[generateImage-Grsai] 开始生成, 模型:', config.IMAGE_MODEL);
   console.log('[generateImage-Grsai] Prompt长度:', prompt.length);
   
   try {
@@ -14,9 +14,11 @@ async function generateImageGrsai(prompt) {
     const response = await axios.post(
       `${apiBase}/v1/draw/nano-banana`,
       {
+        model: config.IMAGE_MODEL || 'nano-banana',
         prompt: prompt,
-        size: '1K',          // 1K 分辨率
-        aspect_ratio: '1:1'  // 正方形
+        aspectRatio: '1:1',
+        imageSize: '1K',
+        webHook: '-1'
       },
       {
         timeout: 120000,
@@ -29,18 +31,12 @@ async function generateImageGrsai(prompt) {
 
     console.log('[generateImage-Grsai] Response:', JSON.stringify(response.data).substring(0, 500));
 
-    // Grsai 异步模式：返回 task_id
-    const data = response.data?.data || response.data;
-    const taskId = data?.task_id || data?.id;
-    if (taskId) {
-      return { taskId, status: 'submitted', provider: 'grsai' };
-    }
-    
-    // 同步模式（如果直接返回图片）
-    const imageUrl = data?.url || data?.image_url || data?.images?.[0]?.url;
-    if (imageUrl) {
-      return { taskId: 'sync_grsai_' + Date.now(), status: 'completed', imageUrl, provider: 'grsai' };
-    }
+    const code = response.data?.code;
+    const msg = response.data?.msg;
+    if (typeof code === 'number' && code !== 0) throw new Error(msg || `Grsai错误码: ${code}`);
+
+    const taskId = response.data?.data?.id;
+    if (taskId) return { taskId, status: 'submitted', provider: 'grsai' };
     
     console.error('[generateImage-Grsai] 无法解析响应:', JSON.stringify(response.data).substring(0, 500));
     throw new Error('Grsai API返回格式错误');
@@ -117,57 +113,89 @@ export async function generateImage(prompt) {
  * 参考图改图（通过 image_urls 传递参考图）
  * 参考文档: https://docs.apimart.ai/en/api-reference/images/gemini-3-pro/generation
  */
-export async function editImage({ imageUrl, prompt }) {
-  console.log('[editImage] 开始参考图改图, 模型:', config.IMAGE_MODEL);
-  console.log('[editImage] 参考图:', imageUrl);
-  console.log('[editImage] Prompt长度:', prompt.length);
-  
-  try {
-    const apiBase = config.APIMART_API_BASE;
-    const apiKey = config.APIMART_API_KEY;
-    const requestBody = {
-      model: config.IMAGE_MODEL,
-      prompt: prompt,
-      size: '1:1',
-      n: 1,
-      resolution: '1K',
-      image_urls: [
-        { url: imageUrl }
-      ]
-    };
-    
-    console.log('[editImage] 请求体:', JSON.stringify(requestBody).substring(0, 500));
-    
-    const response = await axios.post(
-      `${apiBase}/v1/images/generations`,
-      requestBody,
-      {
-        headers: {
-          'Authorization': `Bearer ${apiKey}`,
-          'Content-Type': 'application/json'
-        }
+async function editImageGrsai({ imageUrl, prompt }) {
+  console.log('[editImage-Grsai] 开始参考图改图, 模型:', config.IMAGE_MODEL);
+  console.log('[editImage-Grsai] 参考图:', imageUrl);
+  console.log('[editImage-Grsai] Prompt长度:', prompt.length);
+
+  const apiBase = config.GRSAI_API_BASE;
+  const apiKey = config.GRSAI_API_KEY;
+
+  const response = await axios.post(
+    `${apiBase}/v1/draw/nano-banana`,
+    {
+      model: config.IMAGE_MODEL || 'nano-banana',
+      prompt,
+      urls: [imageUrl],
+      aspectRatio: '1:1',
+      imageSize: '1K',
+      webHook: '-1'
+    },
+    {
+      timeout: 120000,
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json'
       }
-    );
+    }
+  );
 
-    console.log('[editImage] Response:', JSON.stringify(response.data));
+  const code = response.data?.code;
+  const msg = response.data?.msg;
+  if (typeof code === 'number' && code !== 0) throw new Error(msg || `Grsai错误码: ${code}`);
 
-    // 异步模式：返回 task_id
-    const taskId = response.data?.data?.[0]?.task_id;
-    if (taskId) {
-      return { taskId, status: 'submitted' };
+  const taskId = response.data?.data?.id;
+  if (taskId) return { taskId, status: 'submitted', provider: 'grsai' };
+
+  console.error('[editImage-Grsai] 无法解析响应:', JSON.stringify(response.data).substring(0, 500));
+  throw new Error('Grsai改图返回格式错误');
+}
+
+async function editImageApimart({ imageUrl, prompt }) {
+  console.log('[editImage-APIMart] 开始参考图改图, 模型:', config.IMAGE_MODEL);
+  console.log('[editImage-APIMart] 参考图:', imageUrl);
+  console.log('[editImage-APIMart] Prompt长度:', prompt.length);
+
+  const apiBase = config.APIMART_API_BASE;
+  const apiKey = config.APIMART_API_KEY;
+  const requestBody = {
+    model: config.IMAGE_MODEL,
+    prompt: prompt,
+    size: '1:1',
+    n: 1,
+    resolution: '1K',
+    image_urls: [{ url: imageUrl }]
+  };
+
+  const response = await axios.post(
+    `${apiBase}/v1/images/generations`,
+    requestBody,
+    {
+      timeout: 120000,
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json'
+      }
     }
-    
-    // 同步模式
-    const imageData = response.data?.data?.[0];
-    if (imageData?.url) {
-      return { taskId: 'sync_' + Date.now(), status: 'completed', imageUrl: imageData.url };
-    }
-    if (imageData?.b64_json) {
-      return { taskId: 'sync_' + Date.now(), status: 'completed', imageUrl: `data:image/png;base64,${imageData.b64_json}` };
-    }
-    
-    console.error('[editImage] 无法解析响应:', JSON.stringify(response.data).substring(0, 500));
-    throw new Error('改图API返回格式错误');
+  );
+
+  const taskId = response.data?.data?.[0]?.task_id;
+  if (taskId) return { taskId, status: 'submitted', provider: 'apimart' };
+
+  const imageData = response.data?.data?.[0];
+  if (imageData?.url) return { taskId: 'sync_' + Date.now(), status: 'completed', imageUrl: imageData.url, provider: 'apimart' };
+  if (imageData?.b64_json) return { taskId: 'sync_' + Date.now(), status: 'completed', imageUrl: `data:image/png;base64,${imageData.b64_json}`, provider: 'apimart' };
+
+  console.error('[editImage-APIMart] 无法解析响应:', JSON.stringify(response.data).substring(0, 500));
+  throw new Error('APIMart改图返回格式错误');
+}
+
+export async function editImage({ imageUrl, prompt }) {
+  const provider = config.IMAGE_PROVIDER || 'grsai';
+  console.log('[editImage] 使用提供商:', provider);
+  try {
+    if (provider === 'grsai') return await editImageGrsai({ imageUrl, prompt });
+    return await editImageApimart({ imageUrl, prompt });
   } catch (err) {
     console.error('[editImage] 请求失败:', err.response?.data || err.message);
     throw err;
@@ -182,7 +210,7 @@ async function getTaskStatusGrsai(taskId) {
     
     const response = await axios.post(
       `${apiBase}/v1/draw/result`,
-      { task_id: taskId },
+      { id: taskId },
       {
         timeout: 30000,
         headers: {
@@ -194,31 +222,35 @@ async function getTaskStatusGrsai(taskId) {
 
     console.log(`[getTaskStatus-Grsai] 原始响应:`, JSON.stringify(response.data).substring(0, 500));
 
-    const data = response.data?.data || response.data;
-    const status = data?.status || 'processing';
-    const progress = data?.progress || 0;
+    const code = response.data?.code;
+    const msg = response.data?.msg;
+    if (typeof code === 'number' && code !== 0) {
+      return { status: 'failed', imageUrl: null, error: msg || `Grsai错误码: ${code}`, progress: 0, provider: 'grsai' };
+    }
+
+    const data = response.data?.data || {};
+    const remoteStatus = data?.status || 'running';
+    const progress = typeof data?.progress === 'number' ? data.progress : 0;
     
-    console.log(`[getTaskStatus-Grsai] ${taskId.slice(-8)}: ${status} (${progress}%)`);
+    console.log(`[getTaskStatus-Grsai] ${taskId.slice(-8)}: ${remoteStatus} (${progress}%)`);
 
     let imageUrl = null;
-    
-    // 完成时获取图片URL
-    if (status === 'completed' || status === 'success') {
-      imageUrl = data?.url || data?.image_url || data?.images?.[0]?.url || data?.result?.url;
-      if (imageUrl) {
-        console.log('[getTaskStatus-Grsai] Image URL:', imageUrl);
-      }
+
+    if (remoteStatus === 'succeeded') {
+      imageUrl = data?.results?.[0]?.url || null;
+      if (imageUrl) console.log('[getTaskStatus-Grsai] Image URL:', imageUrl);
     }
-    
-    if (status === 'failed' || data?.error) {
-      console.error('[getTaskStatus-Grsai] Task failed:', data?.error || 'Unknown error');
-    }
+
+    const mappedStatus =
+      remoteStatus === 'succeeded' ? 'completed' :
+      remoteStatus === 'failed' ? 'failed' :
+      'processing';
     
     return {
-      status: status === 'success' ? 'completed' : status,
+      status: mappedStatus,
       imageUrl: imageUrl,
-      progress: status === 'completed' || status === 'success' ? 100 : progress,
-      error: data?.error || null,
+      progress: mappedStatus === 'completed' ? 100 : progress,
+      error: data?.failure_reason || data?.error || null,
       provider: 'grsai'
     };
   } catch (err) {

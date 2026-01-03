@@ -28,7 +28,7 @@
   "colorLogic": "主色调为高明度的白色和蓝色，表现出清净和澄明的情感。小面积使用高明度的黄色作为对比色，突出启发的主题。使用渐变效果从中心向外收敛，保持界线的清晰。",
   "prompt": "A square canvas with a clean and minimalistic design. The composition is divided into two areas: the upper area with a dynamic curved line representing waves and the sea, and the lower area with a stable rectangle representing calm and clarity. A vertical line runs through the center, symbolizing the transition from confusion to clarity. The entire layout is orderly and aligned, reflecting the theme of boundaries and discipline. The main colors are high-brightness white and blue, with a small area of high-brightness yellow for contrast. Use a gradient effect from the center outward to maintain clear boundaries.",
   "negativePrompt": "text, numbers, punctuation, logos, letters, scriptures, symbols, people, animals, organs, gestures, buildings, natural landscapes, religious artifacts, lotus, dharma wheel, mandala, zen circle, scriptures, seals, radial symmetrical totems, dense geometric patterns, realistic 3D, photography, metallic glass realism, strong grain noise, heavy texture, any concrete objects",
-  "status": "submitted",
+  "status": "pending",
   "createdAt": "2025-12-25T16:59:47.226Z",
   "imageUrl": "https://upload.apimart.ai/f/image/9998233317997641-ecda1d1c-329d-465a-953d-e99527cbd1f8-image_task_01KDB780XPKQQWD9PKQ7YFCMN1_0.jpg",
   "evaluation": {
@@ -52,5 +52,6 @@
     "pass": true,
     "summary": "封面设计简洁，颜色搭配和谐，抽象程度高，符合日本美学，整体质量优秀。"
   },
-  "evaluatedAt": "2025-12-25T17:00:23.830Z"
+  "evaluatedAt": "2025-12-25T17:00:23.830Z",
+  "error": "Request failed with status code 401"
 }

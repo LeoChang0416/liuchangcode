@@ -31,7 +31,7 @@
   "colorLogic": "采用白色和蓝色为主色调，白色为背景，较大方形为淡蓝色，较小方形为明黄色，形成强烈的明度对比与冷暖对比。两域的颜色通过轻微渐变进行过渡，体现切分与穿透感。",
   "prompt": "1:1 square, 10% safe margin, >=50% whitespace, <=3 shapes, <=2 lines, <=2 gradients/glows. Background: high-brightness paper white. Two abstract square shapes, one larger in light blue, one smaller in bright yellow, positioned centrally with clear offset. Strong light-dark and warm-cool contrast. Subtle gradient transitions within shapes. Japanese minimalism (Ma), clean, serene, balanced.",
   "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
-  "status": "submitted",
+  "status": "pending",
   "createdAt": "2025-12-25T17:41:24.855Z",
   "imageUrl": "https://upload.apimart.ai/f/image/9998233315499121-d1a64a7d-9d42-4864-9fcd-8b0a11f75dc7-image_task_01KDB9M8WEEVY11Z8JBWRA77YZ_0.jpg",
   "evaluation": {
@@ -58,5 +58,6 @@
     "pass": true,
     "summary": "封面设计简洁，颜色清爽，符合日本美学的高级克制和空间感要求。"
   },
-  "evaluatedAt": "2025-12-25T17:43:56.750Z"
+  "evaluatedAt": "2025-12-25T17:43:56.750Z",
+  "error": "Request failed with status code 401"
 }

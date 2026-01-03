@@ -195,44 +195,44 @@ export const STYLE_DNA = `
 - Symmetrical, predictable, rigid compositions
 `;
 
-// 背景色号参考（V3：支持深浅色，由内容决定）
+// 背景色号参考（V4：色温与材质绑定版）
 export const BACKGROUND_COLORS = {
   // 浅色系（明亮、开放、轻盈）
   light: [
-    { name: 'paper-white', hex: '#F6F3EA', temp: 'warm', mood: '温暖纸质' },
-    { name: 'mist-white', hex: '#F2F5F6', temp: 'cool', mood: '清凉雾白' },
-    { name: 'warm-beige', hex: '#F7F0E1', temp: 'warm', mood: '暖米色' },
-    { name: 'soft-gray', hex: '#F0F0F0', temp: 'neutral', mood: '柔和灰' },
-    { name: 'cream', hex: '#FFFEF1', temp: 'warm', mood: '奶油白' },
-    { name: 'cool-mist', hex: '#F3F6FA', temp: 'cool', mood: '冷雾蓝' },
-    { name: 'ivory', hex: '#FFFFE9', temp: 'warm', mood: '象牙白' },
-    { name: 'snow', hex: '#FFF8F8', temp: 'neutral', mood: '雪白' },
-    { name: 'pale-sage', hex: '#E8F0E8', temp: 'cool', mood: '淡鼠尾草' },
-    { name: 'blush-pink', hex: '#FFF0F0', temp: 'warm', mood: '腮红粉' }
+    { name: 'paper-white', hex: '#F6F3EA', temp: 'warm', texture: 'fine washi paper', mood: '温暖纸质' },
+    { name: 'mist-white', hex: '#F2F5F6', temp: 'cool', texture: 'smooth ceramic', mood: '清凉雾白' },
+    { name: 'warm-beige', hex: '#F7F0E1', temp: 'warm', texture: 'rough handmade paper', mood: '暖米色' },
+    { name: 'soft-gray', hex: '#F0F0F0', temp: 'neutral', texture: 'matte concrete', mood: '柔和灰' },
+    { name: 'cream', hex: '#FFFEF1', temp: 'warm', texture: 'smooth silk', mood: '奶油白' },
+    { name: 'cool-mist', hex: '#F3F6FA', temp: 'cool', texture: 'frosted glass', mood: '冷雾蓝' },
+    { name: 'ivory', hex: '#FFFFE9', temp: 'warm', texture: 'linen fabric', mood: '象牙白' },
+    { name: 'snow', hex: '#FFF8F8', temp: 'neutral', texture: 'powdery snow', mood: '雪白' },
+    { name: 'pale-sage', hex: '#E8F0E8', temp: 'cool', texture: 'dried leaf', mood: '淡鼠尾草' },
+    { name: 'blush-pink', hex: '#FFF0F0', temp: 'warm', texture: 'petal texture', mood: '腮红粉' }
   ],
   // 中性色系（平衡、稳定、过渡）
   medium: [
-    { name: 'warm-sand', hex: '#D4C4A8', temp: 'warm', mood: '暖沙色' },
-    { name: 'cool-slate', hex: '#B8C4CC', temp: 'cool', mood: '石板蓝灰' },
-    { name: 'dusty-rose', hex: '#D4B8B8', temp: 'warm', mood: '烟玫瑰' },
-    { name: 'sage-green', hex: '#A8C4A8', temp: 'cool', mood: '鼠尾草绿' },
-    { name: 'lavender-gray', hex: '#C4C0D0', temp: 'cool', mood: '薰衣草灰' },
-    { name: 'terracotta-light', hex: '#D4A890', temp: 'warm', mood: '浅赤陶' },
-    { name: 'steel-blue', hex: '#A0B0C0', temp: 'cool', mood: '钢蓝' },
-    { name: 'taupe', hex: '#C0B0A0', temp: 'neutral', mood: '灰褐色' }
+    { name: 'warm-sand', hex: '#D4C4A8', temp: 'warm', texture: 'coarse sand', mood: '暖沙色' },
+    { name: 'cool-slate', hex: '#B8C4CC', temp: 'cool', texture: 'slate stone', mood: '石板蓝灰' },
+    { name: 'dusty-rose', hex: '#D4B8B8', temp: 'warm', texture: 'velvet', mood: '烟玫瑰' },
+    { name: 'sage-green', hex: '#A8C4A8', temp: 'cool', texture: 'mossy surface', mood: '鼠尾草绿' },
+    { name: 'lavender-gray', hex: '#C4C0D0', temp: 'cool', texture: 'hazy mist', mood: '薰衣草灰' },
+    { name: 'terracotta-light', hex: '#D4A890', temp: 'warm', texture: 'unglazed clay', mood: '浅赤陶' },
+    { name: 'steel-blue', hex: '#A0B0C0', temp: 'cool', texture: 'brushed metal', mood: '钢蓝' },
+    { name: 'taupe', hex: '#C0B0A0', temp: 'neutral', texture: 'woven wool', mood: '灰褐色' }
   ],
   // 深色系（沉稳、深邃、内敛）
   dark: [
-    { name: 'charcoal', hex: '#2C3E50', temp: 'cool', mood: '木炭灰' },
-    { name: 'deep-navy', hex: '#1A2634', temp: 'cool', mood: '深海蓝' },
-    { name: 'midnight-blue', hex: '#0D1B2A', temp: 'cool', mood: '午夜蓝' },
-    { name: 'dark-forest', hex: '#1B2E1B', temp: 'cool', mood: '暗森林' },
-    { name: 'deep-purple', hex: '#2A1B3D', temp: 'cool', mood: '深紫' },
-    { name: 'warm-espresso', hex: '#3C2415', temp: 'warm', mood: '浓咖啡' },
-    { name: 'dark-slate', hex: '#2F3640', temp: 'neutral', mood: '暗石板' },
-    { name: 'black-ink', hex: '#0A0A0A', temp: 'neutral', mood: '墨黑' },
-    { name: 'deep-burgundy', hex: '#3D1C24', temp: 'warm', mood: '深酒红' },
-    { name: 'dark-olive', hex: '#2C3022', temp: 'warm', mood: '暗橄榄' }
+    { name: 'charcoal', hex: '#2C3E50', temp: 'cool', texture: 'charcoal sketch', mood: '木炭灰' },
+    { name: 'deep-navy', hex: '#1A2634', temp: 'cool', texture: 'deep ocean', mood: '深海蓝' },
+    { name: 'midnight-blue', hex: '#0D1B2A', temp: 'cool', texture: 'starless sky', mood: '午夜蓝' },
+    { name: 'dark-forest', hex: '#1B2E1B', temp: 'cool', texture: 'dense foliage', mood: '暗森林' },
+    { name: 'deep-purple', hex: '#2A1B3D', temp: 'cool', texture: 'royal velvet', mood: '深紫' },
+    { name: 'warm-espresso', hex: '#3C2415', temp: 'warm', texture: 'coffee grounds', mood: '浓咖啡' },
+    { name: 'dark-slate', hex: '#2F3640', temp: 'neutral', texture: 'wet stone', mood: '暗石板' },
+    { name: 'black-ink', hex: '#0A0A0A', temp: 'neutral', texture: 'india ink', mood: '墨黑' },
+    { name: 'deep-burgundy', hex: '#3D1C24', temp: 'warm', texture: 'aged leather', mood: '深酒红' },
+    { name: 'dark-olive', hex: '#2C3022', temp: 'warm', texture: 'earth soil', mood: '暗橄榄' }
   ]
 };
 
@@ -299,9 +299,9 @@ export const FIVE_COLORS = {
 };
 
 // ========================================
-// 每个度的颜色策略（V2 修订版）
+// 每个度的颜色策略（V4：引入氛围定式）
 // ========================================
-// V3：移除固定背景色约束，由内容分析决定
+// V4：引入 bgTemp（色温锁）、bgMaterial（材质暗示）、contrastPreference（对比偏好）
 export const DEGREE_COLOR_RULES = {
   dana: {
     name: '布施',
@@ -313,7 +313,10 @@ export const DEGREE_COLOR_RULES = {
     accentAreaRange: [2, 6],
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['area', 'brightness', 'warm-cool'],
-    allowedBgTypes: ['light', 'medium', 'dark'], // V3: 所有背景类型都允许
+    allowedBgTypes: ['light', 'medium', 'dark'],
+    bgTemp: ['warm', 'neutral'], // 必须暖或中性
+    bgMaterial: 'matte washi paper, organic fabric, warm clay', // 材质暗示
+    contrastPreference: 'gentle', // 对比偏好
     rule: '高明度黄/绿为主，蓝/红只作"提示"，避免抢戏',
     palette: { main: 'butter', mainHex: '#FFF5D3', aux1: 'celadon', aux1Hex: '#D4EDB7', aux2: 'ice-blue', aux2Hex: '#DFF0FC' }
   },
@@ -328,6 +331,9 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [8, 12],
     allowedContrastMethods: ['brightness', 'area', 'none'],
     allowedBgTypes: ['light', 'medium', 'dark'],
+    bgTemp: ['cool', 'neutral'], // 必须冷或中性
+    bgMaterial: 'smooth stone, ceramic, clean minimal surface',
+    contrastPreference: 'crisp',
     rule: '以冷白/淡蓝/淡绿建立秩序；红/黄仅用于"警醒点"',
     palette: { main: 'moon-white', mainHex: '#ECF2F8', aux1: 'ice-blue', aux1Hex: '#DFF0FC', aux2: 'eucalyptus', aux2Hex: '#D8F2F1' }
   },
@@ -342,6 +348,9 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [12, 18],
     allowedContrastMethods: ['layering', 'brightness', 'warm-cool', 'none'],
     allowedBgTypes: ['light', 'medium', 'dark'],
+    bgTemp: ['warm', 'neutral'], // 偏暖/中性
+    bgMaterial: 'weathered paper, layered veil, earth texture',
+    contrastPreference: 'layered',
     rule: '以留白与雾化叠层承受刺激；引入"温和暖黄"作为稳定中轴',
     palette: { main: 'pearl', mainHex: '#F7F9FA', aux1: 'mint-mist', aux1Hex: '#E2F5E4', aux2: 'warm-amber', aux2Hex: '#FFDF91' }
   },
@@ -356,6 +365,9 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['brightness', 'area', 'warm-cool'],
     allowedBgTypes: ['light', 'medium', 'dark'],
+    bgTemp: ['warm', 'cool'], // 可冷可暖（强调对比）
+    bgMaterial: 'high grain noise, bold matte surface, kinetic blur',
+    contrastPreference: 'strong',
     rule: '暖色主导但不压；用冷色作"呼吸口"，保持轻盈',
     palette: { main: 'honey-light', mainHex: '#FFD24A', aux1: 'warm-rose', aux1Hex: '#F8A0CB', aux2: 'serene-blue', aux2Hex: '#92DBFC' }
   },
@@ -370,6 +382,9 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['brightness', 'area', 'warm-cool', 'none'],
     allowedBgTypes: ['light', 'medium', 'dark'],
+    bgTemp: ['cool', 'neutral'], // 偏冷/中性
+    bgMaterial: 'frosted glass, mist, still water surface',
+    contrastPreference: 'subtle',
     rule: '仍以留白与微差为核心，加入明亮暖黄作为"内在灯火"',
     palette: { main: 'cloud-white', mainHex: '#FAFAFA', aux1: 'clear-cyan', aux1Hex: '#D4F6FA', aux2: 'sunlight', aux2Hex: '#FFE391' }
   },
@@ -384,18 +399,21 @@ export const DEGREE_COLOR_RULES = {
     accentOpacityRange: [10, 15],
     allowedContrastMethods: ['warm-cool', 'brightness', 'area'],
     allowedBgTypes: ['light', 'medium', 'dark'],
+    bgTemp: ['cool', 'neutral'], // 极冷/中性（锐利）
+    bgMaterial: 'dark void, optical glass, geometric grid, sharp cut',
+    contrastPreference: 'sharp',
     rule: '保留冷暖对照但降低频率；点醒色更小更淡，避免"聪明而躁"',
     palette: { main: 'moon-white', mainHex: '#ECF2F8', aux1: 'clear-cyan', aux1Hex: '#D4F6FA', aux2: 'cream-yellow', aux2Hex: '#FFF6DB' }
   }
 };
 
-function pickOne(arr) {
+function pickOne(arr, rng = Math.random) {
   if (!arr || arr.length === 0) return null;
-  return arr[Math.floor(Math.random() * arr.length)];
+  return arr[Math.floor(rng() * arr.length)];
 }
 
-function randFloat(min, max) {
-  return min + Math.random() * (max - min);
+function randFloat(min, max, rng = Math.random) {
+  return min + rng() * (max - min);
 }
 
 function clamp(n, min, max) {
@@ -403,7 +421,7 @@ function clamp(n, min, max) {
 }
 
 // 随机选择颜色变体的工具函数
-export function selectColorVariant(hueName, minBrightness = 80, maxSaturation = 40) {
+export function selectColorVariant(hueName, minBrightness = 80, maxSaturation = 40, rng = Math.random) {
   const hue = FIVE_COLORS[hueName];
   if (!hue) return null;
   
@@ -412,35 +430,59 @@ export function selectColorVariant(hueName, minBrightness = 80, maxSaturation = 
   );
   
   if (eligible.length === 0) return hue.variants[0];
-  return eligible[Math.floor(Math.random() * eligible.length)];
+  return eligible[Math.floor(rng() * eligible.length)];
 }
 
-// 根据度生成随机配色方案（V3：背景色由内容决定，不在此处固定）
-export function generateColorScheme(degreeKey) {
+function seedFromString(input) {
+  let h = 2166136261;
+  const s = String(input ?? '');
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+function mulberry32(seed) {
+  let t = seed >>> 0;
+  return function () {
+    t += 0x6D2B79F5;
+    let x = Math.imul(t ^ (t >>> 15), 1 | t);
+    x ^= x + Math.imul(x ^ (x >>> 7), 61 | x);
+    return ((x ^ (x >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+export function makeDeterministicRng(seedKey) {
+  return mulberry32(seedFromString(seedKey));
+}
+
+// 根据度生成配色方案（支持确定性 RNG：用于“重新生成”保持一致）
+export function generateColorScheme(degreeKey, rng = Math.random) {
   const rule = DEGREE_COLOR_RULES[degreeKey];
   if (!rule) return null;
   
   // 随机选择主色相
-  const primaryHue = pickOne(rule.primaryHues);
-  const primaryVariant = selectColorVariant(primaryHue, rule.brightnessMin, rule.saturationMax);
+  const primaryHue = pickOne(rule.primaryHues, rng);
+  const primaryVariant = selectColorVariant(primaryHue, rule.brightnessMin, rule.saturationMax, rng);
   
   // 对比策略（增强变化维度）
-  const contrastMethod = pickOne(rule.allowedContrastMethods || ['brightness', 'area', 'warm-cool', 'layering', 'none']);
+  const contrastMethod = pickOne(rule.allowedContrastMethods || ['brightness', 'area', 'warm-cool', 'layering', 'none'], rng);
   
   // 是否使用对比色
   const accentAllowed = contrastMethod !== 'none' && Array.isArray(rule.accentHues) && rule.accentHues.length > 0;
   const accentProbability = typeof rule.accentProbability === 'number' ? clamp(rule.accentProbability, 0, 1) : 0.5;
-  const useAccent = accentAllowed && Math.random() < accentProbability;
-  const accentHue = useAccent ? pickOne(rule.accentHues) : null;
+  const useAccent = accentAllowed && rng() < accentProbability;
+  const accentHue = useAccent ? pickOne(rule.accentHues, rng) : null;
   const accentVariant = useAccent && accentHue
-    ? selectColorVariant(accentHue, rule.brightnessMin + 5, rule.saturationMax - 5)
+    ? selectColorVariant(accentHue, rule.brightnessMin + 5, rule.saturationMax - 5, rng)
     : null;
 
   // 点缀强度
   const areaRange = rule.accentAreaRange || [2, 10];
   const opacityRange = rule.accentOpacityRange || [12, 22];
-  const accentAreaPct = accentVariant ? Math.round(randFloat(areaRange[0], areaRange[1])) : 0;
-  const accentOpacityPct = accentVariant ? Math.round(randFloat(opacityRange[0], opacityRange[1])) : 0;
+  const accentAreaPct = accentVariant ? Math.round(randFloat(areaRange[0], areaRange[1], rng)) : 0;
+  const accentOpacityPct = accentVariant ? Math.round(randFloat(opacityRange[0], opacityRange[1], rng)) : 0;
   
   // V3：返回可用的背景色选项，让 LLM 根据内容选择
   return {
@@ -666,7 +708,8 @@ export const ANALYZE_SYSTEM = `你是一个"播客→独特视觉意象"转换�
 4. ✅ antiTemplateCheck.isLeftRightDual 是否为 false？
 5. ✅ 这个骨架是否真正反映了播客的独特意象？
 
-**重要：所有输出内容必须使用中文，不要使用英文。只输出JSON。**`;
+**重要：除 prompt 字段必须为英文外，其余字段内容必须使用中文。只输出JSON。**
+**prompt 字段额外要求**：必须是英文，且必须包含这些标签段落（原样输出标签名）：[CANVAS], [TOPOLOGY], [RELATIONSHIPS], [RHYTHM], [GEOMETRY], [COLOR], [LIGHTING], [TEXTURE & MATERIAL], [ATMOSPHERE & MOOD], [ARTISTIC QUALITY], [STYLE]。`;
 
 // ========================================
 // 自动选度（V2：增强区分度，防止般若成为默认）
@@ -889,12 +932,13 @@ physicalMetaphor 应该在画面中有直观的视觉呼应。
 
 [COLOR]
 - Background type: {light/medium/dark，来自 backgroundDecision.type}
-- Background color: {具体色名和色号，来自 backgroundDecision.suggestedColors}
+- Background color: {具体色名和色号}
+- Background temperature: {degree rule: bgTemp}
 - Background mood: {backgroundDecision.moodMatch}
 - Primary hue: {色名、明度、色号范围}
 - Secondary hue: {如有}
 - Temperature: {度影响的色温}
-- Contrast method: {对比方式及具体的构图体现}
+- Contrast strategy: {degree rule: contrastPreference}
 - Accent usage: {如有对比色，描述其具体形态和占比}
 - Dark mode adaptation: {如果是深色背景，描述主形体如何在暗色上突出}
 
@@ -903,7 +947,8 @@ physicalMetaphor 应该在画面中有直观的视觉呼应。
 - Glow effects: {数量、位置、颜色}
 - Ambient atmosphere: {整体光感}
 
-[TEXTURE & MATERIAL] — 度可微调
+[TEXTURE & MATERIAL] — 必须符合度的材质暗示
+- Material hint: {degree rule: bgMaterial}
 - Surface quality: {度影响的材质}
 - Edge sharpness: {度影响的边缘}
 - Transparency: {如有}

@@ -31,6 +31,7 @@
   "colorLogic": "使用高明度的白色和蓝色作为主色，强调清醒和通透的气质。背景采用paper-white (#F6F4EE)，并在切面附近使用淡黄色（#FFF8E7）作为对比，引导观者注意力。",
   "prompt": "[COMPOSITION] 1:1 square, 10% safe margin, 55% whitespace, 2 shapes, 1 line. [GEOMETRY] A single geometric shape is cut into two parts by a clean edge and shifted apart. The cut is clean and not sharp, with a stable and centered composition. [COLOR] High-brightness white and blue on a paper-white (#F6F4EE) background. Light yellow (#FFF8E7) accent near the cut line. [LIGHTING] Soft diffuse ambient, no gradient or glow. [ATMOSPHERE] Ma, Kanso, Shibui. [STYLE] Minimal geometric abstraction, no concrete objects, pure shapes.",
   "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
-  "status": "submitted",
-  "createdAt": "2025-12-25T18:48:43.013Z"
+  "status": "pending",
+  "createdAt": "2025-12-25T18:48:43.013Z",
+  "error": "Request failed with status code 401"
 }

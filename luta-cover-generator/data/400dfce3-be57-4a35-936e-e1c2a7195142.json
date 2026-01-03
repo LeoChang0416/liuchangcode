@@ -31,7 +31,7 @@
   "colorLogic": "主色为亮红色，象征进取和热忱。对比色为小面积的明亮蓝色，突出冷静和理性。背景为高亮的浅灰色，营造清醒的氛围。",
   "prompt": "Minimalist abstract geometric composition, three ascending rectangles and two horizontal lines representing steps and progression. Rectangles arranged from lower left to upper right, increasing in size. Lines intersect rectangles horizontally at the center. Primary color bright red, small area of bright blue for contrast. Background high-brightness light gray, creating an awakening atmosphere. Soft, diffuse ambient light, no harsh shadows.",
   "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
-  "status": "submitted",
+  "status": "pending",
   "createdAt": "2025-12-25T17:19:07.860Z",
   "imageUrl": "https://upload.apimart.ai/f/image/9998233316837763-07ad0fff-c5b0-4abd-8761-8aaceeb2dc3f-image_task_01KDB8BDKW1JBQH3XNB1C1AT03_0.jpg",
   "evaluation": {
@@ -59,5 +59,6 @@
     "pass": true,
     "summary": "这张播客封面图片符合现代艺术封面的标准，具有极简的几何抽象风格，留白足够，画面干净，构图平衡。"
   },
-  "evaluatedAt": "2025-12-25T17:19:33.610Z"
+  "evaluatedAt": "2025-12-25T17:19:33.610Z",
+  "error": "Request failed with status code 401"
 }

@@ -31,7 +31,7 @@
   "colorLogic": "背景采用 soft-gray (#F0F0F0)，实域使用高亮度低饱和度的蓝色 (#E3F2FD)，虚域则使用半透明的暖黄色 (#FFE5B4)，以冷暖对比突出主题。",
   "prompt": "[COMPOSITION] 1:1 square, 10% safe margin, 55% whitespace, 2 shapes, 0 lines.\n[GEOMETRY] One solid and one semi-transparent domain contrast. The solid domain symbolizes the light and solidity of the mind, while the semi-transparent domain symbolizes the broken shackles and translucent clarity.\n[COLOR] High-brightness, low-saturation blue (#E3F2FD) and semi-transparent warm yellow (#FFE5B4) on soft-gray (#F0F0F0) background.\n[LIGHTING] Soft diffuse ambient, subtle gradient between domains.\n[ATMOSPHERE] Ma, Kanso, Shibui.\n[STYLE] Minimal geometric abstraction, no concrete objects, pure shapes.",
   "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
-  "status": "submitted",
+  "status": "pending",
   "createdAt": "2025-12-25T18:08:14.169Z",
   "imageUrl": "https://upload.apimart.ai/f/image/9998233313886728-13859703-26d6-4732-b3ea-9e650b4617ef-image_task_01KDBB5FFRNNNNX8XMY7XTWJBW_0.jpg",
   "evaluation": {
@@ -58,5 +58,6 @@
     "pass": true,
     "summary": "封面设计在结构、颜色、抽象和美学方面均符合要求，整体感觉简洁高级。"
   },
-  "evaluatedAt": "2025-12-25T18:10:05.626Z"
+  "evaluatedAt": "2025-12-25T18:10:05.626Z",
+  "error": "Request failed with status code 401"
 }

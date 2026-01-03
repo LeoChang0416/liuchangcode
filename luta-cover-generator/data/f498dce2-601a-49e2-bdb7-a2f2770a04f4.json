@@ -31,7 +31,7 @@
   "colorLogic": "使用高亮度低饱和度的蓝色和绿色作为主色调，背景为软灰色，传达清醒与坚定的情感基调。小面积的暖黄色作为点睛之笔，在保持整体通透的同时增加视觉焦点。",
   "prompt": "[COMPOSITION] 1:1 square, 10% safe margin, 55% whitespace, 2 shapes, 0 lines.\n[GEOMETRY] Two rounded rectangles facing each other but not colliding, forming a buffer zone in the middle.\n[COLOR] High brightness, low saturation blue and green on soft-gray (#F0F0F0) background. A small accent of warm yellow.\n[LIGHTING] Soft diffuse ambient, subtle gradient between the two rounded rectangles.\n[ATMOSPHERE] Ma, Kanso, Shibui.\n[STYLE] Minimal geometric abstraction, no concrete objects, pure shapes.",
   "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
-  "status": "submitted",
+  "status": "pending",
   "createdAt": "2025-12-25T18:41:11.029Z",
   "imageUrl": "https://upload.apimart.ai/f/image/9998233311914322-fa44d880-2e09-4e56-a98b-0510d72c07c7-image_task_01KDBD1NNDZJ9Q59CH82EYHSWZ_0.jpg",
   "evaluation": {
@@ -59,5 +59,6 @@
     "pass": true,
     "summary": "该封面在结构、颜色、抽象和美学维度上均符合要求，整体评分较高，适合作为播客封面。"
   },
-  "evaluatedAt": "2025-12-25T18:42:28.660Z"
+  "evaluatedAt": "2025-12-25T18:42:28.660Z",
+  "error": "Request failed with status code 401"
 }

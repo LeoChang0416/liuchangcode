@@ -1,6 +1,6 @@
 import axios from 'axios';
 import config from '../config.js';
-import { DEGREES, ANALYZE_SYSTEM, DEGREE_SELECT_SYSTEM, PROMPT_SYSTEM, EDIT_PROMPT_SYSTEM, HARD_NEGATIVES, STYLE_DNA, BACKGROUND_COLORS, PRIMARY_COLOR_EXAMPLES, FIVE_COLORS, DEGREE_COLOR_RULES, generateColorScheme } from '../prompts/system.js';
+import { DEGREES, ANALYZE_SYSTEM, DEGREE_SELECT_SYSTEM, PROMPT_SYSTEM, EDIT_PROMPT_SYSTEM, HARD_NEGATIVES, STYLE_DNA, BACKGROUND_COLORS, PRIMARY_COLOR_EXAMPLES, FIVE_COLORS, DEGREE_COLOR_RULES, generateColorScheme, makeDeterministicRng } from '../prompts/system.js';
 
 const RECENT_COLOR_KEYS_BY_DEGREE = new Map();
 
@@ -328,7 +328,42 @@ function safeJsonParse(jsonStr) {
         let fixed = sanitizeJsonString(jsonStr);
         // 移除尾随逗号
         fixed = fixed.replace(/,\s*}/g, '}').replace(/,\s*]/g, ']');
-        return JSON.parse(fixed);
+        // 处理：JSON 后面夹带了非空白文本 / 多个 JSON 串联
+        try {
+          const lastBrace = fixed.lastIndexOf('}');
+          if (lastBrace >= 0) fixed = fixed.slice(0, lastBrace + 1);
+          return JSON.parse(fixed);
+        } catch (e4) {
+          // 尝试：提取第一个完整的顶层 JSON 对象（忽略字符串内的大括号）
+          let inString = false;
+          let escape = false;
+          let depth = 0;
+          for (let i = 0; i < fixed.length; i++) {
+            const ch = fixed[i];
+            if (escape) {
+              escape = false;
+              continue;
+            }
+            if (ch === '\\\\') {
+              if (inString) escape = true;
+              continue;
+            }
+            if (ch === '\"') {
+              inString = !inString;
+              continue;
+            }
+            if (inString) continue;
+            if (ch === '{') depth++;
+            if (ch === '}') {
+              depth--;
+              if (depth === 0) {
+                const cand = fixed.slice(0, i + 1);
+                return JSON.parse(cand);
+              }
+            }
+          }
+          throw e4;
+        }
       } catch (e3) {
         console.error('[safeJsonParse] All attempts failed:', e3.message);
         console.error('[safeJsonParse] First 500 chars:', jsonStr.substring(0, 500));
@@ -375,21 +410,34 @@ export async function analyzeContent(podcastContent, options = {}) {
   console.log('[analyzeContent] 开始分析，preferredModelId:', preferredModelId || '(default)');
   
   try {
-    const content = await callChatCompletions({
-      stage: '内容分析',
-      temperature: 0.5,
-      preferredModelId,
-      messages: [
-        { role: 'system', content: ANALYZE_SYSTEM },
-        { role: 'user', content: `请分析以下播客内容，输出语义提取和结构参数：\n\n${podcastContent}` }
-      ]
-    });
-    
-    const jsonStr = extractJsonFromText(content);
-    if (!jsonStr) throw new Error('内容分析返回格式错误: 未找到JSON');
-    
+    const userMsg = `请分析以下播客内容，输出语义提取和结构参数：\n\n${podcastContent}`;
+    const tryAnalyze = async (temperature, extraRuleText = '') => {
+      const content = await callChatCompletions({
+        stage: '内容分析',
+        temperature,
+        preferredModelId,
+        messages: [
+          { role: 'system', content: ANALYZE_SYSTEM },
+          { role: 'user', content: `${userMsg}${extraRuleText ? `\n\n${extraRuleText}` : ''}` }
+        ]
+      });
+      const jsonStr = extractJsonFromText(content);
+      if (!jsonStr) throw new Error('内容分析返回格式错误: 未找到JSON');
+      return safeJsonParse(jsonStr);
+    };
+
+    let parsed;
+    try {
+      parsed = await tryAnalyze(0.5);
+    } catch (e) {
+      parsed = await tryAnalyze(
+        0,
+        '⚠️ 你上一轮输出无法被JSON解析。现在只输出一个严格合法的JSON对象（以 { 开头，以 } 结尾），不要输出任何其他字符，不要使用```代码块；字符串内容里不要出现未转义的双引号。'
+      );
+    }
+
     console.log('[analyzeContent] 解析成功');
-    return safeJsonParse(jsonStr);
+    return parsed;
   } catch (err) {
     console.error('[analyzeContent] 请求失败:', err.message);
     throw err;
@@ -399,18 +447,31 @@ export async function analyzeContent(podcastContent, options = {}) {
 export async function selectDegree(podcastContent, options = {}) {
   const preferredModelId = options?.textModelId || '';
   try {
-    const content = await callChatCompletions({
-      stage: '自动选度',
-      temperature: 0.3, // 略微提高temperature增加多样性
-      preferredModelId,
-      messages: [
-        { role: 'system', content: DEGREE_SELECT_SYSTEM },
-        { role: 'user', content: `请基于以下播客文本进行选度：\n\n${podcastContent}` }
-      ]
-    });
-    const jsonStr = extractJsonFromText(content);
-    if (!jsonStr) throw new Error('选度返回格式错误: 未找到JSON');
-    const result = safeJsonParse(jsonStr);
+    const userMsg = `请基于以下播客文本进行选度：\n\n${podcastContent}`;
+    const trySelect = async (temperature, extraRuleText = '') => {
+      const content = await callChatCompletions({
+        stage: '自动选度',
+        temperature,
+        preferredModelId,
+        messages: [
+          { role: 'system', content: DEGREE_SELECT_SYSTEM },
+          { role: 'user', content: `${userMsg}${extraRuleText ? `\n\n${extraRuleText}` : ''}` }
+        ]
+      });
+      const jsonStr = extractJsonFromText(content);
+      if (!jsonStr) throw new Error('选度返回格式错误: 未找到JSON');
+      return safeJsonParse(jsonStr);
+    };
+
+    let result;
+    try {
+      result = await trySelect(0.2);
+    } catch (e) {
+      result = await trySelect(
+        0,
+        '⚠️ 你上一轮输出无法被JSON解析。现在只输出一个严格合法的JSON对象（以 { 开头，以 } 结尾），不要输出任何其他字符，不要使用```代码块；字符串内容里不要出现未转义的双引号。'
+      );
+    }
 
     const degreeKey = result?.degreeKey;
     const confidence = Number(result?.confidence);
@@ -477,24 +538,36 @@ export async function buildEditPrompt({ degreeKey, originalPrompt, analysis, ima
 ## 要求
 只输出改动点，不要描述保留项。结尾加 "Keep everything else unchanged."`;
 
-  const content = await callChatCompletions({
-    stage: '改图提示词',
-    temperature: 0.5,
-    preferredModelId: textModelId || '',
-    messages: [
-      { role: 'system', content: EDIT_PROMPT_SYSTEM },
-      { role: 'user', content: userMessage }
-    ]
-  });
+  const preferredModelId = textModelId || '';
+  const tryEdit = async (temperature, extraRuleText = '') => {
+    const content = await callChatCompletions({
+      stage: '改图提示词',
+      temperature,
+      preferredModelId,
+      messages: [
+        { role: 'system', content: EDIT_PROMPT_SYSTEM },
+        { role: 'user', content: `${userMessage}${extraRuleText ? `\n\n${extraRuleText}` : ''}` }
+      ]
+    });
+    const jsonStr = extractJsonFromText(content);
+    if (!jsonStr) throw new Error('改图提示词返回格式错误: 未找到JSON');
+    return safeJsonParse(jsonStr);
+  };
 
-  const jsonStr = extractJsonFromText(content);
-  if (!jsonStr) throw new Error('改图提示词返回格式错误: 未找到JSON');
-  const result = safeJsonParse(jsonStr);
+  let result;
+  try {
+    result = await tryEdit(0.3);
+  } catch (e) {
+    result = await tryEdit(
+      0,
+      '⚠️ 你上一轮输出无法被JSON解析。现在只输出一个严格合法的JSON对象（以 { 开头，以 } 结尾），不要输出任何其他字符，不要使用```代码块；字符串内容里不要出现未转义的双引号。'
+    );
+  }
   if (!result?.editPrompt || typeof result.editPrompt !== 'string') {
     throw new Error('改图提示词返回格式错误: 缺少 editPrompt');
   }
   return {
-    editPrompt: result.editPrompt,
+    editPrompt: String(result.editPrompt || '').trim(),
     changes: Array.isArray(result?.changes) ? result.changes.filter(Boolean).slice(0, 4) : [],
     keeps: [] // 不再返回keeps，避免过度强调保留
   };
@@ -584,8 +657,10 @@ export async function generatePrompt(podcastContent, degreeKey, analysisResult =
     if (found) selectedBg = found;
   }
   
-  // 生成本次的随机配色方案
-  const colorScheme = getUniqueColorScheme(degreeKey);
+  // 生成配色方案：同内容同规则同结果（避免重新生成时风格随机漂移）
+  const seedKey = `${degreeKey}|${String(podcastContent ?? '').trim()}`;
+  const rng = makeDeterministicRng(seedKey);
+  const colorScheme = generateColorScheme(degreeKey, rng);
   // V2颜色规则特别说明
   const v2ColorNote = (() => {
     if (degreeKey === 'ksanti') {
@@ -645,6 +720,11 @@ ${v2ColorNote}
   // 构建度的氛围偏置（非形态指令）
   const atmosphere = degree.atmosphere || {};
   const bias = degree.bias || {};
+
+  // V4: 提取氛围定式规则
+  const bgTempRule = colorRule.bgTemp ? colorRule.bgTemp.join(' or ') : 'any';
+  const bgMaterialRule = colorRule.bgMaterial || 'standard abstract surface';
+  const contrastPrefRule = colorRule.contrastPreference || 'balanced';
 
   const userMessage = `
 ## ⚠️ 骨架由内容决定 ⚠️
@@ -747,6 +827,11 @@ ${analysis.theme?.join('、') || '无'}
 - 背景参考：${bgColorRef}
 ${colorSchemeDesc}
 
+**⚠️ 氛围定式（V4 新增 - 必须严格执行）**：
+- **色温锁 (Temperature Lock)**: 背景色温必须是 **${bgTempRule}**。禁止违背此色温倾向。
+- **材质暗示 (Material Hint)**: 必须包含 **${bgMaterialRule}** 相关的材质关键词。
+- **对比策略 (Contrast Strategy)**: 采用 **${contrastPrefRule}** 风格的对比。
+
 **约束**：
 - 形体 ≤ ${degree.constraints?.maxShapes || 4}
 - 线条 ≤ ${degree.constraints?.maxLines || 3}
@@ -819,20 +904,111 @@ ${improvementSuggestions.map((s, i) => `${i + 1}. **${s}**`).join('\n')}
   console.log('[generatePrompt] 调用 API，preferredModelId:', preferredModelId || '(default)');
   onProgress(70, '正在生成提示词...');
 
-  const content = await callChatCompletions({
-    stage: '提示词生成',
-    temperature: 0.7,
-    preferredModelId,
-    messages: [
-      { role: 'system', content: PROMPT_SYSTEM },
-      { role: 'user', content: userMessage }
-    ]
-  });
-  
-  const jsonStr = extractJsonFromText(content);
-  if (!jsonStr) throw new Error('LLM返回格式错误: 未找到JSON');
-  
-  const result = safeJsonParse(jsonStr);
+  const tryPromptGen = async (temperature, extraRuleText = '') => {
+    const content = await callChatCompletions({
+      stage: '提示词生成',
+      temperature,
+      preferredModelId,
+      messages: [
+        { role: 'system', content: PROMPT_SYSTEM },
+        { role: 'user', content: `${userMessage}${extraRuleText ? `\n\n${extraRuleText}` : ''}` }
+      ]
+    });
+    const jsonStr = extractJsonFromText(content);
+    if (!jsonStr) throw new Error('LLM返回格式错误: 未找到JSON');
+    return safeJsonParse(jsonStr);
+  };
+
+  let result;
+  try {
+    result = await tryPromptGen(0.2);
+  } catch (e) {
+    result = await tryPromptGen(
+      0,
+      '⚠️ 你上一轮输出无法被JSON解析。现在只输出一个严格合法的JSON对象（以 { 开头，以 } 结尾），不要输出任何其他字符，不要使用```代码块；字符串内容里不要出现未转义的双引号。'
+    );
+  }
+
+  const buildFallbackPrompt = () => {
+    const bgTex = selectedBg?.texture ? `Background texture: ${selectedBg.texture}.` : '';
+    const bgMat = colorRule?.bgMaterial ? `Material hint: ${colorRule.bgMaterial}.` : '';
+    const accentLine = colorScheme?.accentColor
+      ? `- Accent: ${colorScheme.accentColor.name} (${colorScheme.accentColor.hex}) at ~${colorScheme.accentAreaPct}% area with ~${colorScheme.accentOpacityPct}% opacity.`
+      : `- Accent: none.`;
+    const cm = colorScheme?.contrastMethod || (structureParams?.contrastMethod || 'none');
+    const edge = structureParams?.edgeTreatment || bias.edgePreference || 'soft';
+    const glow = Number.isFinite(structureParams?.glowCount) ? structureParams.glowCount : 1;
+    const layers = Number.isFinite(structureParams?.layerCount) ? structureParams.layerCount : 2;
+    const whitespace = structureParams?.whitespaceTarget || degree.constraints?.minWhitespace || 55;
+    const tl = topologicalLayout;
+    const pr = primaryRelationship;
+    const rs = rhythmSignature;
+    const pm = typeof physicalMetaphor === 'string' ? physicalMetaphor : '';
+    const mood = bgDecision?.moodMatch || selectedBg?.mood || '';
+    const backgroundLine = `- Background: ${bgType} / ${selectedBg?.name || 'unknown'} (${selectedBg?.hex || ''}). ${bgTex}`.trim();
+    const primaryLine = colorScheme?.primaryColor
+      ? `- Primary: ${colorScheme.primaryColor.name} (${colorScheme.primaryColor.hex}).`
+      : `- Primary: use a single high-value muted hue.`;
+
+    // Ensure >200 words by being explicit but stable.
+    return `
+[CANVAS]
+- Format: 1:1 square, 1024x1024 pixels
+- Safe margin: 10% padding
+- Whitespace target: ${whitespace}%
+
+[TOPOLOGY]
+- Zone count: ${tl.zoneCount ?? '1'}
+- Division method: ${tl.divisionMethod || 'none'}
+- Zone ratios: ${tl.zoneRatios || '100'}
+- Physical metaphor: ${pm || 'a single minimal abstract action'}
+
+[RELATIONSHIPS]
+- Primary relationship type: ${pr.type || 'solo'}
+- Interaction quality: ${pr.interactionQuality || 'distant'}
+- Spatial position: ${pr.spatialPosition || 'center'}
+
+[RHYTHM]
+- Rhythm type: ${rs.type || 'none'}
+- Element count: ${rs.elementCount ?? 1}
+- Direction: ${rs.direction || 'static'}
+
+[GEOMETRY]
+- Use <= ${degree.constraints?.maxShapes || 4} shapes and <= ${degree.constraints?.maxLines || 3} lines.
+- Edge treatment: ${edge}. Layering: ${layers}. Glow effects: ${glow}.
+- Keep the composition minimal, asymmetrical balance, large breathing negative space.
+
+[COLOR]
+${backgroundLine}
+${primaryLine}
+${accentLine}
+- Contrast method: ${cm}.
+- Mood: ${String(mood || '').trim()}
+
+[LIGHTING]
+- Soft ambient luminosity with gentle falloff; no harsh shadows.
+- If glow is used, keep it subtle and localized.
+
+[TEXTURE & MATERIAL]
+- ${bgMat}
+- Tactile paper-like matte surface, painterly-digital hybrid (not hard vector, not photorealistic).
+
+[ATMOSPHERE & MOOD]
+- Meditative stillness, quiet elegance, subtle depth; invite pause and contemplation.
+
+[ARTISTIC QUALITY]
+- Museum-quality abstract art, gallery-worthy minimalist composition.
+- Refined, sophisticated, understated; avoid busy patterns and aggressive geometry.
+
+[STYLE]
+- No text, no symbols, no UI elements, no religious icons, no photorealism, no neon, no glossy/metallic surfaces.
+`.trim();
+  };
+
+  const normalizedPrompt = typeof result?.prompt === 'string' ? result.prompt.trim() : '';
+  const requiredTags = ['[CANVAS]', '[COLOR]', '[TEXTURE & MATERIAL]'];
+  const hasRequiredTags = requiredTags.every(t => normalizedPrompt.includes(t));
+  const finalPrompt = (normalizedPrompt && hasRequiredTags) ? normalizedPrompt : buildFallbackPrompt();
 
   // 构建三类强变量返回（来自分析阶段）
   const strongLayoutVars = {
@@ -913,7 +1089,7 @@ ${improvementSuggestions.map((s, i) => `${i + 1}. **${s}**`).join('\n')}
     
     degreeBiasApplication: result.degreeBiasApplication || { appliedBiases: [], howApplied: '' },
     constraintCheck: result.constraintCheck,
-    prompt: result.prompt,
+    prompt: finalPrompt,
     negative_prompt: HARD_NEGATIVES,
     warnings: warnings.length > 0 ? warnings : null
   };

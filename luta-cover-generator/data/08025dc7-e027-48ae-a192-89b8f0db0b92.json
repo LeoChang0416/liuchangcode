@@ -31,7 +31,7 @@
   "colorLogic": "主色采用高明度的黄，代表光明与觉悟。背景为浅灰色，代表通透与清醒。少量蓝色光斑点缀，增加对比度和视觉焦点。",
   "prompt": "A minimalist square design with a light gray background. Center-left an open arc starting dark on the left and gradually becoming bright yellow towards the right. ≤5 small blue light dots scatter outward from the right side. The composition should reflect the transition from confusion to enlightenment, with ample white space and a sense of flow and openness.",
   "negativePrompt": "text, words, letters, numbers, signature, watermark, logo, human, face, hand, eyes, body, animal, plant, flower, tree, nature, landscape, cloud, mountain, water, fire, buddha, statue, monk, temple, stupa, lotus, mandala, dharma wheel, enso, zen circle, mantra, scriptures, qrcode, qr code, barcode, waveform, play button, music note, microphone, headphones, ui, icon, interface, button, arrow, check mark, cross mark, exclamation mark, question mark, compass, clock, photorealistic, 3d render, metallic, shiny, glass, cyberpunk, neon, grunge, noise, texture, dirty, messy, complex, detailed",
-  "status": "submitted",
+  "status": "pending",
   "createdAt": "2025-12-25T17:56:10.856Z",
   "imageUrl": "https://upload.apimart.ai/f/image/9998233314614421-830d52c9-5b4d-4729-a7fc-c120a9c26cda-image_task_01KDBAF8VAP3029C4QT0XNJFED_0.jpg",
   "evaluation": {
@@ -58,5 +58,6 @@
     "pass": true,
     "summary": "该封面在所有维度上均符合要求，整体设计简洁、高级且具有视觉呼吸感。"
   },
-  "evaluatedAt": "2025-12-25T17:57:00.366Z"
+  "evaluatedAt": "2025-12-25T17:57:00.366Z",
+  "error": "Request failed with status code 401"
 }

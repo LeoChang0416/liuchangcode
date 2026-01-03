@@ -21,7 +21,7 @@ export default {
   // ====== Grsai (Nano Banana 图片生成) ======
   // 文档: https://grsai.com/zh/dashboard/documents/nano-banana
   GRSAI_API_KEY: process.env.GRSAI_API_KEY || '',
-  GRSAI_API_BASE: process.env.GRSAI_API_BASE || 'https://api.grsai.ai', // 国内直连用 grsai.ai
+  GRSAI_API_BASE: process.env.GRSAI_API_BASE || 'https://grsai.dakka.com.cn',
 
   // ====== Image Provider 选择 ======
   // 可选: 'apimart' | 'grsai'
@@ -32,10 +32,10 @@ export default {
   // id is what frontend sends as textModelId
   TEXT_MODEL_CATALOG: [
     {
-      id: 'doubao-seed-1-8',
-      label: 'Doubao-Seed-1.8（Ark）',
+      id: 'doubao-seed-1-6-flash',
+      label: 'Doubao-Seed-1.6-flash（Ark）',
       provider: 'ark',
-      model: process.env.ARK_TEXT_MODEL || 'doubao-seed-1-8-251215'
+      model: process.env.ARK_TEXT_MODEL || 'ep-20260103202057-tgj44'
     },
     {
       id: 'apimart-gemini',
@@ -52,7 +52,7 @@ export default {
       apiKey: process.env.MIMO_API_KEY || ''
     }
   ],
-  DEFAULT_TEXT_MODEL_ID: process.env.DEFAULT_TEXT_MODEL_ID || 'doubao-seed-1-8',
+  DEFAULT_TEXT_MODEL_ID: process.env.DEFAULT_TEXT_MODEL_ID || 'doubao-seed-1-6-flash',
 
   // 视觉模型（图片评估、意象校验）
   VISION_MODEL: process.env.VISION_MODEL || 'gemini-3-flash-preview',
